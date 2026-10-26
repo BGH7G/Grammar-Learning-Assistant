@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "2",
+  "promptVersion": "layer-v2.8.1-noun-phrases",
+  "sessionId": "irregular",
+  "pieces": [
+    {
+      "id": 0,
+      "text": "We"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "visited"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "an"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "old"
+    },
+    {
+      "id": 7,
+      "text": " "
+    },
+    {
+      "id": 8,
+      "text": "stone"
+    },
+    {
+      "id": 9,
+      "text": " "
+    },
+    {
+      "id": 10,
+      "text": "bridge"
+    },
+    {
+      "id": 11,
+      "text": " "
+    },
+    {
+      "id": 12,
+      "text": "built"
+    },
+    {
+      "id": 13,
+      "text": " "
+    },
+    {
+      "id": 14,
+      "text": "across"
+    },
+    {
+      "id": 15,
+      "text": " "
+    },
+    {
+      "id": 16,
+      "text": "the"
+    },
+    {
+      "id": 17,
+      "text": " "
+    },
+    {
+      "id": 18,
+      "text": "river"
+    },
+    {
+      "id": 19,
+      "text": "."
+    }
+  ],
+  "tokens": [
+    {
+      "id": 0,
+      "text": "We",
+      "pieceId": 0
+    },
+    {
+      "id": 1,
+      "text": "visited",
+      "pieceId": 2
+    },
+    {
+      "id": 2,
+      "text": "an",
+      "pieceId": 4
+    },
+    {
+      "id": 3,
+      "text": "old",
+      "pieceId": 6
+    },
+    {
+      "id": 4,
+      "text": "stone",
+      "pieceId": 8
+    },
+    {
+      "id": 5,
+      "text": "bridge",
+      "pieceId": 10
+    },
+    {
+      "id": 6,
+      "text": "built",
+      "pieceId": 12
+    },
+    {
+      "id": 7,
+      "text": "across",
+      "pieceId": 14
+    },
+    {
+      "id": 8,
+      "text": "the",
+      "pieceId": 16
+    },
+    {
+      "id": 9,
+      "text": "river",
+      "pieceId": 18
+    },
+    {
+      "id": 10,
+      "text": ".",
+      "pieceId": 19
+    }
+  ],
+  "roots": [
+    {
+      "id": "irregular:s0",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 0,
+      "last": 10,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "irregular:s0"
+    }
+  ],
+  "layers": [
+    {
+      "parentId": "irregular:s0",
+      "depth": 1,
+      "skeleton": "We visited an old stone bridge.",
+      "translation": "我们参观了一座横跨河流的古老石桥。",
+      "nodes": [
+        {
+          "id": "irregular:s0:0",
+          "parentId": "irregular:s0",
+          "kind": "word",
+          "role": "subject",
+          "ctype": "none",
+          "first": 0,
+          "last": 0,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "irregular:s0"
+        },
+        {
+          "id": "irregular:s0:1",
+          "parentId": "irregular:s0",
+          "kind": "word",
+          "role": "predicate",
+          "ctype": "none",
+          "first": 1,
+          "last": 1,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "irregular:s0"
+        },
+        {
+          "id": "irregular:s0:2",
+          "parentId": "irregular:s0",
+          "kind": "phrase",
+          "role": "object",
+          "ctype": "none",
+          "grammar": [
+            "noun_phrase"
+          ],
+          "first": 2,
+          "last": 10,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "irregular:s0"
+        }
+      ],
+      "relations": [],
+      "notes": [
+        "过去分词短语作后置定语修饰桥"
+      ],
+      "warnings": [],
+      "normalizationCount": 0
+    }
+  ],
+  "maxDepth": 4
+}

@@ -1,0 +1,649 @@
+{
+  "schemaVersion": "2",
+  "promptVersion": "layer-v2.6-grammar",
+  "sessionId": "quote-true",
+  "pieces": [
+    {
+      "id": 0,
+      "text": "Referencing"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "the"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "title"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "of"
+    },
+    {
+      "id": 7,
+      "text": " "
+    },
+    {
+      "id": 8,
+      "text": "the"
+    },
+    {
+      "id": 9,
+      "text": " "
+    },
+    {
+      "id": 10,
+      "text": "film"
+    },
+    {
+      "id": 11,
+      "text": ","
+    },
+    {
+      "id": 12,
+      "text": " "
+    },
+    {
+      "id": 13,
+      "text": "Night"
+    },
+    {
+      "id": 14,
+      "text": " "
+    },
+    {
+      "id": 15,
+      "text": "Flower"
+    },
+    {
+      "id": 16,
+      "text": ","
+    },
+    {
+      "id": 17,
+      "text": " "
+    },
+    {
+      "id": 18,
+      "text": "Zeteo"
+    },
+    {
+      "id": 19,
+      "text": " "
+    },
+    {
+      "id": 20,
+      "text": "editor"
+    },
+    {
+      "id": 21,
+      "text": "-"
+    },
+    {
+      "id": 22,
+      "text": "in"
+    },
+    {
+      "id": 23,
+      "text": "-"
+    },
+    {
+      "id": 24,
+      "text": "chief"
+    },
+    {
+      "id": 25,
+      "text": " "
+    },
+    {
+      "id": 26,
+      "text": "Mehdi"
+    },
+    {
+      "id": 27,
+      "text": " "
+    },
+    {
+      "id": 28,
+      "text": "Hasan"
+    },
+    {
+      "id": 29,
+      "text": " "
+    },
+    {
+      "id": 30,
+      "text": "says"
+    },
+    {
+      "id": 31,
+      "text": " "
+    },
+    {
+      "id": 32,
+      "text": "AIPAC"
+    },
+    {
+      "id": 33,
+      "text": " "
+    },
+    {
+      "id": 34,
+      "text": "“"
+    },
+    {
+      "id": 35,
+      "text": "blossoms"
+    },
+    {
+      "id": 36,
+      "text": " "
+    },
+    {
+      "id": 37,
+      "text": "in"
+    },
+    {
+      "id": 38,
+      "text": " "
+    },
+    {
+      "id": 39,
+      "text": "the"
+    },
+    {
+      "id": 40,
+      "text": " "
+    },
+    {
+      "id": 41,
+      "text": "dark"
+    },
+    {
+      "id": 42,
+      "text": ","
+    },
+    {
+      "id": 43,
+      "text": " "
+    },
+    {
+      "id": 44,
+      "text": "shrivels"
+    },
+    {
+      "id": 45,
+      "text": " "
+    },
+    {
+      "id": 46,
+      "text": "in"
+    },
+    {
+      "id": 47,
+      "text": " "
+    },
+    {
+      "id": 48,
+      "text": "the"
+    },
+    {
+      "id": 49,
+      "text": " "
+    },
+    {
+      "id": 50,
+      "text": "light"
+    },
+    {
+      "id": 51,
+      "text": "."
+    },
+    {
+      "id": 52,
+      "text": " "
+    },
+    {
+      "id": 53,
+      "text": "We’re"
+    },
+    {
+      "id": 54,
+      "text": " "
+    },
+    {
+      "id": 55,
+      "text": "trying"
+    },
+    {
+      "id": 56,
+      "text": " "
+    },
+    {
+      "id": 57,
+      "text": "to"
+    },
+    {
+      "id": 58,
+      "text": " "
+    },
+    {
+      "id": 59,
+      "text": "put"
+    },
+    {
+      "id": 60,
+      "text": " "
+    },
+    {
+      "id": 61,
+      "text": "some"
+    },
+    {
+      "id": 62,
+      "text": " "
+    },
+    {
+      "id": 63,
+      "text": "sunlight"
+    },
+    {
+      "id": 64,
+      "text": " "
+    },
+    {
+      "id": 65,
+      "text": "onto"
+    },
+    {
+      "id": 66,
+      "text": " "
+    },
+    {
+      "id": 67,
+      "text": "AIPAC"
+    },
+    {
+      "id": 68,
+      "text": "."
+    },
+    {
+      "id": 69,
+      "text": "”"
+    }
+  ],
+  "tokens": [
+    {
+      "id": 0,
+      "text": "Referencing",
+      "pieceId": 0
+    },
+    {
+      "id": 1,
+      "text": "the",
+      "pieceId": 2
+    },
+    {
+      "id": 2,
+      "text": "title",
+      "pieceId": 4
+    },
+    {
+      "id": 3,
+      "text": "of",
+      "pieceId": 6
+    },
+    {
+      "id": 4,
+      "text": "the",
+      "pieceId": 8
+    },
+    {
+      "id": 5,
+      "text": "film",
+      "pieceId": 10
+    },
+    {
+      "id": 6,
+      "text": ",",
+      "pieceId": 11
+    },
+    {
+      "id": 7,
+      "text": "Night",
+      "pieceId": 13
+    },
+    {
+      "id": 8,
+      "text": "Flower",
+      "pieceId": 15
+    },
+    {
+      "id": 9,
+      "text": ",",
+      "pieceId": 16
+    },
+    {
+      "id": 10,
+      "text": "Zeteo",
+      "pieceId": 18
+    },
+    {
+      "id": 11,
+      "text": "editor",
+      "pieceId": 20
+    },
+    {
+      "id": 12,
+      "text": "-",
+      "pieceId": 21
+    },
+    {
+      "id": 13,
+      "text": "in",
+      "pieceId": 22
+    },
+    {
+      "id": 14,
+      "text": "-",
+      "pieceId": 23
+    },
+    {
+      "id": 15,
+      "text": "chief",
+      "pieceId": 24
+    },
+    {
+      "id": 16,
+      "text": "Mehdi",
+      "pieceId": 26
+    },
+    {
+      "id": 17,
+      "text": "Hasan",
+      "pieceId": 28
+    },
+    {
+      "id": 18,
+      "text": "says",
+      "pieceId": 30
+    },
+    {
+      "id": 19,
+      "text": "AIPAC",
+      "pieceId": 32
+    },
+    {
+      "id": 20,
+      "text": "“",
+      "pieceId": 34
+    },
+    {
+      "id": 21,
+      "text": "blossoms",
+      "pieceId": 35
+    },
+    {
+      "id": 22,
+      "text": "in",
+      "pieceId": 37
+    },
+    {
+      "id": 23,
+      "text": "the",
+      "pieceId": 39
+    },
+    {
+      "id": 24,
+      "text": "dark",
+      "pieceId": 41
+    },
+    {
+      "id": 25,
+      "text": ",",
+      "pieceId": 42
+    },
+    {
+      "id": 26,
+      "text": "shrivels",
+      "pieceId": 44
+    },
+    {
+      "id": 27,
+      "text": "in",
+      "pieceId": 46
+    },
+    {
+      "id": 28,
+      "text": "the",
+      "pieceId": 48
+    },
+    {
+      "id": 29,
+      "text": "light",
+      "pieceId": 50
+    },
+    {
+      "id": 30,
+      "text": ".",
+      "pieceId": 51
+    },
+    {
+      "id": 31,
+      "text": "We’re",
+      "pieceId": 53
+    },
+    {
+      "id": 32,
+      "text": "trying",
+      "pieceId": 55
+    },
+    {
+      "id": 33,
+      "text": "to",
+      "pieceId": 57
+    },
+    {
+      "id": 34,
+      "text": "put",
+      "pieceId": 59
+    },
+    {
+      "id": 35,
+      "text": "some",
+      "pieceId": 61
+    },
+    {
+      "id": 36,
+      "text": "sunlight",
+      "pieceId": 63
+    },
+    {
+      "id": 37,
+      "text": "onto",
+      "pieceId": 65
+    },
+    {
+      "id": 38,
+      "text": "AIPAC",
+      "pieceId": 67
+    },
+    {
+      "id": 39,
+      "text": ".",
+      "pieceId": 68
+    },
+    {
+      "id": 40,
+      "text": "”",
+      "pieceId": 69
+    }
+  ],
+  "roots": [
+    {
+      "id": "quote-true:s0",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 0,
+      "last": 30,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "quote-true:s0"
+    },
+    {
+      "id": "quote-true:s1",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 31,
+      "last": 40,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "quote-true:s1"
+    }
+  ],
+  "layers": [
+    {
+      "parentId": "quote-true:s0",
+      "depth": 1,
+      "skeleton": "Referencing the film's title, editor-in-chief Mehdi Hasan says AIPAC blossoms in the dark, shrivels in the light.",
+      "translation": "提到电影《夜花》的片名，主编迈赫迪·哈桑说，AIPAC在黑暗中绽放，在光明中枯萎。",
+      "nodes": [
+        {
+          "id": "quote-true:s0:0",
+          "parentId": "quote-true:s0",
+          "kind": "phrase",
+          "role": "adverbial",
+          "ctype": "participial",
+          "first": 0,
+          "last": 9,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "quote-true:s0"
+        },
+        {
+          "id": "quote-true:s0:1",
+          "parentId": "quote-true:s0",
+          "kind": "phrase",
+          "role": "subject",
+          "ctype": "none",
+          "first": 10,
+          "last": 17,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "quote-true:s0"
+        },
+        {
+          "id": "quote-true:s0:2",
+          "parentId": "quote-true:s0",
+          "kind": "word",
+          "role": "predicate",
+          "ctype": "none",
+          "first": 18,
+          "last": 18,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "quote-true:s0"
+        },
+        {
+          "id": "quote-true:s0:3",
+          "parentId": "quote-true:s0",
+          "kind": "clause",
+          "role": "object",
+          "ctype": "noun",
+          "first": 19,
+          "last": 29,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "quote-true:s0"
+        },
+        {
+          "id": "quote-true:s0:4",
+          "parentId": "quote-true:s0",
+          "kind": "word",
+          "role": "punctuation",
+          "ctype": "none",
+          "first": 30,
+          "last": 30,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "quote-true:s0"
+        }
+      ],
+      "relations": [],
+      "notes": [
+        "句首分词状语，逻辑主语为主句主语。",
+        "引号内为宾语从句，含并列谓语。"
+      ],
+      "warnings": [],
+      "normalizationCount": 0
+    },
+    {
+      "parentId": "quote-true:s1",
+      "depth": 1,
+      "skeleton": "We're trying to put some sunlight onto AIPAC.",
+      "translation": "我们正试图把一些阳光照到AIPAC身上。",
+      "nodes": [
+        {
+          "id": "quote-true:s1:0",
+          "parentId": "quote-true:s1",
+          "kind": "phrase",
+          "role": "subject",
+          "ctype": "none",
+          "first": 31,
+          "last": 31,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "quote-true:s1"
+        },
+        {
+          "id": "quote-true:s1:1",
+          "parentId": "quote-true:s1",
+          "kind": "phrase",
+          "role": "predicate",
+          "ctype": "none",
+          "first": 32,
+          "last": 38,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "quote-true:s1"
+        },
+        {
+          "id": "quote-true:s1:2",
+          "parentId": "quote-true:s1",
+          "kind": "word",
+          "role": "punctuation",
+          "ctype": "none",
+          "first": 39,
+          "last": 40,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "quote-true:s1"
+        }
+      ],
+      "relations": [],
+      "notes": [
+        "引号并入句末标点",
+        "谓语为进行体加不定式"
+      ],
+      "warnings": [],
+      "normalizationCount": 0
+    }
+  ],
+  "maxDepth": 4
+}

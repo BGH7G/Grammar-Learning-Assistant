@@ -1,0 +1,300 @@
+{
+  "layers": [
+    {
+      "depth": 2,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 0,
+          "id": "other-classes:s0:0:0",
+          "kind": "word",
+          "last": 0,
+          "parentId": "other-classes:s0:0",
+          "role": "determiner",
+          "sentenceId": "other-classes:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 1,
+          "grammar": [
+            "premodifier",
+            "adjective"
+          ],
+          "id": "other-classes:s0:0:1",
+          "kind": "word",
+          "last": 1,
+          "parentId": "other-classes:s0:0",
+          "role": "attribute",
+          "sentenceId": "other-classes:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 2,
+          "grammar": [
+            "noun"
+          ],
+          "id": "other-classes:s0:0:2",
+          "kind": "word",
+          "last": 2,
+          "parentId": "other-classes:s0:0",
+          "role": "head",
+          "sentenceId": "other-classes:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [],
+      "parentId": "other-classes:s0:0",
+      "relations": [
+        {
+          "headToken": 2,
+          "sourceId": "other-classes:s0:0:1"
+        }
+      ],
+      "skeleton": null,
+      "translation": "这位年轻的科学家",
+      "warnings": [
+        "部分语法细分类与结构不一致，已保留通用标签。"
+      ]
+    },
+    {
+      "depth": 2,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 5,
+          "grammar": [
+            "preposition"
+          ],
+          "id": "other-classes:s0:3:0",
+          "kind": "word",
+          "last": 5,
+          "parentId": "other-classes:s0:3",
+          "role": "head",
+          "sentenceId": "other-classes:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 6,
+          "grammar": [
+            "proper_noun"
+          ],
+          "id": "other-classes:s0:3:1",
+          "kind": "word",
+          "last": 7,
+          "parentId": "other-classes:s0:3",
+          "role": "object",
+          "sentenceId": "other-classes:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "介词短语，介词后名词作宾语"
+      ],
+      "parentId": "other-classes:s0:3",
+      "relations": [],
+      "skeleton": null,
+      "translation": "在伦敦。",
+      "warnings": []
+    },
+    {
+      "depth": 1,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": true,
+          "first": 0,
+          "grammar": [
+            "noun_phrase"
+          ],
+          "id": "other-classes:s0:0",
+          "kind": "phrase",
+          "last": 2,
+          "parentId": "other-classes:s0",
+          "role": "subject",
+          "sentenceId": "other-classes:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 3,
+          "grammar": [
+            "lexical_verb"
+          ],
+          "id": "other-classes:s0:1",
+          "kind": "word",
+          "last": 3,
+          "parentId": "other-classes:s0",
+          "role": "predicate",
+          "sentenceId": "other-classes:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 4,
+          "grammar": [
+            "adverb"
+          ],
+          "id": "other-classes:s0:2",
+          "kind": "word",
+          "last": 4,
+          "parentId": "other-classes:s0",
+          "role": "adverbial",
+          "sentenceId": "other-classes:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": true,
+          "first": 5,
+          "grammar": [
+            "prepositional_phrase"
+          ],
+          "id": "other-classes:s0:3",
+          "kind": "phrase",
+          "last": 7,
+          "parentId": "other-classes:s0",
+          "role": "adverbial",
+          "sentenceId": "other-classes:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [],
+      "parentId": "other-classes:s0",
+      "relations": [],
+      "skeleton": "The scientist worked.",
+      "translation": "这位年轻的科学家在伦敦安静地工作。",
+      "warnings": []
+    }
+  ],
+  "maxDepth": 4,
+  "pieces": [
+    {
+      "id": 0,
+      "text": "The"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "young"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "scientist"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "worked"
+    },
+    {
+      "id": 7,
+      "text": " "
+    },
+    {
+      "id": 8,
+      "text": "quietly"
+    },
+    {
+      "id": 9,
+      "text": " "
+    },
+    {
+      "id": 10,
+      "text": "in"
+    },
+    {
+      "id": 11,
+      "text": " "
+    },
+    {
+      "id": 12,
+      "text": "London"
+    },
+    {
+      "id": 13,
+      "text": "."
+    }
+  ],
+  "promptVersion": "layer-v2.9.2-grammar-types",
+  "roots": [
+    {
+      "ctype": "none",
+      "depth": 0,
+      "expandable": true,
+      "first": 0,
+      "id": "other-classes:s0",
+      "kind": "sentence",
+      "last": 7,
+      "parentId": null,
+      "role": "root",
+      "sentenceId": "other-classes:s0"
+    }
+  ],
+  "schemaVersion": "2",
+  "sessionId": "other-classes",
+  "tokens": [
+    {
+      "id": 0,
+      "pieceId": 0,
+      "text": "The"
+    },
+    {
+      "id": 1,
+      "pieceId": 2,
+      "text": "young"
+    },
+    {
+      "id": 2,
+      "pieceId": 4,
+      "text": "scientist"
+    },
+    {
+      "id": 3,
+      "pieceId": 6,
+      "text": "worked"
+    },
+    {
+      "id": 4,
+      "pieceId": 8,
+      "text": "quietly"
+    },
+    {
+      "id": 5,
+      "pieceId": 10,
+      "text": "in"
+    },
+    {
+      "id": 6,
+      "pieceId": 12,
+      "text": "London"
+    },
+    {
+      "id": 7,
+      "pieceId": 13,
+      "text": "."
+    }
+  ]
+}

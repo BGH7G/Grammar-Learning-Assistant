@@ -1,0 +1,455 @@
+{
+  "schemaVersion": "2",
+  "promptVersion": "layer-v2.7.2-boundaries",
+  "sessionId": "original-1",
+  "pieces": [
+    {
+      "id": 0,
+      "text": "His"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "political"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "views"
+    },
+    {
+      "id": 5,
+      "text": ","
+    },
+    {
+      "id": 6,
+      "text": " "
+    },
+    {
+      "id": 7,
+      "text": "disseminated"
+    },
+    {
+      "id": 8,
+      "text": " "
+    },
+    {
+      "id": 9,
+      "text": "to"
+    },
+    {
+      "id": 10,
+      "text": " "
+    },
+    {
+      "id": 11,
+      "text": "his"
+    },
+    {
+      "id": 12,
+      "text": " "
+    },
+    {
+      "id": 13,
+      "text": "240m"
+    },
+    {
+      "id": 14,
+      "text": " "
+    },
+    {
+      "id": 15,
+      "text": "followers"
+    },
+    {
+      "id": 16,
+      "text": " "
+    },
+    {
+      "id": 17,
+      "text": "on"
+    },
+    {
+      "id": 18,
+      "text": " "
+    },
+    {
+      "id": 19,
+      "text": "X"
+    },
+    {
+      "id": 20,
+      "text": ","
+    },
+    {
+      "id": 21,
+      "text": " "
+    },
+    {
+      "id": 22,
+      "text": "strike"
+    },
+    {
+      "id": 23,
+      "text": " "
+    },
+    {
+      "id": 24,
+      "text": "many"
+    },
+    {
+      "id": 25,
+      "text": " "
+    },
+    {
+      "id": 26,
+      "text": "as"
+    },
+    {
+      "id": 27,
+      "text": " "
+    },
+    {
+      "id": 28,
+      "text": "plain"
+    },
+    {
+      "id": 29,
+      "text": "-"
+    },
+    {
+      "id": 30,
+      "text": "speaking"
+    },
+    {
+      "id": 31,
+      "text": " "
+    },
+    {
+      "id": 32,
+      "text": "and"
+    },
+    {
+      "id": 33,
+      "text": " "
+    },
+    {
+      "id": 34,
+      "text": "strike"
+    },
+    {
+      "id": 35,
+      "text": " "
+    },
+    {
+      "id": 36,
+      "text": "many"
+    },
+    {
+      "id": 37,
+      "text": " "
+    },
+    {
+      "id": 38,
+      "text": "more"
+    },
+    {
+      "id": 39,
+      "text": ","
+    },
+    {
+      "id": 40,
+      "text": " "
+    },
+    {
+      "id": 41,
+      "text": "including"
+    },
+    {
+      "id": 42,
+      "text": " "
+    },
+    {
+      "id": 43,
+      "text": "The"
+    },
+    {
+      "id": 44,
+      "text": " "
+    },
+    {
+      "id": 45,
+      "text": "Economist"
+    },
+    {
+      "id": 46,
+      "text": ","
+    },
+    {
+      "id": 47,
+      "text": " "
+    },
+    {
+      "id": 48,
+      "text": "as"
+    },
+    {
+      "id": 49,
+      "text": " "
+    },
+    {
+      "id": 50,
+      "text": "plainly"
+    },
+    {
+      "id": 51,
+      "text": " "
+    },
+    {
+      "id": 52,
+      "text": "bigoted"
+    },
+    {
+      "id": 53,
+      "text": "."
+    }
+  ],
+  "tokens": [
+    {
+      "id": 0,
+      "text": "His",
+      "pieceId": 0
+    },
+    {
+      "id": 1,
+      "text": "political",
+      "pieceId": 2
+    },
+    {
+      "id": 2,
+      "text": "views",
+      "pieceId": 4
+    },
+    {
+      "id": 3,
+      "text": ",",
+      "pieceId": 5
+    },
+    {
+      "id": 4,
+      "text": "disseminated",
+      "pieceId": 7
+    },
+    {
+      "id": 5,
+      "text": "to",
+      "pieceId": 9
+    },
+    {
+      "id": 6,
+      "text": "his",
+      "pieceId": 11
+    },
+    {
+      "id": 7,
+      "text": "240m",
+      "pieceId": 13
+    },
+    {
+      "id": 8,
+      "text": "followers",
+      "pieceId": 15
+    },
+    {
+      "id": 9,
+      "text": "on",
+      "pieceId": 17
+    },
+    {
+      "id": 10,
+      "text": "X",
+      "pieceId": 19
+    },
+    {
+      "id": 11,
+      "text": ",",
+      "pieceId": 20
+    },
+    {
+      "id": 12,
+      "text": "strike",
+      "pieceId": 22
+    },
+    {
+      "id": 13,
+      "text": "many",
+      "pieceId": 24
+    },
+    {
+      "id": 14,
+      "text": "as",
+      "pieceId": 26
+    },
+    {
+      "id": 15,
+      "text": "plain",
+      "pieceId": 28
+    },
+    {
+      "id": 16,
+      "text": "-",
+      "pieceId": 29
+    },
+    {
+      "id": 17,
+      "text": "speaking",
+      "pieceId": 30
+    },
+    {
+      "id": 18,
+      "text": "and",
+      "pieceId": 32
+    },
+    {
+      "id": 19,
+      "text": "strike",
+      "pieceId": 34
+    },
+    {
+      "id": 20,
+      "text": "many",
+      "pieceId": 36
+    },
+    {
+      "id": 21,
+      "text": "more",
+      "pieceId": 38
+    },
+    {
+      "id": 22,
+      "text": ",",
+      "pieceId": 39
+    },
+    {
+      "id": 23,
+      "text": "including",
+      "pieceId": 41
+    },
+    {
+      "id": 24,
+      "text": "The",
+      "pieceId": 43
+    },
+    {
+      "id": 25,
+      "text": "Economist",
+      "pieceId": 45
+    },
+    {
+      "id": 26,
+      "text": ",",
+      "pieceId": 46
+    },
+    {
+      "id": 27,
+      "text": "as",
+      "pieceId": 48
+    },
+    {
+      "id": 28,
+      "text": "plainly",
+      "pieceId": 50
+    },
+    {
+      "id": 29,
+      "text": "bigoted",
+      "pieceId": 52
+    },
+    {
+      "id": 30,
+      "text": ".",
+      "pieceId": 53
+    }
+  ],
+  "roots": [
+    {
+      "id": "original-1:s0",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 0,
+      "last": 30,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "original-1:s0"
+    }
+  ],
+  "layers": [
+    {
+      "parentId": "original-1:s0",
+      "depth": 1,
+      "skeleton": "His political views strike many as plain-speaking and strike many more as plainly bigoted.",
+      "translation": "他的政治观点传播给他2.4亿X粉丝，让许多人觉得是直言不讳，也让更多人（包括《经济学人》）觉得是赤裸裸的偏执。",
+      "nodes": [
+        {
+          "id": "original-1:s0:0",
+          "parentId": "original-1:s0",
+          "kind": "phrase",
+          "role": "subject",
+          "ctype": "none",
+          "first": 0,
+          "last": 3,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "original-1:s0"
+        },
+        {
+          "id": "original-1:s0:1",
+          "parentId": "original-1:s0",
+          "kind": "phrase",
+          "role": "attribute",
+          "ctype": "participial",
+          "first": 4,
+          "last": 11,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "original-1:s0"
+        },
+        {
+          "id": "original-1:s0:2",
+          "parentId": "original-1:s0",
+          "kind": "phrase",
+          "role": "predicate",
+          "ctype": "none",
+          "first": 12,
+          "last": 30,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "original-1:s0"
+        }
+      ],
+      "relations": [
+        {
+          "sourceId": "original-1:s0:1",
+          "headToken": 2
+        }
+      ],
+      "notes": [
+        "插入的分词短语修饰主语 views",
+        "并列谓语共用主语"
+      ],
+      "warnings": [
+        "已按原文补齐标点归属，单词的成分划分保持原样。"
+      ],
+      "normalizationCount": 0
+    }
+  ],
+  "maxDepth": 4
+}

@@ -1,0 +1,129 @@
+{
+  "layers": [
+    {
+      "depth": 1,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 0,
+          "grammar": [
+            "pronoun"
+          ],
+          "id": "linking:s0:0",
+          "kind": "word",
+          "last": 0,
+          "parentId": "linking:s0",
+          "role": "subject",
+          "sentenceId": "linking:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 1,
+          "grammar": [
+            "linking_verb"
+          ],
+          "id": "linking:s0:1",
+          "kind": "word",
+          "last": 1,
+          "parentId": "linking:s0",
+          "role": "predicate",
+          "sentenceId": "linking:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 2,
+          "grammar": [
+            "adjective"
+          ],
+          "id": "linking:s0:2",
+          "kind": "word",
+          "last": 3,
+          "parentId": "linking:s0",
+          "role": "predicative",
+          "sentenceId": "linking:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "系表结构，happy 作表语"
+      ],
+      "parentId": "linking:s0",
+      "relations": [],
+      "skeleton": "She is happy.",
+      "translation": "她很开心。",
+      "warnings": []
+    }
+  ],
+  "maxDepth": 4,
+  "pieces": [
+    {
+      "id": 0,
+      "text": "She"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "is"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "happy"
+    },
+    {
+      "id": 5,
+      "text": "."
+    }
+  ],
+  "promptVersion": "layer-v2.9-grammar-types",
+  "roots": [
+    {
+      "ctype": "none",
+      "depth": 0,
+      "expandable": true,
+      "first": 0,
+      "id": "linking:s0",
+      "kind": "sentence",
+      "last": 3,
+      "parentId": null,
+      "role": "root",
+      "sentenceId": "linking:s0"
+    }
+  ],
+  "schemaVersion": "2",
+  "sessionId": "linking",
+  "tokens": [
+    {
+      "id": 0,
+      "pieceId": 0,
+      "text": "She"
+    },
+    {
+      "id": 1,
+      "pieceId": 2,
+      "text": "is"
+    },
+    {
+      "id": 2,
+      "pieceId": 4,
+      "text": "happy"
+    },
+    {
+      "id": 3,
+      "pieceId": 5,
+      "text": "."
+    }
+  ]
+}

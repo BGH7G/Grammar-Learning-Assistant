@@ -1,0 +1,6 @@
+* text=auto
+
+# Preserve archived files exactly so their SHA-256 manifests remain verifiable.
+docs/benchmarks/** -text -whitespace
+docs/prompt-backups/** -text -whitespace
+docs/ui-backups/** -text -whitespace

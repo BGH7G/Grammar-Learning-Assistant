@@ -1,0 +1,1016 @@
+{
+  "model": "deepseek-v4-flash",
+  "promptVersion": "layer-v2.5",
+  "reasoningEffort": "high",
+  "rows": [
+    {
+      "elapsedMs": 2306.504,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "quote-true:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "quote-true:s0",
+            "role": "adverbial",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 7,
+            "id": "quote-true:s0:1",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "quote-true:s0",
+            "role": "subject",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 18,
+            "id": "quote-true:s0:2",
+            "kind": "word",
+            "last": 18,
+            "parentId": "quote-true:s0",
+            "role": "predicate",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "noun",
+            "depth": 1,
+            "expandable": true,
+            "first": 19,
+            "id": "quote-true:s0:3",
+            "kind": "clause",
+            "last": 30,
+            "parentId": "quote-true:s0",
+            "role": "object",
+            "sentenceId": "quote-true:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "引语为直接引语作宾语",
+          "分词短语表方式"
+        ],
+        "parentId": "quote-true:s0",
+        "relations": [],
+        "skeleton": "Referencing the title of the film, Zeteo editor-in-chief Mehdi Hasan says AIPAC blossoms in the dark, shrivels in the light.",
+        "translation": "引用这部电影的片名，Zeteo主编迈赫迪·哈桑说，AIPAC在黑暗中绽放，在光明中枯萎。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 512,
+            "inputTokens": 674,
+            "outputTokens": 155,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2305.7299000000003,
+            "responseReadMs": 0.061300000000301225,
+            "responseWaitMs": 2305.6686,
+            "stage": "第1层 · 0–30 · 初次",
+            "validationMs": 0.055099999999999996
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.062299999999999994,
+        "totalMs": 2305.8778
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "quote-true:s0",
+        "kind": "sentence",
+        "last": 30,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "quote-true:s0"
+      },
+      "split": true,
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 512,
+        "httpMs": 2305.7299000000003,
+        "inputTokens": 674,
+        "outputTokens": 155,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "elapsedMs": 1368.7098,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 31,
+            "id": "quote-true:s1:0",
+            "kind": "phrase",
+            "last": 31,
+            "parentId": "quote-true:s1",
+            "role": "subject",
+            "sentenceId": "quote-true:s1"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 32,
+            "id": "quote-true:s1:1",
+            "kind": "phrase",
+            "last": 38,
+            "parentId": "quote-true:s1",
+            "role": "predicate",
+            "sentenceId": "quote-true:s1"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 39,
+            "id": "quote-true:s1:2",
+            "kind": "word",
+            "last": 40,
+            "parentId": "quote-true:s1",
+            "role": "punctuation",
+            "sentenceId": "quote-true:s1"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "引号属标点，单独成项。"
+        ],
+        "parentId": "quote-true:s1",
+        "relations": [],
+        "skeleton": "We're trying to put sunlight onto AIPAC.",
+        "translation": "我们正试图把阳光照到AIPAC上。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 589,
+            "outputTokens": 97,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1368.6089,
+            "responseReadMs": 0.0465999999998985,
+            "responseWaitMs": 1368.5623,
+            "stage": "第1层 · 31–40 · 初次",
+            "validationMs": 0.0261
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.032100000000000004,
+        "totalMs": 1368.6903
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 31,
+        "id": "quote-true:s1",
+        "kind": "sentence",
+        "last": 40,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "quote-true:s1"
+      },
+      "split": true,
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1368.6089,
+        "inputTokens": 589,
+        "outputTokens": 97,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "elapsedMs": 2948.0342,
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 19,
+            "id": "quote-true:s0:3:0",
+            "kind": "word",
+            "last": 19,
+            "parentId": "quote-true:s0:3",
+            "role": "subject",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 20,
+            "id": "quote-true:s0:3:1",
+            "kind": "word",
+            "last": 20,
+            "parentId": "quote-true:s0:3",
+            "role": "punctuation",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 21,
+            "id": "quote-true:s0:3:2",
+            "kind": "word",
+            "last": 21,
+            "parentId": "quote-true:s0:3",
+            "role": "predicate",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 22,
+            "id": "quote-true:s0:3:3",
+            "kind": "phrase",
+            "last": 24,
+            "parentId": "quote-true:s0:3",
+            "role": "adverbial",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 25,
+            "id": "quote-true:s0:3:4",
+            "kind": "word",
+            "last": 25,
+            "parentId": "quote-true:s0:3",
+            "role": "punctuation",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 26,
+            "id": "quote-true:s0:3:5",
+            "kind": "word",
+            "last": 26,
+            "parentId": "quote-true:s0:3",
+            "role": "predicate",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 27,
+            "id": "quote-true:s0:3:6",
+            "kind": "phrase",
+            "last": 29,
+            "parentId": "quote-true:s0:3",
+            "role": "adverbial",
+            "sentenceId": "quote-true:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 30,
+            "id": "quote-true:s0:3:7",
+            "kind": "word",
+            "last": 30,
+            "parentId": "quote-true:s0:3",
+            "role": "punctuation",
+            "sentenceId": "quote-true:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "引号单独作标点成分",
+          "两个介词短语作状语"
+        ],
+        "parentId": "quote-true:s0:3",
+        "relations": [],
+        "skeleton": null,
+        "translation": "AIPAC“在黑暗中绽放，在光明中枯萎。”",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 638,
+            "outputTokens": 162,
+            "reasoningTokens": null,
+            "repairReason": "n[1] actual first=21, last=21, expandable=0; REQUIRED first=20, 20<=last<=30, expandable=0/1. Correct this array; do not repeat it.",
+            "requestMs": 1683.2699,
+            "responseReadMs": 0.04719999999997526,
+            "responseWaitMs": 1683.2227,
+            "stage": "第2层 · 19–30 · 初次",
+            "validationMs": 0.0269
+          },
+          {
+            "cachedInputTokens": 640,
+            "inputTokens": 868,
+            "outputTokens": 175,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1264.6062,
+            "responseReadMs": 0.04870000000005348,
+            "responseWaitMs": 1264.5575,
+            "stage": "第2层 · 19–30 · 修复",
+            "validationMs": 0.0294
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0292,
+        "totalMs": 2948.0148000000004
+      },
+      "parent": {
+        "ctype": "noun",
+        "depth": 1,
+        "expandable": true,
+        "first": 19,
+        "id": "quote-true:s0:3",
+        "kind": "clause",
+        "last": 30,
+        "parentId": "quote-true:s0",
+        "role": "object",
+        "sentenceId": "quote-true:s0"
+      },
+      "split": true,
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 1024,
+        "httpMs": 2947.8761,
+        "inputTokens": 1506,
+        "outputTokens": 337,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "elapsedMs": 1364.6169000000002,
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 32,
+            "id": "quote-true:s1:1:0",
+            "kind": "word",
+            "last": 32,
+            "parentId": "quote-true:s1:1",
+            "role": "head",
+            "sentenceId": "quote-true:s1"
+          },
+          {
+            "ctype": "infinitive",
+            "depth": 2,
+            "expandable": true,
+            "first": 33,
+            "id": "quote-true:s1:1:1",
+            "kind": "phrase",
+            "last": 38,
+            "parentId": "quote-true:s1:1",
+            "role": "complement",
+            "sentenceId": "quote-true:s1"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "现在分词短语作谓语",
+          "不定式短语作补足语"
+        ],
+        "parentId": "quote-true:s1:1",
+        "relations": [],
+        "skeleton": null,
+        "translation": "试图把一些阳光照到AIPAC身上",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 592,
+            "outputTokens": 85,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1364.5233,
+            "responseReadMs": 0.047700000000077125,
+            "responseWaitMs": 1364.4756,
+            "stage": "第2层 · 32–38 · 初次",
+            "validationMs": 0.022600000000000002
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0292,
+        "totalMs": 1364.5988
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 32,
+        "id": "quote-true:s1:1",
+        "kind": "phrase",
+        "last": 38,
+        "parentId": "quote-true:s1",
+        "role": "predicate",
+        "sentenceId": "quote-true:s1"
+      },
+      "split": true,
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1364.5233,
+        "inputTokens": 592,
+        "outputTokens": 85,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "elapsedMs": 1524.8838999999998,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "quote-false:s0:0",
+            "kind": "phrase",
+            "last": 9,
+            "parentId": "quote-false:s0",
+            "role": "adverbial",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 10,
+            "id": "quote-false:s0:1",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "quote-false:s0",
+            "role": "subject",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 18,
+            "id": "quote-false:s0:2",
+            "kind": "word",
+            "last": 18,
+            "parentId": "quote-false:s0",
+            "role": "predicate",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "noun",
+            "depth": 1,
+            "expandable": true,
+            "first": 19,
+            "id": "quote-false:s0:3",
+            "kind": "clause",
+            "last": 40,
+            "parentId": "quote-false:s0",
+            "role": "object",
+            "sentenceId": "quote-false:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "引语为直接引语",
+          "主语含头衔同位语"
+        ],
+        "parentId": "quote-false:s0",
+        "relations": [],
+        "skeleton": "Zeteo editor-in-chief Mehdi Hasan says AIPAC blossoms in the dark, shrivels in the light.",
+        "translation": "Zeteo主编迈赫迪·哈桑说，AIPAC在黑暗中绽放，在光明中枯萎。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 512,
+            "inputTokens": 717,
+            "outputTokens": 141,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1524.7722,
+            "responseReadMs": 0.05430000000023938,
+            "responseWaitMs": 1524.7178999999999,
+            "stage": "第1层 · 0–40 · 初次",
+            "validationMs": 0.0314
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0327,
+        "totalMs": 1524.8615
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "quote-false:s0",
+        "kind": "sentence",
+        "last": 40,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "quote-false:s0"
+      },
+      "split": false,
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 512,
+        "httpMs": 1524.7722,
+        "inputTokens": 717,
+        "outputTokens": 141,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "elapsedMs": 1367.549,
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "main",
+            "depth": 2,
+            "expandable": true,
+            "first": 19,
+            "id": "quote-false:s0:3:0",
+            "kind": "clause",
+            "last": 30,
+            "parentId": "quote-false:s0:3",
+            "role": "main_clause",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "main",
+            "depth": 2,
+            "expandable": true,
+            "first": 31,
+            "id": "quote-false:s0:3:1",
+            "kind": "clause",
+            "last": 39,
+            "parentId": "quote-false:s0:3",
+            "role": "main_clause",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 40,
+            "id": "quote-false:s0:3:2",
+            "kind": "word",
+            "last": 40,
+            "parentId": "quote-false:s0:3",
+            "role": "punctuation",
+            "sentenceId": "quote-false:s0"
+          }
+        ],
+        "normalizationCount": 2,
+        "notes": [
+          "引号内为直接引语",
+          "两个主句并列"
+        ],
+        "parentId": "quote-false:s0:3",
+        "relations": [],
+        "skeleton": null,
+        "translation": "AIPAC“在黑暗中绽放，在光明中枯萎。我们正试图把一些阳光照到AIPAC身上。”",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 512,
+            "inputTokens": 694,
+            "outputTokens": 130,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1367.4401999999998,
+            "responseReadMs": 0.04839999999967404,
+            "responseWaitMs": 1367.3918,
+            "stage": "第2层 · 19–40 · 初次",
+            "validationMs": 0.0235
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0401,
+        "totalMs": 1367.5283
+      },
+      "parent": {
+        "ctype": "noun",
+        "depth": 1,
+        "expandable": true,
+        "first": 19,
+        "id": "quote-false:s0:3",
+        "kind": "clause",
+        "last": 40,
+        "parentId": "quote-false:s0",
+        "role": "object",
+        "sentenceId": "quote-false:s0"
+      },
+      "split": false,
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 512,
+        "httpMs": 1367.4401999999998,
+        "inputTokens": 694,
+        "outputTokens": 130,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "elapsedMs": 3564.9261,
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 19,
+            "id": "quote-false:s0:3:0:0",
+            "kind": "word",
+            "last": 19,
+            "parentId": "quote-false:s0:3:0",
+            "role": "subject",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 20,
+            "id": "quote-false:s0:3:0:1",
+            "kind": "word",
+            "last": 20,
+            "parentId": "quote-false:s0:3:0",
+            "role": "punctuation",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 21,
+            "id": "quote-false:s0:3:0:2",
+            "kind": "word",
+            "last": 21,
+            "parentId": "quote-false:s0:3:0",
+            "role": "predicate",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 22,
+            "id": "quote-false:s0:3:0:3",
+            "kind": "phrase",
+            "last": 24,
+            "parentId": "quote-false:s0:3:0",
+            "role": "adverbial",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 25,
+            "id": "quote-false:s0:3:0:4",
+            "kind": "word",
+            "last": 25,
+            "parentId": "quote-false:s0:3:0",
+            "role": "punctuation",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 26,
+            "id": "quote-false:s0:3:0:5",
+            "kind": "word",
+            "last": 26,
+            "parentId": "quote-false:s0:3:0",
+            "role": "predicate",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 27,
+            "id": "quote-false:s0:3:0:6",
+            "kind": "phrase",
+            "last": 29,
+            "parentId": "quote-false:s0:3:0",
+            "role": "adverbial",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 30,
+            "id": "quote-false:s0:3:0:7",
+            "kind": "word",
+            "last": 30,
+            "parentId": "quote-false:s0:3:0",
+            "role": "punctuation",
+            "sentenceId": "quote-false:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "引号作为独立标点处理",
+          "两个谓语并列共享主语"
+        ],
+        "parentId": "quote-false:s0:3:0",
+        "relations": [],
+        "skeleton": null,
+        "translation": "AIPAC“在黑暗中绽放，在光明中枯萎。”",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 512,
+            "inputTokens": 653,
+            "outputTokens": 160,
+            "reasoningTokens": null,
+            "repairReason": "n[1] actual first=21, last=21, expandable=0; REQUIRED first=20, 20<=last<=30, expandable=0/1. Correct this array; do not repeat it.",
+            "requestMs": 1768.9553,
+            "responseReadMs": 0.04610000000002401,
+            "responseWaitMs": 1768.9092,
+            "stage": "第3层 · 19–30 · 初次",
+            "validationMs": 0.027299999999999998
+          },
+          {
+            "cachedInputTokens": 640,
+            "inputTokens": 881,
+            "outputTokens": 175,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1795.7999,
+            "responseReadMs": 0.048400000000128784,
+            "responseWaitMs": 1795.7514999999999,
+            "stage": "第3层 · 19–30 · 修复",
+            "validationMs": 0.0299
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0315,
+        "totalMs": 3564.9046000000003
+      },
+      "parent": {
+        "ctype": "main",
+        "depth": 2,
+        "expandable": true,
+        "first": 19,
+        "id": "quote-false:s0:3:0",
+        "kind": "clause",
+        "last": 30,
+        "parentId": "quote-false:s0:3",
+        "role": "main_clause",
+        "sentenceId": "quote-false:s0"
+      },
+      "split": false,
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 1152,
+        "httpMs": 3564.7552,
+        "inputTokens": 1534,
+        "outputTokens": 335,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "elapsedMs": 1654.8777,
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 31,
+            "id": "quote-false:s0:3:1:0",
+            "kind": "word",
+            "last": 31,
+            "parentId": "quote-false:s0:3:1",
+            "role": "subject",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 32,
+            "id": "quote-false:s0:3:1:1",
+            "kind": "phrase",
+            "last": 38,
+            "parentId": "quote-false:s0:3:1",
+            "role": "predicate",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 39,
+            "id": "quote-false:s0:3:1:2",
+            "kind": "word",
+            "last": 39,
+            "parentId": "quote-false:s0:3:1",
+            "role": "punctuation",
+            "sentenceId": "quote-false:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "主句为现在进行时",
+          "宾语含不定式结构"
+        ],
+        "parentId": "quote-false:s0:3:1",
+        "relations": [],
+        "skeleton": null,
+        "translation": "我们正试图把阳光照到AIPAC身上。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 642,
+            "outputTokens": 100,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1654.7768999999998,
+            "responseReadMs": 0.0465999999998985,
+            "responseWaitMs": 1654.7303,
+            "stage": "第3层 · 31–39 · 初次",
+            "validationMs": 0.0231
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.036399999999999995,
+        "totalMs": 1654.8595000000003
+      },
+      "parent": {
+        "ctype": "main",
+        "depth": 2,
+        "expandable": true,
+        "first": 31,
+        "id": "quote-false:s0:3:1",
+        "kind": "clause",
+        "last": 39,
+        "parentId": "quote-false:s0:3",
+        "role": "main_clause",
+        "sentenceId": "quote-false:s0"
+      },
+      "split": false,
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1654.7768999999998,
+        "inputTokens": 642,
+        "outputTokens": 100,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "elapsedMs": 1297.5568,
+      "layer": {
+        "depth": 4,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 4,
+            "expandable": false,
+            "first": 32,
+            "id": "quote-false:s0:3:1:1:0",
+            "kind": "word",
+            "last": 32,
+            "parentId": "quote-false:s0:3:1:1",
+            "role": "head",
+            "sentenceId": "quote-false:s0"
+          },
+          {
+            "ctype": "infinitive",
+            "depth": 4,
+            "expandable": false,
+            "first": 33,
+            "id": "quote-false:s0:3:1:1:1",
+            "kind": "phrase",
+            "last": 38,
+            "parentId": "quote-false:s0:3:1:1",
+            "role": "complement",
+            "sentenceId": "quote-false:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "不定式短语作trying的补足语"
+        ],
+        "parentId": "quote-false:s0:3:1:1",
+        "relations": [],
+        "skeleton": null,
+        "translation": "试图把阳光照到AIPAC身上",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 631,
+            "outputTokens": 80,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1297.4152000000001,
+            "responseReadMs": 0.04800000000000182,
+            "responseWaitMs": 1297.3672000000001,
+            "stage": "第4层 · 32–38 · 初次",
+            "validationMs": 0.0593
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0365,
+        "totalMs": 1297.5349999999999
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 3,
+        "expandable": true,
+        "first": 32,
+        "id": "quote-false:s0:3:1:1",
+        "kind": "phrase",
+        "last": 38,
+        "parentId": "quote-false:s0:3:1",
+        "role": "predicate",
+        "sentenceId": "quote-false:s0"
+      },
+      "split": false,
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1297.4152000000001,
+        "inputTokens": 631,
+        "outputTokens": 80,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    }
+  ],
+  "temperature": 0.3,
+  "text": "Referencing the title of the film, Night Flower, Zeteo editor-in-chief Mehdi Hasan says AIPAC “blossoms in the dark, shrivels in the light. We’re trying to put some sunlight onto AIPAC.”",
+  "thinking": false
+}

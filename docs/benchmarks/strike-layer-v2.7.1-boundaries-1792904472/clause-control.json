@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "2",
+  "promptVersion": "layer-v2.7.1-boundaries",
+  "sessionId": "clause-control",
+  "pieces": [
+    {
+      "id": 0,
+      "text": "The"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "report"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "surprised"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "me"
+    },
+    {
+      "id": 7,
+      "text": ","
+    },
+    {
+      "id": 8,
+      "text": " "
+    },
+    {
+      "id": 9,
+      "text": "and"
+    },
+    {
+      "id": 10,
+      "text": " "
+    },
+    {
+      "id": 11,
+      "text": "the"
+    },
+    {
+      "id": 12,
+      "text": " "
+    },
+    {
+      "id": 13,
+      "text": "editor"
+    },
+    {
+      "id": 14,
+      "text": " "
+    },
+    {
+      "id": 15,
+      "text": "disagreed"
+    },
+    {
+      "id": 16,
+      "text": "."
+    }
+  ],
+  "tokens": [
+    {
+      "id": 0,
+      "text": "The",
+      "pieceId": 0
+    },
+    {
+      "id": 1,
+      "text": "report",
+      "pieceId": 2
+    },
+    {
+      "id": 2,
+      "text": "surprised",
+      "pieceId": 4
+    },
+    {
+      "id": 3,
+      "text": "me",
+      "pieceId": 6
+    },
+    {
+      "id": 4,
+      "text": ",",
+      "pieceId": 7
+    },
+    {
+      "id": 5,
+      "text": "and",
+      "pieceId": 9
+    },
+    {
+      "id": 6,
+      "text": "the",
+      "pieceId": 11
+    },
+    {
+      "id": 7,
+      "text": "editor",
+      "pieceId": 13
+    },
+    {
+      "id": 8,
+      "text": "disagreed",
+      "pieceId": 15
+    },
+    {
+      "id": 9,
+      "text": ".",
+      "pieceId": 16
+    }
+  ],
+  "roots": [
+    {
+      "id": "clause-control:s0",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 0,
+      "last": 9,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "clause-control:s0"
+    }
+  ],
+  "layers": [],
+  "maxDepth": 4
+}

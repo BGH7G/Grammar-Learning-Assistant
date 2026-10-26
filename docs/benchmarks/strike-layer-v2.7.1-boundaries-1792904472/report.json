@@ -1,0 +1,882 @@
+{
+  "complete": true,
+  "model": "deepseek-v4-flash",
+  "promptVersion": "layer-v2.7.1-boundaries",
+  "reasoningEffort": "high",
+  "rows": [
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "id": "original-1:s0:0",
+            "kind": "phrase",
+            "last": 2,
+            "parentId": "original-1:s0",
+            "role": "subject",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 3,
+            "id": "original-1:s0:1",
+            "kind": "phrase",
+            "last": 11,
+            "parentId": "original-1:s0",
+            "role": "attribute",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 12,
+            "id": "original-1:s0:2",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "original-1:s0",
+            "role": "predicate",
+            "sentenceId": "original-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "过去分词短语补充说明主语，被逗号隔开",
+          "两个并列谓语共用主语"
+        ],
+        "parentId": "original-1:s0",
+        "relations": [
+          {
+            "headToken": 2,
+            "sourceId": "original-1:s0:1"
+          }
+        ],
+        "skeleton": "His political views strike many as plain-speaking and strike many more as plainly bigoted.",
+        "translation": "他的政治观点，传播给他在X上的2.4亿粉丝，让许多人觉得直言不讳，也让更多人觉得明显偏执。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 0,
+            "inputTokens": 7719,
+            "outputTokens": 132,
+            "reasoningTokens": null,
+            "repairReason": "n[1] actual first=4, last=11, expandable=1; REQUIRED first=3, 3<=last<=30, expandable=0/1. Correct this array; do not repeat it.",
+            "requestMs": 2793.5981,
+            "responseReadMs": 0.06720000000041182,
+            "responseWaitMs": 2793.5308999999997,
+            "stage": "第1层 · 0–30 · 初次",
+            "validationMs": 0.0704
+          },
+          {
+            "cachedInputTokens": 7680,
+            "inputTokens": 7919,
+            "outputTokens": 132,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1401.2228,
+            "responseReadMs": 0.04940000000010514,
+            "responseWaitMs": 1401.1734,
+            "stage": "第1层 · 0–30 · 修复",
+            "validationMs": 0.055099999999999996
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.1283,
+        "totalMs": 4195.1602
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "original-1:s0",
+        "kind": "sentence",
+        "last": 30,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "original-1:s0"
+      },
+      "sample": "original-1",
+      "status": "ok",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 7680,
+        "httpMs": 4194.820900000001,
+        "inputTokens": 15638,
+        "outputTokens": 264,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 3,
+            "id": "original-1:s0:1:0",
+            "kind": "word",
+            "last": 3,
+            "parentId": "original-1:s0:1",
+            "role": "punctuation",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 2,
+            "expandable": true,
+            "first": 4,
+            "id": "original-1:s0:1:1",
+            "kind": "clause",
+            "last": 11,
+            "parentId": "original-1:s0:1",
+            "role": "attribute",
+            "sentenceId": "original-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "过去分词短语作后置定语修饰 views"
+        ],
+        "parentId": "original-1:s0:1",
+        "relations": [],
+        "skeleton": null,
+        "translation": "，传播给他2.4亿X粉丝的，",
+        "warnings": [
+          "部分修饰关联未通过校验，已省略连线。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 7424,
+            "inputTokens": 7719,
+            "outputTokens": 76,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1698.7068000000002,
+            "responseReadMs": 0.09980000000018663,
+            "responseWaitMs": 1698.607,
+            "stage": "第2层 · 3–11 · 初次",
+            "validationMs": 0.0257
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0347,
+        "totalMs": 1698.7931999999998
+      },
+      "parent": {
+        "ctype": "participial",
+        "depth": 1,
+        "expandable": true,
+        "first": 3,
+        "id": "original-1:s0:1",
+        "kind": "phrase",
+        "last": 11,
+        "parentId": "original-1:s0",
+        "role": "attribute",
+        "sentenceId": "original-1:s0"
+      },
+      "sample": "original-1",
+      "status": "ok",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 7424,
+        "httpMs": 1698.7068000000002,
+        "inputTokens": 7719,
+        "outputTokens": 76,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 12,
+            "id": "original-1:s0:2:0",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "original-1:s0:2",
+            "role": "coordinate",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 18,
+            "id": "original-1:s0:2:1",
+            "kind": "word",
+            "last": 18,
+            "parentId": "original-1:s0:2",
+            "role": "conjunction",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 19,
+            "id": "original-1:s0:2:2",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "original-1:s0:2",
+            "role": "coordinate",
+            "sentenceId": "original-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "两个并列谓语共用主语，各带宾语和 as 补语"
+        ],
+        "parentId": "original-1:s0:2",
+        "relations": [],
+        "skeleton": null,
+        "translation": "令许多人觉得直言不讳，也令更多人（包括《经济学人》）觉得偏执得露骨",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 7424,
+            "inputTokens": 7719,
+            "outputTokens": 101,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1733.7118999999998,
+            "responseReadMs": 0.05399999999985994,
+            "responseWaitMs": 1733.6579,
+            "stage": "第2层 · 12–30 · 初次",
+            "validationMs": 0.024
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.038,
+        "totalMs": 1733.7988
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 12,
+        "id": "original-1:s0:2",
+        "kind": "phrase",
+        "last": 30,
+        "parentId": "original-1:s0",
+        "role": "predicate",
+        "sentenceId": "original-1:s0"
+      },
+      "sample": "original-1",
+      "status": "ok",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 7424,
+        "httpMs": 1733.7118999999998,
+        "inputTokens": 7719,
+        "outputTokens": 101,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 4,
+            "id": "original-1:s0:1:1:0",
+            "kind": "word",
+            "last": 4,
+            "parentId": "original-1:s0:1:1",
+            "role": "head",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 5,
+            "id": "original-1:s0:1:1:1",
+            "kind": "phrase",
+            "last": 8,
+            "parentId": "original-1:s0:1:1",
+            "role": "adverbial",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 9,
+            "id": "original-1:s0:1:1:2",
+            "kind": "phrase",
+            "last": 11,
+            "parentId": "original-1:s0:1:1",
+            "role": "adverbial",
+            "sentenceId": "original-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "过去分词作后置定语，含被动意义",
+          "to 短语表示传播对象"
+        ],
+        "parentId": "original-1:s0:1:1",
+        "relations": [
+          {
+            "headToken": 4,
+            "sourceId": "original-1:s0:1:1:1"
+          }
+        ],
+        "skeleton": null,
+        "translation": "传播给他2.4亿X平台粉丝的",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 7424,
+            "inputTokens": 7720,
+            "outputTokens": 95,
+            "reasoningTokens": null,
+            "repairReason": "节点未完全覆盖目标，最后一个 last 应为 11。",
+            "requestMs": 1692.5045,
+            "responseReadMs": 0.0466999999998734,
+            "responseWaitMs": 1692.4578000000001,
+            "stage": "第3层 · 4–11 · 初次",
+            "validationMs": 0.0246
+          },
+          {
+            "cachedInputTokens": 7680,
+            "inputTokens": 7850,
+            "outputTokens": 95,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1429.2764,
+            "responseReadMs": 0.04169999999999163,
+            "responseWaitMs": 1429.2347,
+            "stage": "第3层 · 4–11 · 修复",
+            "validationMs": 0.0286
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0396,
+        "totalMs": 3121.9277
+      },
+      "parent": {
+        "ctype": "participial",
+        "depth": 2,
+        "expandable": true,
+        "first": 4,
+        "id": "original-1:s0:1:1",
+        "kind": "clause",
+        "last": 11,
+        "parentId": "original-1:s0:1",
+        "role": "attribute",
+        "sentenceId": "original-1:s0"
+      },
+      "sample": "original-1",
+      "status": "ok",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 15104,
+        "httpMs": 3121.7808999999997,
+        "inputTokens": 15570,
+        "outputTokens": 190,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 12,
+            "id": "original-1:s0:2:0:0",
+            "kind": "word",
+            "last": 12,
+            "parentId": "original-1:s0:2:0",
+            "role": "predicate",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 13,
+            "id": "original-1:s0:2:0:1",
+            "kind": "word",
+            "last": 13,
+            "parentId": "original-1:s0:2:0",
+            "role": "object",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 14,
+            "id": "original-1:s0:2:0:2",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "original-1:s0:2:0",
+            "role": "complement",
+            "sentenceId": "original-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "as 短语说明主语给人的印象"
+        ],
+        "parentId": "original-1:s0:2:0",
+        "relations": [],
+        "skeleton": null,
+        "translation": "让许多人觉得不过是直言不讳",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 7424,
+            "inputTokens": 7719,
+            "outputTokens": 78,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1165.4713000000002,
+            "responseReadMs": 0.04510000000027503,
+            "responseWaitMs": 1165.4261999999999,
+            "stage": "第3层 · 12–17 · 初次",
+            "validationMs": 0.0235
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0653,
+        "totalMs": 1165.5884999999998
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 2,
+        "expandable": true,
+        "first": 12,
+        "id": "original-1:s0:2:0",
+        "kind": "phrase",
+        "last": 17,
+        "parentId": "original-1:s0:2",
+        "role": "coordinate",
+        "sentenceId": "original-1:s0"
+      },
+      "sample": "original-1",
+      "status": "ok",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 7424,
+        "httpMs": 1165.4713000000002,
+        "inputTokens": 7719,
+        "outputTokens": 78,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 19,
+            "id": "original-1:s0:2:2:0",
+            "kind": "word",
+            "last": 19,
+            "parentId": "original-1:s0:2:2",
+            "role": "predicate",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 20,
+            "id": "original-1:s0:2:2:1",
+            "kind": "phrase",
+            "last": 26,
+            "parentId": "original-1:s0:2:2",
+            "role": "object",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 27,
+            "id": "original-1:s0:2:2:2",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "original-1:s0:2:2",
+            "role": "complement",
+            "sentenceId": "original-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "as 短语评价 views，非评价 many"
+        ],
+        "parentId": "original-1:s0:2:2",
+        "relations": [],
+        "skeleton": null,
+        "translation": "并且让更多人——包括《经济学人》——觉得是公然偏执的",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 7424,
+            "inputTokens": 7719,
+            "outputTokens": 89,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1480.0423999999998,
+            "responseReadMs": 0.041899999999714055,
+            "responseWaitMs": 1480.0005,
+            "stage": "第3层 · 19–30 · 初次",
+            "validationMs": 0.0223
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0445,
+        "totalMs": 1480.1304
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 2,
+        "expandable": true,
+        "first": 19,
+        "id": "original-1:s0:2:2",
+        "kind": "phrase",
+        "last": 30,
+        "parentId": "original-1:s0:2",
+        "role": "coordinate",
+        "sentenceId": "original-1:s0"
+      },
+      "sample": "original-1",
+      "status": "ok",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 7424,
+        "httpMs": 1480.0423999999998,
+        "inputTokens": 7719,
+        "outputTokens": 89,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 4,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 4,
+            "expandable": false,
+            "first": 20,
+            "id": "original-1:s0:2:2:1:0",
+            "kind": "word",
+            "last": 20,
+            "parentId": "original-1:s0:2:2:1",
+            "role": "object",
+            "sentenceId": "original-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 4,
+            "expandable": false,
+            "first": 21,
+            "id": "original-1:s0:2:2:1:1",
+            "kind": "phrase",
+            "last": 26,
+            "parentId": "original-1:s0:2:2:1",
+            "role": "attribute",
+            "sentenceId": "original-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "including 短语补充说明 many more"
+        ],
+        "parentId": "original-1:s0:2:2:1",
+        "relations": [
+          {
+            "headToken": 20,
+            "sourceId": "original-1:s0:2:2:1:1"
+          }
+        ],
+        "skeleton": null,
+        "translation": "以及让更多人——包括《经济学人》——觉得是赤裸裸的偏执",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 7424,
+            "inputTokens": 7718,
+            "outputTokens": 77,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1687.6126,
+            "responseReadMs": 0.04469999999992069,
+            "responseWaitMs": 1687.5679,
+            "stage": "第4层 · 20–26 · 初次",
+            "validationMs": 0.0315
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.030199999999999998,
+        "totalMs": 1687.6977
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 3,
+        "expandable": true,
+        "first": 20,
+        "id": "original-1:s0:2:2:1",
+        "kind": "phrase",
+        "last": 26,
+        "parentId": "original-1:s0:2:2",
+        "role": "object",
+        "sentenceId": "original-1:s0"
+      },
+      "sample": "original-1",
+      "status": "ok",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 7424,
+        "httpMs": 1687.6126,
+        "inputTokens": 7718,
+        "outputTokens": 77,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "error": "本层修复后仍未通过校验：n[2] actual first=12, last=29, expandable=1; REQUIRED first=11, 11<=last<=30, expandable=0/1. Correct this array; do not repeat it. 上一层结果已保留。",
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "original-2:s0",
+        "kind": "sentence",
+        "last": 30,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "original-2:s0"
+      },
+      "sample": "original-2",
+      "status": "error",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 15232,
+        "httpMs": 3386.4166999999998,
+        "inputTokens": 15637,
+        "outputTokens": 262,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "error": "本层修复后仍未通过校验：节点未完全覆盖目标，最后一个 last 应为 22。 上一层结果已保留。",
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "transfer:s0",
+        "kind": "sentence",
+        "last": 22,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "transfer:s0"
+      },
+      "sample": "transfer",
+      "status": "error",
+      "text": "Her proposals, circulated among the staff, strike some as sensible and strike others, including the manager, as impractical.",
+      "totals": {
+        "cachedInputTokens": 15104,
+        "httpMs": 3296.9794,
+        "inputTokens": 15562,
+        "outputTokens": 244,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "id": "finite-control:s0:0",
+            "kind": "phrase",
+            "last": 1,
+            "parentId": "finite-control:s0",
+            "role": "subject",
+            "sentenceId": "finite-control:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 2,
+            "id": "finite-control:s0:1",
+            "kind": "phrase",
+            "last": 8,
+            "parentId": "finite-control:s0",
+            "role": "predicate",
+            "sentenceId": "finite-control:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 9,
+            "id": "finite-control:s0:2",
+            "kind": "word",
+            "last": 9,
+            "parentId": "finite-control:s0",
+            "role": "punctuation",
+            "sentenceId": "finite-control:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "两个并列谓语共用一个主语"
+        ],
+        "parentId": "finite-control:s0",
+        "relations": [],
+        "skeleton": "His team disseminated the report and contacted the editor.",
+        "translation": "他的团队传播了那份报告，并联系了编辑。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 7424,
+            "inputTokens": 7635,
+            "outputTokens": 78,
+            "reasoningTokens": null,
+            "repairReason": "节点未完全覆盖目标，最后一个 last 应为 9。",
+            "requestMs": 1416.4787999999999,
+            "responseReadMs": 0.04549999999994725,
+            "responseWaitMs": 1416.4333,
+            "stage": "第1层 · 0–9 · 初次",
+            "validationMs": 0.0259
+          },
+          {
+            "cachedInputTokens": 7552,
+            "inputTokens": 7748,
+            "outputTokens": 92,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1529.3932,
+            "responseReadMs": 0.6567000000000007,
+            "responseWaitMs": 1528.7365,
+            "stage": "第1层 · 0–9 · 修复",
+            "validationMs": 0.0281
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.027100000000000003,
+        "totalMs": 2946.0123
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "finite-control:s0",
+        "kind": "sentence",
+        "last": 9,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "finite-control:s0"
+      },
+      "sample": "finite-control",
+      "status": "ok",
+      "text": "His team disseminated the report and contacted the editor.",
+      "totals": {
+        "cachedInputTokens": 14976,
+        "httpMs": 2945.872,
+        "inputTokens": 15383,
+        "outputTokens": 170,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "error": "本层修复后仍未通过校验：节点未完全覆盖目标，最后一个 last 应为 9。 上一层结果已保留。",
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "clause-control:s0",
+        "kind": "sentence",
+        "last": 9,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "clause-control:s0"
+      },
+      "sample": "clause-control",
+      "status": "error",
+      "text": "The report surprised me, and the editor disagreed.",
+      "totals": {
+        "cachedInputTokens": 14976,
+        "httpMs": 2839.2248,
+        "inputTokens": 15435,
+        "outputTokens": 198,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    }
+  ],
+  "temperature": 0.3,
+  "thinking": false
+}

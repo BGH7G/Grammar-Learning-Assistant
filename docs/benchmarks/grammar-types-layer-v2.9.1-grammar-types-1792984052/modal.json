@@ -1,0 +1,198 @@
+{
+  "layers": [
+    {
+      "depth": 1,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 0,
+          "grammar": [
+            "pronoun"
+          ],
+          "id": "modal:s0:0",
+          "kind": "word",
+          "last": 0,
+          "parentId": "modal:s0",
+          "role": "subject",
+          "sentenceId": "modal:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": true,
+          "first": 1,
+          "grammar": [
+            "verb_phrase"
+          ],
+          "id": "modal:s0:1",
+          "kind": "phrase",
+          "last": 2,
+          "parentId": "modal:s0",
+          "role": "predicate",
+          "sentenceId": "modal:s0"
+        },
+        {
+          "ctype": "infinitive",
+          "depth": 1,
+          "expandable": true,
+          "first": 3,
+          "id": "modal:s0:2",
+          "kind": "clause",
+          "last": 5,
+          "parentId": "modal:s0",
+          "role": "object",
+          "sentenceId": "modal:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "情态动词与实义动词共同组成谓语"
+      ],
+      "parentId": "modal:s0",
+      "relations": [],
+      "skeleton": "They may struggle to adjust.",
+      "translation": "他们可能难以适应。",
+      "warnings": [
+        "部分语法细分类与结构不一致，已保留通用标签。"
+      ]
+    },
+    {
+      "depth": 2,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 1,
+          "grammar": [
+            "modal_verb"
+          ],
+          "id": "modal:s0:1:0",
+          "kind": "word",
+          "last": 1,
+          "parentId": "modal:s0:1",
+          "role": "predicate",
+          "sentenceId": "modal:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 2,
+          "grammar": [
+            "lexical_verb"
+          ],
+          "id": "modal:s0:1:1",
+          "kind": "word",
+          "last": 2,
+          "parentId": "modal:s0:1",
+          "role": "predicate",
+          "sentenceId": "modal:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "情态动词与实义动词共同组成谓语"
+      ],
+      "parentId": "modal:s0:1",
+      "relations": [],
+      "skeleton": null,
+      "translation": "（他们）可能难以",
+      "warnings": []
+    }
+  ],
+  "maxDepth": 4,
+  "pieces": [
+    {
+      "id": 0,
+      "text": "They"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "may"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "struggle"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "to"
+    },
+    {
+      "id": 7,
+      "text": " "
+    },
+    {
+      "id": 8,
+      "text": "adjust"
+    },
+    {
+      "id": 9,
+      "text": "."
+    }
+  ],
+  "promptVersion": "layer-v2.9.1-grammar-types",
+  "roots": [
+    {
+      "ctype": "none",
+      "depth": 0,
+      "expandable": true,
+      "first": 0,
+      "id": "modal:s0",
+      "kind": "sentence",
+      "last": 5,
+      "parentId": null,
+      "role": "root",
+      "sentenceId": "modal:s0"
+    }
+  ],
+  "schemaVersion": "2",
+  "sessionId": "modal",
+  "tokens": [
+    {
+      "id": 0,
+      "pieceId": 0,
+      "text": "They"
+    },
+    {
+      "id": 1,
+      "pieceId": 2,
+      "text": "may"
+    },
+    {
+      "id": 2,
+      "pieceId": 4,
+      "text": "struggle"
+    },
+    {
+      "id": 3,
+      "pieceId": 6,
+      "text": "to"
+    },
+    {
+      "id": 4,
+      "pieceId": 8,
+      "text": "adjust"
+    },
+    {
+      "id": 5,
+      "pieceId": 9,
+      "text": "."
+    }
+  ]
+}

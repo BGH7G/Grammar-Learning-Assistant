@@ -1,0 +1,359 @@
+{
+  "schemaVersion": "2",
+  "promptVersion": "layer-v2.7.3-boundaries",
+  "sessionId": "transfer",
+  "pieces": [
+    {
+      "id": 0,
+      "text": "Her"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "proposals"
+    },
+    {
+      "id": 3,
+      "text": ","
+    },
+    {
+      "id": 4,
+      "text": " "
+    },
+    {
+      "id": 5,
+      "text": "circulated"
+    },
+    {
+      "id": 6,
+      "text": " "
+    },
+    {
+      "id": 7,
+      "text": "among"
+    },
+    {
+      "id": 8,
+      "text": " "
+    },
+    {
+      "id": 9,
+      "text": "the"
+    },
+    {
+      "id": 10,
+      "text": " "
+    },
+    {
+      "id": 11,
+      "text": "staff"
+    },
+    {
+      "id": 12,
+      "text": ","
+    },
+    {
+      "id": 13,
+      "text": " "
+    },
+    {
+      "id": 14,
+      "text": "strike"
+    },
+    {
+      "id": 15,
+      "text": " "
+    },
+    {
+      "id": 16,
+      "text": "some"
+    },
+    {
+      "id": 17,
+      "text": " "
+    },
+    {
+      "id": 18,
+      "text": "as"
+    },
+    {
+      "id": 19,
+      "text": " "
+    },
+    {
+      "id": 20,
+      "text": "sensible"
+    },
+    {
+      "id": 21,
+      "text": " "
+    },
+    {
+      "id": 22,
+      "text": "and"
+    },
+    {
+      "id": 23,
+      "text": " "
+    },
+    {
+      "id": 24,
+      "text": "strike"
+    },
+    {
+      "id": 25,
+      "text": " "
+    },
+    {
+      "id": 26,
+      "text": "others"
+    },
+    {
+      "id": 27,
+      "text": ","
+    },
+    {
+      "id": 28,
+      "text": " "
+    },
+    {
+      "id": 29,
+      "text": "including"
+    },
+    {
+      "id": 30,
+      "text": " "
+    },
+    {
+      "id": 31,
+      "text": "the"
+    },
+    {
+      "id": 32,
+      "text": " "
+    },
+    {
+      "id": 33,
+      "text": "manager"
+    },
+    {
+      "id": 34,
+      "text": ","
+    },
+    {
+      "id": 35,
+      "text": " "
+    },
+    {
+      "id": 36,
+      "text": "as"
+    },
+    {
+      "id": 37,
+      "text": " "
+    },
+    {
+      "id": 38,
+      "text": "impractical"
+    },
+    {
+      "id": 39,
+      "text": "."
+    }
+  ],
+  "tokens": [
+    {
+      "id": 0,
+      "text": "Her",
+      "pieceId": 0
+    },
+    {
+      "id": 1,
+      "text": "proposals",
+      "pieceId": 2
+    },
+    {
+      "id": 2,
+      "text": ",",
+      "pieceId": 3
+    },
+    {
+      "id": 3,
+      "text": "circulated",
+      "pieceId": 5
+    },
+    {
+      "id": 4,
+      "text": "among",
+      "pieceId": 7
+    },
+    {
+      "id": 5,
+      "text": "the",
+      "pieceId": 9
+    },
+    {
+      "id": 6,
+      "text": "staff",
+      "pieceId": 11
+    },
+    {
+      "id": 7,
+      "text": ",",
+      "pieceId": 12
+    },
+    {
+      "id": 8,
+      "text": "strike",
+      "pieceId": 14
+    },
+    {
+      "id": 9,
+      "text": "some",
+      "pieceId": 16
+    },
+    {
+      "id": 10,
+      "text": "as",
+      "pieceId": 18
+    },
+    {
+      "id": 11,
+      "text": "sensible",
+      "pieceId": 20
+    },
+    {
+      "id": 12,
+      "text": "and",
+      "pieceId": 22
+    },
+    {
+      "id": 13,
+      "text": "strike",
+      "pieceId": 24
+    },
+    {
+      "id": 14,
+      "text": "others",
+      "pieceId": 26
+    },
+    {
+      "id": 15,
+      "text": ",",
+      "pieceId": 27
+    },
+    {
+      "id": 16,
+      "text": "including",
+      "pieceId": 29
+    },
+    {
+      "id": 17,
+      "text": "the",
+      "pieceId": 31
+    },
+    {
+      "id": 18,
+      "text": "manager",
+      "pieceId": 33
+    },
+    {
+      "id": 19,
+      "text": ",",
+      "pieceId": 34
+    },
+    {
+      "id": 20,
+      "text": "as",
+      "pieceId": 36
+    },
+    {
+      "id": 21,
+      "text": "impractical",
+      "pieceId": 38
+    },
+    {
+      "id": 22,
+      "text": ".",
+      "pieceId": 39
+    }
+  ],
+  "roots": [
+    {
+      "id": "transfer:s0",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 0,
+      "last": 22,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "transfer:s0"
+    }
+  ],
+  "layers": [
+    {
+      "parentId": "transfer:s0",
+      "depth": 1,
+      "skeleton": "Her proposals strike some as sensible and strike others as impractical.",
+      "translation": "她的提案在员工中传阅后，让一些人觉得合理，也让另一些人（包括经理）觉得不切实际。",
+      "nodes": [
+        {
+          "id": "transfer:s0:0",
+          "parentId": "transfer:s0",
+          "kind": "phrase",
+          "role": "subject",
+          "ctype": "none",
+          "first": 0,
+          "last": 2,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "transfer:s0"
+        },
+        {
+          "id": "transfer:s0:1",
+          "parentId": "transfer:s0",
+          "kind": "clause",
+          "role": "attribute",
+          "ctype": "participial",
+          "first": 3,
+          "last": 7,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "transfer:s0"
+        },
+        {
+          "id": "transfer:s0:2",
+          "parentId": "transfer:s0",
+          "kind": "phrase",
+          "role": "predicate",
+          "ctype": "none",
+          "first": 8,
+          "last": 22,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "transfer:s0"
+        }
+      ],
+      "relations": [
+        {
+          "sourceId": "transfer:s0:1",
+          "headToken": 1
+        }
+      ],
+      "notes": [
+        "分词短语补充说明主语 proposals",
+        "as 补足语说明主语给人的印象"
+      ],
+      "warnings": [
+        "已按原文补齐标点归属，单词的成分划分保持原样。"
+      ],
+      "normalizationCount": 0
+    }
+  ],
+  "maxDepth": 4
+}

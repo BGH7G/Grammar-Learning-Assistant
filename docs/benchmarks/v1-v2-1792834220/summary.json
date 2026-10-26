@@ -1,0 +1,49 @@
+{
+  "conditions": {
+    "v1_full": {
+      "runs": 12,
+      "completed": 12,
+      "inputTokens": 6772,
+      "outputTokens": 4036,
+      "totalTokens": 10808,
+      "cachedInputTokens": 4352,
+      "requests": 12,
+      "retryRequests": 0,
+      "firstPassRuns": 12,
+      "meanMs": 2109.3249333333333,
+      "medianMs": 2029.7386
+    },
+    "v2_first": {
+      "runs": 12,
+      "completed": 12,
+      "inputTokens": 7406,
+      "outputTokens": 1425,
+      "totalTokens": 8831,
+      "cachedInputTokens": 4480,
+      "requests": 12,
+      "retryRequests": 0,
+      "firstPassRuns": 12,
+      "meanMs": 1495.007775,
+      "medianMs": 1522.4221
+    },
+    "v2_expanded_to_depth4": {
+      "runs": 12,
+      "completed": 12,
+      "inputTokens": 48153,
+      "outputTokens": 6829,
+      "totalTokens": 54982,
+      "cachedInputTokens": 31104,
+      "requests": 79,
+      "retryRequests": 4,
+      "firstPassRuns": 8,
+      "meanMs": 8753.046325,
+      "medianMs": 7135.41725
+    }
+  },
+  "v2FirstChangePercent": {
+    "inputTokens": 9.362079149438873,
+    "outputTokens": -64.69276511397423,
+    "totalTokens": -18.2920059215396,
+    "meanMs": -29.12387506663269
+  }
+}

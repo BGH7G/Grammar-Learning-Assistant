@@ -1,0 +1,1946 @@
+{
+  "checks": [
+    {
+      "passed": true,
+      "sample": "bbc-1"
+    },
+    {
+      "passed": true,
+      "sample": "bbc-2"
+    },
+    {
+      "passed": true,
+      "sample": "irregular"
+    },
+    {
+      "passed": true,
+      "sample": "present"
+    },
+    {
+      "passed": true,
+      "sample": "adjective-control"
+    }
+  ],
+  "complete": true,
+  "failures": [],
+  "model": "deepseek-v4-flash",
+  "promptVersion": "layer-v2.8-noun-phrases",
+  "rows": [
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "bbc-1:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "bbc-1:s0",
+            "role": "subject",
+            "sentenceId": "bbc-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 7,
+            "id": "bbc-1:s0:1",
+            "kind": "word",
+            "last": 7,
+            "parentId": "bbc-1:s0",
+            "role": "predicate",
+            "sentenceId": "bbc-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 8,
+            "id": "bbc-1:s0:2",
+            "kind": "phrase",
+            "last": 21,
+            "parentId": "bbc-1:s0",
+            "role": "predicative",
+            "sentenceId": "bbc-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "括号内 BBC 为同位语，说明主语"
+        ],
+        "parentId": "bbc-1:s0",
+        "relations": [],
+        "skeleton": "The British Broadcasting Corporation (BBC) is a British public service broadcaster.",
+        "translation": "英国广播公司（BBC）是一家总部位于英格兰伦敦广播大厦的英国公共广播机构。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 128,
+            "inputTokens": 9065,
+            "outputTokens": 112,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1838.8331,
+            "responseReadMs": 0.06650000000013279,
+            "responseWaitMs": 1838.7666,
+            "stage": "第1层 · 0–21 · 初次",
+            "validationMs": 0.1194
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.12430000000000001,
+        "totalMs": 1839.1178
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "bbc-1:s0",
+        "kind": "sentence",
+        "last": 21,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "bbc-1:s0"
+      },
+      "sample": "bbc-1",
+      "status": "ok",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 128,
+        "httpMs": 1838.8331,
+        "inputTokens": 9065,
+        "outputTokens": 112,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 8,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "bbc-1:s0:2:0",
+            "kind": "phrase",
+            "last": 12,
+            "parentId": "bbc-1:s0:2",
+            "role": "head",
+            "sentenceId": "bbc-1:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 2,
+            "expandable": true,
+            "first": 13,
+            "grammar": [
+              "postmodifier",
+              "past_participial"
+            ],
+            "id": "bbc-1:s0:2:1",
+            "kind": "clause",
+            "last": 21,
+            "parentId": "bbc-1:s0:2",
+            "role": "attribute",
+            "sentenceId": "bbc-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "核心名词短语与过去分词后置定语构成完整名词短语"
+        ],
+        "parentId": "bbc-1:s0:2",
+        "relations": [
+          {
+            "headToken": 12,
+            "sourceId": "bbc-1:s0:2:1"
+          }
+        ],
+        "skeleton": null,
+        "translation": "一家总部位于英格兰伦敦广播大楼的英国公共广播机构",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8576,
+            "inputTokens": 9026,
+            "outputTokens": 106,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1685.5142,
+            "responseReadMs": 0.050700000000006185,
+            "responseWaitMs": 1685.4635,
+            "stage": "第2层 · 8–21 · 初次",
+            "validationMs": 0.0962
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0497,
+        "totalMs": 1685.7373
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 8,
+        "id": "bbc-1:s0:2",
+        "kind": "phrase",
+        "last": 21,
+        "parentId": "bbc-1:s0",
+        "role": "predicative",
+        "sentenceId": "bbc-1:s0"
+      },
+      "sample": "bbc-1",
+      "status": "ok",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 8576,
+        "httpMs": 1685.5142,
+        "inputTokens": 9026,
+        "outputTokens": 106,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 8,
+            "id": "bbc-1:s0:2:0:0",
+            "kind": "word",
+            "last": 8,
+            "parentId": "bbc-1:s0:2:0",
+            "role": "determiner",
+            "sentenceId": "bbc-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 9,
+            "grammar": [
+              "premodifier"
+            ],
+            "id": "bbc-1:s0:2:0:1",
+            "kind": "word",
+            "last": 9,
+            "parentId": "bbc-1:s0:2:0",
+            "role": "attribute",
+            "sentenceId": "bbc-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 10,
+            "grammar": [
+              "premodifier"
+            ],
+            "id": "bbc-1:s0:2:0:2",
+            "kind": "phrase",
+            "last": 11,
+            "parentId": "bbc-1:s0:2:0",
+            "role": "attribute",
+            "sentenceId": "bbc-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 12,
+            "id": "bbc-1:s0:2:0:3",
+            "kind": "word",
+            "last": 12,
+            "parentId": "bbc-1:s0:2:0",
+            "role": "head",
+            "sentenceId": "bbc-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "public service 作为整体前置修饰 broadcaster"
+        ],
+        "parentId": "bbc-1:s0:2:0",
+        "relations": [
+          {
+            "headToken": 12,
+            "sourceId": "bbc-1:s0:2:0:1"
+          },
+          {
+            "headToken": 12,
+            "sourceId": "bbc-1:s0:2:0:2"
+          }
+        ],
+        "skeleton": null,
+        "translation": "一家英国公共服务广播机构",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8576,
+            "inputTokens": 8979,
+            "outputTokens": 114,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1443.0288,
+            "responseReadMs": 0.06529999999997926,
+            "responseWaitMs": 1442.9635,
+            "stage": "第3层 · 8–12 · 初次",
+            "validationMs": 0.0809
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.035800000000000005,
+        "totalMs": 1443.2776999999999
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 2,
+        "expandable": true,
+        "first": 8,
+        "grammar": [
+          "noun_phrase"
+        ],
+        "id": "bbc-1:s0:2:0",
+        "kind": "phrase",
+        "last": 12,
+        "parentId": "bbc-1:s0:2",
+        "role": "head",
+        "sentenceId": "bbc-1:s0"
+      },
+      "sample": "bbc-1",
+      "status": "ok",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 8576,
+        "httpMs": 1443.0288,
+        "inputTokens": 8979,
+        "outputTokens": 114,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 13,
+            "id": "bbc-1:s0:2:1:0",
+            "kind": "word",
+            "last": 13,
+            "parentId": "bbc-1:s0:2:1",
+            "role": "predicate",
+            "sentenceId": "bbc-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 14,
+            "id": "bbc-1:s0:2:1:1",
+            "kind": "phrase",
+            "last": 16,
+            "parentId": "bbc-1:s0:2:1",
+            "role": "complement",
+            "sentenceId": "bbc-1:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 17,
+            "id": "bbc-1:s0:2:1:2",
+            "kind": "phrase",
+            "last": 21,
+            "parentId": "bbc-1:s0:2:1",
+            "role": "adverbial",
+            "sentenceId": "bbc-1:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "过去分词短语作后置定语，修饰 broadcaster",
+          "at 短语说明总部所在地，in 短语说明城市"
+        ],
+        "parentId": "bbc-1:s0:2:1",
+        "relations": [
+          {
+            "headToken": 13,
+            "sourceId": "bbc-1:s0:2:1:1"
+          },
+          {
+            "headToken": 16,
+            "sourceId": "bbc-1:s0:2:1:2"
+          }
+        ],
+        "skeleton": null,
+        "translation": "总部位于英格兰伦敦的广播大厦",
+        "warnings": [
+          "部分语法细分类与结构不一致，已保留通用标签。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 9002,
+            "outputTokens": 115,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1813.0134999999998,
+            "responseReadMs": 0.04479999999989559,
+            "responseWaitMs": 1812.9687,
+            "stage": "第3层 · 13–21 · 初次",
+            "validationMs": 0.0712
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0446,
+        "totalMs": 1813.1552
+      },
+      "parent": {
+        "ctype": "participial",
+        "depth": 2,
+        "expandable": true,
+        "first": 13,
+        "grammar": [
+          "postmodifier",
+          "past_participial"
+        ],
+        "id": "bbc-1:s0:2:1",
+        "kind": "clause",
+        "last": 21,
+        "parentId": "bbc-1:s0:2",
+        "role": "attribute",
+        "sentenceId": "bbc-1:s0"
+      },
+      "sample": "bbc-1",
+      "status": "ok",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1813.0134999999998,
+        "inputTokens": 9002,
+        "outputTokens": 115,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "bbc-2:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "bbc-2:s0",
+            "role": "subject",
+            "sentenceId": "bbc-2:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 7,
+            "id": "bbc-2:s0:1",
+            "kind": "word",
+            "last": 7,
+            "parentId": "bbc-2:s0",
+            "role": "predicate",
+            "sentenceId": "bbc-2:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 8,
+            "id": "bbc-2:s0:2",
+            "kind": "phrase",
+            "last": 21,
+            "parentId": "bbc-2:s0",
+            "role": "predicative",
+            "sentenceId": "bbc-2:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "括号内 BBC 为同位语，说明主语"
+        ],
+        "parentId": "bbc-2:s0",
+        "relations": [],
+        "skeleton": "The British Broadcasting Corporation (BBC) is a British public service broadcaster.",
+        "translation": "英国广播公司（BBC）是一家总部位于英格兰伦敦广播大厦的英国公共广播机构。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8832,
+            "inputTokens": 9065,
+            "outputTokens": 112,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1449.3598,
+            "responseReadMs": 0.04839999999990141,
+            "responseWaitMs": 1449.3114,
+            "stage": "第1层 · 0–21 · 初次",
+            "validationMs": 0.0781
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.05450000000000001,
+        "totalMs": 1449.5327
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "bbc-2:s0",
+        "kind": "sentence",
+        "last": 21,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "bbc-2:s0"
+      },
+      "sample": "bbc-2",
+      "status": "ok",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 8832,
+        "httpMs": 1449.3598,
+        "inputTokens": 9065,
+        "outputTokens": 112,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 8,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "bbc-2:s0:2:0",
+            "kind": "phrase",
+            "last": 12,
+            "parentId": "bbc-2:s0:2",
+            "role": "head",
+            "sentenceId": "bbc-2:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 2,
+            "expandable": true,
+            "first": 13,
+            "grammar": [
+              "postmodifier",
+              "past_participial"
+            ],
+            "id": "bbc-2:s0:2:1",
+            "kind": "clause",
+            "last": 21,
+            "parentId": "bbc-2:s0:2",
+            "role": "attribute",
+            "sentenceId": "bbc-2:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "核心名词短语与后置定语共同构成完整名词短语"
+        ],
+        "parentId": "bbc-2:s0:2",
+        "relations": [
+          {
+            "headToken": 12,
+            "sourceId": "bbc-2:s0:2:1"
+          }
+        ],
+        "skeleton": null,
+        "translation": "一家总部位于英格兰伦敦广播大楼的英国公共广播机构",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8832,
+            "inputTokens": 9026,
+            "outputTokens": 105,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1755.1757,
+            "responseReadMs": 0.04610000000002401,
+            "responseWaitMs": 1755.1296,
+            "stage": "第2层 · 8–21 · 初次",
+            "validationMs": 0.077
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0526,
+        "totalMs": 1755.3314
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 8,
+        "id": "bbc-2:s0:2",
+        "kind": "phrase",
+        "last": 21,
+        "parentId": "bbc-2:s0",
+        "role": "predicative",
+        "sentenceId": "bbc-2:s0"
+      },
+      "sample": "bbc-2",
+      "status": "ok",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 8832,
+        "httpMs": 1755.1757,
+        "inputTokens": 9026,
+        "outputTokens": 105,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 8,
+            "id": "bbc-2:s0:2:0:0",
+            "kind": "word",
+            "last": 8,
+            "parentId": "bbc-2:s0:2:0",
+            "role": "determiner",
+            "sentenceId": "bbc-2:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 9,
+            "grammar": [
+              "premodifier"
+            ],
+            "id": "bbc-2:s0:2:0:1",
+            "kind": "word",
+            "last": 9,
+            "parentId": "bbc-2:s0:2:0",
+            "role": "attribute",
+            "sentenceId": "bbc-2:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 10,
+            "grammar": [
+              "premodifier"
+            ],
+            "id": "bbc-2:s0:2:0:2",
+            "kind": "phrase",
+            "last": 11,
+            "parentId": "bbc-2:s0:2:0",
+            "role": "attribute",
+            "sentenceId": "bbc-2:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 12,
+            "id": "bbc-2:s0:2:0:3",
+            "kind": "word",
+            "last": 12,
+            "parentId": "bbc-2:s0:2:0",
+            "role": "head",
+            "sentenceId": "bbc-2:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "public service 作为整体前置修饰 broadcaster"
+        ],
+        "parentId": "bbc-2:s0:2:0",
+        "relations": [
+          {
+            "headToken": 12,
+            "sourceId": "bbc-2:s0:2:0:1"
+          },
+          {
+            "headToken": 12,
+            "sourceId": "bbc-2:s0:2:0:2"
+          }
+        ],
+        "skeleton": null,
+        "translation": "一家英国公共广播机构",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8832,
+            "inputTokens": 8979,
+            "outputTokens": 114,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1442.0903,
+            "responseReadMs": 0.04500000000007276,
+            "responseWaitMs": 1442.0453,
+            "stage": "第3层 · 8–12 · 初次",
+            "validationMs": 0.0769
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0552,
+        "totalMs": 1442.2473
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 2,
+        "expandable": true,
+        "first": 8,
+        "grammar": [
+          "noun_phrase"
+        ],
+        "id": "bbc-2:s0:2:0",
+        "kind": "phrase",
+        "last": 12,
+        "parentId": "bbc-2:s0:2",
+        "role": "head",
+        "sentenceId": "bbc-2:s0"
+      },
+      "sample": "bbc-2",
+      "status": "ok",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 8832,
+        "httpMs": 1442.0903,
+        "inputTokens": 8979,
+        "outputTokens": 114,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 13,
+            "id": "bbc-2:s0:2:1:0",
+            "kind": "word",
+            "last": 13,
+            "parentId": "bbc-2:s0:2:1",
+            "role": "predicate",
+            "sentenceId": "bbc-2:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 14,
+            "id": "bbc-2:s0:2:1:1",
+            "kind": "phrase",
+            "last": 16,
+            "parentId": "bbc-2:s0:2:1",
+            "role": "complement",
+            "sentenceId": "bbc-2:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 17,
+            "id": "bbc-2:s0:2:1:2",
+            "kind": "phrase",
+            "last": 21,
+            "parentId": "bbc-2:s0:2:1",
+            "role": "adverbial",
+            "sentenceId": "bbc-2:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "过去分词短语作后置定语，修饰 broadcaster",
+          "at 短语说明总部所在，in 短语说明城市"
+        ],
+        "parentId": "bbc-2:s0:2:1",
+        "relations": [
+          {
+            "headToken": 13,
+            "sourceId": "bbc-2:s0:2:1:1"
+          },
+          {
+            "headToken": 16,
+            "sourceId": "bbc-2:s0:2:1:2"
+          }
+        ],
+        "skeleton": null,
+        "translation": "总部位于英格兰伦敦的广播大楼",
+        "warnings": [
+          "部分语法细分类与结构不一致，已保留通用标签。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8832,
+            "inputTokens": 9002,
+            "outputTokens": 115,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1625.1293,
+            "responseReadMs": 0.04719999999997526,
+            "responseWaitMs": 1625.0821,
+            "stage": "第3层 · 13–21 · 初次",
+            "validationMs": 0.0773
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0435,
+        "totalMs": 1625.2743999999998
+      },
+      "parent": {
+        "ctype": "participial",
+        "depth": 2,
+        "expandable": true,
+        "first": 13,
+        "grammar": [
+          "postmodifier",
+          "past_participial"
+        ],
+        "id": "bbc-2:s0:2:1",
+        "kind": "clause",
+        "last": 21,
+        "parentId": "bbc-2:s0:2",
+        "role": "attribute",
+        "sentenceId": "bbc-2:s0"
+      },
+      "sample": "bbc-2",
+      "status": "ok",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 8832,
+        "httpMs": 1625.1293,
+        "inputTokens": 9002,
+        "outputTokens": 115,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "id": "irregular:s0:0",
+            "kind": "word",
+            "last": 0,
+            "parentId": "irregular:s0",
+            "role": "subject",
+            "sentenceId": "irregular:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 1,
+            "id": "irregular:s0:1",
+            "kind": "word",
+            "last": 1,
+            "parentId": "irregular:s0",
+            "role": "predicate",
+            "sentenceId": "irregular:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 2,
+            "id": "irregular:s0:2",
+            "kind": "phrase",
+            "last": 10,
+            "parentId": "irregular:s0",
+            "role": "object",
+            "sentenceId": "irregular:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "built 短语作后置定语修饰 bridge"
+        ],
+        "parentId": "irregular:s0",
+        "relations": [],
+        "skeleton": "We visited an old stone bridge.",
+        "translation": "我们参观了一座横跨河流的古老石桥。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8966,
+            "outputTokens": 94,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1429.5964,
+            "responseReadMs": 0.04599999999982174,
+            "responseWaitMs": 1429.5504,
+            "stage": "第1层 · 0–10 · 初次",
+            "validationMs": 0.0639
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0293,
+        "totalMs": 1429.7127
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "irregular:s0",
+        "kind": "sentence",
+        "last": 10,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "irregular:s0"
+      },
+      "sample": "irregular",
+      "status": "ok",
+      "text": "We visited an old stone bridge built across the river.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1429.5964,
+        "inputTokens": 8966,
+        "outputTokens": 94,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 2,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "irregular:s0:2:0",
+            "kind": "phrase",
+            "last": 5,
+            "parentId": "irregular:s0:2",
+            "role": "head",
+            "sentenceId": "irregular:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 2,
+            "expandable": true,
+            "first": 6,
+            "grammar": [
+              "postmodifier",
+              "past_participial"
+            ],
+            "id": "irregular:s0:2:1",
+            "kind": "clause",
+            "last": 10,
+            "parentId": "irregular:s0:2",
+            "role": "attribute",
+            "sentenceId": "irregular:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "过去分词短语后置修饰 bridge",
+          "核心名词短语与后置定语构成完整宾语"
+        ],
+        "parentId": "irregular:s0:2",
+        "relations": [
+          {
+            "headToken": 5,
+            "sourceId": "irregular:s0:2:1"
+          }
+        ],
+        "skeleton": null,
+        "translation": "一座横跨河流的古老石桥",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8955,
+            "outputTokens": 107,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1968.9470000000001,
+            "responseReadMs": 0.045200000000022555,
+            "responseWaitMs": 1968.9018,
+            "stage": "第2层 · 2–10 · 初次",
+            "validationMs": 0.0691
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.032,
+        "totalMs": 1969.0738
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 2,
+        "id": "irregular:s0:2",
+        "kind": "phrase",
+        "last": 10,
+        "parentId": "irregular:s0",
+        "role": "object",
+        "sentenceId": "irregular:s0"
+      },
+      "sample": "irregular",
+      "status": "ok",
+      "text": "We visited an old stone bridge built across the river.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1968.9470000000001,
+        "inputTokens": 8955,
+        "outputTokens": 107,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 2,
+            "id": "irregular:s0:2:0:0",
+            "kind": "word",
+            "last": 2,
+            "parentId": "irregular:s0:2:0",
+            "role": "determiner",
+            "sentenceId": "irregular:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 3,
+            "grammar": [
+              "premodifier"
+            ],
+            "id": "irregular:s0:2:0:1",
+            "kind": "word",
+            "last": 3,
+            "parentId": "irregular:s0:2:0",
+            "role": "attribute",
+            "sentenceId": "irregular:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 4,
+            "grammar": [
+              "premodifier"
+            ],
+            "id": "irregular:s0:2:0:2",
+            "kind": "word",
+            "last": 4,
+            "parentId": "irregular:s0:2:0",
+            "role": "attribute",
+            "sentenceId": "irregular:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 5,
+            "id": "irregular:s0:2:0:3",
+            "kind": "word",
+            "last": 5,
+            "parentId": "irregular:s0:2:0",
+            "role": "head",
+            "sentenceId": "irregular:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "stone 作名词修饰 bridge"
+        ],
+        "parentId": "irregular:s0:2:0",
+        "relations": [
+          {
+            "headToken": 5,
+            "sourceId": "irregular:s0:2:0:1"
+          },
+          {
+            "headToken": 5,
+            "sourceId": "irregular:s0:2:0:2"
+          }
+        ],
+        "skeleton": null,
+        "translation": "一座古老的石桥",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8930,
+            "outputTokens": 111,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1638.4059,
+            "responseReadMs": 0.04779999999982465,
+            "responseWaitMs": 1638.3581000000001,
+            "stage": "第3层 · 2–5 · 初次",
+            "validationMs": 0.07279999999999999
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0305,
+        "totalMs": 1638.5330000000001
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 2,
+        "expandable": true,
+        "first": 2,
+        "grammar": [
+          "noun_phrase"
+        ],
+        "id": "irregular:s0:2:0",
+        "kind": "phrase",
+        "last": 5,
+        "parentId": "irregular:s0:2",
+        "role": "head",
+        "sentenceId": "irregular:s0"
+      },
+      "sample": "irregular",
+      "status": "ok",
+      "text": "We visited an old stone bridge built across the river.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1638.4059,
+        "inputTokens": 8930,
+        "outputTokens": 111,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 6,
+            "id": "irregular:s0:2:1:0",
+            "kind": "word",
+            "last": 6,
+            "parentId": "irregular:s0:2:1",
+            "role": "predicate",
+            "sentenceId": "irregular:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 7,
+            "id": "irregular:s0:2:1:1",
+            "kind": "phrase",
+            "last": 10,
+            "parentId": "irregular:s0:2:1",
+            "role": "adverbial",
+            "sentenceId": "irregular:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "过去分词作后置定语，逻辑主语是桥"
+        ],
+        "parentId": "irregular:s0:2:1",
+        "relations": [],
+        "skeleton": null,
+        "translation": "横跨河流建造的",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8937,
+            "outputTokens": 71,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1705.1251,
+            "responseReadMs": 0.044399999999996,
+            "responseWaitMs": 1705.0807,
+            "stage": "第3层 · 6–10 · 初次",
+            "validationMs": 0.0566
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0354,
+        "totalMs": 1705.2428
+      },
+      "parent": {
+        "ctype": "participial",
+        "depth": 2,
+        "expandable": true,
+        "first": 6,
+        "grammar": [
+          "postmodifier",
+          "past_participial"
+        ],
+        "id": "irregular:s0:2:1",
+        "kind": "clause",
+        "last": 10,
+        "parentId": "irregular:s0:2",
+        "role": "attribute",
+        "sentenceId": "irregular:s0"
+      },
+      "sample": "irregular",
+      "status": "ok",
+      "text": "We visited an old stone bridge built across the river.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1705.1251,
+        "inputTokens": 8937,
+        "outputTokens": 71,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "id": "present:s0:0",
+            "kind": "word",
+            "last": 0,
+            "parentId": "present:s0",
+            "role": "subject",
+            "sentenceId": "present:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 1,
+            "id": "present:s0:1",
+            "kind": "word",
+            "last": 1,
+            "parentId": "present:s0",
+            "role": "predicate",
+            "sentenceId": "present:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 2,
+            "id": "present:s0:2",
+            "kind": "phrase",
+            "last": 9,
+            "parentId": "present:s0",
+            "role": "object",
+            "sentenceId": "present:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [],
+        "parentId": "present:s0",
+        "relations": [],
+        "skeleton": "She greeted the scientist.",
+        "translation": "她向在实验室工作的那位年轻科学家打了招呼。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8961,
+            "outputTokens": 78,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1389.6717999999998,
+            "responseReadMs": 0.04969999999980246,
+            "responseWaitMs": 1389.6221,
+            "stage": "第1层 · 0–9 · 初次",
+            "validationMs": 0.0673
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0299,
+        "totalMs": 1389.7951
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "present:s0",
+        "kind": "sentence",
+        "last": 9,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "present:s0"
+      },
+      "sample": "present",
+      "status": "ok",
+      "text": "She greeted the young scientist working in the laboratory.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1389.6717999999998,
+        "inputTokens": 8961,
+        "outputTokens": 78,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 2,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "present:s0:2:0",
+            "kind": "phrase",
+            "last": 4,
+            "parentId": "present:s0:2",
+            "role": "head",
+            "sentenceId": "present:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 2,
+            "expandable": true,
+            "first": 5,
+            "grammar": [
+              "postmodifier",
+              "present_participial"
+            ],
+            "id": "present:s0:2:1",
+            "kind": "clause",
+            "last": 9,
+            "parentId": "present:s0:2",
+            "role": "attribute",
+            "sentenceId": "present:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "核心名词短语与分词后置定语构成完整名词短语"
+        ],
+        "parentId": "present:s0:2",
+        "relations": [
+          {
+            "headToken": 4,
+            "sourceId": "present:s0:2:1"
+          }
+        ],
+        "skeleton": null,
+        "translation": "那位在实验室工作的年轻科学家",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8949,
+            "outputTokens": 99,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1701.9207999999999,
+            "responseReadMs": 0.044399999999996,
+            "responseWaitMs": 1701.8763999999999,
+            "stage": "第2层 · 2–9 · 初次",
+            "validationMs": 0.06899999999999999
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.037200000000000004,
+        "totalMs": 1702.0517
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 2,
+        "id": "present:s0:2",
+        "kind": "phrase",
+        "last": 9,
+        "parentId": "present:s0",
+        "role": "object",
+        "sentenceId": "present:s0"
+      },
+      "sample": "present",
+      "status": "ok",
+      "text": "She greeted the young scientist working in the laboratory.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1701.9207999999999,
+        "inputTokens": 8949,
+        "outputTokens": 99,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 2,
+            "id": "present:s0:2:0:0",
+            "kind": "word",
+            "last": 2,
+            "parentId": "present:s0:2:0",
+            "role": "determiner",
+            "sentenceId": "present:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 3,
+            "grammar": [
+              "premodifier"
+            ],
+            "id": "present:s0:2:0:1",
+            "kind": "word",
+            "last": 3,
+            "parentId": "present:s0:2:0",
+            "role": "attribute",
+            "sentenceId": "present:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 4,
+            "id": "present:s0:2:0:2",
+            "kind": "word",
+            "last": 4,
+            "parentId": "present:s0:2:0",
+            "role": "head",
+            "sentenceId": "present:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [],
+        "parentId": "present:s0:2:0",
+        "relations": [
+          {
+            "headToken": 4,
+            "sourceId": "present:s0:2:0:1"
+          }
+        ],
+        "skeleton": null,
+        "translation": "这位年轻的科学家",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8924,
+            "outputTokens": 79,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1683.3914000000002,
+            "responseReadMs": 0.046500000000150976,
+            "responseWaitMs": 1683.3449,
+            "stage": "第3层 · 2–4 · 初次",
+            "validationMs": 0.06830000000000001
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.032,
+        "totalMs": 1683.5571
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 2,
+        "expandable": true,
+        "first": 2,
+        "grammar": [
+          "noun_phrase"
+        ],
+        "id": "present:s0:2:0",
+        "kind": "phrase",
+        "last": 4,
+        "parentId": "present:s0:2",
+        "role": "head",
+        "sentenceId": "present:s0"
+      },
+      "sample": "present",
+      "status": "ok",
+      "text": "She greeted the young scientist working in the laboratory.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1683.3914000000002,
+        "inputTokens": 8924,
+        "outputTokens": 79,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 5,
+            "id": "present:s0:2:1:0",
+            "kind": "word",
+            "last": 5,
+            "parentId": "present:s0:2:1",
+            "role": "predicate",
+            "sentenceId": "present:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 6,
+            "id": "present:s0:2:1:1",
+            "kind": "phrase",
+            "last": 9,
+            "parentId": "present:s0:2:1",
+            "role": "adverbial",
+            "sentenceId": "present:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "现在分词短语作后置定语，逻辑主语是 scientist"
+        ],
+        "parentId": "present:s0:2:1",
+        "relations": [],
+        "skeleton": null,
+        "translation": "在实验室里工作的",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8935,
+            "outputTokens": 71,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1476.5003000000002,
+            "responseReadMs": 0.04800000000000182,
+            "responseWaitMs": 1476.4523000000002,
+            "stage": "第3层 · 5–9 · 初次",
+            "validationMs": 0.30160000000000003
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0348,
+        "totalMs": 1476.862
+      },
+      "parent": {
+        "ctype": "participial",
+        "depth": 2,
+        "expandable": true,
+        "first": 5,
+        "grammar": [
+          "postmodifier",
+          "present_participial"
+        ],
+        "id": "present:s0:2:1",
+        "kind": "clause",
+        "last": 9,
+        "parentId": "present:s0:2",
+        "role": "attribute",
+        "sentenceId": "present:s0"
+      },
+      "sample": "present",
+      "status": "ok",
+      "text": "She greeted the young scientist working in the laboratory.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1476.5003000000002,
+        "inputTokens": 8935,
+        "outputTokens": 71,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "id": "adjective-control:s0:0",
+            "kind": "word",
+            "last": 0,
+            "parentId": "adjective-control:s0",
+            "role": "subject",
+            "sentenceId": "adjective-control:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 1,
+            "id": "adjective-control:s0:1",
+            "kind": "word",
+            "last": 1,
+            "parentId": "adjective-control:s0",
+            "role": "predicate",
+            "sentenceId": "adjective-control:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 2,
+            "id": "adjective-control:s0:2",
+            "kind": "phrase",
+            "last": 7,
+            "parentId": "adjective-control:s0",
+            "role": "predicative",
+            "sentenceId": "adjective-control:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "形容词短语作表语，of 短语说明 proud 的对象"
+        ],
+        "parentId": "adjective-control:s0",
+        "relations": [],
+        "skeleton": "She is very proud of her daughter.",
+        "translation": "她为她的女儿感到非常自豪。",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8937,
+            "outputTokens": 98,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1481.4471,
+            "responseReadMs": 0.05180000000018481,
+            "responseWaitMs": 1481.3953,
+            "stage": "第1层 · 0–7 · 初次",
+            "validationMs": 0.0649
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.027100000000000003,
+        "totalMs": 1481.5621
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "adjective-control:s0",
+        "kind": "sentence",
+        "last": 7,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "adjective-control:s0"
+      },
+      "sample": "adjective-control",
+      "status": "ok",
+      "text": "She is very proud of her daughter.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1481.4471,
+        "inputTokens": 8937,
+        "outputTokens": 98,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 2,
+            "id": "adjective-control:s0:2:0",
+            "kind": "word",
+            "last": 3,
+            "parentId": "adjective-control:s0:2",
+            "role": "head",
+            "sentenceId": "adjective-control:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 4,
+            "grammar": [
+              "postmodifier"
+            ],
+            "id": "adjective-control:s0:2:1",
+            "kind": "phrase",
+            "last": 7,
+            "parentId": "adjective-control:s0:2",
+            "role": "attribute",
+            "sentenceId": "adjective-control:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "形容词短语作表语，of 短语补充说明 proud"
+        ],
+        "parentId": "adjective-control:s0:2",
+        "relations": [
+          {
+            "headToken": 3,
+            "sourceId": "adjective-control:s0:2:1"
+          }
+        ],
+        "skeleton": null,
+        "translation": "为她女儿感到非常自豪",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8928,
+            "outputTokens": 80,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1632.0942,
+            "responseReadMs": 0.04500000000007276,
+            "responseWaitMs": 1632.0492,
+            "stage": "第2层 · 2–7 · 初次",
+            "validationMs": 0.0691
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0371,
+        "totalMs": 1632.2265
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 2,
+        "id": "adjective-control:s0:2",
+        "kind": "phrase",
+        "last": 7,
+        "parentId": "adjective-control:s0",
+        "role": "predicative",
+        "sentenceId": "adjective-control:s0"
+      },
+      "sample": "adjective-control",
+      "status": "ok",
+      "text": "She is very proud of her daughter.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1632.0942,
+        "inputTokens": 8928,
+        "outputTokens": 80,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 3,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": false,
+            "first": 4,
+            "id": "adjective-control:s0:2:1:0",
+            "kind": "word",
+            "last": 4,
+            "parentId": "adjective-control:s0:2:1",
+            "role": "head",
+            "sentenceId": "adjective-control:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 3,
+            "expandable": true,
+            "first": 5,
+            "id": "adjective-control:s0:2:1:1",
+            "kind": "phrase",
+            "last": 7,
+            "parentId": "adjective-control:s0:2:1",
+            "role": "object",
+            "sentenceId": "adjective-control:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "介词短语作形容词 proud 的补足成分"
+        ],
+        "parentId": "adjective-control:s0:2:1",
+        "relations": [],
+        "skeleton": null,
+        "translation": "她女儿的",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 8704,
+            "inputTokens": 8916,
+            "outputTokens": 65,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1340.7707,
+            "responseReadMs": 0.045900000000074215,
+            "responseWaitMs": 1340.7248,
+            "stage": "第3层 · 4–7 · 初次",
+            "validationMs": 0.0571
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.030800000000000004,
+        "totalMs": 1340.8849
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 2,
+        "expandable": true,
+        "first": 4,
+        "grammar": [
+          "postmodifier"
+        ],
+        "id": "adjective-control:s0:2:1",
+        "kind": "phrase",
+        "last": 7,
+        "parentId": "adjective-control:s0:2",
+        "role": "attribute",
+        "sentenceId": "adjective-control:s0"
+      },
+      "sample": "adjective-control",
+      "status": "ok",
+      "text": "She is very proud of her daughter.",
+      "totals": {
+        "cachedInputTokens": 8704,
+        "httpMs": 1340.7707,
+        "inputTokens": 8916,
+        "outputTokens": 65,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    }
+  ],
+  "temperature": 0.3,
+  "thinking": false
+}

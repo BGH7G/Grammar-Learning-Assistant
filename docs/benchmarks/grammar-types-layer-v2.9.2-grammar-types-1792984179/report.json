@@ -1,0 +1,1427 @@
+{
+  "checks": [
+    {
+      "passed": true,
+      "sample": "modal",
+      "tag": "pronoun",
+      "word": "They"
+    },
+    {
+      "passed": true,
+      "sample": "modal",
+      "tag": "modal_verb",
+      "word": "may"
+    },
+    {
+      "passed": true,
+      "sample": "modal",
+      "tag": "lexical_verb",
+      "word": "struggle"
+    },
+    {
+      "passed": true,
+      "sample": "modal",
+      "tag": "infinitive object"
+    },
+    {
+      "passed": true,
+      "sample": "auxiliary",
+      "tag": "auxiliary_verb",
+      "word": "has"
+    },
+    {
+      "passed": true,
+      "sample": "auxiliary",
+      "tag": "lexical_verb",
+      "word": "finished"
+    },
+    {
+      "passed": true,
+      "sample": "lexical-have",
+      "tag": "lexical_verb",
+      "word": "has"
+    },
+    {
+      "passed": true,
+      "sample": "linking",
+      "tag": "linking_verb",
+      "word": "is"
+    },
+    {
+      "passed": true,
+      "sample": "linking",
+      "tag": "adjective",
+      "word": "happy"
+    },
+    {
+      "passed": true,
+      "sample": "other-classes",
+      "tag": "adjective",
+      "word": "young"
+    },
+    {
+      "passed": true,
+      "sample": "other-classes",
+      "tag": "noun",
+      "word": "scientist"
+    },
+    {
+      "passed": true,
+      "sample": "other-classes",
+      "tag": "adverb",
+      "word": "quietly"
+    },
+    {
+      "passed": true,
+      "sample": "other-classes",
+      "tag": "preposition",
+      "word": "in"
+    },
+    {
+      "passed": true,
+      "sample": "other-classes",
+      "tag": "proper_noun",
+      "word": "London"
+    },
+    {
+      "passed": true,
+      "sample": "noun-can",
+      "tag": "noun",
+      "word": "can"
+    },
+    {
+      "passed": true,
+      "sample": "noun-can",
+      "tag": "lexical_verb",
+      "word": "fell"
+    },
+    {
+      "passed": true,
+      "sample": "discourse",
+      "tag": "discourse_marker",
+      "word": "Well"
+    },
+    {
+      "passed": true,
+      "sample": "discourse",
+      "tag": "modal_verb",
+      "word": "may"
+    },
+    {
+      "passed": true,
+      "sample": "discourse",
+      "tag": "lexical_verb",
+      "word": "leave"
+    }
+  ],
+  "complete": true,
+  "failures": [],
+  "model": "deepseek-v4-flash",
+  "promptVersion": "layer-v2.9.2-grammar-types",
+  "rows": [
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "grammar": [
+              "pronoun"
+            ],
+            "id": "modal:s0:0",
+            "kind": "word",
+            "last": 0,
+            "parentId": "modal:s0",
+            "role": "subject",
+            "sentenceId": "modal:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 1,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "modal:s0:1",
+            "kind": "phrase",
+            "last": 2,
+            "parentId": "modal:s0",
+            "role": "predicate",
+            "sentenceId": "modal:s0"
+          },
+          {
+            "ctype": "infinitive",
+            "depth": 1,
+            "expandable": true,
+            "first": 3,
+            "id": "modal:s0:2",
+            "kind": "clause",
+            "last": 5,
+            "parentId": "modal:s0",
+            "role": "object",
+            "sentenceId": "modal:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "情态动词与实义动词共同组成谓语",
+          "不定式作struggle的宾语"
+        ],
+        "parentId": "modal:s0",
+        "relations": [],
+        "skeleton": "They may struggle to adjust.",
+        "translation": "他们可能难以适应。",
+        "warnings": [
+          "部分语法细分类与结构不一致，已保留通用标签。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 4096,
+            "inputTokens": 10747,
+            "outputTokens": 118,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2381.4986,
+            "responseReadMs": 0.05949999999984357,
+            "responseWaitMs": 2381.4391,
+            "stage": "第1层 · 0–5 · 初次",
+            "validationMs": 0.1428
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.1098,
+        "totalMs": 2381.8001999999997
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "modal:s0",
+        "kind": "sentence",
+        "last": 5,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "modal:s0"
+      },
+      "sample": "modal",
+      "status": "ok",
+      "text": "They may struggle to adjust.",
+      "totals": {
+        "cachedInputTokens": 4096,
+        "httpMs": 2381.4986,
+        "inputTokens": 10747,
+        "outputTokens": 118,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 1,
+            "grammar": [
+              "modal_verb"
+            ],
+            "id": "modal:s0:1:0",
+            "kind": "word",
+            "last": 1,
+            "parentId": "modal:s0:1",
+            "role": "predicate",
+            "sentenceId": "modal:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "modal:s0:1:1",
+            "kind": "word",
+            "last": 2,
+            "parentId": "modal:s0:1",
+            "role": "predicate",
+            "sentenceId": "modal:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "情态动词与实义动词共同组成谓语"
+        ],
+        "parentId": "modal:s0:1",
+        "relations": [],
+        "skeleton": null,
+        "translation": "（他们）可能难以",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10732,
+            "outputTokens": 84,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1339.3055,
+            "responseReadMs": 0.04809999999997672,
+            "responseWaitMs": 1339.2574,
+            "stage": "第2层 · 1–2 · 初次",
+            "validationMs": 0.0679
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0521,
+        "totalMs": 1339.4656
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 1,
+        "grammar": [
+          "verb_phrase"
+        ],
+        "id": "modal:s0:1",
+        "kind": "phrase",
+        "last": 2,
+        "parentId": "modal:s0",
+        "role": "predicate",
+        "sentenceId": "modal:s0"
+      },
+      "sample": "modal",
+      "status": "ok",
+      "text": "They may struggle to adjust.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1339.3055,
+        "inputTokens": 10732,
+        "outputTokens": 84,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "grammar": [
+              "pronoun"
+            ],
+            "id": "auxiliary:s0:0",
+            "kind": "word",
+            "last": 0,
+            "parentId": "auxiliary:s0",
+            "role": "subject",
+            "sentenceId": "auxiliary:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 1,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "auxiliary:s0:1",
+            "kind": "phrase",
+            "last": 2,
+            "parentId": "auxiliary:s0",
+            "role": "predicate",
+            "sentenceId": "auxiliary:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 3,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "auxiliary:s0:2",
+            "kind": "phrase",
+            "last": 5,
+            "parentId": "auxiliary:s0",
+            "role": "object",
+            "sentenceId": "auxiliary:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "has 为助动词，与 finished 构成现在完成时"
+        ],
+        "parentId": "auxiliary:s0",
+        "relations": [],
+        "skeleton": "She has finished the work.",
+        "translation": "她已经完成了这项工作。",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10745,
+            "outputTokens": 109,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1646.0276000000001,
+            "responseReadMs": 0.05030000000010659,
+            "responseWaitMs": 1645.9773,
+            "stage": "第1层 · 0–5 · 初次",
+            "validationMs": 0.0784
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0356,
+        "totalMs": 1646.1779999999999
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "auxiliary:s0",
+        "kind": "sentence",
+        "last": 5,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "auxiliary:s0"
+      },
+      "sample": "auxiliary",
+      "status": "ok",
+      "text": "She has finished the work.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1646.0276000000001,
+        "inputTokens": 10745,
+        "outputTokens": 109,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 1,
+            "grammar": [
+              "auxiliary_verb"
+            ],
+            "id": "auxiliary:s0:1:0",
+            "kind": "word",
+            "last": 1,
+            "parentId": "auxiliary:s0:1",
+            "role": "predicate",
+            "sentenceId": "auxiliary:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "auxiliary:s0:1:1",
+            "kind": "word",
+            "last": 2,
+            "parentId": "auxiliary:s0:1",
+            "role": "predicate",
+            "sentenceId": "auxiliary:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "两个词共同组成一个谓语"
+        ],
+        "parentId": "auxiliary:s0:1",
+        "relations": [],
+        "skeleton": null,
+        "translation": "（她）已经完成了",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10730,
+            "outputTokens": 81,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1346.3099,
+            "responseReadMs": 0.04610000000002401,
+            "responseWaitMs": 1346.2638,
+            "stage": "第2层 · 1–2 · 初次",
+            "validationMs": 0.0772
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.028,
+        "totalMs": 1346.455
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 1,
+        "grammar": [
+          "verb_phrase"
+        ],
+        "id": "auxiliary:s0:1",
+        "kind": "phrase",
+        "last": 2,
+        "parentId": "auxiliary:s0",
+        "role": "predicate",
+        "sentenceId": "auxiliary:s0"
+      },
+      "sample": "auxiliary",
+      "status": "ok",
+      "text": "She has finished the work.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1346.3099,
+        "inputTokens": 10730,
+        "outputTokens": 81,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "grammar": [
+              "pronoun"
+            ],
+            "id": "lexical-have:s0:0",
+            "kind": "word",
+            "last": 0,
+            "parentId": "lexical-have:s0",
+            "role": "subject",
+            "sentenceId": "lexical-have:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 1,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "lexical-have:s0:1",
+            "kind": "word",
+            "last": 1,
+            "parentId": "lexical-have:s0",
+            "role": "predicate",
+            "sentenceId": "lexical-have:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "lexical-have:s0:2",
+            "kind": "phrase",
+            "last": 4,
+            "parentId": "lexical-have:s0",
+            "role": "object",
+            "sentenceId": "lexical-have:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "has 为实义动词，表示拥有"
+        ],
+        "parentId": "lexical-have:s0",
+        "relations": [],
+        "skeleton": "She has a bicycle.",
+        "translation": "她有一辆自行车。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10734,
+            "outputTokens": 106,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1480.5067000000001,
+            "responseReadMs": 0.045400000000199725,
+            "responseWaitMs": 1480.4613,
+            "stage": "第1层 · 0–4 · 初次",
+            "validationMs": 0.0751
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0369,
+        "totalMs": 1480.6534
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "lexical-have:s0",
+        "kind": "sentence",
+        "last": 4,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "lexical-have:s0"
+      },
+      "sample": "lexical-have",
+      "status": "ok",
+      "text": "She has a bicycle.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1480.5067000000001,
+        "inputTokens": 10734,
+        "outputTokens": 106,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "grammar": [
+              "pronoun"
+            ],
+            "id": "linking:s0:0",
+            "kind": "word",
+            "last": 0,
+            "parentId": "linking:s0",
+            "role": "subject",
+            "sentenceId": "linking:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 1,
+            "grammar": [
+              "linking_verb"
+            ],
+            "id": "linking:s0:1",
+            "kind": "word",
+            "last": 1,
+            "parentId": "linking:s0",
+            "role": "predicate",
+            "sentenceId": "linking:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "adjective"
+            ],
+            "id": "linking:s0:2",
+            "kind": "word",
+            "last": 3,
+            "parentId": "linking:s0",
+            "role": "predicative",
+            "sentenceId": "linking:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "系表结构，形容词作表语"
+        ],
+        "parentId": "linking:s0",
+        "relations": [],
+        "skeleton": "She is happy.",
+        "translation": "她很开心。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10727,
+            "outputTokens": 101,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1425.7651,
+            "responseReadMs": 0.04560000000014952,
+            "responseWaitMs": 1425.7195,
+            "stage": "第1层 · 0–3 · 初次",
+            "validationMs": 0.08
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0331,
+        "totalMs": 1425.9135
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "linking:s0",
+        "kind": "sentence",
+        "last": 3,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "linking:s0"
+      },
+      "sample": "linking",
+      "status": "ok",
+      "text": "She is happy.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1425.7651,
+        "inputTokens": 10727,
+        "outputTokens": 101,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "other-classes:s0:0",
+            "kind": "phrase",
+            "last": 2,
+            "parentId": "other-classes:s0",
+            "role": "subject",
+            "sentenceId": "other-classes:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 3,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "other-classes:s0:1",
+            "kind": "word",
+            "last": 3,
+            "parentId": "other-classes:s0",
+            "role": "predicate",
+            "sentenceId": "other-classes:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 4,
+            "grammar": [
+              "adverb"
+            ],
+            "id": "other-classes:s0:2",
+            "kind": "word",
+            "last": 4,
+            "parentId": "other-classes:s0",
+            "role": "adverbial",
+            "sentenceId": "other-classes:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 5,
+            "grammar": [
+              "prepositional_phrase"
+            ],
+            "id": "other-classes:s0:3",
+            "kind": "phrase",
+            "last": 7,
+            "parentId": "other-classes:s0",
+            "role": "adverbial",
+            "sentenceId": "other-classes:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [],
+        "parentId": "other-classes:s0",
+        "relations": [],
+        "skeleton": "The scientist worked.",
+        "translation": "这位年轻的科学家在伦敦安静地工作。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10624,
+            "inputTokens": 10765,
+            "outputTokens": 123,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1609.9659,
+            "responseReadMs": 0.04980000000000473,
+            "responseWaitMs": 1609.9161,
+            "stage": "第1层 · 0–7 · 初次",
+            "validationMs": 0.1067
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0493,
+        "totalMs": 1610.1595
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "other-classes:s0",
+        "kind": "sentence",
+        "last": 7,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "other-classes:s0"
+      },
+      "sample": "other-classes",
+      "status": "ok",
+      "text": "The young scientist worked quietly in London.",
+      "totals": {
+        "cachedInputTokens": 10624,
+        "httpMs": 1609.9659,
+        "inputTokens": 10765,
+        "outputTokens": 123,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 0,
+            "id": "other-classes:s0:0:0",
+            "kind": "word",
+            "last": 0,
+            "parentId": "other-classes:s0:0",
+            "role": "determiner",
+            "sentenceId": "other-classes:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 1,
+            "grammar": [
+              "premodifier",
+              "adjective"
+            ],
+            "id": "other-classes:s0:0:1",
+            "kind": "word",
+            "last": 1,
+            "parentId": "other-classes:s0:0",
+            "role": "attribute",
+            "sentenceId": "other-classes:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "noun"
+            ],
+            "id": "other-classes:s0:0:2",
+            "kind": "word",
+            "last": 2,
+            "parentId": "other-classes:s0:0",
+            "role": "head",
+            "sentenceId": "other-classes:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [],
+        "parentId": "other-classes:s0:0",
+        "relations": [
+          {
+            "headToken": 2,
+            "sourceId": "other-classes:s0:0:1"
+          }
+        ],
+        "skeleton": null,
+        "translation": "这位年轻的科学家",
+        "warnings": [
+          "部分语法细分类与结构不一致，已保留通用标签。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10743,
+            "outputTokens": 95,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1637.1205,
+            "responseReadMs": 0.049600000000054933,
+            "responseWaitMs": 1637.0709,
+            "stage": "第2层 · 0–2 · 初次",
+            "validationMs": 0.1036
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0391,
+        "totalMs": 1637.3015
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 0,
+        "grammar": [
+          "noun_phrase"
+        ],
+        "id": "other-classes:s0:0",
+        "kind": "phrase",
+        "last": 2,
+        "parentId": "other-classes:s0",
+        "role": "subject",
+        "sentenceId": "other-classes:s0"
+      },
+      "sample": "other-classes",
+      "status": "ok",
+      "text": "The young scientist worked quietly in London.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1637.1205,
+        "inputTokens": 10743,
+        "outputTokens": 95,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 5,
+            "grammar": [
+              "preposition"
+            ],
+            "id": "other-classes:s0:3:0",
+            "kind": "word",
+            "last": 5,
+            "parentId": "other-classes:s0:3",
+            "role": "head",
+            "sentenceId": "other-classes:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 6,
+            "grammar": [
+              "proper_noun"
+            ],
+            "id": "other-classes:s0:3:1",
+            "kind": "word",
+            "last": 7,
+            "parentId": "other-classes:s0:3",
+            "role": "object",
+            "sentenceId": "other-classes:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "介词短语，介词后名词作宾语"
+        ],
+        "parentId": "other-classes:s0:3",
+        "relations": [],
+        "skeleton": null,
+        "translation": "在伦敦。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10745,
+            "outputTokens": 76,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1576.2939000000001,
+            "responseReadMs": 0.04510000000004766,
+            "responseWaitMs": 1576.2488,
+            "stage": "第2层 · 5–7 · 初次",
+            "validationMs": 0.0668
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.034100000000000005,
+        "totalMs": 1576.4205
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 5,
+        "grammar": [
+          "prepositional_phrase"
+        ],
+        "id": "other-classes:s0:3",
+        "kind": "phrase",
+        "last": 7,
+        "parentId": "other-classes:s0",
+        "role": "adverbial",
+        "sentenceId": "other-classes:s0"
+      },
+      "sample": "other-classes",
+      "status": "ok",
+      "text": "The young scientist worked quietly in London.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1576.2939000000001,
+        "inputTokens": 10745,
+        "outputTokens": 76,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "noun-can:s0:0",
+            "kind": "phrase",
+            "last": 1,
+            "parentId": "noun-can:s0",
+            "role": "subject",
+            "sentenceId": "noun-can:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "noun-can:s0:1",
+            "kind": "word",
+            "last": 3,
+            "parentId": "noun-can:s0",
+            "role": "predicate",
+            "sentenceId": "noun-can:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "can 在此为名词，作主语中心词"
+        ],
+        "parentId": "noun-can:s0",
+        "relations": [],
+        "skeleton": "The can fell.",
+        "translation": "罐子掉了下来。",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10725,
+            "outputTokens": 87,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1512.5253,
+            "responseReadMs": 0.04250000000001819,
+            "responseWaitMs": 1512.4828,
+            "stage": "第1层 · 0–3 · 初次",
+            "validationMs": 0.0759
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.031,
+        "totalMs": 1512.6644000000001
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "noun-can:s0",
+        "kind": "sentence",
+        "last": 3,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "noun-can:s0"
+      },
+      "sample": "noun-can",
+      "status": "ok",
+      "text": "The can fell.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1512.5253,
+        "inputTokens": 10725,
+        "outputTokens": 87,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 0,
+            "id": "noun-can:s0:0:0",
+            "kind": "word",
+            "last": 0,
+            "parentId": "noun-can:s0:0",
+            "role": "determiner",
+            "sentenceId": "noun-can:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 1,
+            "grammar": [
+              "noun"
+            ],
+            "id": "noun-can:s0:0:1",
+            "kind": "word",
+            "last": 1,
+            "parentId": "noun-can:s0:0",
+            "role": "head",
+            "sentenceId": "noun-can:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "can 在此为名词，作名词短语中心词"
+        ],
+        "parentId": "noun-can:s0:0",
+        "relations": [],
+        "skeleton": null,
+        "translation": "那个罐子",
+        "warnings": [
+          "部分语法细分类与结构不一致，已保留通用标签。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10719,
+            "outputTokens": 78,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1255.1274,
+            "responseReadMs": 0.04500000000007276,
+            "responseWaitMs": 1255.0824,
+            "stage": "第2层 · 0–1 · 初次",
+            "validationMs": 0.0672
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0282,
+        "totalMs": 1255.2641
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 0,
+        "grammar": [
+          "noun_phrase"
+        ],
+        "id": "noun-can:s0:0",
+        "kind": "phrase",
+        "last": 1,
+        "parentId": "noun-can:s0",
+        "role": "subject",
+        "sentenceId": "noun-can:s0"
+      },
+      "sample": "noun-can",
+      "status": "ok",
+      "text": "The can fell.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1255.1274,
+        "inputTokens": 10719,
+        "outputTokens": 78,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "grammar": [
+              "discourse_marker"
+            ],
+            "id": "discourse:s0:0",
+            "kind": "word",
+            "last": 1,
+            "parentId": "discourse:s0",
+            "role": "marker",
+            "sentenceId": "discourse:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "pronoun"
+            ],
+            "id": "discourse:s0:1",
+            "kind": "word",
+            "last": 2,
+            "parentId": "discourse:s0",
+            "role": "subject",
+            "sentenceId": "discourse:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 3,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "discourse:s0:2",
+            "kind": "phrase",
+            "last": 5,
+            "parentId": "discourse:s0",
+            "role": "predicate",
+            "sentenceId": "discourse:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "Well 为独立话语标记，非句子成分",
+          "情态动词与实义动词共同构成谓语"
+        ],
+        "parentId": "discourse:s0",
+        "relations": [],
+        "skeleton": "They may leave.",
+        "translation": "嗯，他们可能会离开。",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10743,
+            "outputTokens": 119,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1741.7453,
+            "responseReadMs": 0.36169999999992797,
+            "responseWaitMs": 1741.3836000000001,
+            "stage": "第1层 · 0–5 · 初次",
+            "validationMs": 0.0878
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0672,
+        "totalMs": 1741.9383000000003
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "discourse:s0",
+        "kind": "sentence",
+        "last": 5,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "discourse:s0"
+      },
+      "sample": "discourse",
+      "status": "ok",
+      "text": "Well, they may leave.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1741.7453,
+        "inputTokens": 10743,
+        "outputTokens": 119,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 3,
+            "grammar": [
+              "modal_verb"
+            ],
+            "id": "discourse:s0:2:0",
+            "kind": "word",
+            "last": 3,
+            "parentId": "discourse:s0:2",
+            "role": "predicate",
+            "sentenceId": "discourse:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 4,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "discourse:s0:2:1",
+            "kind": "word",
+            "last": 5,
+            "parentId": "discourse:s0:2",
+            "role": "predicate",
+            "sentenceId": "discourse:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "情态动词与实义动词共同组成谓语"
+        ],
+        "parentId": "discourse:s0:2",
+        "relations": [],
+        "skeleton": null,
+        "translation": "（他们）可以离开。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10733,
+            "outputTokens": 85,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1774.3759,
+            "responseReadMs": 0.04739999999992506,
+            "responseWaitMs": 1774.3285,
+            "stage": "第2层 · 3–5 · 初次",
+            "validationMs": 0.0791
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0443,
+        "totalMs": 1774.5654
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 3,
+        "grammar": [
+          "verb_phrase"
+        ],
+        "id": "discourse:s0:2",
+        "kind": "phrase",
+        "last": 5,
+        "parentId": "discourse:s0",
+        "role": "predicate",
+        "sentenceId": "discourse:s0"
+      },
+      "sample": "discourse",
+      "status": "ok",
+      "text": "Well, they may leave.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1774.3759,
+        "inputTokens": 10733,
+        "outputTokens": 85,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    }
+  ],
+  "temperature": 0.3,
+  "thinking": false
+}

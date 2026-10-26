@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "2",
+  "promptVersion": "layer-v2.8-noun-phrases",
+  "sessionId": "adjective-control",
+  "pieces": [
+    {
+      "id": 0,
+      "text": "She"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "is"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "very"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "proud"
+    },
+    {
+      "id": 7,
+      "text": " "
+    },
+    {
+      "id": 8,
+      "text": "of"
+    },
+    {
+      "id": 9,
+      "text": " "
+    },
+    {
+      "id": 10,
+      "text": "her"
+    },
+    {
+      "id": 11,
+      "text": " "
+    },
+    {
+      "id": 12,
+      "text": "daughter"
+    },
+    {
+      "id": 13,
+      "text": "."
+    }
+  ],
+  "tokens": [
+    {
+      "id": 0,
+      "text": "She",
+      "pieceId": 0
+    },
+    {
+      "id": 1,
+      "text": "is",
+      "pieceId": 2
+    },
+    {
+      "id": 2,
+      "text": "very",
+      "pieceId": 4
+    },
+    {
+      "id": 3,
+      "text": "proud",
+      "pieceId": 6
+    },
+    {
+      "id": 4,
+      "text": "of",
+      "pieceId": 8
+    },
+    {
+      "id": 5,
+      "text": "her",
+      "pieceId": 10
+    },
+    {
+      "id": 6,
+      "text": "daughter",
+      "pieceId": 12
+    },
+    {
+      "id": 7,
+      "text": ".",
+      "pieceId": 13
+    }
+  ],
+  "roots": [
+    {
+      "id": "adjective-control:s0",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 0,
+      "last": 7,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "adjective-control:s0"
+    }
+  ],
+  "layers": [
+    {
+      "parentId": "adjective-control:s0",
+      "depth": 1,
+      "skeleton": "She is very proud of her daughter.",
+      "translation": "她为她的女儿感到非常自豪。",
+      "nodes": [
+        {
+          "id": "adjective-control:s0:0",
+          "parentId": "adjective-control:s0",
+          "kind": "word",
+          "role": "subject",
+          "ctype": "none",
+          "first": 0,
+          "last": 0,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "adjective-control:s0"
+        },
+        {
+          "id": "adjective-control:s0:1",
+          "parentId": "adjective-control:s0",
+          "kind": "word",
+          "role": "predicate",
+          "ctype": "none",
+          "first": 1,
+          "last": 1,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "adjective-control:s0"
+        },
+        {
+          "id": "adjective-control:s0:2",
+          "parentId": "adjective-control:s0",
+          "kind": "phrase",
+          "role": "predicative",
+          "ctype": "none",
+          "first": 2,
+          "last": 7,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "adjective-control:s0"
+        }
+      ],
+      "relations": [],
+      "notes": [
+        "形容词短语作表语，of 短语说明 proud 的对象"
+      ],
+      "warnings": [
+        "已按原文补齐标点归属，单词的成分划分保持原样。"
+      ],
+      "normalizationCount": 0
+    }
+  ],
+  "maxDepth": 4
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "path": "src-tauri/src/prompts/layer-v2.txt",
+    "sha256": "e3074eca9fba95f3191d6dcb3729f21030304ab5f15f0479a0cdf40cdce60de6"
+  },
+  {
+    "path": "src-tauri/src/layered.rs",
+    "sha256": "c104718733ebb2fe0485911506103dd50fbf8d4b9777c777784acc02e660fb08"
+  },
+  {
+    "path": "src/components/LayeredAnalysisView.tsx",
+    "sha256": "dbe52aca70e240fdaaf8f6e3c98003d4c092bb0d2c14def51b0c3ae1fe8b68d7"
+  },
+  {
+    "path": "src/componentLabels.ts",
+    "sha256": "b207a7883502c6853590872e12b1be6528eb91583073a9d0569ba8c3f3e80934"
+  }
+]

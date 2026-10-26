@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "2",
+  "promptVersion": "layer-v2.8-noun-phrases",
+  "sessionId": "present",
+  "pieces": [
+    {
+      "id": 0,
+      "text": "She"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "greeted"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "the"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "young"
+    },
+    {
+      "id": 7,
+      "text": " "
+    },
+    {
+      "id": 8,
+      "text": "scientist"
+    },
+    {
+      "id": 9,
+      "text": " "
+    },
+    {
+      "id": 10,
+      "text": "working"
+    },
+    {
+      "id": 11,
+      "text": " "
+    },
+    {
+      "id": 12,
+      "text": "in"
+    },
+    {
+      "id": 13,
+      "text": " "
+    },
+    {
+      "id": 14,
+      "text": "the"
+    },
+    {
+      "id": 15,
+      "text": " "
+    },
+    {
+      "id": 16,
+      "text": "laboratory"
+    },
+    {
+      "id": 17,
+      "text": "."
+    }
+  ],
+  "tokens": [
+    {
+      "id": 0,
+      "text": "She",
+      "pieceId": 0
+    },
+    {
+      "id": 1,
+      "text": "greeted",
+      "pieceId": 2
+    },
+    {
+      "id": 2,
+      "text": "the",
+      "pieceId": 4
+    },
+    {
+      "id": 3,
+      "text": "young",
+      "pieceId": 6
+    },
+    {
+      "id": 4,
+      "text": "scientist",
+      "pieceId": 8
+    },
+    {
+      "id": 5,
+      "text": "working",
+      "pieceId": 10
+    },
+    {
+      "id": 6,
+      "text": "in",
+      "pieceId": 12
+    },
+    {
+      "id": 7,
+      "text": "the",
+      "pieceId": 14
+    },
+    {
+      "id": 8,
+      "text": "laboratory",
+      "pieceId": 16
+    },
+    {
+      "id": 9,
+      "text": ".",
+      "pieceId": 17
+    }
+  ],
+  "roots": [
+    {
+      "id": "present:s0",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 0,
+      "last": 9,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "present:s0"
+    }
+  ],
+  "layers": [
+    {
+      "parentId": "present:s0",
+      "depth": 1,
+      "skeleton": "She greeted the scientist.",
+      "translation": "她向在实验室工作的那位年轻科学家打了招呼。",
+      "nodes": [
+        {
+          "id": "present:s0:0",
+          "parentId": "present:s0",
+          "kind": "word",
+          "role": "subject",
+          "ctype": "none",
+          "first": 0,
+          "last": 0,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "present:s0"
+        },
+        {
+          "id": "present:s0:1",
+          "parentId": "present:s0",
+          "kind": "word",
+          "role": "predicate",
+          "ctype": "none",
+          "first": 1,
+          "last": 1,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "present:s0"
+        },
+        {
+          "id": "present:s0:2",
+          "parentId": "present:s0",
+          "kind": "phrase",
+          "role": "object",
+          "ctype": "none",
+          "first": 2,
+          "last": 9,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "present:s0"
+        }
+      ],
+      "relations": [],
+      "notes": [],
+      "warnings": [],
+      "normalizationCount": 0
+    }
+  ],
+  "maxDepth": 4
+}

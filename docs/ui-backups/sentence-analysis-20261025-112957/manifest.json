@@ -1,0 +1,170 @@
+{
+  "createdAt": "2026-10-25T11:29:57.207043+08:00",
+  "files": [
+    {
+      "path": "src/App.css",
+      "bytes": 28751,
+      "sha256": "98532e3d506c369e5df6934ecd1152fd270b06ba3834c826b5044952cc5009a9"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 21827,
+      "sha256": "6ca9b37f4faa4d4baba13518ef2b064571d85ef5d38331bf9cfd7074e8c3983a"
+    },
+    {
+      "path": "src/layerSample.ts",
+      "bytes": 2849,
+      "sha256": "f704e7a9f66bbca1ddc7482b862181c990286126a178eba257be9214b7585680"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 238,
+      "sha256": "8f55009f27569355469b6c65ddd242e2b38aa30b7a070ee2e438f4909a47a233"
+    },
+    {
+      "path": "src/sample.ts",
+      "bytes": 1151,
+      "sha256": "88319ccfeacaac781fb587ef533a0cf71f83ccfba1d0eca7e72907c911399d26"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "bytes": 39,
+      "sha256": "424faf9241dd699dda995b367ed36665732da1e6ec1f33b2fd40394488ecac92"
+    },
+    {
+      "path": "src/assets/react.svg",
+      "bytes": 4126,
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+    },
+    {
+      "path": "src/components/AnalysisView.tsx",
+      "bytes": 1478,
+      "sha256": "a86051c2b17e41893c4397eb20e8b00275c809a499d09692607ab1cc0f1ebc76"
+    },
+    {
+      "path": "src/components/ColorSettings.tsx",
+      "bytes": 10690,
+      "sha256": "c44142d5fec6c01c0c9eedf508e212ccbc854920c5cd3d516d8eba1fd9470847"
+    },
+    {
+      "path": "src/components/Icon.tsx",
+      "bytes": 2639,
+      "sha256": "8becae47a5ee8392891aa020c4dacab84f89496bf4f2c580c4f48d355498f2b7"
+    },
+    {
+      "path": "src/components/LayeredAnalysisView.tsx",
+      "bytes": 9255,
+      "sha256": "fe80c59c92f38ad83e3498b02c3d6766c67f73fbd7d7c287b0b8e12128f42da7"
+    },
+    {
+      "path": "src/components/PerformanceDetails.tsx",
+      "bytes": 2047,
+      "sha256": "6523e01e3abdaec7a28e58beece54484f9479262e3ccc182d8c68866dbceb298"
+    },
+    {
+      "path": "src/types/analysis.ts",
+      "bytes": 2552,
+      "sha256": "528e061bee57b65cc08eb47b30d721265c9fc7faebc202594878a8fe2e5a24f5"
+    },
+    {
+      "path": "src-tauri/src/analysis.rs",
+      "bytes": 7286,
+      "sha256": "6df935c78c5cb3790dd0533996efe5678144b071fba0658b1674d333df90c063"
+    },
+    {
+      "path": "src-tauri/src/analyzer.rs",
+      "bytes": 9686,
+      "sha256": "83845e9c0a46da1b83f038e88aafb42447d36bc9ff583fa1bffd62acb61fc2d0"
+    },
+    {
+      "path": "src-tauri/src/benchmark.rs",
+      "bytes": 11880,
+      "sha256": "596896d2db867391ec7720eb4374f944c4cee0181cb96469990feea99c03a71b"
+    },
+    {
+      "path": "src-tauri/src/layered.rs",
+      "bytes": 26584,
+      "sha256": "22b67945ecad91ee1136c480cf68ec4fbc21cf775a48b982897b5b9ea084f025"
+    },
+    {
+      "path": "src-tauri/src/lib.rs",
+      "bytes": 12541,
+      "sha256": "822a5e14138165088f3132ecbad2a55713676ac1b17cb55079478f9c8c2f148b"
+    },
+    {
+      "path": "src-tauri/src/llm.rs",
+      "bytes": 11363,
+      "sha256": "a879d368cb0bfa476ea5189e2d044a2234d2d89183e90f9c449bbd522c895c24"
+    },
+    {
+      "path": "src-tauri/src/main.rs",
+      "bytes": 198,
+      "sha256": "61285545dd30e656d602b7a0497408ca346251b6005e8661f0d5b65764386014"
+    },
+    {
+      "path": "src-tauri/src/settings.rs",
+      "bytes": 4427,
+      "sha256": "0f288466a0bac1e107ec1212274a84caa6bc18e0b2234b3e4cf708b877d4386a"
+    },
+    {
+      "path": "src-tauri/src/prompts/analyze.txt",
+      "bytes": 1539,
+      "sha256": "4e2f67a72be97ce94937cd965a40de33b10f50e83add47efbe59bf6d0ced0233"
+    },
+    {
+      "path": "src-tauri/src/prompts/layer-v2.txt",
+      "bytes": 1893,
+      "sha256": "0735c6a0817b2b5f999915b29c49ac5c6996b9e891d6de241544575daf9398af"
+    },
+    {
+      "path": "package.json",
+      "bytes": 601,
+      "sha256": "2c0529ebb36aaba02c366648993cf563fbd5d64e4419acc464c333233a9403df"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 38431,
+      "sha256": "3d02b905b11b36dcfda754942f0077ad36375ab906cea5a32aa2764dd9c78170"
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "bytes": 1052,
+      "sha256": "b56859d2f33472a0ee7ea0ad3bf204be20cf9ae67c52784f09f6c38cf609e58b"
+    },
+    {
+      "path": "src-tauri/Cargo.lock",
+      "bytes": 132812,
+      "sha256": "14426fb94cdfc8f8e81de5656f1ebecba6ffa680fe8875582f761584b0d859c7"
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "bytes": 810,
+      "sha256": "3615091118f48d098131f7a43400bffa58122002d33df970a0a99282e3627231"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 614,
+      "sha256": "9671b50541bcb0112d8914cf5f82c838fcaaa25bc3f14ab90cf40a49e929224e"
+    },
+    {
+      "path": "tsconfig.node.json",
+      "bytes": 223,
+      "sha256": "6ec602b8aa146888c76f0b41ca3515f91f95919f6e6417a4670decaba8fcb982"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 891,
+      "sha256": "647d31427695725417578522e1734643cf3311d0ebda51e2d4c2f9887269a844"
+    },
+    {
+      "path": "index.html",
+      "bytes": 321,
+      "sha256": "3a5d432498fc165dd69bda46c1b778edc1558e480c736e3ca5de30ff5695e015"
+    },
+    {
+      "path": "docs/layered-protocol-v2.md",
+      "bytes": 4049,
+      "sha256": "2d668d74da040f136c0795842d1503bae7ec6b32e585a3ee5c349b4956e724ca"
+    }
+  ]
+}

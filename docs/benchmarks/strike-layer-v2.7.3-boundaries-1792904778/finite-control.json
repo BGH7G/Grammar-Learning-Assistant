@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "2",
+  "promptVersion": "layer-v2.7.3-boundaries",
+  "sessionId": "finite-control",
+  "pieces": [
+    {
+      "id": 0,
+      "text": "His"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "team"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "disseminated"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "the"
+    },
+    {
+      "id": 7,
+      "text": " "
+    },
+    {
+      "id": 8,
+      "text": "report"
+    },
+    {
+      "id": 9,
+      "text": " "
+    },
+    {
+      "id": 10,
+      "text": "and"
+    },
+    {
+      "id": 11,
+      "text": " "
+    },
+    {
+      "id": 12,
+      "text": "contacted"
+    },
+    {
+      "id": 13,
+      "text": " "
+    },
+    {
+      "id": 14,
+      "text": "the"
+    },
+    {
+      "id": 15,
+      "text": " "
+    },
+    {
+      "id": 16,
+      "text": "editor"
+    },
+    {
+      "id": 17,
+      "text": "."
+    }
+  ],
+  "tokens": [
+    {
+      "id": 0,
+      "text": "His",
+      "pieceId": 0
+    },
+    {
+      "id": 1,
+      "text": "team",
+      "pieceId": 2
+    },
+    {
+      "id": 2,
+      "text": "disseminated",
+      "pieceId": 4
+    },
+    {
+      "id": 3,
+      "text": "the",
+      "pieceId": 6
+    },
+    {
+      "id": 4,
+      "text": "report",
+      "pieceId": 8
+    },
+    {
+      "id": 5,
+      "text": "and",
+      "pieceId": 10
+    },
+    {
+      "id": 6,
+      "text": "contacted",
+      "pieceId": 12
+    },
+    {
+      "id": 7,
+      "text": "the",
+      "pieceId": 14
+    },
+    {
+      "id": 8,
+      "text": "editor",
+      "pieceId": 16
+    },
+    {
+      "id": 9,
+      "text": ".",
+      "pieceId": 17
+    }
+  ],
+  "roots": [
+    {
+      "id": "finite-control:s0",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 0,
+      "last": 9,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "finite-control:s0"
+    }
+  ],
+  "layers": [
+    {
+      "parentId": "finite-control:s0",
+      "depth": 1,
+      "skeleton": "His team disseminated the report and contacted the editor.",
+      "translation": "他的团队传播了那份报告，并联系了编辑。",
+      "nodes": [
+        {
+          "id": "finite-control:s0:0",
+          "parentId": "finite-control:s0",
+          "kind": "phrase",
+          "role": "subject",
+          "ctype": "none",
+          "first": 0,
+          "last": 1,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "finite-control:s0"
+        },
+        {
+          "id": "finite-control:s0:1",
+          "parentId": "finite-control:s0",
+          "kind": "phrase",
+          "role": "predicate",
+          "ctype": "none",
+          "first": 2,
+          "last": 9,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "finite-control:s0"
+        }
+      ],
+      "relations": [],
+      "notes": [
+        "一个主语带两个并列谓语"
+      ],
+      "warnings": [
+        "已按原文补齐标点归属，单词的成分划分保持原样。"
+      ],
+      "normalizationCount": 0
+    }
+  ],
+  "maxDepth": 4
+}

@@ -1,0 +1,144 @@
+{
+  "layers": [
+    {
+      "depth": 1,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 0,
+          "grammar": [
+            "pronoun"
+          ],
+          "id": "lexical-have:s0:0",
+          "kind": "word",
+          "last": 0,
+          "parentId": "lexical-have:s0",
+          "role": "subject",
+          "sentenceId": "lexical-have:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 1,
+          "grammar": [
+            "lexical_verb"
+          ],
+          "id": "lexical-have:s0:1",
+          "kind": "word",
+          "last": 1,
+          "parentId": "lexical-have:s0",
+          "role": "predicate",
+          "sentenceId": "lexical-have:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 2,
+          "grammar": [
+            "noun_phrase"
+          ],
+          "id": "lexical-have:s0:2",
+          "kind": "phrase",
+          "last": 4,
+          "parentId": "lexical-have:s0",
+          "role": "object",
+          "sentenceId": "lexical-have:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "has 为实义动词，表示拥有"
+      ],
+      "parentId": "lexical-have:s0",
+      "relations": [],
+      "skeleton": "She has a bicycle.",
+      "translation": "她有一辆自行车。",
+      "warnings": [
+        "已按原文补齐标点归属，单词的成分划分保持原样。"
+      ]
+    }
+  ],
+  "maxDepth": 4,
+  "pieces": [
+    {
+      "id": 0,
+      "text": "She"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "has"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "a"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "bicycle"
+    },
+    {
+      "id": 7,
+      "text": "."
+    }
+  ],
+  "promptVersion": "layer-v2.9-grammar-types",
+  "roots": [
+    {
+      "ctype": "none",
+      "depth": 0,
+      "expandable": true,
+      "first": 0,
+      "id": "lexical-have:s0",
+      "kind": "sentence",
+      "last": 4,
+      "parentId": null,
+      "role": "root",
+      "sentenceId": "lexical-have:s0"
+    }
+  ],
+  "schemaVersion": "2",
+  "sessionId": "lexical-have",
+  "tokens": [
+    {
+      "id": 0,
+      "pieceId": 0,
+      "text": "She"
+    },
+    {
+      "id": 1,
+      "pieceId": 2,
+      "text": "has"
+    },
+    {
+      "id": 2,
+      "pieceId": 4,
+      "text": "a"
+    },
+    {
+      "id": 3,
+      "pieceId": 6,
+      "text": "bicycle"
+    },
+    {
+      "id": 4,
+      "pieceId": 7,
+      "text": "."
+    }
+  ]
+}

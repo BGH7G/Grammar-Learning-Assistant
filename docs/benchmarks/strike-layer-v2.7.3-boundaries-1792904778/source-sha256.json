@@ -1,0 +1,8 @@
+{
+  "src-tauri/src/prompts/layer-v2.txt": "cee90f6d09c0ea893044fdeac804522633b3a6c189e5e0fcc69befeabf853c08",
+  "src-tauri/src/layered.rs": "fd98c575603c1208c5601e3440876c16bd48b0cf5cfa5a6d6f4c5180c0a96f60",
+  "src-tauri/src/benchmark.rs": "0907a7fc38511ebe624305da7f6313833320f4b07df1221517d7f524be5992b3",
+  "src/components/LayeredAnalysisView.tsx": "439bf2b56d7817d5205b87da444c2e2f8f754273e67bd0d7356f8197dd0b17b7",
+  "src/componentLabels.ts": "aa4be7c8f81674d8d9299a84c66186d5c8288ac1f5d920c0020aee6cf3a1c370",
+  "scripts/check-component-labels.mjs": "67a545e790942e72d32ca185412fa1a97bb99030aa7d82b18851783e953effa7"
+}

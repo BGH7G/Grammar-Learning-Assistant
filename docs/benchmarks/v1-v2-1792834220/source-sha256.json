@@ -1,0 +1,10 @@
+{
+  "source\\analysis.rs": "6df935c78c5cb3790dd0533996efe5678144b071fba0658b1674d333df90c063",
+  "source\\analyzer.rs": "83845e9c0a46da1b83f038e88aafb42447d36bc9ff583fa1bffd62acb61fc2d0",
+  "source\\benchmark.rs": "596896d2db867391ec7720eb4374f944c4cee0181cb96469990feea99c03a71b",
+  "source\\layered.rs": "22b67945ecad91ee1136c480cf68ec4fbc21cf775a48b982897b5b9ea084f025",
+  "source\\lib.rs": "822a5e14138165088f3132ecbad2a55713676ac1b17cb55079478f9c8c2f148b",
+  "source\\llm.rs": "a879d368cb0bfa476ea5189e2d044a2234d2d89183e90f9c449bbd522c895c24",
+  "source\\settings.rs": "0f288466a0bac1e107ec1212274a84caa6bc18e0b2234b3e4cf708b877d4386a",
+  "prompt-v2.txt": "0735c6a0817b2b5f999915b29c49ac5c6996b9e891d6de241544575daf9398af"
+}

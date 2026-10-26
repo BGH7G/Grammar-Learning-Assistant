@@ -1,0 +1,159 @@
+{
+  "layers": [
+    {
+      "depth": 1,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": true,
+          "first": 0,
+          "grammar": [
+            "noun_phrase"
+          ],
+          "id": "noun-can:s0:0",
+          "kind": "phrase",
+          "last": 1,
+          "parentId": "noun-can:s0",
+          "role": "subject",
+          "sentenceId": "noun-can:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 2,
+          "grammar": [
+            "lexical_verb"
+          ],
+          "id": "noun-can:s0:1",
+          "kind": "word",
+          "last": 3,
+          "parentId": "noun-can:s0",
+          "role": "predicate",
+          "sentenceId": "noun-can:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "can 在此为名词，作主语中心词"
+      ],
+      "parentId": "noun-can:s0",
+      "relations": [],
+      "skeleton": "The can fell.",
+      "translation": "罐子掉了下来。",
+      "warnings": [
+        "已按原文补齐标点归属，单词的成分划分保持原样。"
+      ]
+    },
+    {
+      "depth": 2,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 0,
+          "id": "noun-can:s0:0:0",
+          "kind": "word",
+          "last": 0,
+          "parentId": "noun-can:s0:0",
+          "role": "determiner",
+          "sentenceId": "noun-can:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 1,
+          "grammar": [
+            "noun"
+          ],
+          "id": "noun-can:s0:0:1",
+          "kind": "word",
+          "last": 1,
+          "parentId": "noun-can:s0:0",
+          "role": "head",
+          "sentenceId": "noun-can:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "can 在此为名词，作主语中心词"
+      ],
+      "parentId": "noun-can:s0:0",
+      "relations": [],
+      "skeleton": null,
+      "translation": "那个罐头",
+      "warnings": [
+        "部分语法细分类与结构不一致，已保留通用标签。"
+      ]
+    }
+  ],
+  "maxDepth": 4,
+  "pieces": [
+    {
+      "id": 0,
+      "text": "The"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "can"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "fell"
+    },
+    {
+      "id": 5,
+      "text": "."
+    }
+  ],
+  "promptVersion": "layer-v2.9-grammar-types",
+  "roots": [
+    {
+      "ctype": "none",
+      "depth": 0,
+      "expandable": true,
+      "first": 0,
+      "id": "noun-can:s0",
+      "kind": "sentence",
+      "last": 3,
+      "parentId": null,
+      "role": "root",
+      "sentenceId": "noun-can:s0"
+    }
+  ],
+  "schemaVersion": "2",
+  "sessionId": "noun-can",
+  "tokens": [
+    {
+      "id": 0,
+      "pieceId": 0,
+      "text": "The"
+    },
+    {
+      "id": 1,
+      "pieceId": 2,
+      "text": "can"
+    },
+    {
+      "id": 2,
+      "pieceId": 4,
+      "text": "fell"
+    },
+    {
+      "id": 3,
+      "pieceId": 5,
+      "text": "."
+    }
+  ]
+}

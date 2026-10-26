@@ -1,0 +1,201 @@
+{
+  "layers": [
+    {
+      "depth": 1,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 0,
+          "grammar": [
+            "pronoun"
+          ],
+          "id": "auxiliary:s0:0",
+          "kind": "word",
+          "last": 0,
+          "parentId": "auxiliary:s0",
+          "role": "subject",
+          "sentenceId": "auxiliary:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": true,
+          "first": 1,
+          "grammar": [
+            "verb_phrase"
+          ],
+          "id": "auxiliary:s0:1",
+          "kind": "phrase",
+          "last": 2,
+          "parentId": "auxiliary:s0",
+          "role": "predicate",
+          "sentenceId": "auxiliary:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 3,
+          "grammar": [
+            "noun_phrase"
+          ],
+          "id": "auxiliary:s0:2",
+          "kind": "phrase",
+          "last": 5,
+          "parentId": "auxiliary:s0",
+          "role": "object",
+          "sentenceId": "auxiliary:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "has 为助动词，与 finished 构成现在完成时"
+      ],
+      "parentId": "auxiliary:s0",
+      "relations": [],
+      "skeleton": "She has finished the work.",
+      "translation": "她已经完成了这项工作。",
+      "warnings": [
+        "已按原文补齐标点归属，单词的成分划分保持原样。"
+      ]
+    },
+    {
+      "depth": 2,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 1,
+          "grammar": [
+            "auxiliary_verb"
+          ],
+          "id": "auxiliary:s0:1:0",
+          "kind": "word",
+          "last": 1,
+          "parentId": "auxiliary:s0:1",
+          "role": "predicate",
+          "sentenceId": "auxiliary:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 2,
+          "grammar": [
+            "lexical_verb"
+          ],
+          "id": "auxiliary:s0:1:1",
+          "kind": "word",
+          "last": 2,
+          "parentId": "auxiliary:s0:1",
+          "role": "predicate",
+          "sentenceId": "auxiliary:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "两个词共同组成一个谓语"
+      ],
+      "parentId": "auxiliary:s0:1",
+      "relations": [],
+      "skeleton": null,
+      "translation": "（她）已经完成了",
+      "warnings": []
+    }
+  ],
+  "maxDepth": 4,
+  "pieces": [
+    {
+      "id": 0,
+      "text": "She"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "has"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "finished"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "the"
+    },
+    {
+      "id": 7,
+      "text": " "
+    },
+    {
+      "id": 8,
+      "text": "work"
+    },
+    {
+      "id": 9,
+      "text": "."
+    }
+  ],
+  "promptVersion": "layer-v2.9.2-grammar-types",
+  "roots": [
+    {
+      "ctype": "none",
+      "depth": 0,
+      "expandable": true,
+      "first": 0,
+      "id": "auxiliary:s0",
+      "kind": "sentence",
+      "last": 5,
+      "parentId": null,
+      "role": "root",
+      "sentenceId": "auxiliary:s0"
+    }
+  ],
+  "schemaVersion": "2",
+  "sessionId": "auxiliary",
+  "tokens": [
+    {
+      "id": 0,
+      "pieceId": 0,
+      "text": "She"
+    },
+    {
+      "id": 1,
+      "pieceId": 2,
+      "text": "has"
+    },
+    {
+      "id": 2,
+      "pieceId": 4,
+      "text": "finished"
+    },
+    {
+      "id": 3,
+      "pieceId": 6,
+      "text": "the"
+    },
+    {
+      "id": 4,
+      "pieceId": 8,
+      "text": "work"
+    },
+    {
+      "id": 5,
+      "pieceId": 9,
+      "text": "."
+    }
+  ]
+}

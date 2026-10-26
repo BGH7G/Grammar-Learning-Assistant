@@ -1,0 +1,22 @@
+[
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\prompts\\layer-v2.txt",
+    "Hash": "A5EF52DF69D376ACADB5FA5E638858FF88410DA09B66152736E9474092AFBFAC"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\layered.rs",
+    "Hash": "2E3F9679FA1DDF41639267B59337733C0A902770AE7157946016E03E663413D2"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src\\componentLabels.ts",
+    "Hash": "470DFF60AF08A2CE66EB45BBFF5C61F216E6F4F052B61AB83C1BB446E5B77B21"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src\\types\\analysis.ts",
+    "Hash": "17E452CF8003ACD20843C10141634B70E3E233F4B8A6931B7EA02F8F41E187DA"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src\\components\\LayeredAnalysisView.tsx",
+    "Hash": "9A8CF6CF371A68C972184DED6BE8EB1BFD85D7FBC984E86BA08FC957A3AE3791"
+  }
+]

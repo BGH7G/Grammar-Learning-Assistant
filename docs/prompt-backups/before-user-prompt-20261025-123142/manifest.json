@@ -1,0 +1,9 @@
+{
+  "previousVersion": "layer-v2.6.1-roles",
+  "replacementSource": "C:\\Users\\17531\\.codex\\attachments\\d560e9d7-2039-4e87-8e55-b2d9b1bc34f3\\已粘贴的文本.txt",
+  "replacementSha256": "e3074eca9fba95f3191d6dcb3729f21030304ab5f15f0479a0cdf40cdce60de6",
+  "backups": {
+    "layer-v2.txt": "c1eba03b18518d487557ca3e2d71a2ef50c1f49e7ca01d53ce3c368d1ad4ff22",
+    "layered.rs": "343623cef86bc1d88daf4916a54e45f0e67bed0efcf606b229e6285108783fe8"
+  }
+}

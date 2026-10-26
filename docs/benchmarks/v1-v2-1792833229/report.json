@@ -1,0 +1,6522 @@
+{
+  "backup": "docs/prompt-backups/v1-20261024-165343",
+  "complete": true,
+  "endpointHost": "api.deepseek.com",
+  "jsonMode": false,
+  "maxDepth": 4,
+  "model": "deepseek-v4-flash",
+  "rounds": 2,
+  "rows": [
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 5,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "a",
+            "kind": "phrase",
+            "last": 2,
+            "parent_id": "s",
+            "role": "subject"
+          },
+          {
+            "first": 4,
+            "id": "b",
+            "kind": "word",
+            "last": 4,
+            "parent_id": "s",
+            "role": "predicate"
+          }
+        ],
+        "notes": [],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "The"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "cat"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "sleeps"
+          },
+          {
+            "id": 5,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "这只猫在睡觉。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 1446.595,
+      "round": 1,
+      "sample": "simple",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 256,
+        "httpMs": 1445.3649,
+        "inputTokens": 429,
+        "outputTokens": 95,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 966.0055,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "id": "bench-0-simple:s0:0",
+            "kind": "phrase",
+            "last": 1,
+            "parentId": "bench-0-simple:s0",
+            "role": "subject",
+            "sentenceId": "bench-0-simple:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 2,
+            "id": "bench-0-simple:s0:1",
+            "kind": "word",
+            "last": 2,
+            "parentId": "bench-0-simple:s0",
+            "role": "predicate",
+            "sentenceId": "bench-0-simple:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 3,
+            "id": "bench-0-simple:s0:2",
+            "kind": "word",
+            "last": 3,
+            "parentId": "bench-0-simple:s0",
+            "role": "punctuation",
+            "sentenceId": "bench-0-simple:s0"
+          }
+        ],
+        "notes": [],
+        "parentId": "bench-0-simple:s0",
+        "relations": [],
+        "skeleton": "The cat sleeps.",
+        "translation": "猫在睡觉。"
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 573,
+            "outputTokens": 71,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 965.8889,
+            "responseReadMs": 0.04719999999997526,
+            "responseWaitMs": 965.8417000000001,
+            "stage": "第1层 · 0–3 · 初次",
+            "validationMs": 0.0351
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0174,
+        "totalMs": 965.9708999999999
+      },
+      "round": 1,
+      "sample": "simple",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 965.8889,
+        "inputTokens": 573,
+        "outputTokens": 71,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "cacheHitVerified": true,
+      "condition": "v2_expanded_to_depth4",
+      "elapsedMs": 966.4128,
+      "errors": [],
+      "failedCallsHaveUnknownTokens": false,
+      "layers": [
+        {
+          "depth": 1,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 0,
+              "id": "bench-0-simple:s0:0",
+              "kind": "phrase",
+              "last": 1,
+              "parentId": "bench-0-simple:s0",
+              "role": "subject",
+              "sentenceId": "bench-0-simple:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 2,
+              "id": "bench-0-simple:s0:1",
+              "kind": "word",
+              "last": 2,
+              "parentId": "bench-0-simple:s0",
+              "role": "predicate",
+              "sentenceId": "bench-0-simple:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 3,
+              "id": "bench-0-simple:s0:2",
+              "kind": "word",
+              "last": 3,
+              "parentId": "bench-0-simple:s0",
+              "role": "punctuation",
+              "sentenceId": "bench-0-simple:s0"
+            }
+          ],
+          "notes": [],
+          "parentId": "bench-0-simple:s0",
+          "relations": [],
+          "skeleton": "The cat sleeps.",
+          "translation": "猫在睡觉。"
+        }
+      ],
+      "round": 1,
+      "sample": "simple",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 965.8889,
+        "inputTokens": 573,
+        "outputTokens": 71,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 19,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "subj",
+            "kind": "phrase",
+            "last": 10,
+            "parent_id": "s",
+            "role": "subject"
+          },
+          {
+            "first": 0,
+            "id": "subj_head",
+            "kind": "phrase",
+            "last": 2,
+            "parent_id": "subj",
+            "role": "subject"
+          },
+          {
+            "first": 4,
+            "id": "rel",
+            "kind": "clause",
+            "last": 10,
+            "parent_id": "subj",
+            "role": "attribute"
+          },
+          {
+            "first": 6,
+            "id": "rel_subj",
+            "kind": "word",
+            "last": 6,
+            "parent_id": "rel",
+            "role": "subject"
+          },
+          {
+            "first": 8,
+            "id": "rel_pred",
+            "kind": "word",
+            "last": 8,
+            "parent_id": "rel",
+            "role": "predicate"
+          },
+          {
+            "first": 10,
+            "id": "rel_adv",
+            "kind": "word",
+            "last": 10,
+            "parent_id": "rel",
+            "role": "adverbial"
+          },
+          {
+            "first": 12,
+            "id": "pred",
+            "kind": "word",
+            "last": 12,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 14,
+            "id": "adv",
+            "kind": "phrase",
+            "last": 18,
+            "parent_id": "s",
+            "role": "adverbial"
+          },
+          {
+            "first": 14,
+            "id": "adv_prep",
+            "kind": "word",
+            "last": 14,
+            "parent_id": "adv",
+            "role": "adverbial"
+          },
+          {
+            "first": 16,
+            "id": "adv_obj",
+            "kind": "phrase",
+            "last": 18,
+            "parent_id": "adv",
+            "role": "object"
+          }
+        ],
+        "notes": [
+          "that I saw yesterday 是定语从句，修饰 cat。",
+          "sat 是主句谓语，on the mat 作地点状语。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "The"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "cat"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "that"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "I"
+          },
+          {
+            "id": 7,
+            "text": " "
+          },
+          {
+            "id": 8,
+            "text": "saw"
+          },
+          {
+            "id": 9,
+            "text": " "
+          },
+          {
+            "id": 10,
+            "text": "yesterday"
+          },
+          {
+            "id": 11,
+            "text": " "
+          },
+          {
+            "id": 12,
+            "text": "sat"
+          },
+          {
+            "id": 13,
+            "text": " "
+          },
+          {
+            "id": 14,
+            "text": "on"
+          },
+          {
+            "id": 15,
+            "text": " "
+          },
+          {
+            "id": 16,
+            "text": "the"
+          },
+          {
+            "id": 17,
+            "text": " "
+          },
+          {
+            "id": 18,
+            "text": "mat"
+          },
+          {
+            "id": 19,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "我昨天看到的那只猫坐在垫子上。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 2005.4395,
+      "round": 1,
+      "sample": "relative",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 256,
+        "httpMs": 2005.2994,
+        "inputTokens": 500,
+        "outputTokens": 347,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 1210.3451,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "bench-0-relative:s0:0",
+            "kind": "phrase",
+            "last": 5,
+            "parentId": "bench-0-relative:s0",
+            "role": "subject",
+            "sentenceId": "bench-0-relative:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 6,
+            "id": "bench-0-relative:s0:1",
+            "kind": "word",
+            "last": 6,
+            "parentId": "bench-0-relative:s0",
+            "role": "predicate",
+            "sentenceId": "bench-0-relative:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 7,
+            "id": "bench-0-relative:s0:2",
+            "kind": "phrase",
+            "last": 9,
+            "parentId": "bench-0-relative:s0",
+            "role": "adverbial",
+            "sentenceId": "bench-0-relative:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 10,
+            "id": "bench-0-relative:s0:3",
+            "kind": "word",
+            "last": 10,
+            "parentId": "bench-0-relative:s0",
+            "role": "punctuation",
+            "sentenceId": "bench-0-relative:s0"
+          }
+        ],
+        "notes": [
+          "主语含定语从句修饰cat",
+          "介词短语作地点状语"
+        ],
+        "parentId": "bench-0-relative:s0",
+        "relations": [
+          {
+            "headToken": 6,
+            "sourceId": "bench-0-relative:s0:0"
+          }
+        ],
+        "skeleton": "The cat sat on the mat.",
+        "translation": "我昨天看见的那只猫坐在垫子上。"
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 609,
+            "outputTokens": 111,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1210.2177000000001,
+            "responseReadMs": 0.04700000000025284,
+            "responseWaitMs": 1210.1707,
+            "stage": "第1层 · 0–10 · 初次",
+            "validationMs": 0.0428
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0247,
+        "totalMs": 1210.3081
+      },
+      "round": 1,
+      "sample": "relative",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1210.2177000000001,
+        "inputTokens": 609,
+        "outputTokens": 111,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "cacheHitVerified": true,
+      "condition": "v2_expanded_to_depth4",
+      "elapsedMs": 8837.0807,
+      "errors": [],
+      "failedCallsHaveUnknownTokens": false,
+      "layers": [
+        {
+          "depth": 4,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 2,
+              "id": "bench-0-relative:s0:0:1:1:0",
+              "kind": "word",
+              "last": 2,
+              "parentId": "bench-0-relative:s0:0:1:1",
+              "role": "marker",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 3,
+              "id": "bench-0-relative:s0:0:1:1:1",
+              "kind": "phrase",
+              "last": 3,
+              "parentId": "bench-0-relative:s0:0:1:1",
+              "role": "subject",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 4,
+              "id": "bench-0-relative:s0:0:1:1:2",
+              "kind": "word",
+              "last": 4,
+              "parentId": "bench-0-relative:s0:0:1:1",
+              "role": "predicate",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 5,
+              "id": "bench-0-relative:s0:0:1:1:3",
+              "kind": "word",
+              "last": 5,
+              "parentId": "bench-0-relative:s0:0:1:1",
+              "role": "adverbial",
+              "sentenceId": "bench-0-relative:s0"
+            }
+          ],
+          "notes": [
+            "关系从句修饰先行词",
+            "省略关系代词宾语"
+          ],
+          "parentId": "bench-0-relative:s0:0:1:1",
+          "relations": [
+            {
+              "headToken": 4,
+              "sourceId": "bench-0-relative:s0:0:1:1:3"
+            }
+          ],
+          "skeleton": null,
+          "translation": "我昨天看到的那只"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 1,
+              "id": "bench-0-relative:s0:0:1:0",
+              "kind": "word",
+              "last": 1,
+              "parentId": "bench-0-relative:s0:0:1",
+              "role": "head",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "relative",
+              "depth": 3,
+              "expandable": true,
+              "first": 2,
+              "id": "bench-0-relative:s0:0:1:1",
+              "kind": "clause",
+              "last": 5,
+              "parentId": "bench-0-relative:s0:0:1",
+              "role": "attribute",
+              "sentenceId": "bench-0-relative:s0"
+            }
+          ],
+          "notes": [
+            "关系从句修饰cat",
+            "从句内省略关系副词"
+          ],
+          "parentId": "bench-0-relative:s0:0:1",
+          "relations": [
+            {
+              "headToken": 1,
+              "sourceId": "bench-0-relative:s0:0:1:1"
+            }
+          ],
+          "skeleton": null,
+          "translation": "我昨天看到的那只猫"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 7,
+              "id": "bench-0-relative:s0:2:0",
+              "kind": "word",
+              "last": 7,
+              "parentId": "bench-0-relative:s0:2",
+              "role": "marker",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": true,
+              "first": 8,
+              "id": "bench-0-relative:s0:2:1",
+              "kind": "phrase",
+              "last": 9,
+              "parentId": "bench-0-relative:s0:2",
+              "role": "object",
+              "sentenceId": "bench-0-relative:s0"
+            }
+          ],
+          "notes": [
+            "介词短语作地点状语"
+          ],
+          "parentId": "bench-0-relative:s0:2",
+          "relations": [],
+          "skeleton": null,
+          "translation": "在垫子上"
+        },
+        {
+          "depth": 1,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": true,
+              "first": 0,
+              "id": "bench-0-relative:s0:0",
+              "kind": "phrase",
+              "last": 5,
+              "parentId": "bench-0-relative:s0",
+              "role": "subject",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 6,
+              "id": "bench-0-relative:s0:1",
+              "kind": "word",
+              "last": 6,
+              "parentId": "bench-0-relative:s0",
+              "role": "predicate",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": true,
+              "first": 7,
+              "id": "bench-0-relative:s0:2",
+              "kind": "phrase",
+              "last": 9,
+              "parentId": "bench-0-relative:s0",
+              "role": "adverbial",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 10,
+              "id": "bench-0-relative:s0:3",
+              "kind": "word",
+              "last": 10,
+              "parentId": "bench-0-relative:s0",
+              "role": "punctuation",
+              "sentenceId": "bench-0-relative:s0"
+            }
+          ],
+          "notes": [
+            "主语含定语从句修饰cat",
+            "介词短语作地点状语"
+          ],
+          "parentId": "bench-0-relative:s0",
+          "relations": [
+            {
+              "headToken": 6,
+              "sourceId": "bench-0-relative:s0:0"
+            }
+          ],
+          "skeleton": "The cat sat on the mat.",
+          "translation": "我昨天看见的那只猫坐在垫子上。"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 8,
+              "id": "bench-0-relative:s0:2:1:0",
+              "kind": "word",
+              "last": 8,
+              "parentId": "bench-0-relative:s0:2:1",
+              "role": "determiner",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 9,
+              "id": "bench-0-relative:s0:2:1:1",
+              "kind": "word",
+              "last": 9,
+              "parentId": "bench-0-relative:s0:2:1",
+              "role": "head",
+              "sentenceId": "bench-0-relative:s0"
+            }
+          ],
+          "notes": [
+            "名词短语，作介词宾语"
+          ],
+          "parentId": "bench-0-relative:s0:2:1",
+          "relations": [],
+          "skeleton": null,
+          "translation": "垫子"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 0,
+              "id": "bench-0-relative:s0:0:0",
+              "kind": "word",
+              "last": 0,
+              "parentId": "bench-0-relative:s0:0",
+              "role": "determiner",
+              "sentenceId": "bench-0-relative:s0"
+            },
+            {
+              "ctype": "relative",
+              "depth": 2,
+              "expandable": true,
+              "first": 1,
+              "id": "bench-0-relative:s0:0:1",
+              "kind": "phrase",
+              "last": 5,
+              "parentId": "bench-0-relative:s0:0",
+              "role": "head",
+              "sentenceId": "bench-0-relative:s0"
+            }
+          ],
+          "notes": [
+            "主语中心词带定语从句"
+          ],
+          "parentId": "bench-0-relative:s0:0",
+          "relations": [],
+          "skeleton": null,
+          "translation": "我昨天看见的那只猫"
+        }
+      ],
+      "round": 1,
+      "sample": "relative",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 2816,
+        "httpMs": 8835.8552,
+        "inputTokens": 4235,
+        "outputTokens": 537,
+        "reasoningTokens": null,
+        "requests": 7,
+        "retryRequests": 1
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 18,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "c1",
+            "kind": "clause",
+            "last": 6,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 0,
+            "id": "s1",
+            "kind": "word",
+            "last": 0,
+            "parent_id": "c1",
+            "role": "subject"
+          },
+          {
+            "first": 2,
+            "id": "p1",
+            "kind": "word",
+            "last": 2,
+            "parent_id": "c1",
+            "role": "predicate"
+          },
+          {
+            "first": 4,
+            "id": "o1",
+            "kind": "phrase",
+            "last": 6,
+            "parent_id": "c1",
+            "role": "object"
+          },
+          {
+            "first": 11,
+            "id": "c2",
+            "kind": "clause",
+            "last": 17,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 11,
+            "id": "s2",
+            "kind": "phrase",
+            "last": 13,
+            "parent_id": "c2",
+            "role": "subject"
+          },
+          {
+            "first": 15,
+            "id": "p2",
+            "kind": "word",
+            "last": 15,
+            "parent_id": "c2",
+            "role": "predicate"
+          },
+          {
+            "first": 17,
+            "id": "a2",
+            "kind": "word",
+            "last": 17,
+            "parent_id": "c2",
+            "role": "predicative"
+          }
+        ],
+        "notes": [
+          "but连接两个并列分句，第二个分句省略了主语前的连词标记。",
+          "to leave为不定式短语，作wanted的宾语。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "I"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "wanted"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "to"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "leave"
+          },
+          {
+            "id": 7,
+            "text": ","
+          },
+          {
+            "id": 8,
+            "text": " "
+          },
+          {
+            "id": 9,
+            "text": "but"
+          },
+          {
+            "id": 10,
+            "text": " "
+          },
+          {
+            "id": 11,
+            "text": "the"
+          },
+          {
+            "id": 12,
+            "text": " "
+          },
+          {
+            "id": 13,
+            "text": "train"
+          },
+          {
+            "id": 14,
+            "text": " "
+          },
+          {
+            "id": 15,
+            "text": "was"
+          },
+          {
+            "id": 16,
+            "text": " "
+          },
+          {
+            "id": 17,
+            "text": "late"
+          },
+          {
+            "id": 18,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "我想离开，但火车晚点了。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 1933.346,
+      "round": 1,
+      "sample": "coordination",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 256,
+        "httpMs": 1933.2129,
+        "inputTokens": 494,
+        "outputTokens": 302,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 1407.4119,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "main",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "bench-0-coordination:s0:0",
+            "kind": "clause",
+            "last": 4,
+            "parentId": "bench-0-coordination:s0",
+            "role": "coordinate",
+            "sentenceId": "bench-0-coordination:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 5,
+            "id": "bench-0-coordination:s0:1",
+            "kind": "word",
+            "last": 5,
+            "parentId": "bench-0-coordination:s0",
+            "role": "conjunction",
+            "sentenceId": "bench-0-coordination:s0"
+          },
+          {
+            "ctype": "main",
+            "depth": 1,
+            "expandable": true,
+            "first": 6,
+            "id": "bench-0-coordination:s0:2",
+            "kind": "clause",
+            "last": 9,
+            "parentId": "bench-0-coordination:s0",
+            "role": "coordinate",
+            "sentenceId": "bench-0-coordination:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 10,
+            "id": "bench-0-coordination:s0:3",
+            "kind": "word",
+            "last": 10,
+            "parentId": "bench-0-coordination:s0",
+            "role": "punctuation",
+            "sentenceId": "bench-0-coordination:s0"
+          }
+        ],
+        "notes": [
+          "并列句由but连接两个分句",
+          "第二分句为主系表结构"
+        ],
+        "parentId": "bench-0-coordination:s0",
+        "relations": [],
+        "skeleton": "I wanted to leave, but the train was late.",
+        "translation": "我想离开，但火车晚点了。"
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 607,
+            "outputTokens": 116,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1407.3038,
+            "responseReadMs": 0.048699999999826105,
+            "responseWaitMs": 1407.2551,
+            "stage": "第1层 · 0–10 · 初次",
+            "validationMs": 0.0257
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0255,
+        "totalMs": 1407.3784
+      },
+      "round": 1,
+      "sample": "coordination",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1407.3038,
+        "inputTokens": 607,
+        "outputTokens": 116,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "cacheHitVerified": true,
+      "condition": "v2_expanded_to_depth4",
+      "elapsedMs": 7762.8785,
+      "errors": [],
+      "failedCallsHaveUnknownTokens": false,
+      "layers": [
+        {
+          "depth": 1,
+          "nodes": [
+            {
+              "ctype": "main",
+              "depth": 1,
+              "expandable": true,
+              "first": 0,
+              "id": "bench-0-coordination:s0:0",
+              "kind": "clause",
+              "last": 4,
+              "parentId": "bench-0-coordination:s0",
+              "role": "coordinate",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 5,
+              "id": "bench-0-coordination:s0:1",
+              "kind": "word",
+              "last": 5,
+              "parentId": "bench-0-coordination:s0",
+              "role": "conjunction",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "main",
+              "depth": 1,
+              "expandable": true,
+              "first": 6,
+              "id": "bench-0-coordination:s0:2",
+              "kind": "clause",
+              "last": 9,
+              "parentId": "bench-0-coordination:s0",
+              "role": "coordinate",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 10,
+              "id": "bench-0-coordination:s0:3",
+              "kind": "word",
+              "last": 10,
+              "parentId": "bench-0-coordination:s0",
+              "role": "punctuation",
+              "sentenceId": "bench-0-coordination:s0"
+            }
+          ],
+          "notes": [
+            "并列句由but连接两个分句",
+            "第二分句为主系表结构"
+          ],
+          "parentId": "bench-0-coordination:s0",
+          "relations": [],
+          "skeleton": "I wanted to leave, but the train was late.",
+          "translation": "我想离开，但火车晚点了。"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": true,
+              "first": 6,
+              "id": "bench-0-coordination:s0:2:0",
+              "kind": "phrase",
+              "last": 7,
+              "parentId": "bench-0-coordination:s0:2",
+              "role": "subject",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 8,
+              "id": "bench-0-coordination:s0:2:1",
+              "kind": "word",
+              "last": 8,
+              "parentId": "bench-0-coordination:s0:2",
+              "role": "predicate",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 9,
+              "id": "bench-0-coordination:s0:2:2",
+              "kind": "word",
+              "last": 9,
+              "parentId": "bench-0-coordination:s0:2",
+              "role": "predicative",
+              "sentenceId": "bench-0-coordination:s0"
+            }
+          ],
+          "notes": [
+            "主系表结构"
+          ],
+          "parentId": "bench-0-coordination:s0:2",
+          "relations": [],
+          "skeleton": null,
+          "translation": "火车晚点了。"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 6,
+              "id": "bench-0-coordination:s0:2:0:0",
+              "kind": "word",
+              "last": 6,
+              "parentId": "bench-0-coordination:s0:2:0",
+              "role": "determiner",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 7,
+              "id": "bench-0-coordination:s0:2:0:1",
+              "kind": "word",
+              "last": 7,
+              "parentId": "bench-0-coordination:s0:2:0",
+              "role": "head",
+              "sentenceId": "bench-0-coordination:s0"
+            }
+          ],
+          "notes": [
+            "定冠词修饰名词中心词"
+          ],
+          "parentId": "bench-0-coordination:s0:2:0",
+          "relations": [],
+          "skeleton": null,
+          "translation": "火车"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 1,
+              "id": "bench-0-coordination:s0:0:1:0",
+              "kind": "word",
+              "last": 1,
+              "parentId": "bench-0-coordination:s0:0:1",
+              "role": "predicate",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "infinitive",
+              "depth": 3,
+              "expandable": true,
+              "first": 2,
+              "id": "bench-0-coordination:s0:0:1:1",
+              "kind": "phrase",
+              "last": 3,
+              "parentId": "bench-0-coordination:s0:0:1",
+              "role": "object",
+              "sentenceId": "bench-0-coordination:s0"
+            }
+          ],
+          "notes": [
+            "不定式短语作宾语"
+          ],
+          "parentId": "bench-0-coordination:s0:0:1",
+          "relations": [
+            {
+              "headToken": 1,
+              "sourceId": "bench-0-coordination:s0:0:1:1"
+            }
+          ],
+          "skeleton": null,
+          "translation": "想要离开"
+        },
+        {
+          "depth": 4,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 2,
+              "id": "bench-0-coordination:s0:0:1:1:0",
+              "kind": "word",
+              "last": 2,
+              "parentId": "bench-0-coordination:s0:0:1:1",
+              "role": "marker",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 3,
+              "id": "bench-0-coordination:s0:0:1:1:1",
+              "kind": "word",
+              "last": 3,
+              "parentId": "bench-0-coordination:s0:0:1:1",
+              "role": "head",
+              "sentenceId": "bench-0-coordination:s0"
+            }
+          ],
+          "notes": [
+            "不定式短语作宾语，结构简单"
+          ],
+          "parentId": "bench-0-coordination:s0:0:1:1",
+          "relations": [],
+          "skeleton": null,
+          "translation": "离开"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 0,
+              "id": "bench-0-coordination:s0:0:0",
+              "kind": "word",
+              "last": 0,
+              "parentId": "bench-0-coordination:s0:0",
+              "role": "subject",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": true,
+              "first": 1,
+              "id": "bench-0-coordination:s0:0:1",
+              "kind": "phrase",
+              "last": 3,
+              "parentId": "bench-0-coordination:s0:0",
+              "role": "predicate",
+              "sentenceId": "bench-0-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 4,
+              "id": "bench-0-coordination:s0:0:2",
+              "kind": "word",
+              "last": 4,
+              "parentId": "bench-0-coordination:s0:0",
+              "role": "punctuation",
+              "sentenceId": "bench-0-coordination:s0"
+            }
+          ],
+          "notes": [
+            "并列分句之一，含不定式宾语"
+          ],
+          "parentId": "bench-0-coordination:s0:0",
+          "relations": [],
+          "skeleton": null,
+          "translation": "我想离开，"
+        }
+      ],
+      "round": 1,
+      "sample": "coordination",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 2304,
+        "httpMs": 7761.3225,
+        "inputTokens": 3525,
+        "outputTokens": 463,
+        "reasoningTokens": null,
+        "requests": 6,
+        "retryRequests": 0
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 32,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "p0",
+            "kind": "phrase",
+            "last": 10,
+            "parent_id": "s",
+            "role": "adverbial"
+          },
+          {
+            "first": 2,
+            "id": "w0",
+            "kind": "word",
+            "last": 2,
+            "parent_id": "p0",
+            "role": "predicate"
+          },
+          {
+            "first": 4,
+            "id": "o0",
+            "kind": "phrase",
+            "last": 6,
+            "parent_id": "p0",
+            "role": "object"
+          },
+          {
+            "first": 8,
+            "id": "a0",
+            "kind": "phrase",
+            "last": 10,
+            "parent_id": "p0",
+            "role": "adverbial"
+          },
+          {
+            "first": 13,
+            "id": "sub",
+            "kind": "word",
+            "last": 13,
+            "parent_id": "s",
+            "role": "subject"
+          },
+          {
+            "first": 15,
+            "id": "pred",
+            "kind": "word",
+            "last": 15,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 17,
+            "id": "adv",
+            "kind": "word",
+            "last": 17,
+            "parent_id": "s",
+            "role": "adverbial"
+          },
+          {
+            "first": 19,
+            "id": "c1",
+            "kind": "clause",
+            "last": 31,
+            "parent_id": "s",
+            "role": "adverbial"
+          },
+          {
+            "first": 21,
+            "id": "cs",
+            "kind": "phrase",
+            "last": 23,
+            "parent_id": "c1",
+            "role": "subject"
+          },
+          {
+            "first": 25,
+            "id": "cp",
+            "kind": "word",
+            "last": 25,
+            "parent_id": "c1",
+            "role": "predicate"
+          },
+          {
+            "first": 27,
+            "id": "co",
+            "kind": "phrase",
+            "last": 31,
+            "parent_id": "c1",
+            "role": "object"
+          }
+        ],
+        "notes": [
+          "句首不定式短语表目的，作状语。",
+          "while引导时间状语从句，与主句动作同时发生。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "To"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "finish"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "the"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "project"
+          },
+          {
+            "id": 7,
+            "text": " "
+          },
+          {
+            "id": 8,
+            "text": "on"
+          },
+          {
+            "id": 9,
+            "text": " "
+          },
+          {
+            "id": 10,
+            "text": "time"
+          },
+          {
+            "id": 11,
+            "text": ","
+          },
+          {
+            "id": 12,
+            "text": " "
+          },
+          {
+            "id": 13,
+            "text": "Maya"
+          },
+          {
+            "id": 14,
+            "text": " "
+          },
+          {
+            "id": 15,
+            "text": "worked"
+          },
+          {
+            "id": 16,
+            "text": " "
+          },
+          {
+            "id": 17,
+            "text": "late"
+          },
+          {
+            "id": 18,
+            "text": " "
+          },
+          {
+            "id": 19,
+            "text": "while"
+          },
+          {
+            "id": 20,
+            "text": " "
+          },
+          {
+            "id": 21,
+            "text": "her"
+          },
+          {
+            "id": 22,
+            "text": " "
+          },
+          {
+            "id": 23,
+            "text": "team"
+          },
+          {
+            "id": 24,
+            "text": " "
+          },
+          {
+            "id": 25,
+            "text": "reviewed"
+          },
+          {
+            "id": 26,
+            "text": " "
+          },
+          {
+            "id": 27,
+            "text": "the"
+          },
+          {
+            "id": 28,
+            "text": " "
+          },
+          {
+            "id": 29,
+            "text": "final"
+          },
+          {
+            "id": 30,
+            "text": " "
+          },
+          {
+            "id": 31,
+            "text": "report"
+          },
+          {
+            "id": 32,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "为了按时完成项目，Maya工作到很晚，而她的团队则在审阅最终报告。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 2156.672,
+      "round": 1,
+      "sample": "nonfinite",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 2156.5204,
+        "inputTokens": 566,
+        "outputTokens": 380,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 1516.8427,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "infinitive",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "bench-0-nonfinite:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "bench-0-nonfinite:s0",
+            "role": "adverbial",
+            "sentenceId": "bench-0-nonfinite:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 7,
+            "id": "bench-0-nonfinite:s0:1",
+            "kind": "word",
+            "last": 7,
+            "parentId": "bench-0-nonfinite:s0",
+            "role": "subject",
+            "sentenceId": "bench-0-nonfinite:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 8,
+            "id": "bench-0-nonfinite:s0:2",
+            "kind": "word",
+            "last": 8,
+            "parentId": "bench-0-nonfinite:s0",
+            "role": "predicate",
+            "sentenceId": "bench-0-nonfinite:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 9,
+            "id": "bench-0-nonfinite:s0:3",
+            "kind": "word",
+            "last": 9,
+            "parentId": "bench-0-nonfinite:s0",
+            "role": "adverbial",
+            "sentenceId": "bench-0-nonfinite:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 10,
+            "id": "bench-0-nonfinite:s0:4",
+            "kind": "word",
+            "last": 10,
+            "parentId": "bench-0-nonfinite:s0",
+            "role": "conjunction",
+            "sentenceId": "bench-0-nonfinite:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 11,
+            "id": "bench-0-nonfinite:s0:5",
+            "kind": "phrase",
+            "last": 12,
+            "parentId": "bench-0-nonfinite:s0",
+            "role": "subject",
+            "sentenceId": "bench-0-nonfinite:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 13,
+            "id": "bench-0-nonfinite:s0:6",
+            "kind": "word",
+            "last": 13,
+            "parentId": "bench-0-nonfinite:s0",
+            "role": "predicate",
+            "sentenceId": "bench-0-nonfinite:s0"
+          },
+          {
+            "ctype": "noun",
+            "depth": 1,
+            "expandable": true,
+            "first": 14,
+            "id": "bench-0-nonfinite:s0:7",
+            "kind": "phrase",
+            "last": 16,
+            "parentId": "bench-0-nonfinite:s0",
+            "role": "object",
+            "sentenceId": "bench-0-nonfinite:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 17,
+            "id": "bench-0-nonfinite:s0:8",
+            "kind": "word",
+            "last": 17,
+            "parentId": "bench-0-nonfinite:s0",
+            "role": "punctuation",
+            "sentenceId": "bench-0-nonfinite:s0"
+          }
+        ],
+        "notes": [
+          "目的状语置于句首",
+          "while引导对比状语从句"
+        ],
+        "parentId": "bench-0-nonfinite:s0",
+        "relations": [
+          {
+            "headToken": 8,
+            "sourceId": "bench-0-nonfinite:s0:0"
+          },
+          {
+            "headToken": 13,
+            "sourceId": "bench-0-nonfinite:s0:4"
+          }
+        ],
+        "skeleton": "Maya worked late while her team reviewed the report.",
+        "translation": "为了按时完成项目，玛雅工作到很晚，而她的团队则在审阅最终报告。"
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 644,
+            "outputTokens": 199,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1516.7096,
+            "responseReadMs": 0.051599999999780266,
+            "responseWaitMs": 1516.6580000000001,
+            "stage": "第1层 · 0–17 · 初次",
+            "validationMs": 0.0407
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0287,
+        "totalMs": 1516.8029999999999
+      },
+      "round": 1,
+      "sample": "nonfinite",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1516.7096,
+        "inputTokens": 644,
+        "outputTokens": 199,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "cacheHitVerified": true,
+      "condition": "v2_expanded_to_depth4",
+      "elapsedMs": 8904.6327,
+      "errors": [],
+      "failedCallsHaveUnknownTokens": false,
+      "layers": [
+        {
+          "depth": 4,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 4,
+              "id": "bench-0-nonfinite:s0:0:2:2:0",
+              "kind": "word",
+              "last": 4,
+              "parentId": "bench-0-nonfinite:s0:0:2:2",
+              "role": "marker",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 5,
+              "id": "bench-0-nonfinite:s0:0:2:2:1",
+              "kind": "word",
+              "last": 5,
+              "parentId": "bench-0-nonfinite:s0:0:2:2",
+              "role": "head",
+              "sentenceId": "bench-0-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "固定介词短语，作时间状语"
+          ],
+          "parentId": "bench-0-nonfinite:s0:0:2:2",
+          "relations": [],
+          "skeleton": null,
+          "translation": "按时完成项目，Maya加班工作，而她的团队审阅最终报告。"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 11,
+              "id": "bench-0-nonfinite:s0:5:0",
+              "kind": "word",
+              "last": 11,
+              "parentId": "bench-0-nonfinite:s0:5",
+              "role": "determiner",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 12,
+              "id": "bench-0-nonfinite:s0:5:1",
+              "kind": "word",
+              "last": 12,
+              "parentId": "bench-0-nonfinite:s0:5",
+              "role": "head",
+              "sentenceId": "bench-0-nonfinite:s0"
+            }
+          ],
+          "notes": [],
+          "parentId": "bench-0-nonfinite:s0:5",
+          "relations": [
+            {
+              "headToken": 12,
+              "sourceId": "bench-0-nonfinite:s0:5:0"
+            }
+          ],
+          "skeleton": null,
+          "translation": "她的团队"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 2,
+              "id": "bench-0-nonfinite:s0:0:2:0",
+              "kind": "word",
+              "last": 2,
+              "parentId": "bench-0-nonfinite:s0:0:2",
+              "role": "determiner",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 3,
+              "id": "bench-0-nonfinite:s0:0:2:1",
+              "kind": "word",
+              "last": 3,
+              "parentId": "bench-0-nonfinite:s0:0:2",
+              "role": "head",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": true,
+              "first": 4,
+              "id": "bench-0-nonfinite:s0:0:2:2",
+              "kind": "phrase",
+              "last": 5,
+              "parentId": "bench-0-nonfinite:s0:0:2",
+              "role": "attribute",
+              "sentenceId": "bench-0-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "介词短语修饰project",
+            "整体作finish的宾语"
+          ],
+          "parentId": "bench-0-nonfinite:s0:0:2",
+          "relations": [
+            {
+              "headToken": 3,
+              "sourceId": "bench-0-nonfinite:s0:0:2:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "按时完成项目"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 14,
+              "id": "bench-0-nonfinite:s0:7:0",
+              "kind": "word",
+              "last": 14,
+              "parentId": "bench-0-nonfinite:s0:7",
+              "role": "determiner",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 15,
+              "id": "bench-0-nonfinite:s0:7:1",
+              "kind": "word",
+              "last": 15,
+              "parentId": "bench-0-nonfinite:s0:7",
+              "role": "attribute",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 16,
+              "id": "bench-0-nonfinite:s0:7:2",
+              "kind": "word",
+              "last": 16,
+              "parentId": "bench-0-nonfinite:s0:7",
+              "role": "head",
+              "sentenceId": "bench-0-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "名词短语作宾语",
+            "final修饰report"
+          ],
+          "parentId": "bench-0-nonfinite:s0:7",
+          "relations": [
+            {
+              "headToken": 16,
+              "sourceId": "bench-0-nonfinite:s0:7:1"
+            }
+          ],
+          "skeleton": null,
+          "translation": "最终报告"
+        },
+        {
+          "depth": 1,
+          "nodes": [
+            {
+              "ctype": "infinitive",
+              "depth": 1,
+              "expandable": true,
+              "first": 0,
+              "id": "bench-0-nonfinite:s0:0",
+              "kind": "phrase",
+              "last": 6,
+              "parentId": "bench-0-nonfinite:s0",
+              "role": "adverbial",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 7,
+              "id": "bench-0-nonfinite:s0:1",
+              "kind": "word",
+              "last": 7,
+              "parentId": "bench-0-nonfinite:s0",
+              "role": "subject",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 8,
+              "id": "bench-0-nonfinite:s0:2",
+              "kind": "word",
+              "last": 8,
+              "parentId": "bench-0-nonfinite:s0",
+              "role": "predicate",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 9,
+              "id": "bench-0-nonfinite:s0:3",
+              "kind": "word",
+              "last": 9,
+              "parentId": "bench-0-nonfinite:s0",
+              "role": "adverbial",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 10,
+              "id": "bench-0-nonfinite:s0:4",
+              "kind": "word",
+              "last": 10,
+              "parentId": "bench-0-nonfinite:s0",
+              "role": "conjunction",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": true,
+              "first": 11,
+              "id": "bench-0-nonfinite:s0:5",
+              "kind": "phrase",
+              "last": 12,
+              "parentId": "bench-0-nonfinite:s0",
+              "role": "subject",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 13,
+              "id": "bench-0-nonfinite:s0:6",
+              "kind": "word",
+              "last": 13,
+              "parentId": "bench-0-nonfinite:s0",
+              "role": "predicate",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "noun",
+              "depth": 1,
+              "expandable": true,
+              "first": 14,
+              "id": "bench-0-nonfinite:s0:7",
+              "kind": "phrase",
+              "last": 16,
+              "parentId": "bench-0-nonfinite:s0",
+              "role": "object",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 17,
+              "id": "bench-0-nonfinite:s0:8",
+              "kind": "word",
+              "last": 17,
+              "parentId": "bench-0-nonfinite:s0",
+              "role": "punctuation",
+              "sentenceId": "bench-0-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "目的状语置于句首",
+            "while引导对比状语从句"
+          ],
+          "parentId": "bench-0-nonfinite:s0",
+          "relations": [
+            {
+              "headToken": 8,
+              "sourceId": "bench-0-nonfinite:s0:0"
+            },
+            {
+              "headToken": 13,
+              "sourceId": "bench-0-nonfinite:s0:4"
+            }
+          ],
+          "skeleton": "Maya worked late while her team reviewed the report.",
+          "translation": "为了按时完成项目，玛雅工作到很晚，而她的团队则在审阅最终报告。"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 0,
+              "id": "bench-0-nonfinite:s0:0:0",
+              "kind": "word",
+              "last": 0,
+              "parentId": "bench-0-nonfinite:s0:0",
+              "role": "marker",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "infinitive",
+              "depth": 2,
+              "expandable": false,
+              "first": 1,
+              "id": "bench-0-nonfinite:s0:0:1",
+              "kind": "phrase",
+              "last": 1,
+              "parentId": "bench-0-nonfinite:s0:0",
+              "role": "predicate",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "noun",
+              "depth": 2,
+              "expandable": true,
+              "first": 2,
+              "id": "bench-0-nonfinite:s0:0:2",
+              "kind": "phrase",
+              "last": 5,
+              "parentId": "bench-0-nonfinite:s0:0",
+              "role": "object",
+              "sentenceId": "bench-0-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 6,
+              "id": "bench-0-nonfinite:s0:0:3",
+              "kind": "word",
+              "last": 6,
+              "parentId": "bench-0-nonfinite:s0:0",
+              "role": "punctuation",
+              "sentenceId": "bench-0-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "不定式短语作目的状语",
+            "宾语含后置修饰"
+          ],
+          "parentId": "bench-0-nonfinite:s0:0",
+          "relations": [
+            {
+              "headToken": 1,
+              "sourceId": "bench-0-nonfinite:s0:0:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "为了按时完成项目，"
+        }
+      ],
+      "round": 1,
+      "sample": "nonfinite",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 2304,
+        "httpMs": 8902.4951,
+        "inputTokens": 3602,
+        "outputTokens": 604,
+        "reasoningTokens": null,
+        "requests": 6,
+        "retryRequests": 0
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 80,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "c1",
+            "kind": "clause",
+            "last": 17,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 0,
+            "id": "c1s",
+            "kind": "phrase",
+            "last": 2,
+            "parent_id": "c1",
+            "role": "subject"
+          },
+          {
+            "first": 4,
+            "id": "c1p",
+            "kind": "phrase",
+            "last": 8,
+            "parent_id": "c1",
+            "role": "predicate"
+          },
+          {
+            "first": 10,
+            "id": "c1a",
+            "kind": "phrase",
+            "last": 17,
+            "parent_id": "c1",
+            "role": "adverbial"
+          },
+          {
+            "first": 20,
+            "id": "c2",
+            "kind": "clause",
+            "last": 80,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 20,
+            "id": "c2s",
+            "kind": "phrase",
+            "last": 28,
+            "parent_id": "c2",
+            "role": "subject"
+          },
+          {
+            "first": 30,
+            "id": "c2p",
+            "kind": "phrase",
+            "last": 38,
+            "parent_id": "c2",
+            "role": "predicate"
+          },
+          {
+            "first": 40,
+            "id": "c2a",
+            "kind": "phrase",
+            "last": 47,
+            "parent_id": "c2",
+            "role": "adverbial"
+          },
+          {
+            "first": 48,
+            "id": "c2a2",
+            "kind": "phrase",
+            "last": 79,
+            "parent_id": "c2",
+            "role": "adverbial"
+          },
+          {
+            "first": 60,
+            "id": "c2mod",
+            "kind": "phrase",
+            "last": 79,
+            "parent_id": "c2a2",
+            "role": "attribute"
+          },
+          {
+            "first": 60,
+            "id": "c2modp",
+            "kind": "phrase",
+            "last": 64,
+            "parent_id": "c2mod",
+            "role": "predicate"
+          },
+          {
+            "first": 67,
+            "id": "c2moda",
+            "kind": "phrase",
+            "last": 79,
+            "parent_id": "c2mod",
+            "role": "adverbial"
+          }
+        ],
+        "notes": [
+          "but连接两个并列分句，第二分句省略了与前句相同的部分。",
+          "organised by...为过去分词短语，修饰protests。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "Sweeping"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "restrictions"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "have"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "been"
+          },
+          {
+            "id": 7,
+            "text": " "
+          },
+          {
+            "id": 8,
+            "text": "imposed"
+          },
+          {
+            "id": 9,
+            "text": " "
+          },
+          {
+            "id": 10,
+            "text": "on"
+          },
+          {
+            "id": 11,
+            "text": " "
+          },
+          {
+            "id": 12,
+            "text": "demonstrations"
+          },
+          {
+            "id": 13,
+            "text": " "
+          },
+          {
+            "id": 14,
+            "text": "across"
+          },
+          {
+            "id": 15,
+            "text": " "
+          },
+          {
+            "id": 16,
+            "text": "France"
+          },
+          {
+            "id": 17,
+            "text": " "
+          },
+          {
+            "id": 18,
+            "text": "but"
+          },
+          {
+            "id": 19,
+            "text": " "
+          },
+          {
+            "id": 20,
+            "text": "hundreds"
+          },
+          {
+            "id": 21,
+            "text": " "
+          },
+          {
+            "id": 22,
+            "text": "of"
+          },
+          {
+            "id": 23,
+            "text": " "
+          },
+          {
+            "id": 24,
+            "text": "thousands"
+          },
+          {
+            "id": 25,
+            "text": " "
+          },
+          {
+            "id": 26,
+            "text": "of"
+          },
+          {
+            "id": 27,
+            "text": " "
+          },
+          {
+            "id": 28,
+            "text": "protesters"
+          },
+          {
+            "id": 29,
+            "text": " "
+          },
+          {
+            "id": 30,
+            "text": "are"
+          },
+          {
+            "id": 31,
+            "text": " "
+          },
+          {
+            "id": 32,
+            "text": "still"
+          },
+          {
+            "id": 33,
+            "text": " "
+          },
+          {
+            "id": 34,
+            "text": "expected"
+          },
+          {
+            "id": 35,
+            "text": " "
+          },
+          {
+            "id": 36,
+            "text": "to"
+          },
+          {
+            "id": 37,
+            "text": " "
+          },
+          {
+            "id": 38,
+            "text": "gather"
+          },
+          {
+            "id": 39,
+            "text": " "
+          },
+          {
+            "id": 40,
+            "text": "in"
+          },
+          {
+            "id": 41,
+            "text": " "
+          },
+          {
+            "id": 42,
+            "text": "Paris"
+          },
+          {
+            "id": 43,
+            "text": " "
+          },
+          {
+            "id": 44,
+            "text": "and"
+          },
+          {
+            "id": 45,
+            "text": " "
+          },
+          {
+            "id": 46,
+            "text": "elsewhere"
+          },
+          {
+            "id": 47,
+            "text": " "
+          },
+          {
+            "id": 48,
+            "text": "for"
+          },
+          {
+            "id": 49,
+            "text": " "
+          },
+          {
+            "id": 50,
+            "text": "a"
+          },
+          {
+            "id": 51,
+            "text": " "
+          },
+          {
+            "id": 52,
+            "text": "second"
+          },
+          {
+            "id": 53,
+            "text": " "
+          },
+          {
+            "id": 54,
+            "text": "round"
+          },
+          {
+            "id": 55,
+            "text": " "
+          },
+          {
+            "id": 56,
+            "text": "of"
+          },
+          {
+            "id": 57,
+            "text": " "
+          },
+          {
+            "id": 58,
+            "text": "protests"
+          },
+          {
+            "id": 59,
+            "text": " "
+          },
+          {
+            "id": 60,
+            "text": "organised"
+          },
+          {
+            "id": 61,
+            "text": " "
+          },
+          {
+            "id": 62,
+            "text": "by"
+          },
+          {
+            "id": 63,
+            "text": " "
+          },
+          {
+            "id": 64,
+            "text": "students"
+          },
+          {
+            "id": 65,
+            "text": ","
+          },
+          {
+            "id": 66,
+            "text": " "
+          },
+          {
+            "id": 67,
+            "text": "trade"
+          },
+          {
+            "id": 68,
+            "text": " "
+          },
+          {
+            "id": 69,
+            "text": "unions"
+          },
+          {
+            "id": 70,
+            "text": " "
+          },
+          {
+            "id": 71,
+            "text": "and"
+          },
+          {
+            "id": 72,
+            "text": " "
+          },
+          {
+            "id": 73,
+            "text": "wider"
+          },
+          {
+            "id": 74,
+            "text": " "
+          },
+          {
+            "id": 75,
+            "text": "anti"
+          },
+          {
+            "id": 76,
+            "text": "-"
+          },
+          {
+            "id": 77,
+            "text": "government"
+          },
+          {
+            "id": 78,
+            "text": " "
+          },
+          {
+            "id": 79,
+            "text": "groups"
+          },
+          {
+            "id": 80,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "法国各地对示威活动实施了严厉限制，但预计仍有数十万抗议者将在巴黎和其他地方聚集，参加由学生、工会和更广泛的反政府团体组织的第二轮抗议活动。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 5136.514499999999,
+      "round": 1,
+      "sample": "long",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 1792,
+        "httpMs": 5136.1893,
+        "inputTokens": 2141,
+        "outputTokens": 918,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 3995.2879000000003,
+      "error": "本层修复后仍未通过校验：n[1] 范围错误：first 应为 10，last 应在 first..42 内，expandable 只能为 0/1。 上一层结果已保留。",
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 512,
+            "inputTokens": 783,
+            "outputTokens": 140,
+            "reasoningTokens": null,
+            "repairReason": "n[1] 范围错误：first 应为 10，last 应在 first..42 内，expandable 只能为 0/1。",
+            "requestMs": 1880.8584,
+            "responseReadMs": 0.04870000000005348,
+            "responseWaitMs": 1880.8097,
+            "stage": "第1层 · 0–42 · 初次",
+            "validationMs": 0.0279
+          },
+          {
+            "cachedInputTokens": 768,
+            "inputTokens": 977,
+            "outputTokens": 140,
+            "reasoningTokens": null,
+            "repairReason": "n[1] 范围错误：first 应为 10，last 应在 first..42 内，expandable 只能为 0/1。",
+            "requestMs": 2114.2105,
+            "responseReadMs": 0.7331000000003769,
+            "responseWaitMs": 2113.4773999999998,
+            "stage": "第1层 · 0–42 · 修复",
+            "validationMs": 0.0277
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.046900000000000004,
+        "totalMs": 3995.2232
+      },
+      "round": 1,
+      "sample": "long",
+      "status": "error",
+      "totals": {
+        "cachedInputTokens": 1280,
+        "httpMs": 3995.0689,
+        "inputTokens": 1760,
+        "outputTokens": 280,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 33,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "subj",
+            "kind": "phrase",
+            "last": 12,
+            "parent_id": "s",
+            "role": "subject"
+          },
+          {
+            "first": 2,
+            "id": "head",
+            "kind": "word",
+            "last": 2,
+            "parent_id": "subj",
+            "role": "subject"
+          },
+          {
+            "first": 4,
+            "id": "rc",
+            "kind": "clause",
+            "last": 12,
+            "parent_id": "subj",
+            "role": "attribute"
+          },
+          {
+            "first": 4,
+            "id": "rcpred",
+            "kind": "word",
+            "last": 4,
+            "parent_id": "rc",
+            "role": "predicate"
+          },
+          {
+            "first": 6,
+            "id": "agent",
+            "kind": "phrase",
+            "last": 10,
+            "parent_id": "rc",
+            "role": "adverbial"
+          },
+          {
+            "first": 12,
+            "id": "rctime",
+            "kind": "word",
+            "last": 12,
+            "parent_id": "rc",
+            "role": "adverbial"
+          },
+          {
+            "first": 14,
+            "id": "pred",
+            "kind": "word",
+            "last": 14,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 16,
+            "id": "obj",
+            "kind": "clause",
+            "last": 32,
+            "parent_id": "s",
+            "role": "object"
+          },
+          {
+            "first": 18,
+            "id": "osubj",
+            "kind": "phrase",
+            "last": 26,
+            "parent_id": "obj",
+            "role": "subject"
+          },
+          {
+            "first": 20,
+            "id": "ohead",
+            "kind": "word",
+            "last": 20,
+            "parent_id": "osubj",
+            "role": "subject"
+          },
+          {
+            "first": 22,
+            "id": "orc",
+            "kind": "clause",
+            "last": 26,
+            "parent_id": "osubj",
+            "role": "attribute"
+          },
+          {
+            "first": 22,
+            "id": "orpred",
+            "kind": "word",
+            "last": 22,
+            "parent_id": "orc",
+            "role": "predicate"
+          },
+          {
+            "first": 24,
+            "id": "ortime",
+            "kind": "phrase",
+            "last": 26,
+            "parent_id": "orc",
+            "role": "adverbial"
+          },
+          {
+            "first": 28,
+            "id": "opred",
+            "kind": "phrase",
+            "last": 30,
+            "parent_id": "obj",
+            "role": "predicate"
+          },
+          {
+            "first": 32,
+            "id": "oobj",
+            "kind": "word",
+            "last": 32,
+            "parent_id": "obj",
+            "role": "object"
+          }
+        ],
+        "notes": [
+          "published by...yesterday 为过去分词短语作后置定语修饰 report。",
+          "that 引导宾语从句，从句主语 measures 由 introduced last year 修饰。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "The"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "report"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "published"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "by"
+          },
+          {
+            "id": 7,
+            "text": " "
+          },
+          {
+            "id": 8,
+            "text": "the"
+          },
+          {
+            "id": 9,
+            "text": " "
+          },
+          {
+            "id": 10,
+            "text": "committee"
+          },
+          {
+            "id": 11,
+            "text": " "
+          },
+          {
+            "id": 12,
+            "text": "yesterday"
+          },
+          {
+            "id": 13,
+            "text": " "
+          },
+          {
+            "id": 14,
+            "text": "suggests"
+          },
+          {
+            "id": 15,
+            "text": " "
+          },
+          {
+            "id": 16,
+            "text": "that"
+          },
+          {
+            "id": 17,
+            "text": " "
+          },
+          {
+            "id": 18,
+            "text": "the"
+          },
+          {
+            "id": 19,
+            "text": " "
+          },
+          {
+            "id": 20,
+            "text": "measures"
+          },
+          {
+            "id": 21,
+            "text": " "
+          },
+          {
+            "id": 22,
+            "text": "introduced"
+          },
+          {
+            "id": 23,
+            "text": " "
+          },
+          {
+            "id": 24,
+            "text": "last"
+          },
+          {
+            "id": 25,
+            "text": " "
+          },
+          {
+            "id": 26,
+            "text": "year"
+          },
+          {
+            "id": 27,
+            "text": " "
+          },
+          {
+            "id": 28,
+            "text": "have"
+          },
+          {
+            "id": 29,
+            "text": " "
+          },
+          {
+            "id": 30,
+            "text": "reduced"
+          },
+          {
+            "id": 31,
+            "text": " "
+          },
+          {
+            "id": 32,
+            "text": "pollution"
+          },
+          {
+            "id": 33,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "委员会昨天发布的报告表明，去年出台的措施已经减少了污染。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 2567.6501,
+      "round": 1,
+      "sample": "attachment",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 2567.4764,
+        "inputTokens": 574,
+        "outputTokens": 490,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 2997.8032,
+      "error": "本层修复后仍未通过校验：修饰 head 必须位于本层目标内且在修饰节点范围外，关系不得重复。 上一层结果已保留。",
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 512,
+            "inputTokens": 648,
+            "outputTokens": 133,
+            "reasoningTokens": null,
+            "repairReason": "修饰 head 必须位于本层目标内且在修饰节点范围外，关系不得重复。",
+            "requestMs": 1769.5302000000001,
+            "responseReadMs": 0.04460000000017317,
+            "responseWaitMs": 1769.4856,
+            "stage": "第1层 · 0–17 · 初次",
+            "validationMs": 0.0295
+          },
+          {
+            "cachedInputTokens": 640,
+            "inputTokens": 822,
+            "outputTokens": 129,
+            "reasoningTokens": null,
+            "repairReason": "修饰 head 必须位于本层目标内且在修饰节点范围外，关系不得重复。",
+            "requestMs": 1228.062,
+            "responseReadMs": 0.04789999999979955,
+            "responseWaitMs": 1228.0141,
+            "stage": "第1层 · 0–17 · 修复",
+            "validationMs": 0.0299
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0336,
+        "totalMs": 2997.7386
+      },
+      "round": 1,
+      "sample": "attachment",
+      "status": "error",
+      "totals": {
+        "cachedInputTokens": 1152,
+        "httpMs": 2997.5922,
+        "inputTokens": 1470,
+        "outputTokens": 262,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 999.5895,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 0,
+            "id": "bench-1-simple:s0:0",
+            "kind": "phrase",
+            "last": 1,
+            "parentId": "bench-1-simple:s0",
+            "role": "subject",
+            "sentenceId": "bench-1-simple:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 2,
+            "id": "bench-1-simple:s0:1",
+            "kind": "word",
+            "last": 2,
+            "parentId": "bench-1-simple:s0",
+            "role": "predicate",
+            "sentenceId": "bench-1-simple:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 3,
+            "id": "bench-1-simple:s0:2",
+            "kind": "word",
+            "last": 3,
+            "parentId": "bench-1-simple:s0",
+            "role": "punctuation",
+            "sentenceId": "bench-1-simple:s0"
+          }
+        ],
+        "notes": [],
+        "parentId": "bench-1-simple:s0",
+        "relations": [],
+        "skeleton": "The cat sleeps.",
+        "translation": "猫在睡觉。"
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 573,
+            "outputTokens": 71,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 999.475,
+            "responseReadMs": 0.0402000000000271,
+            "responseWaitMs": 999.4348,
+            "stage": "第1层 · 0–3 · 初次",
+            "validationMs": 0.027
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0244,
+        "totalMs": 999.5462
+      },
+      "round": 2,
+      "sample": "simple",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 999.475,
+        "inputTokens": 573,
+        "outputTokens": 71,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "cacheHitVerified": true,
+      "condition": "v2_expanded_to_depth4",
+      "elapsedMs": 1001.6871000000001,
+      "errors": [],
+      "failedCallsHaveUnknownTokens": false,
+      "layers": [
+        {
+          "depth": 1,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 0,
+              "id": "bench-1-simple:s0:0",
+              "kind": "phrase",
+              "last": 1,
+              "parentId": "bench-1-simple:s0",
+              "role": "subject",
+              "sentenceId": "bench-1-simple:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 2,
+              "id": "bench-1-simple:s0:1",
+              "kind": "word",
+              "last": 2,
+              "parentId": "bench-1-simple:s0",
+              "role": "predicate",
+              "sentenceId": "bench-1-simple:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 3,
+              "id": "bench-1-simple:s0:2",
+              "kind": "word",
+              "last": 3,
+              "parentId": "bench-1-simple:s0",
+              "role": "punctuation",
+              "sentenceId": "bench-1-simple:s0"
+            }
+          ],
+          "notes": [],
+          "parentId": "bench-1-simple:s0",
+          "relations": [],
+          "skeleton": "The cat sleeps.",
+          "translation": "猫在睡觉。"
+        }
+      ],
+      "round": 2,
+      "sample": "simple",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 999.475,
+        "inputTokens": 573,
+        "outputTokens": 71,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 5,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "a",
+            "kind": "phrase",
+            "last": 2,
+            "parent_id": "s",
+            "role": "subject"
+          },
+          {
+            "first": 4,
+            "id": "b",
+            "kind": "word",
+            "last": 4,
+            "parent_id": "s",
+            "role": "predicate"
+          }
+        ],
+        "notes": [],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "The"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "cat"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "sleeps"
+          },
+          {
+            "id": 5,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "这只猫在睡觉。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 1023.9377999999999,
+      "round": 2,
+      "sample": "simple",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 256,
+        "httpMs": 1023.8254,
+        "inputTokens": 429,
+        "outputTokens": 95,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 1226.5742,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "bench-1-relative:s0:0",
+            "kind": "phrase",
+            "last": 5,
+            "parentId": "bench-1-relative:s0",
+            "role": "subject",
+            "sentenceId": "bench-1-relative:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 6,
+            "id": "bench-1-relative:s0:1",
+            "kind": "word",
+            "last": 6,
+            "parentId": "bench-1-relative:s0",
+            "role": "predicate",
+            "sentenceId": "bench-1-relative:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 7,
+            "id": "bench-1-relative:s0:2",
+            "kind": "phrase",
+            "last": 9,
+            "parentId": "bench-1-relative:s0",
+            "role": "adverbial",
+            "sentenceId": "bench-1-relative:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 10,
+            "id": "bench-1-relative:s0:3",
+            "kind": "word",
+            "last": 10,
+            "parentId": "bench-1-relative:s0",
+            "role": "punctuation",
+            "sentenceId": "bench-1-relative:s0"
+          }
+        ],
+        "notes": [
+          "主语含定语从句修饰猫。",
+          "介词短语作地点状语。"
+        ],
+        "parentId": "bench-1-relative:s0",
+        "relations": [
+          {
+            "headToken": 6,
+            "sourceId": "bench-1-relative:s0:0"
+          }
+        ],
+        "skeleton": "The cat sat on the mat.",
+        "translation": "我昨天看见的那只猫坐在垫子上。"
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 609,
+            "outputTokens": 113,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1226.4593,
+            "responseReadMs": 0.04870000000005348,
+            "responseWaitMs": 1226.4106,
+            "stage": "第1层 · 0–10 · 初次",
+            "validationMs": 0.0322
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0252,
+        "totalMs": 1226.5403999999999
+      },
+      "round": 2,
+      "sample": "relative",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1226.4593,
+        "inputTokens": 609,
+        "outputTokens": 113,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "cacheHitVerified": true,
+      "condition": "v2_expanded_to_depth4",
+      "elapsedMs": 6797.8674,
+      "errors": [],
+      "failedCallsHaveUnknownTokens": false,
+      "layers": [
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 2,
+              "id": "bench-1-relative:s0:0:2:0",
+              "kind": "word",
+              "last": 2,
+              "parentId": "bench-1-relative:s0:0:2",
+              "role": "marker",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 3,
+              "id": "bench-1-relative:s0:0:2:1",
+              "kind": "phrase",
+              "last": 3,
+              "parentId": "bench-1-relative:s0:0:2",
+              "role": "subject",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 4,
+              "id": "bench-1-relative:s0:0:2:2",
+              "kind": "word",
+              "last": 4,
+              "parentId": "bench-1-relative:s0:0:2",
+              "role": "predicate",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 5,
+              "id": "bench-1-relative:s0:0:2:3",
+              "kind": "word",
+              "last": 5,
+              "parentId": "bench-1-relative:s0:0:2",
+              "role": "adverbial",
+              "sentenceId": "bench-1-relative:s0"
+            }
+          ],
+          "notes": [
+            "关系从句，省略宾语",
+            "yesterday为时间状语"
+          ],
+          "parentId": "bench-1-relative:s0:0:2",
+          "relations": [
+            {
+              "headToken": 4,
+              "sourceId": "bench-1-relative:s0:0:2:1"
+            },
+            {
+              "headToken": 4,
+              "sourceId": "bench-1-relative:s0:0:2:3"
+            }
+          ],
+          "skeleton": null,
+          "translation": "我昨天看见的"
+        },
+        {
+          "depth": 1,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": true,
+              "first": 0,
+              "id": "bench-1-relative:s0:0",
+              "kind": "phrase",
+              "last": 5,
+              "parentId": "bench-1-relative:s0",
+              "role": "subject",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 6,
+              "id": "bench-1-relative:s0:1",
+              "kind": "word",
+              "last": 6,
+              "parentId": "bench-1-relative:s0",
+              "role": "predicate",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": true,
+              "first": 7,
+              "id": "bench-1-relative:s0:2",
+              "kind": "phrase",
+              "last": 9,
+              "parentId": "bench-1-relative:s0",
+              "role": "adverbial",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 10,
+              "id": "bench-1-relative:s0:3",
+              "kind": "word",
+              "last": 10,
+              "parentId": "bench-1-relative:s0",
+              "role": "punctuation",
+              "sentenceId": "bench-1-relative:s0"
+            }
+          ],
+          "notes": [
+            "主语含定语从句修饰猫。",
+            "介词短语作地点状语。"
+          ],
+          "parentId": "bench-1-relative:s0",
+          "relations": [
+            {
+              "headToken": 6,
+              "sourceId": "bench-1-relative:s0:0"
+            }
+          ],
+          "skeleton": "The cat sat on the mat.",
+          "translation": "我昨天看见的那只猫坐在垫子上。"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 0,
+              "id": "bench-1-relative:s0:0:0",
+              "kind": "word",
+              "last": 0,
+              "parentId": "bench-1-relative:s0:0",
+              "role": "determiner",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 1,
+              "id": "bench-1-relative:s0:0:1",
+              "kind": "word",
+              "last": 1,
+              "parentId": "bench-1-relative:s0:0",
+              "role": "head",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "relative",
+              "depth": 2,
+              "expandable": true,
+              "first": 2,
+              "id": "bench-1-relative:s0:0:2",
+              "kind": "clause",
+              "last": 5,
+              "parentId": "bench-1-relative:s0:0",
+              "role": "attribute",
+              "sentenceId": "bench-1-relative:s0"
+            }
+          ],
+          "notes": [
+            "关系从句修饰cat",
+            "从句内部可再分析"
+          ],
+          "parentId": "bench-1-relative:s0:0",
+          "relations": [
+            {
+              "headToken": 1,
+              "sourceId": "bench-1-relative:s0:0:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "我昨天看到的那只猫坐在垫子上。"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 7,
+              "id": "bench-1-relative:s0:2:0",
+              "kind": "word",
+              "last": 7,
+              "parentId": "bench-1-relative:s0:2",
+              "role": "head",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 8,
+              "id": "bench-1-relative:s0:2:1",
+              "kind": "phrase",
+              "last": 8,
+              "parentId": "bench-1-relative:s0:2",
+              "role": "determiner",
+              "sentenceId": "bench-1-relative:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 9,
+              "id": "bench-1-relative:s0:2:2",
+              "kind": "word",
+              "last": 9,
+              "parentId": "bench-1-relative:s0:2",
+              "role": "head",
+              "sentenceId": "bench-1-relative:s0"
+            }
+          ],
+          "notes": [
+            "介词短语作地点状语"
+          ],
+          "parentId": "bench-1-relative:s0:2",
+          "relations": [
+            {
+              "headToken": 7,
+              "sourceId": "bench-1-relative:s0:2:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "在垫子上"
+        }
+      ],
+      "round": 2,
+      "sample": "relative",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 2048,
+        "httpMs": 6795.262500000001,
+        "inputTokens": 3100,
+        "outputTokens": 491,
+        "reasoningTokens": null,
+        "requests": 5,
+        "retryRequests": 1
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 19,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "subj",
+            "kind": "phrase",
+            "last": 10,
+            "parent_id": "s",
+            "role": "subject"
+          },
+          {
+            "first": 2,
+            "id": "subj_head",
+            "kind": "word",
+            "last": 2,
+            "parent_id": "subj",
+            "role": "subject"
+          },
+          {
+            "first": 4,
+            "id": "rel",
+            "kind": "clause",
+            "last": 10,
+            "parent_id": "subj",
+            "role": "attribute"
+          },
+          {
+            "first": 6,
+            "id": "rel_subj",
+            "kind": "word",
+            "last": 6,
+            "parent_id": "rel",
+            "role": "subject"
+          },
+          {
+            "first": 8,
+            "id": "rel_pred",
+            "kind": "word",
+            "last": 8,
+            "parent_id": "rel",
+            "role": "predicate"
+          },
+          {
+            "first": 10,
+            "id": "rel_adv",
+            "kind": "word",
+            "last": 10,
+            "parent_id": "rel",
+            "role": "adverbial"
+          },
+          {
+            "first": 12,
+            "id": "pred",
+            "kind": "word",
+            "last": 12,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 14,
+            "id": "pp",
+            "kind": "phrase",
+            "last": 18,
+            "parent_id": "s",
+            "role": "adverbial"
+          },
+          {
+            "first": 16,
+            "id": "pp_obj",
+            "kind": "phrase",
+            "last": 18,
+            "parent_id": "pp",
+            "role": "object"
+          }
+        ],
+        "notes": [
+          "that I saw yesterday 是修饰 cat 的定语从句。",
+          "sat on the mat 中 on the mat 为地点状语。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "The"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "cat"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "that"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "I"
+          },
+          {
+            "id": 7,
+            "text": " "
+          },
+          {
+            "id": 8,
+            "text": "saw"
+          },
+          {
+            "id": 9,
+            "text": " "
+          },
+          {
+            "id": 10,
+            "text": "yesterday"
+          },
+          {
+            "id": 11,
+            "text": " "
+          },
+          {
+            "id": 12,
+            "text": "sat"
+          },
+          {
+            "id": 13,
+            "text": " "
+          },
+          {
+            "id": 14,
+            "text": "on"
+          },
+          {
+            "id": 15,
+            "text": " "
+          },
+          {
+            "id": 16,
+            "text": "the"
+          },
+          {
+            "id": 17,
+            "text": " "
+          },
+          {
+            "id": 18,
+            "text": "mat"
+          },
+          {
+            "id": 19,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "我昨天看到的那只猫坐在垫子上。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 2230.4460000000004,
+      "round": 2,
+      "sample": "relative",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 256,
+        "httpMs": 2230.2786,
+        "inputTokens": 500,
+        "outputTokens": 319,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 1517.9966,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "main",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "bench-1-coordination:s0:0",
+            "kind": "clause",
+            "last": 3,
+            "parentId": "bench-1-coordination:s0",
+            "role": "coordinate",
+            "sentenceId": "bench-1-coordination:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 4,
+            "id": "bench-1-coordination:s0:1",
+            "kind": "word",
+            "last": 4,
+            "parentId": "bench-1-coordination:s0",
+            "role": "conjunction",
+            "sentenceId": "bench-1-coordination:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 5,
+            "id": "bench-1-coordination:s0:2",
+            "kind": "word",
+            "last": 5,
+            "parentId": "bench-1-coordination:s0",
+            "role": "conjunction",
+            "sentenceId": "bench-1-coordination:s0"
+          },
+          {
+            "ctype": "main",
+            "depth": 1,
+            "expandable": true,
+            "first": 6,
+            "id": "bench-1-coordination:s0:3",
+            "kind": "clause",
+            "last": 9,
+            "parentId": "bench-1-coordination:s0",
+            "role": "coordinate",
+            "sentenceId": "bench-1-coordination:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 10,
+            "id": "bench-1-coordination:s0:4",
+            "kind": "word",
+            "last": 10,
+            "parentId": "bench-1-coordination:s0",
+            "role": "punctuation",
+            "sentenceId": "bench-1-coordination:s0"
+          }
+        ],
+        "notes": [
+          "并列句由转折连词连接两个分句。"
+        ],
+        "parentId": "bench-1-coordination:s0",
+        "relations": [],
+        "skeleton": "I wanted to leave, but the train was late.",
+        "translation": "我想离开，但火车晚点了。"
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 384,
+            "inputTokens": 607,
+            "outputTokens": 125,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1517.8148999999999,
+            "responseReadMs": 0.04609999999979664,
+            "responseWaitMs": 1517.7688,
+            "stage": "第1层 · 0–10 · 初次",
+            "validationMs": 0.0481
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0253,
+        "totalMs": 1517.9418
+      },
+      "round": 2,
+      "sample": "coordination",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1517.8148999999999,
+        "inputTokens": 607,
+        "outputTokens": 125,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "cacheHitVerified": true,
+      "condition": "v2_expanded_to_depth4",
+      "elapsedMs": 7356.5324,
+      "errors": [],
+      "failedCallsHaveUnknownTokens": false,
+      "layers": [
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 1,
+              "id": "bench-1-coordination:s0:0:1:0",
+              "kind": "word",
+              "last": 1,
+              "parentId": "bench-1-coordination:s0:0:1",
+              "role": "predicate",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "infinitive",
+              "depth": 3,
+              "expandable": true,
+              "first": 2,
+              "id": "bench-1-coordination:s0:0:1:1",
+              "kind": "phrase",
+              "last": 3,
+              "parentId": "bench-1-coordination:s0:0:1",
+              "role": "object",
+              "sentenceId": "bench-1-coordination:s0"
+            }
+          ],
+          "notes": [
+            "不定式短语作宾语"
+          ],
+          "parentId": "bench-1-coordination:s0:0:1",
+          "relations": [
+            {
+              "headToken": 1,
+              "sourceId": "bench-1-coordination:s0:0:1:1"
+            }
+          ],
+          "skeleton": null,
+          "translation": "想要离开"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 6,
+              "id": "bench-1-coordination:s0:3:0:0",
+              "kind": "word",
+              "last": 6,
+              "parentId": "bench-1-coordination:s0:3:0",
+              "role": "determiner",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 7,
+              "id": "bench-1-coordination:s0:3:0:1",
+              "kind": "word",
+              "last": 7,
+              "parentId": "bench-1-coordination:s0:3:0",
+              "role": "head",
+              "sentenceId": "bench-1-coordination:s0"
+            }
+          ],
+          "notes": [
+            "定冠词加名词构成名词短语"
+          ],
+          "parentId": "bench-1-coordination:s0:3:0",
+          "relations": [],
+          "skeleton": null,
+          "translation": "火车"
+        },
+        {
+          "depth": 4,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 2,
+              "id": "bench-1-coordination:s0:0:1:1:0",
+              "kind": "word",
+              "last": 2,
+              "parentId": "bench-1-coordination:s0:0:1:1",
+              "role": "marker",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 3,
+              "id": "bench-1-coordination:s0:0:1:1:1",
+              "kind": "word",
+              "last": 3,
+              "parentId": "bench-1-coordination:s0:0:1:1",
+              "role": "head",
+              "sentenceId": "bench-1-coordination:s0"
+            }
+          ],
+          "notes": [
+            "不定式短语作宾语，结构简单。"
+          ],
+          "parentId": "bench-1-coordination:s0:0:1:1",
+          "relations": [],
+          "skeleton": null,
+          "translation": "离开"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 0,
+              "id": "bench-1-coordination:s0:0:0",
+              "kind": "word",
+              "last": 0,
+              "parentId": "bench-1-coordination:s0:0",
+              "role": "subject",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": true,
+              "first": 1,
+              "id": "bench-1-coordination:s0:0:1",
+              "kind": "phrase",
+              "last": 3,
+              "parentId": "bench-1-coordination:s0:0",
+              "role": "predicate",
+              "sentenceId": "bench-1-coordination:s0"
+            }
+          ],
+          "notes": [
+            "谓语含不定式宾语"
+          ],
+          "parentId": "bench-1-coordination:s0:0",
+          "relations": [],
+          "skeleton": null,
+          "translation": "我想离开。"
+        },
+        {
+          "depth": 1,
+          "nodes": [
+            {
+              "ctype": "main",
+              "depth": 1,
+              "expandable": true,
+              "first": 0,
+              "id": "bench-1-coordination:s0:0",
+              "kind": "clause",
+              "last": 3,
+              "parentId": "bench-1-coordination:s0",
+              "role": "coordinate",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 4,
+              "id": "bench-1-coordination:s0:1",
+              "kind": "word",
+              "last": 4,
+              "parentId": "bench-1-coordination:s0",
+              "role": "conjunction",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 5,
+              "id": "bench-1-coordination:s0:2",
+              "kind": "word",
+              "last": 5,
+              "parentId": "bench-1-coordination:s0",
+              "role": "conjunction",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "main",
+              "depth": 1,
+              "expandable": true,
+              "first": 6,
+              "id": "bench-1-coordination:s0:3",
+              "kind": "clause",
+              "last": 9,
+              "parentId": "bench-1-coordination:s0",
+              "role": "coordinate",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 10,
+              "id": "bench-1-coordination:s0:4",
+              "kind": "word",
+              "last": 10,
+              "parentId": "bench-1-coordination:s0",
+              "role": "punctuation",
+              "sentenceId": "bench-1-coordination:s0"
+            }
+          ],
+          "notes": [
+            "并列句由转折连词连接两个分句。"
+          ],
+          "parentId": "bench-1-coordination:s0",
+          "relations": [],
+          "skeleton": "I wanted to leave, but the train was late.",
+          "translation": "我想离开，但火车晚点了。"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": true,
+              "first": 6,
+              "id": "bench-1-coordination:s0:3:0",
+              "kind": "phrase",
+              "last": 7,
+              "parentId": "bench-1-coordination:s0:3",
+              "role": "subject",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 8,
+              "id": "bench-1-coordination:s0:3:1",
+              "kind": "word",
+              "last": 8,
+              "parentId": "bench-1-coordination:s0:3",
+              "role": "predicate",
+              "sentenceId": "bench-1-coordination:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 9,
+              "id": "bench-1-coordination:s0:3:2",
+              "kind": "word",
+              "last": 9,
+              "parentId": "bench-1-coordination:s0:3",
+              "role": "predicative",
+              "sentenceId": "bench-1-coordination:s0"
+            }
+          ],
+          "notes": [
+            "系表结构，late作表语。"
+          ],
+          "parentId": "bench-1-coordination:s0:3",
+          "relations": [],
+          "skeleton": null,
+          "translation": "火车晚点了。"
+        }
+      ],
+      "round": 2,
+      "sample": "coordination",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 2304,
+        "httpMs": 7352.8553,
+        "inputTokens": 3521,
+        "outputTokens": 461,
+        "reasoningTokens": null,
+        "requests": 6,
+        "retryRequests": 0
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 18,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "c1",
+            "kind": "clause",
+            "last": 7,
+            "parent_id": "s",
+            "role": "adverbial"
+          },
+          {
+            "first": 0,
+            "id": "s1",
+            "kind": "phrase",
+            "last": 0,
+            "parent_id": "c1",
+            "role": "subject"
+          },
+          {
+            "first": 2,
+            "id": "p1",
+            "kind": "word",
+            "last": 2,
+            "parent_id": "c1",
+            "role": "predicate"
+          },
+          {
+            "first": 4,
+            "id": "o1",
+            "kind": "phrase",
+            "last": 6,
+            "parent_id": "c1",
+            "role": "object"
+          },
+          {
+            "first": 9,
+            "id": "c2",
+            "kind": "clause",
+            "last": 18,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 11,
+            "id": "s2",
+            "kind": "phrase",
+            "last": 13,
+            "parent_id": "c2",
+            "role": "subject"
+          },
+          {
+            "first": 15,
+            "id": "p2",
+            "kind": "word",
+            "last": 15,
+            "parent_id": "c2",
+            "role": "predicate"
+          },
+          {
+            "first": 17,
+            "id": "pr2",
+            "kind": "word",
+            "last": 17,
+            "parent_id": "c2",
+            "role": "predicative"
+          }
+        ],
+        "notes": [
+          "but连接两个并列分句，第二个分句作整体谓语部分。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "I"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "wanted"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "to"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "leave"
+          },
+          {
+            "id": 7,
+            "text": ","
+          },
+          {
+            "id": 8,
+            "text": " "
+          },
+          {
+            "id": 9,
+            "text": "but"
+          },
+          {
+            "id": 10,
+            "text": " "
+          },
+          {
+            "id": 11,
+            "text": "the"
+          },
+          {
+            "id": 12,
+            "text": " "
+          },
+          {
+            "id": 13,
+            "text": "train"
+          },
+          {
+            "id": 14,
+            "text": " "
+          },
+          {
+            "id": 15,
+            "text": "was"
+          },
+          {
+            "id": 16,
+            "text": " "
+          },
+          {
+            "id": 17,
+            "text": "late"
+          },
+          {
+            "id": 18,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "我想离开，但火车晚点了。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 1696.3845,
+      "round": 2,
+      "sample": "coordination",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 256,
+        "httpMs": 1696.2492,
+        "inputTokens": 494,
+        "outputTokens": 285,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 2718.9730999999997,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "infinitive",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "bench-1-nonfinite:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "bench-1-nonfinite:s0",
+            "role": "adverbial",
+            "sentenceId": "bench-1-nonfinite:s0"
+          },
+          {
+            "ctype": "main",
+            "depth": 1,
+            "expandable": true,
+            "first": 7,
+            "id": "bench-1-nonfinite:s0:1",
+            "kind": "clause",
+            "last": 9,
+            "parentId": "bench-1-nonfinite:s0",
+            "role": "coordinate",
+            "sentenceId": "bench-1-nonfinite:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 10,
+            "id": "bench-1-nonfinite:s0:2",
+            "kind": "word",
+            "last": 10,
+            "parentId": "bench-1-nonfinite:s0",
+            "role": "conjunction",
+            "sentenceId": "bench-1-nonfinite:s0"
+          },
+          {
+            "ctype": "main",
+            "depth": 1,
+            "expandable": true,
+            "first": 11,
+            "id": "bench-1-nonfinite:s0:3",
+            "kind": "clause",
+            "last": 16,
+            "parentId": "bench-1-nonfinite:s0",
+            "role": "coordinate",
+            "sentenceId": "bench-1-nonfinite:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 17,
+            "id": "bench-1-nonfinite:s0:4",
+            "kind": "word",
+            "last": 17,
+            "parentId": "bench-1-nonfinite:s0",
+            "role": "punctuation",
+            "sentenceId": "bench-1-nonfinite:s0"
+          }
+        ],
+        "notes": [
+          "目的状语置于句首",
+          "while连接两个并列分句"
+        ],
+        "parentId": "bench-1-nonfinite:s0",
+        "relations": [],
+        "skeleton": "Maya worked late while her team reviewed the report.",
+        "translation": "为了按时完成项目，玛雅工作到很晚，而她的团队则在审阅最终报告。"
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 510,
+            "inputTokens": 644,
+            "outputTokens": 145,
+            "reasoningTokens": null,
+            "repairReason": "修饰 head 必须位于本层目标内且在修饰节点范围外，关系不得重复。",
+            "requestMs": 1372.0493000000001,
+            "responseReadMs": 0.048300000000153887,
+            "responseWaitMs": 1372.001,
+            "stage": "第1层 · 0–17 · 初次",
+            "validationMs": 0.034499999999999996
+          },
+          {
+            "cachedInputTokens": 640,
+            "inputTokens": 830,
+            "outputTokens": 141,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1346.7065,
+            "responseReadMs": 0.04790000000002692,
+            "responseWaitMs": 1346.6586,
+            "stage": "第1层 · 0–17 · 修复",
+            "validationMs": 0.0354
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0268,
+        "totalMs": 2718.9345
+      },
+      "round": 2,
+      "sample": "nonfinite",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 1150,
+        "httpMs": 2718.7558,
+        "inputTokens": 1474,
+        "outputTokens": 286,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "cacheHitVerified": true,
+      "condition": "v2_expanded_to_depth4",
+      "elapsedMs": 12123.3063,
+      "errors": [],
+      "failedCallsHaveUnknownTokens": false,
+      "layers": [
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 7,
+              "id": "bench-1-nonfinite:s0:1:0",
+              "kind": "word",
+              "last": 7,
+              "parentId": "bench-1-nonfinite:s0:1",
+              "role": "subject",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 8,
+              "id": "bench-1-nonfinite:s0:1:1",
+              "kind": "word",
+              "last": 8,
+              "parentId": "bench-1-nonfinite:s0:1",
+              "role": "predicate",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 9,
+              "id": "bench-1-nonfinite:s0:1:2",
+              "kind": "word",
+              "last": 9,
+              "parentId": "bench-1-nonfinite:s0:1",
+              "role": "adverbial",
+              "sentenceId": "bench-1-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "主句核心结构简单。"
+          ],
+          "parentId": "bench-1-nonfinite:s0:1",
+          "relations": [],
+          "skeleton": null,
+          "translation": "玛雅工作到很晚。"
+        },
+        {
+          "depth": 1,
+          "nodes": [
+            {
+              "ctype": "infinitive",
+              "depth": 1,
+              "expandable": true,
+              "first": 0,
+              "id": "bench-1-nonfinite:s0:0",
+              "kind": "phrase",
+              "last": 6,
+              "parentId": "bench-1-nonfinite:s0",
+              "role": "adverbial",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "main",
+              "depth": 1,
+              "expandable": true,
+              "first": 7,
+              "id": "bench-1-nonfinite:s0:1",
+              "kind": "clause",
+              "last": 9,
+              "parentId": "bench-1-nonfinite:s0",
+              "role": "coordinate",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 10,
+              "id": "bench-1-nonfinite:s0:2",
+              "kind": "word",
+              "last": 10,
+              "parentId": "bench-1-nonfinite:s0",
+              "role": "conjunction",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "main",
+              "depth": 1,
+              "expandable": true,
+              "first": 11,
+              "id": "bench-1-nonfinite:s0:3",
+              "kind": "clause",
+              "last": 16,
+              "parentId": "bench-1-nonfinite:s0",
+              "role": "coordinate",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 17,
+              "id": "bench-1-nonfinite:s0:4",
+              "kind": "word",
+              "last": 17,
+              "parentId": "bench-1-nonfinite:s0",
+              "role": "punctuation",
+              "sentenceId": "bench-1-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "目的状语置于句首",
+            "while连接两个并列分句"
+          ],
+          "parentId": "bench-1-nonfinite:s0",
+          "relations": [],
+          "skeleton": "Maya worked late while her team reviewed the report.",
+          "translation": "为了按时完成项目，玛雅工作到很晚，而她的团队则在审阅最终报告。"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 11,
+              "id": "bench-1-nonfinite:s0:3:0:0",
+              "kind": "word",
+              "last": 11,
+              "parentId": "bench-1-nonfinite:s0:3:0",
+              "role": "determiner",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 12,
+              "id": "bench-1-nonfinite:s0:3:0:1",
+              "kind": "word",
+              "last": 12,
+              "parentId": "bench-1-nonfinite:s0:3:0",
+              "role": "head",
+              "sentenceId": "bench-1-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "限定词加名词中心语"
+          ],
+          "parentId": "bench-1-nonfinite:s0:3:0",
+          "relations": [],
+          "skeleton": null,
+          "translation": "她的团队"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 2,
+              "id": "bench-1-nonfinite:s0:0:2:0",
+              "kind": "word",
+              "last": 2,
+              "parentId": "bench-1-nonfinite:s0:0:2",
+              "role": "determiner",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 3,
+              "id": "bench-1-nonfinite:s0:0:2:1",
+              "kind": "word",
+              "last": 3,
+              "parentId": "bench-1-nonfinite:s0:0:2",
+              "role": "head",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": true,
+              "first": 4,
+              "id": "bench-1-nonfinite:s0:0:2:2",
+              "kind": "phrase",
+              "last": 5,
+              "parentId": "bench-1-nonfinite:s0:0:2",
+              "role": "attribute",
+              "sentenceId": "bench-1-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "介词短语修饰project",
+            "整体作finish的宾语"
+          ],
+          "parentId": "bench-1-nonfinite:s0:0:2",
+          "relations": [
+            {
+              "headToken": 3,
+              "sourceId": "bench-1-nonfinite:s0:0:2:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "按时完成项目"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 0,
+              "id": "bench-1-nonfinite:s0:0:0",
+              "kind": "word",
+              "last": 0,
+              "parentId": "bench-1-nonfinite:s0:0",
+              "role": "marker",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "infinitive",
+              "depth": 2,
+              "expandable": false,
+              "first": 1,
+              "id": "bench-1-nonfinite:s0:0:1",
+              "kind": "phrase",
+              "last": 1,
+              "parentId": "bench-1-nonfinite:s0:0",
+              "role": "predicate",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "noun",
+              "depth": 2,
+              "expandable": true,
+              "first": 2,
+              "id": "bench-1-nonfinite:s0:0:2",
+              "kind": "phrase",
+              "last": 5,
+              "parentId": "bench-1-nonfinite:s0:0",
+              "role": "object",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 6,
+              "id": "bench-1-nonfinite:s0:0:3",
+              "kind": "word",
+              "last": 6,
+              "parentId": "bench-1-nonfinite:s0:0",
+              "role": "punctuation",
+              "sentenceId": "bench-1-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "目的状语不定式短语",
+            "宾语含介词短语修饰"
+          ],
+          "parentId": "bench-1-nonfinite:s0:0",
+          "relations": [
+            {
+              "headToken": 1,
+              "sourceId": "bench-1-nonfinite:s0:0:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "为了按时完成项目，"
+        },
+        {
+          "depth": 4,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 4,
+              "id": "bench-1-nonfinite:s0:0:2:2:0",
+              "kind": "word",
+              "last": 4,
+              "parentId": "bench-1-nonfinite:s0:0:2:2",
+              "role": "marker",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 5,
+              "id": "bench-1-nonfinite:s0:0:2:2:1",
+              "kind": "word",
+              "last": 5,
+              "parentId": "bench-1-nonfinite:s0:0:2:2",
+              "role": "head",
+              "sentenceId": "bench-1-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "固定介词短语作状语",
+            "深度4不再细分"
+          ],
+          "parentId": "bench-1-nonfinite:s0:0:2:2",
+          "relations": [],
+          "skeleton": null,
+          "translation": "按时完成项目，Maya加班工作，而她的团队审阅最终报告。"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 14,
+              "id": "bench-1-nonfinite:s0:3:2:0",
+              "kind": "word",
+              "last": 14,
+              "parentId": "bench-1-nonfinite:s0:3:2",
+              "role": "determiner",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 15,
+              "id": "bench-1-nonfinite:s0:3:2:1",
+              "kind": "word",
+              "last": 15,
+              "parentId": "bench-1-nonfinite:s0:3:2",
+              "role": "attribute",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 16,
+              "id": "bench-1-nonfinite:s0:3:2:2",
+              "kind": "word",
+              "last": 16,
+              "parentId": "bench-1-nonfinite:s0:3:2",
+              "role": "head",
+              "sentenceId": "bench-1-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "名词短语作宾语"
+          ],
+          "parentId": "bench-1-nonfinite:s0:3:2",
+          "relations": [
+            {
+              "headToken": 16,
+              "sourceId": "bench-1-nonfinite:s0:3:2:1"
+            }
+          ],
+          "skeleton": null,
+          "translation": "最终报告"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": true,
+              "first": 11,
+              "id": "bench-1-nonfinite:s0:3:0",
+              "kind": "phrase",
+              "last": 12,
+              "parentId": "bench-1-nonfinite:s0:3",
+              "role": "subject",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 13,
+              "id": "bench-1-nonfinite:s0:3:1",
+              "kind": "word",
+              "last": 13,
+              "parentId": "bench-1-nonfinite:s0:3",
+              "role": "predicate",
+              "sentenceId": "bench-1-nonfinite:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": true,
+              "first": 14,
+              "id": "bench-1-nonfinite:s0:3:2",
+              "kind": "phrase",
+              "last": 16,
+              "parentId": "bench-1-nonfinite:s0:3",
+              "role": "object",
+              "sentenceId": "bench-1-nonfinite:s0"
+            }
+          ],
+          "notes": [
+            "从句为主谓宾结构",
+            "final作report定语"
+          ],
+          "parentId": "bench-1-nonfinite:s0:3",
+          "relations": [
+            {
+              "headToken": 13,
+              "sourceId": "bench-1-nonfinite:s0:3:0"
+            },
+            {
+              "headToken": 13,
+              "sourceId": "bench-1-nonfinite:s0:3:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "她的团队审阅了最终报告。"
+        }
+      ],
+      "round": 2,
+      "sample": "nonfinite",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 3838,
+        "httpMs": 12119.665099999998,
+        "inputTokens": 5629,
+        "outputTokens": 868,
+        "reasoningTokens": null,
+        "requests": 9,
+        "retryRequests": 1
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 32,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "adv1",
+            "kind": "phrase",
+            "last": 11,
+            "parent_id": "s",
+            "role": "adverbial"
+          },
+          {
+            "first": 19,
+            "id": "adv2",
+            "kind": "phrase",
+            "last": 31,
+            "parent_id": "s",
+            "role": "adverbial"
+          },
+          {
+            "first": 13,
+            "id": "subj",
+            "kind": "word",
+            "last": 13,
+            "parent_id": "s",
+            "role": "subject"
+          },
+          {
+            "first": 15,
+            "id": "pred",
+            "kind": "word",
+            "last": 15,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 17,
+            "id": "comp",
+            "kind": "word",
+            "last": 17,
+            "parent_id": "s",
+            "role": "complement"
+          },
+          {
+            "first": 19,
+            "id": "clause2",
+            "kind": "clause",
+            "last": 31,
+            "parent_id": "adv2",
+            "role": "adverbial"
+          },
+          {
+            "first": 21,
+            "id": "subj2",
+            "kind": "phrase",
+            "last": 23,
+            "parent_id": "clause2",
+            "role": "subject"
+          },
+          {
+            "first": 25,
+            "id": "pred2",
+            "kind": "word",
+            "last": 25,
+            "parent_id": "clause2",
+            "role": "predicate"
+          },
+          {
+            "first": 27,
+            "id": "obj2",
+            "kind": "phrase",
+            "last": 31,
+            "parent_id": "clause2",
+            "role": "object"
+          }
+        ],
+        "notes": [
+          "不定式短语作目的状语；while引导时间状语从句。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "To"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "finish"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "the"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "project"
+          },
+          {
+            "id": 7,
+            "text": " "
+          },
+          {
+            "id": 8,
+            "text": "on"
+          },
+          {
+            "id": 9,
+            "text": " "
+          },
+          {
+            "id": 10,
+            "text": "time"
+          },
+          {
+            "id": 11,
+            "text": ","
+          },
+          {
+            "id": 12,
+            "text": " "
+          },
+          {
+            "id": 13,
+            "text": "Maya"
+          },
+          {
+            "id": 14,
+            "text": " "
+          },
+          {
+            "id": 15,
+            "text": "worked"
+          },
+          {
+            "id": 16,
+            "text": " "
+          },
+          {
+            "id": 17,
+            "text": "late"
+          },
+          {
+            "id": 18,
+            "text": " "
+          },
+          {
+            "id": 19,
+            "text": "while"
+          },
+          {
+            "id": 20,
+            "text": " "
+          },
+          {
+            "id": 21,
+            "text": "her"
+          },
+          {
+            "id": 22,
+            "text": " "
+          },
+          {
+            "id": 23,
+            "text": "team"
+          },
+          {
+            "id": 24,
+            "text": " "
+          },
+          {
+            "id": 25,
+            "text": "reviewed"
+          },
+          {
+            "id": 26,
+            "text": " "
+          },
+          {
+            "id": 27,
+            "text": "the"
+          },
+          {
+            "id": 28,
+            "text": " "
+          },
+          {
+            "id": 29,
+            "text": "final"
+          },
+          {
+            "id": 30,
+            "text": " "
+          },
+          {
+            "id": 31,
+            "text": "report"
+          },
+          {
+            "id": 32,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "为了按时完成项目，Maya工作到很晚，而她的团队则在审阅最终报告。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 1846.5247,
+      "round": 2,
+      "sample": "nonfinite",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 1846.3673000000001,
+        "inputTokens": 566,
+        "outputTokens": 322,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 3276.5855,
+      "error": "本层修复后仍未通过校验：n[1] 范围错误：first 应为 10，last 应在 first..42 内，expandable 只能为 0/1。 上一层结果已保留。",
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 640,
+            "inputTokens": 783,
+            "outputTokens": 140,
+            "reasoningTokens": null,
+            "repairReason": "n[1] 范围错误：first 应为 10，last 应在 first..42 内，expandable 只能为 0/1。",
+            "requestMs": 1632.7174,
+            "responseReadMs": 0.04890000000023065,
+            "responseWaitMs": 1632.6684999999998,
+            "stage": "第1层 · 0–42 · 初次",
+            "validationMs": 0.027399999999999997
+          },
+          {
+            "cachedInputTokens": 768,
+            "inputTokens": 977,
+            "outputTokens": 140,
+            "reasoningTokens": null,
+            "repairReason": "n[1] 范围错误：first 应为 10，last 应在 first..42 内，expandable 只能为 0/1。",
+            "requestMs": 1643.6444999999999,
+            "responseReadMs": 0.047599999999874854,
+            "responseWaitMs": 1643.5969,
+            "stage": "第1层 · 0–42 · 修复",
+            "validationMs": 0.026699999999999998
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0477,
+        "totalMs": 3276.5173999999997
+      },
+      "round": 2,
+      "sample": "long",
+      "status": "error",
+      "totals": {
+        "cachedInputTokens": 1408,
+        "httpMs": 3276.3619,
+        "inputTokens": 1760,
+        "outputTokens": 280,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 80,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "c1",
+            "kind": "clause",
+            "last": 17,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 0,
+            "id": "c1s",
+            "kind": "phrase",
+            "last": 2,
+            "parent_id": "c1",
+            "role": "subject"
+          },
+          {
+            "first": 4,
+            "id": "c1p",
+            "kind": "phrase",
+            "last": 8,
+            "parent_id": "c1",
+            "role": "predicate"
+          },
+          {
+            "first": 10,
+            "id": "c1a",
+            "kind": "phrase",
+            "last": 17,
+            "parent_id": "c1",
+            "role": "adverbial"
+          },
+          {
+            "first": 20,
+            "id": "c2",
+            "kind": "clause",
+            "last": 80,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 20,
+            "id": "c2s",
+            "kind": "phrase",
+            "last": 28,
+            "parent_id": "c2",
+            "role": "subject"
+          },
+          {
+            "first": 30,
+            "id": "c2p",
+            "kind": "phrase",
+            "last": 38,
+            "parent_id": "c2",
+            "role": "predicate"
+          },
+          {
+            "first": 40,
+            "id": "c2a",
+            "kind": "phrase",
+            "last": 47,
+            "parent_id": "c2",
+            "role": "adverbial"
+          },
+          {
+            "first": 48,
+            "id": "c2a2",
+            "kind": "phrase",
+            "last": 79,
+            "parent_id": "c2",
+            "role": "adverbial"
+          },
+          {
+            "first": 60,
+            "id": "c2mod",
+            "kind": "phrase",
+            "last": 79,
+            "parent_id": "c2a2",
+            "role": "attribute"
+          },
+          {
+            "first": 60,
+            "id": "c2modp",
+            "kind": "phrase",
+            "last": 64,
+            "parent_id": "c2mod",
+            "role": "predicate"
+          },
+          {
+            "first": 67,
+            "id": "c2moda",
+            "kind": "phrase",
+            "last": 79,
+            "parent_id": "c2mod",
+            "role": "adverbial"
+          }
+        ],
+        "notes": [
+          "but连接两个并列分句，第二分句省略了部分重复成分。",
+          "organised by...为过去分词短语，修饰protests。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "Sweeping"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "restrictions"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "have"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "been"
+          },
+          {
+            "id": 7,
+            "text": " "
+          },
+          {
+            "id": 8,
+            "text": "imposed"
+          },
+          {
+            "id": 9,
+            "text": " "
+          },
+          {
+            "id": 10,
+            "text": "on"
+          },
+          {
+            "id": 11,
+            "text": " "
+          },
+          {
+            "id": 12,
+            "text": "demonstrations"
+          },
+          {
+            "id": 13,
+            "text": " "
+          },
+          {
+            "id": 14,
+            "text": "across"
+          },
+          {
+            "id": 15,
+            "text": " "
+          },
+          {
+            "id": 16,
+            "text": "France"
+          },
+          {
+            "id": 17,
+            "text": " "
+          },
+          {
+            "id": 18,
+            "text": "but"
+          },
+          {
+            "id": 19,
+            "text": " "
+          },
+          {
+            "id": 20,
+            "text": "hundreds"
+          },
+          {
+            "id": 21,
+            "text": " "
+          },
+          {
+            "id": 22,
+            "text": "of"
+          },
+          {
+            "id": 23,
+            "text": " "
+          },
+          {
+            "id": 24,
+            "text": "thousands"
+          },
+          {
+            "id": 25,
+            "text": " "
+          },
+          {
+            "id": 26,
+            "text": "of"
+          },
+          {
+            "id": 27,
+            "text": " "
+          },
+          {
+            "id": 28,
+            "text": "protesters"
+          },
+          {
+            "id": 29,
+            "text": " "
+          },
+          {
+            "id": 30,
+            "text": "are"
+          },
+          {
+            "id": 31,
+            "text": " "
+          },
+          {
+            "id": 32,
+            "text": "still"
+          },
+          {
+            "id": 33,
+            "text": " "
+          },
+          {
+            "id": 34,
+            "text": "expected"
+          },
+          {
+            "id": 35,
+            "text": " "
+          },
+          {
+            "id": 36,
+            "text": "to"
+          },
+          {
+            "id": 37,
+            "text": " "
+          },
+          {
+            "id": 38,
+            "text": "gather"
+          },
+          {
+            "id": 39,
+            "text": " "
+          },
+          {
+            "id": 40,
+            "text": "in"
+          },
+          {
+            "id": 41,
+            "text": " "
+          },
+          {
+            "id": 42,
+            "text": "Paris"
+          },
+          {
+            "id": 43,
+            "text": " "
+          },
+          {
+            "id": 44,
+            "text": "and"
+          },
+          {
+            "id": 45,
+            "text": " "
+          },
+          {
+            "id": 46,
+            "text": "elsewhere"
+          },
+          {
+            "id": 47,
+            "text": " "
+          },
+          {
+            "id": 48,
+            "text": "for"
+          },
+          {
+            "id": 49,
+            "text": " "
+          },
+          {
+            "id": 50,
+            "text": "a"
+          },
+          {
+            "id": 51,
+            "text": " "
+          },
+          {
+            "id": 52,
+            "text": "second"
+          },
+          {
+            "id": 53,
+            "text": " "
+          },
+          {
+            "id": 54,
+            "text": "round"
+          },
+          {
+            "id": 55,
+            "text": " "
+          },
+          {
+            "id": 56,
+            "text": "of"
+          },
+          {
+            "id": 57,
+            "text": " "
+          },
+          {
+            "id": 58,
+            "text": "protests"
+          },
+          {
+            "id": 59,
+            "text": " "
+          },
+          {
+            "id": 60,
+            "text": "organised"
+          },
+          {
+            "id": 61,
+            "text": " "
+          },
+          {
+            "id": 62,
+            "text": "by"
+          },
+          {
+            "id": 63,
+            "text": " "
+          },
+          {
+            "id": 64,
+            "text": "students"
+          },
+          {
+            "id": 65,
+            "text": ","
+          },
+          {
+            "id": 66,
+            "text": " "
+          },
+          {
+            "id": 67,
+            "text": "trade"
+          },
+          {
+            "id": 68,
+            "text": " "
+          },
+          {
+            "id": 69,
+            "text": "unions"
+          },
+          {
+            "id": 70,
+            "text": " "
+          },
+          {
+            "id": 71,
+            "text": "and"
+          },
+          {
+            "id": 72,
+            "text": " "
+          },
+          {
+            "id": 73,
+            "text": "wider"
+          },
+          {
+            "id": 74,
+            "text": " "
+          },
+          {
+            "id": 75,
+            "text": "anti"
+          },
+          {
+            "id": 76,
+            "text": "-"
+          },
+          {
+            "id": 77,
+            "text": "government"
+          },
+          {
+            "id": 78,
+            "text": " "
+          },
+          {
+            "id": 79,
+            "text": "groups"
+          },
+          {
+            "id": 80,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "法国各地对示威活动实施了严厉限制，但预计仍有数十万抗议者将在巴黎和其他地方聚集，参加由学生、工会和更广泛的反政府团体组织的第二轮抗议活动。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 5154.784000000001,
+      "round": 2,
+      "sample": "long",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 1792,
+        "httpMs": 5154.447,
+        "inputTokens": 2140,
+        "outputTokens": 916,
+        "reasoningTokens": null,
+        "requests": 2,
+        "retryRequests": 1
+      }
+    },
+    {
+      "condition": "v2_first",
+      "elapsedMs": 1442.6249,
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "id": "bench-1-attachment:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "bench-1-attachment:s0",
+            "role": "subject",
+            "sentenceId": "bench-1-attachment:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 7,
+            "id": "bench-1-attachment:s0:1",
+            "kind": "word",
+            "last": 7,
+            "parentId": "bench-1-attachment:s0",
+            "role": "predicate",
+            "sentenceId": "bench-1-attachment:s0"
+          },
+          {
+            "ctype": "noun",
+            "depth": 1,
+            "expandable": true,
+            "first": 8,
+            "id": "bench-1-attachment:s0:2",
+            "kind": "clause",
+            "last": 16,
+            "parentId": "bench-1-attachment:s0",
+            "role": "object",
+            "sentenceId": "bench-1-attachment:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 17,
+            "id": "bench-1-attachment:s0:3",
+            "kind": "word",
+            "last": 17,
+            "parentId": "bench-1-attachment:s0",
+            "role": "punctuation",
+            "sentenceId": "bench-1-attachment:s0"
+          }
+        ],
+        "notes": [
+          "主句主语含过去分词短语修饰",
+          "宾语为that引导的宾语从句"
+        ],
+        "parentId": "bench-1-attachment:s0",
+        "relations": [],
+        "skeleton": "The report suggests that the measures have reduced pollution.",
+        "translation": "委员会昨天发布的报告表明，去年推出的措施已经减少了污染。"
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 512,
+            "inputTokens": 648,
+            "outputTokens": 117,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1442.4961999999998,
+            "responseReadMs": 0.04629999999997381,
+            "responseWaitMs": 1442.4498999999998,
+            "stage": "第1层 · 0–17 · 初次",
+            "validationMs": 0.0263
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0309,
+        "totalMs": 1442.5837000000001
+      },
+      "round": 2,
+      "sample": "attachment",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 512,
+        "httpMs": 1442.4961999999998,
+        "inputTokens": 648,
+        "outputTokens": 117,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "cacheHitVerified": true,
+      "condition": "v2_expanded_to_depth4",
+      "elapsedMs": 10872.8964,
+      "errors": [],
+      "failedCallsHaveUnknownTokens": false,
+      "layers": [
+        {
+          "depth": 4,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 3,
+              "id": "bench-1-attachment:s0:0:2:1:0",
+              "kind": "word",
+              "last": 3,
+              "parentId": "bench-1-attachment:s0:0:2:1",
+              "role": "marker",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 4,
+              "id": "bench-1-attachment:s0:0:2:1:1",
+              "kind": "phrase",
+              "last": 5,
+              "parentId": "bench-1-attachment:s0:0:2:1",
+              "role": "object",
+              "sentenceId": "bench-1-attachment:s0"
+            }
+          ],
+          "notes": [
+            "介词短语作状语，说明发布者",
+            "committee为核心名词"
+          ],
+          "parentId": "bench-1-attachment:s0:0:2:1",
+          "relations": [],
+          "skeleton": null,
+          "translation": "由委员会"
+        },
+        {
+          "depth": 1,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": true,
+              "first": 0,
+              "id": "bench-1-attachment:s0:0",
+              "kind": "phrase",
+              "last": 6,
+              "parentId": "bench-1-attachment:s0",
+              "role": "subject",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 7,
+              "id": "bench-1-attachment:s0:1",
+              "kind": "word",
+              "last": 7,
+              "parentId": "bench-1-attachment:s0",
+              "role": "predicate",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "noun",
+              "depth": 1,
+              "expandable": true,
+              "first": 8,
+              "id": "bench-1-attachment:s0:2",
+              "kind": "clause",
+              "last": 16,
+              "parentId": "bench-1-attachment:s0",
+              "role": "object",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 1,
+              "expandable": false,
+              "first": 17,
+              "id": "bench-1-attachment:s0:3",
+              "kind": "word",
+              "last": 17,
+              "parentId": "bench-1-attachment:s0",
+              "role": "punctuation",
+              "sentenceId": "bench-1-attachment:s0"
+            }
+          ],
+          "notes": [
+            "主句主语含过去分词短语修饰",
+            "宾语为that引导的宾语从句"
+          ],
+          "parentId": "bench-1-attachment:s0",
+          "relations": [],
+          "skeleton": "The report suggests that the measures have reduced pollution.",
+          "translation": "委员会昨天发布的报告表明，去年推出的措施已经减少了污染。"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 14,
+              "id": "bench-1-attachment:s0:2:2:0",
+              "kind": "word",
+              "last": 14,
+              "parentId": "bench-1-attachment:s0:2:2",
+              "role": "marker",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 15,
+              "id": "bench-1-attachment:s0:2:2:1",
+              "kind": "word",
+              "last": 15,
+              "parentId": "bench-1-attachment:s0:2:2",
+              "role": "head",
+              "sentenceId": "bench-1-attachment:s0"
+            }
+          ],
+          "notes": [
+            "现在完成时谓语部分"
+          ],
+          "parentId": "bench-1-attachment:s0:2:2",
+          "relations": [],
+          "skeleton": null,
+          "translation": "已经减少了"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 0,
+              "id": "bench-1-attachment:s0:0:0",
+              "kind": "word",
+              "last": 0,
+              "parentId": "bench-1-attachment:s0:0",
+              "role": "determiner",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 1,
+              "id": "bench-1-attachment:s0:0:1",
+              "kind": "word",
+              "last": 1,
+              "parentId": "bench-1-attachment:s0:0",
+              "role": "head",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "participial",
+              "depth": 2,
+              "expandable": true,
+              "first": 2,
+              "id": "bench-1-attachment:s0:0:2",
+              "kind": "phrase",
+              "last": 6,
+              "parentId": "bench-1-attachment:s0:0",
+              "role": "attribute",
+              "sentenceId": "bench-1-attachment:s0"
+            }
+          ],
+          "notes": [
+            "主语中心词为report，后置分词短语作定语。"
+          ],
+          "parentId": "bench-1-attachment:s0:0",
+          "relations": [
+            {
+              "headToken": 1,
+              "sourceId": "bench-1-attachment:s0:0:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "委员会昨天发布的报告表明，去年出台的措施已经减少了污染。"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 2,
+              "id": "bench-1-attachment:s0:0:2:0",
+              "kind": "word",
+              "last": 2,
+              "parentId": "bench-1-attachment:s0:0:2",
+              "role": "head",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": true,
+              "first": 3,
+              "id": "bench-1-attachment:s0:0:2:1",
+              "kind": "phrase",
+              "last": 5,
+              "parentId": "bench-1-attachment:s0:0:2",
+              "role": "adverbial",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 6,
+              "id": "bench-1-attachment:s0:0:2:2",
+              "kind": "word",
+              "last": 6,
+              "parentId": "bench-1-attachment:s0:0:2",
+              "role": "adverbial",
+              "sentenceId": "bench-1-attachment:s0"
+            }
+          ],
+          "notes": [
+            "过去分词短语作后置定语",
+            "by短语表施动者"
+          ],
+          "parentId": "bench-1-attachment:s0:0:2",
+          "relations": [
+            {
+              "headToken": 2,
+              "sourceId": "bench-1-attachment:s0:0:2:1"
+            },
+            {
+              "headToken": 2,
+              "sourceId": "bench-1-attachment:s0:0:2:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "昨天由委员会发布的"
+        },
+        {
+          "depth": 2,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 8,
+              "id": "bench-1-attachment:s0:2:0",
+              "kind": "word",
+              "last": 8,
+              "parentId": "bench-1-attachment:s0:2",
+              "role": "marker",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "noun",
+              "depth": 2,
+              "expandable": true,
+              "first": 9,
+              "id": "bench-1-attachment:s0:2:1",
+              "kind": "phrase",
+              "last": 13,
+              "parentId": "bench-1-attachment:s0:2",
+              "role": "subject",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": true,
+              "first": 14,
+              "id": "bench-1-attachment:s0:2:2",
+              "kind": "phrase",
+              "last": 15,
+              "parentId": "bench-1-attachment:s0:2",
+              "role": "predicate",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 2,
+              "expandable": false,
+              "first": 16,
+              "id": "bench-1-attachment:s0:2:3",
+              "kind": "word",
+              "last": 16,
+              "parentId": "bench-1-attachment:s0:2",
+              "role": "object",
+              "sentenceId": "bench-1-attachment:s0"
+            }
+          ],
+          "notes": [
+            "宾语从句，主谓宾结构完整。",
+            "主语含过去分词后置修饰。"
+          ],
+          "parentId": "bench-1-attachment:s0:2",
+          "relations": [
+            {
+              "headToken": 15,
+              "sourceId": "bench-1-attachment:s0:2:1"
+            }
+          ],
+          "skeleton": null,
+          "translation": "去年出台的措施已经减少了污染。"
+        },
+        {
+          "depth": 3,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 9,
+              "id": "bench-1-attachment:s0:2:1:0",
+              "kind": "word",
+              "last": 9,
+              "parentId": "bench-1-attachment:s0:2:1",
+              "role": "determiner",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 3,
+              "expandable": false,
+              "first": 10,
+              "id": "bench-1-attachment:s0:2:1:1",
+              "kind": "word",
+              "last": 10,
+              "parentId": "bench-1-attachment:s0:2:1",
+              "role": "head",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "participial",
+              "depth": 3,
+              "expandable": true,
+              "first": 11,
+              "id": "bench-1-attachment:s0:2:1:2",
+              "kind": "phrase",
+              "last": 13,
+              "parentId": "bench-1-attachment:s0:2:1",
+              "role": "attribute",
+              "sentenceId": "bench-1-attachment:s0"
+            }
+          ],
+          "notes": [
+            "过去分词短语后置修饰measures",
+            "last year为时间状语"
+          ],
+          "parentId": "bench-1-attachment:s0:2:1",
+          "relations": [
+            {
+              "headToken": 10,
+              "sourceId": "bench-1-attachment:s0:2:1:2"
+            }
+          ],
+          "skeleton": null,
+          "translation": "去年推出的措施"
+        },
+        {
+          "depth": 4,
+          "nodes": [
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 11,
+              "id": "bench-1-attachment:s0:2:1:2:0",
+              "kind": "word",
+              "last": 11,
+              "parentId": "bench-1-attachment:s0:2:1:2",
+              "role": "head",
+              "sentenceId": "bench-1-attachment:s0"
+            },
+            {
+              "ctype": "none",
+              "depth": 4,
+              "expandable": false,
+              "first": 12,
+              "id": "bench-1-attachment:s0:2:1:2:1",
+              "kind": "phrase",
+              "last": 13,
+              "parentId": "bench-1-attachment:s0:2:1:2",
+              "role": "attribute",
+              "sentenceId": "bench-1-attachment:s0"
+            }
+          ],
+          "notes": [
+            "过去分词短语作后置定语",
+            "时间状语修饰分词"
+          ],
+          "parentId": "bench-1-attachment:s0:2:1:2",
+          "relations": [
+            {
+              "headToken": 11,
+              "sourceId": "bench-1-attachment:s0:2:1:2:1"
+            }
+          ],
+          "skeleton": null,
+          "translation": "去年引入的措施"
+        }
+      ],
+      "round": 2,
+      "sample": "attachment",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 3200,
+        "httpMs": 10868.571,
+        "inputTokens": 4842,
+        "outputTokens": 708,
+        "reasoningTokens": null,
+        "requests": 8,
+        "retryRequests": 0
+      }
+    },
+    {
+      "analysis": {
+        "nodes": [
+          {
+            "first": 0,
+            "id": "s",
+            "kind": "clause",
+            "last": 33,
+            "parent_id": null,
+            "role": "root"
+          },
+          {
+            "first": 0,
+            "id": "subj",
+            "kind": "phrase",
+            "last": 12,
+            "parent_id": "s",
+            "role": "subject"
+          },
+          {
+            "first": 2,
+            "id": "subj_head",
+            "kind": "word",
+            "last": 2,
+            "parent_id": "subj",
+            "role": "subject"
+          },
+          {
+            "first": 4,
+            "id": "subj_mod",
+            "kind": "phrase",
+            "last": 12,
+            "parent_id": "subj",
+            "role": "attribute"
+          },
+          {
+            "first": 14,
+            "id": "pred",
+            "kind": "word",
+            "last": 14,
+            "parent_id": "s",
+            "role": "predicate"
+          },
+          {
+            "first": 16,
+            "id": "obj",
+            "kind": "clause",
+            "last": 32,
+            "parent_id": "s",
+            "role": "object"
+          },
+          {
+            "first": 18,
+            "id": "obj_subj",
+            "kind": "phrase",
+            "last": 26,
+            "parent_id": "obj",
+            "role": "subject"
+          },
+          {
+            "first": 20,
+            "id": "obj_subj_head",
+            "kind": "word",
+            "last": 20,
+            "parent_id": "obj_subj",
+            "role": "subject"
+          },
+          {
+            "first": 22,
+            "id": "obj_subj_mod",
+            "kind": "phrase",
+            "last": 26,
+            "parent_id": "obj_subj",
+            "role": "attribute"
+          },
+          {
+            "first": 28,
+            "id": "obj_pred",
+            "kind": "phrase",
+            "last": 30,
+            "parent_id": "obj",
+            "role": "predicate"
+          },
+          {
+            "first": 32,
+            "id": "obj_obj",
+            "kind": "word",
+            "last": 32,
+            "parent_id": "obj",
+            "role": "object"
+          }
+        ],
+        "notes": [
+          "published by the committee yesterday 为过去分词短语作后置定语修饰 report。",
+          "that 引导宾语从句，从句主语 measures 后接过去分词短语作定语。"
+        ],
+        "pieces": [
+          {
+            "id": 0,
+            "text": "The"
+          },
+          {
+            "id": 1,
+            "text": " "
+          },
+          {
+            "id": 2,
+            "text": "report"
+          },
+          {
+            "id": 3,
+            "text": " "
+          },
+          {
+            "id": 4,
+            "text": "published"
+          },
+          {
+            "id": 5,
+            "text": " "
+          },
+          {
+            "id": 6,
+            "text": "by"
+          },
+          {
+            "id": 7,
+            "text": " "
+          },
+          {
+            "id": 8,
+            "text": "the"
+          },
+          {
+            "id": 9,
+            "text": " "
+          },
+          {
+            "id": 10,
+            "text": "committee"
+          },
+          {
+            "id": 11,
+            "text": " "
+          },
+          {
+            "id": 12,
+            "text": "yesterday"
+          },
+          {
+            "id": 13,
+            "text": " "
+          },
+          {
+            "id": 14,
+            "text": "suggests"
+          },
+          {
+            "id": 15,
+            "text": " "
+          },
+          {
+            "id": 16,
+            "text": "that"
+          },
+          {
+            "id": 17,
+            "text": " "
+          },
+          {
+            "id": 18,
+            "text": "the"
+          },
+          {
+            "id": 19,
+            "text": " "
+          },
+          {
+            "id": 20,
+            "text": "measures"
+          },
+          {
+            "id": 21,
+            "text": " "
+          },
+          {
+            "id": 22,
+            "text": "introduced"
+          },
+          {
+            "id": 23,
+            "text": " "
+          },
+          {
+            "id": 24,
+            "text": "last"
+          },
+          {
+            "id": 25,
+            "text": " "
+          },
+          {
+            "id": 26,
+            "text": "year"
+          },
+          {
+            "id": 27,
+            "text": " "
+          },
+          {
+            "id": 28,
+            "text": "have"
+          },
+          {
+            "id": 29,
+            "text": " "
+          },
+          {
+            "id": 30,
+            "text": "reduced"
+          },
+          {
+            "id": 31,
+            "text": " "
+          },
+          {
+            "id": 32,
+            "text": "pollution"
+          },
+          {
+            "id": 33,
+            "text": "."
+          }
+        ],
+        "schema_version": "1",
+        "translation": "委员会昨天发布的报告表明，去年推出的措施已经减少了污染。"
+      },
+      "condition": "v1_full",
+      "elapsedMs": 2424.7359,
+      "round": 2,
+      "sample": "attachment",
+      "status": "ok",
+      "totals": {
+        "cachedInputTokens": 384,
+        "httpMs": 2424.5557999999996,
+        "inputTokens": 574,
+        "outputTokens": 363,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    }
+  ],
+  "samples": [
+    [
+      "simple",
+      "The cat sleeps."
+    ],
+    [
+      "relative",
+      "The cat that I saw yesterday sat on the mat."
+    ],
+    [
+      "coordination",
+      "I wanted to leave, but the train was late."
+    ],
+    [
+      "nonfinite",
+      "To finish the project on time, Maya worked late while her team reviewed the final report."
+    ],
+    [
+      "long",
+      "Sweeping restrictions have been imposed on demonstrations across France but hundreds of thousands of protesters are still expected to gather in Paris and elsewhere for a second round of protests organised by students, trade unions and wider anti-government groups."
+    ],
+    [
+      "attachment",
+      "The report published by the committee yesterday suggests that the measures introduced last year have reduced pollution."
+    ]
+  ],
+  "temperature": 0.3,
+  "thinking": false,
+  "v2Prompt": "layer-v2.1",
+  "candidate": "v2.1",
+  "promptSha256": "db274a10d19ac9449fdf3bc2b59d05970f16b24caecb423791c7953da25136a1"
+}

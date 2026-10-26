@@ -1,0 +1,348 @@
+{
+  "schemaVersion": "2",
+  "promptVersion": "layer-v2.8.1-noun-phrases",
+  "sessionId": "bbc-2",
+  "pieces": [
+    {
+      "id": 0,
+      "text": "The"
+    },
+    {
+      "id": 1,
+      "text": " "
+    },
+    {
+      "id": 2,
+      "text": "British"
+    },
+    {
+      "id": 3,
+      "text": " "
+    },
+    {
+      "id": 4,
+      "text": "Broadcasting"
+    },
+    {
+      "id": 5,
+      "text": " "
+    },
+    {
+      "id": 6,
+      "text": "Corporation"
+    },
+    {
+      "id": 7,
+      "text": " "
+    },
+    {
+      "id": 8,
+      "text": "("
+    },
+    {
+      "id": 9,
+      "text": "BBC"
+    },
+    {
+      "id": 10,
+      "text": ")"
+    },
+    {
+      "id": 11,
+      "text": " "
+    },
+    {
+      "id": 12,
+      "text": "is"
+    },
+    {
+      "id": 13,
+      "text": " "
+    },
+    {
+      "id": 14,
+      "text": "a"
+    },
+    {
+      "id": 15,
+      "text": " "
+    },
+    {
+      "id": 16,
+      "text": "British"
+    },
+    {
+      "id": 17,
+      "text": " "
+    },
+    {
+      "id": 18,
+      "text": "public"
+    },
+    {
+      "id": 19,
+      "text": " "
+    },
+    {
+      "id": 20,
+      "text": "service"
+    },
+    {
+      "id": 21,
+      "text": " "
+    },
+    {
+      "id": 22,
+      "text": "broadcaster"
+    },
+    {
+      "id": 23,
+      "text": " "
+    },
+    {
+      "id": 24,
+      "text": "headquartered"
+    },
+    {
+      "id": 25,
+      "text": " "
+    },
+    {
+      "id": 26,
+      "text": "at"
+    },
+    {
+      "id": 27,
+      "text": " "
+    },
+    {
+      "id": 28,
+      "text": "Broadcasting"
+    },
+    {
+      "id": 29,
+      "text": " "
+    },
+    {
+      "id": 30,
+      "text": "House"
+    },
+    {
+      "id": 31,
+      "text": " "
+    },
+    {
+      "id": 32,
+      "text": "in"
+    },
+    {
+      "id": 33,
+      "text": " "
+    },
+    {
+      "id": 34,
+      "text": "London"
+    },
+    {
+      "id": 35,
+      "text": ","
+    },
+    {
+      "id": 36,
+      "text": " "
+    },
+    {
+      "id": 37,
+      "text": "England"
+    },
+    {
+      "id": 38,
+      "text": "."
+    }
+  ],
+  "tokens": [
+    {
+      "id": 0,
+      "text": "The",
+      "pieceId": 0
+    },
+    {
+      "id": 1,
+      "text": "British",
+      "pieceId": 2
+    },
+    {
+      "id": 2,
+      "text": "Broadcasting",
+      "pieceId": 4
+    },
+    {
+      "id": 3,
+      "text": "Corporation",
+      "pieceId": 6
+    },
+    {
+      "id": 4,
+      "text": "(",
+      "pieceId": 8
+    },
+    {
+      "id": 5,
+      "text": "BBC",
+      "pieceId": 9
+    },
+    {
+      "id": 6,
+      "text": ")",
+      "pieceId": 10
+    },
+    {
+      "id": 7,
+      "text": "is",
+      "pieceId": 12
+    },
+    {
+      "id": 8,
+      "text": "a",
+      "pieceId": 14
+    },
+    {
+      "id": 9,
+      "text": "British",
+      "pieceId": 16
+    },
+    {
+      "id": 10,
+      "text": "public",
+      "pieceId": 18
+    },
+    {
+      "id": 11,
+      "text": "service",
+      "pieceId": 20
+    },
+    {
+      "id": 12,
+      "text": "broadcaster",
+      "pieceId": 22
+    },
+    {
+      "id": 13,
+      "text": "headquartered",
+      "pieceId": 24
+    },
+    {
+      "id": 14,
+      "text": "at",
+      "pieceId": 26
+    },
+    {
+      "id": 15,
+      "text": "Broadcasting",
+      "pieceId": 28
+    },
+    {
+      "id": 16,
+      "text": "House",
+      "pieceId": 30
+    },
+    {
+      "id": 17,
+      "text": "in",
+      "pieceId": 32
+    },
+    {
+      "id": 18,
+      "text": "London",
+      "pieceId": 34
+    },
+    {
+      "id": 19,
+      "text": ",",
+      "pieceId": 35
+    },
+    {
+      "id": 20,
+      "text": "England",
+      "pieceId": 37
+    },
+    {
+      "id": 21,
+      "text": ".",
+      "pieceId": 38
+    }
+  ],
+  "roots": [
+    {
+      "id": "bbc-2:s0",
+      "parentId": null,
+      "kind": "sentence",
+      "role": "root",
+      "ctype": "none",
+      "first": 0,
+      "last": 21,
+      "expandable": true,
+      "depth": 0,
+      "sentenceId": "bbc-2:s0"
+    }
+  ],
+  "layers": [
+    {
+      "parentId": "bbc-2:s0",
+      "depth": 1,
+      "skeleton": "The British Broadcasting Corporation (BBC) is a British public service broadcaster.",
+      "translation": "英国广播公司（BBC）是一家总部位于英格兰伦敦广播大厦的英国公共服务广播机构。",
+      "nodes": [
+        {
+          "id": "bbc-2:s0:0",
+          "parentId": "bbc-2:s0",
+          "kind": "phrase",
+          "role": "subject",
+          "ctype": "none",
+          "grammar": [
+            "noun_phrase"
+          ],
+          "first": 0,
+          "last": 6,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "bbc-2:s0"
+        },
+        {
+          "id": "bbc-2:s0:1",
+          "parentId": "bbc-2:s0",
+          "kind": "word",
+          "role": "predicate",
+          "ctype": "none",
+          "first": 7,
+          "last": 7,
+          "expandable": false,
+          "depth": 1,
+          "sentenceId": "bbc-2:s0"
+        },
+        {
+          "id": "bbc-2:s0:2",
+          "parentId": "bbc-2:s0",
+          "kind": "phrase",
+          "role": "predicative",
+          "ctype": "none",
+          "grammar": [
+            "noun_phrase"
+          ],
+          "first": 8,
+          "last": 21,
+          "expandable": true,
+          "depth": 1,
+          "sentenceId": "bbc-2:s0"
+        }
+      ],
+      "relations": [],
+      "notes": [
+        "主系表结构，表语含过去分词后置定语"
+      ],
+      "warnings": [],
+      "normalizationCount": 0
+    }
+  ],
+  "maxDepth": 4
+}

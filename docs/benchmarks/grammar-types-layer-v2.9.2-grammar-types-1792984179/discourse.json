@@ -1,0 +1,198 @@
+{
+  "layers": [
+    {
+      "depth": 2,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 3,
+          "grammar": [
+            "modal_verb"
+          ],
+          "id": "discourse:s0:2:0",
+          "kind": "word",
+          "last": 3,
+          "parentId": "discourse:s0:2",
+          "role": "predicate",
+          "sentenceId": "discourse:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 2,
+          "expandable": false,
+          "first": 4,
+          "grammar": [
+            "lexical_verb"
+          ],
+          "id": "discourse:s0:2:1",
+          "kind": "word",
+          "last": 5,
+          "parentId": "discourse:s0:2",
+          "role": "predicate",
+          "sentenceId": "discourse:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "情态动词与实义动词共同组成谓语"
+      ],
+      "parentId": "discourse:s0:2",
+      "relations": [],
+      "skeleton": null,
+      "translation": "（他们）可以离开。",
+      "warnings": []
+    },
+    {
+      "depth": 1,
+      "nodes": [
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 0,
+          "grammar": [
+            "discourse_marker"
+          ],
+          "id": "discourse:s0:0",
+          "kind": "word",
+          "last": 1,
+          "parentId": "discourse:s0",
+          "role": "marker",
+          "sentenceId": "discourse:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": false,
+          "first": 2,
+          "grammar": [
+            "pronoun"
+          ],
+          "id": "discourse:s0:1",
+          "kind": "word",
+          "last": 2,
+          "parentId": "discourse:s0",
+          "role": "subject",
+          "sentenceId": "discourse:s0"
+        },
+        {
+          "ctype": "none",
+          "depth": 1,
+          "expandable": true,
+          "first": 3,
+          "grammar": [
+            "verb_phrase"
+          ],
+          "id": "discourse:s0:2",
+          "kind": "phrase",
+          "last": 5,
+          "parentId": "discourse:s0",
+          "role": "predicate",
+          "sentenceId": "discourse:s0"
+        }
+      ],
+      "normalizationCount": 0,
+      "notes": [
+        "Well 为独立话语标记，非句子成分",
+        "情态动词与实义动词共同构成谓语"
+      ],
+      "parentId": "discourse:s0",
+      "relations": [],
+      "skeleton": "They may leave.",
+      "translation": "嗯，他们可能会离开。",
+      "warnings": [
+        "已按原文补齐标点归属，单词的成分划分保持原样。"
+      ]
+    }
+  ],
+  "maxDepth": 4,
+  "pieces": [
+    {
+      "id": 0,
+      "text": "Well"
+    },
+    {
+      "id": 1,
+      "text": ","
+    },
+    {
+      "id": 2,
+      "text": " "
+    },
+    {
+      "id": 3,
+      "text": "they"
+    },
+    {
+      "id": 4,
+      "text": " "
+    },
+    {
+      "id": 5,
+      "text": "may"
+    },
+    {
+      "id": 6,
+      "text": " "
+    },
+    {
+      "id": 7,
+      "text": "leave"
+    },
+    {
+      "id": 8,
+      "text": "."
+    }
+  ],
+  "promptVersion": "layer-v2.9.2-grammar-types",
+  "roots": [
+    {
+      "ctype": "none",
+      "depth": 0,
+      "expandable": true,
+      "first": 0,
+      "id": "discourse:s0",
+      "kind": "sentence",
+      "last": 5,
+      "parentId": null,
+      "role": "root",
+      "sentenceId": "discourse:s0"
+    }
+  ],
+  "schemaVersion": "2",
+  "sessionId": "discourse",
+  "tokens": [
+    {
+      "id": 0,
+      "pieceId": 0,
+      "text": "Well"
+    },
+    {
+      "id": 1,
+      "pieceId": 1,
+      "text": ","
+    },
+    {
+      "id": 2,
+      "pieceId": 3,
+      "text": "they"
+    },
+    {
+      "id": 3,
+      "pieceId": 5,
+      "text": "may"
+    },
+    {
+      "id": 4,
+      "pieceId": 7,
+      "text": "leave"
+    },
+    {
+      "id": 5,
+      "pieceId": 8,
+      "text": "."
+    }
+  ]
+}
