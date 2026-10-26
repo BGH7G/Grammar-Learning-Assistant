@@ -1,0 +1,1037 @@
+{
+  "afterFailures": [],
+  "afterVersion": "layer-v2.10.4-compact",
+  "beforeVersion": "layer-v2.9.2-grammar-types",
+  "caseCount": 2,
+  "complete": true,
+  "jsonMode": false,
+  "model": "deepseek-v4-flash",
+  "reasoningEffort": "high",
+  "rounds": 2,
+  "rows": [
+    {
+      "case": "strike-root",
+      "checks": [
+        [
+          "predicate starts at strike",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "0-strike-root-before:s0:0",
+            "kind": "phrase",
+            "last": 3,
+            "parentId": "0-strike-root-before:s0",
+            "role": "subject",
+            "sentenceId": "0-strike-root-before:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 4,
+            "grammar": [
+              "postmodifier",
+              "past_participial"
+            ],
+            "id": "0-strike-root-before:s0:1",
+            "kind": "clause",
+            "last": 11,
+            "parentId": "0-strike-root-before:s0",
+            "role": "attribute",
+            "sentenceId": "0-strike-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 12,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "0-strike-root-before:s0:2",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "0-strike-root-before:s0",
+            "role": "predicate",
+            "sentenceId": "0-strike-root-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "分词短语补充说明主语，与谓语隔开",
+          "as 短语为补足语，说明主语给人的印象"
+        ],
+        "parentId": "0-strike-root-before:s0",
+        "relations": [
+          {
+            "headToken": 2,
+            "sourceId": "0-strike-root-before:s0:1"
+          }
+        ],
+        "skeleton": "His political views strike many as plain-speaking and strike many more as plainly bigoted.",
+        "translation": "他的政治观点，在X上向2.4亿粉丝传播，让许多人觉得他直言不讳，也让更多人——包括《经济学人》——觉得他明显偏执。",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10752,
+            "inputTokens": 10978,
+            "outputTokens": 180,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2352.2083000000002,
+            "responseReadMs": 0.07659999999987122,
+            "responseWaitMs": 2352.1317000000004,
+            "stage": "第1层 · 0–30 · 初次",
+            "validationMs": 0.1966
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0975,
+        "totalMs": 2352.5581
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "0-strike-root-before:s0",
+        "kind": "sentence",
+        "last": 30,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "0-strike-root-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 10752,
+        "httpMs": 2352.2083000000002,
+        "inputTokens": 10978,
+        "outputTokens": 180,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "strike-root",
+      "checks": [
+        [
+          "predicate starts at strike",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "0-strike-root-after:s0:0",
+            "kind": "phrase",
+            "last": 3,
+            "parentId": "0-strike-root-after:s0",
+            "role": "subject",
+            "sentenceId": "0-strike-root-after:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 4,
+            "grammar": [
+              "postmodifier",
+              "past_participial"
+            ],
+            "id": "0-strike-root-after:s0:1",
+            "kind": "phrase",
+            "last": 11,
+            "parentId": "0-strike-root-after:s0",
+            "role": "attribute",
+            "sentenceId": "0-strike-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 12,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "0-strike-root-after:s0:2",
+            "kind": "phrase",
+            "last": 18,
+            "parentId": "0-strike-root-after:s0",
+            "role": "predicate",
+            "sentenceId": "0-strike-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 19,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "0-strike-root-after:s0:3",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "0-strike-root-after:s0",
+            "role": "coordinate",
+            "sentenceId": "0-strike-root-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "插入的过去分词短语补充说明主语",
+          "两个strike动作共享主语，第二项含as补足语说明主语给人的印象"
+        ],
+        "parentId": "0-strike-root-after:s0",
+        "relations": [
+          {
+            "headToken": 2,
+            "sourceId": "0-strike-root-after:s0:1"
+          }
+        ],
+        "skeleton": "His political views strike many as plain-speaking and strike many more as plainly bigoted.",
+        "translation": "他的政治观点传播给X上的2.4亿粉丝，让许多人觉得他说话直率，也让包括《经济学人》在内的更多人觉得他显然偏执。",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 640,
+            "inputTokens": 4059,
+            "outputTokens": 214,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2076.4287,
+            "responseReadMs": 0.05650000000014188,
+            "responseWaitMs": 2076.3722,
+            "stage": "第1层 · 0–30 · 初次",
+            "validationMs": 0.1106
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0326,
+        "totalMs": 2076.5993
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "0-strike-root-after:s0",
+        "kind": "sentence",
+        "last": 30,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "0-strike-root-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 640,
+        "httpMs": 2076.4287,
+        "inputTokens": 4059,
+        "outputTokens": 214,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "relative-child",
+      "checks": [
+        [
+          "relative object",
+          true
+        ],
+        [
+          "clause subject",
+          true
+        ],
+        [
+          "clause verb",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "relative_pronoun"
+            ],
+            "id": "0-relative-child-after:s0:target:0",
+            "kind": "word",
+            "last": 2,
+            "parentId": "0-relative-child-after:s0:target",
+            "role": "object",
+            "sentenceId": "0-relative-child-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 3,
+            "grammar": [
+              "pronoun"
+            ],
+            "id": "0-relative-child-after:s0:target:1",
+            "kind": "word",
+            "last": 3,
+            "parentId": "0-relative-child-after:s0:target",
+            "role": "subject",
+            "sentenceId": "0-relative-child-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 4,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "0-relative-child-after:s0:target:2",
+            "kind": "word",
+            "last": 4,
+            "parentId": "0-relative-child-after:s0:target",
+            "role": "predicate",
+            "sentenceId": "0-relative-child-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "that在定语从句中作wrote的宾语",
+          "从句主语she不能并入谓语"
+        ],
+        "parentId": "0-relative-child-after:s0:target",
+        "relations": [],
+        "skeleton": null,
+        "translation": "她写的那份",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 3712,
+            "inputTokens": 3930,
+            "outputTokens": 109,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1673.0489,
+            "responseReadMs": 0.048300000000153887,
+            "responseWaitMs": 1673.0005999999998,
+            "stage": "第2层 · 2–4 · 初次",
+            "validationMs": 0.0775
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0143,
+        "totalMs": 1673.1685
+      },
+      "parent": {
+        "ctype": "relative",
+        "depth": 1,
+        "expandable": true,
+        "first": 2,
+        "grammar": [
+          "postmodifier"
+        ],
+        "id": "0-relative-child-after:s0:target",
+        "kind": "clause",
+        "last": 4,
+        "parentId": null,
+        "role": "attribute",
+        "sentenceId": "0-relative-child-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "that she wrote",
+      "text": "The report that she wrote surprised everyone.",
+      "totals": {
+        "cachedInputTokens": 3712,
+        "httpMs": 1673.0489,
+        "inputTokens": 3930,
+        "outputTokens": 109,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "relative-child",
+      "checks": [
+        [
+          "relative object",
+          true
+        ],
+        [
+          "clause subject",
+          true
+        ],
+        [
+          "clause verb",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "relative_pronoun"
+            ],
+            "id": "0-relative-child-before:s0:target:0",
+            "kind": "word",
+            "last": 2,
+            "parentId": "0-relative-child-before:s0:target",
+            "role": "object",
+            "sentenceId": "0-relative-child-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 3,
+            "grammar": [
+              "pronoun"
+            ],
+            "id": "0-relative-child-before:s0:target:1",
+            "kind": "word",
+            "last": 3,
+            "parentId": "0-relative-child-before:s0:target",
+            "role": "subject",
+            "sentenceId": "0-relative-child-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 4,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "0-relative-child-before:s0:target:2",
+            "kind": "word",
+            "last": 4,
+            "parentId": "0-relative-child-before:s0:target",
+            "role": "predicate",
+            "sentenceId": "0-relative-child-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "that 在定语从句中作 wrote 的宾语",
+          "关系代词作宾语时可省略"
+        ],
+        "parentId": "0-relative-child-before:s0:target",
+        "relations": [],
+        "skeleton": null,
+        "translation": "她写的那份",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10745,
+            "outputTokens": 110,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1472.3606,
+            "responseReadMs": 0.04699999999979809,
+            "responseWaitMs": 1472.3136000000002,
+            "stage": "第2层 · 2–4 · 初次",
+            "validationMs": 0.0809
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.017,
+        "totalMs": 1472.5036
+      },
+      "parent": {
+        "ctype": "relative",
+        "depth": 1,
+        "expandable": true,
+        "first": 2,
+        "grammar": [
+          "postmodifier"
+        ],
+        "id": "0-relative-child-before:s0:target",
+        "kind": "clause",
+        "last": 4,
+        "parentId": null,
+        "role": "attribute",
+        "sentenceId": "0-relative-child-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "that she wrote",
+      "text": "The report that she wrote surprised everyone.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1472.3606,
+        "inputTokens": 10745,
+        "outputTokens": 110,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "strike-root",
+      "checks": [
+        [
+          "predicate starts at strike",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "1-strike-root-after:s0:0",
+            "kind": "phrase",
+            "last": 3,
+            "parentId": "1-strike-root-after:s0",
+            "role": "subject",
+            "sentenceId": "1-strike-root-after:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 4,
+            "grammar": [
+              "past_participial"
+            ],
+            "id": "1-strike-root-after:s0:1",
+            "kind": "phrase",
+            "last": 11,
+            "parentId": "1-strike-root-after:s0",
+            "role": "attribute",
+            "sentenceId": "1-strike-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 12,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "1-strike-root-after:s0:2",
+            "kind": "phrase",
+            "last": 18,
+            "parentId": "1-strike-root-after:s0",
+            "role": "predicate",
+            "sentenceId": "1-strike-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 19,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "1-strike-root-after:s0:3",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "1-strike-root-after:s0",
+            "role": "coordinate",
+            "sentenceId": "1-strike-root-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "插入的过去分词短语补充说明主语views",
+          "两个strike共享主语，as短语为补足语说明主语给人的印象"
+        ],
+        "parentId": "1-strike-root-after:s0",
+        "relations": [
+          {
+            "headToken": 2,
+            "sourceId": "1-strike-root-after:s0:1"
+          }
+        ],
+        "skeleton": "His political views strike many as plain-speaking and strike many more as plainly bigoted.",
+        "translation": "他的政治观点传播给X上的2.4亿追随者，让许多人觉得他直言不讳，也让更多人——包括《经济学人》——觉得他明显偏执。",
+        "warnings": [
+          "已按原文补齐标点归属，单词的成分划分保持原样。"
+        ]
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 3840,
+            "inputTokens": 4059,
+            "outputTokens": 208,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1969.5004000000001,
+            "responseReadMs": 0.07220000000029358,
+            "responseWaitMs": 1969.4281999999998,
+            "stage": "第1层 · 0–30 · 初次",
+            "validationMs": 0.1552
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.021500000000000002,
+        "totalMs": 1969.7096
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "1-strike-root-after:s0",
+        "kind": "sentence",
+        "last": 30,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "1-strike-root-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 3840,
+        "httpMs": 1969.5004000000001,
+        "inputTokens": 4059,
+        "outputTokens": 208,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "strike-root",
+      "checks": [
+        [
+          "predicate starts at strike",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "1-strike-root-before:s0:0",
+            "kind": "phrase",
+            "last": 3,
+            "parentId": "1-strike-root-before:s0",
+            "role": "subject",
+            "sentenceId": "1-strike-root-before:s0"
+          },
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 4,
+            "grammar": [
+              "postmodifier",
+              "past_participial"
+            ],
+            "id": "1-strike-root-before:s0:1",
+            "kind": "clause",
+            "last": 11,
+            "parentId": "1-strike-root-before:s0",
+            "role": "attribute",
+            "sentenceId": "1-strike-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 12,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "1-strike-root-before:s0:2",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "1-strike-root-before:s0",
+            "role": "predicate",
+            "sentenceId": "1-strike-root-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "分词短语补充说明主语，与谓语分开",
+          "as短语为描述性补足语，说明主语给人的印象"
+        ],
+        "parentId": "1-strike-root-before:s0",
+        "relations": [
+          {
+            "headToken": 2,
+            "sourceId": "1-strike-root-before:s0:1"
+          }
+        ],
+        "skeleton": "His political views strike many as plain-speaking and strike many more as plainly bigoted.",
+        "translation": "他的政治观点，在X上向2.4亿粉丝传播，让许多人觉得直言不讳，也让更多人——包括《经济学人》——觉得明显偏执。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10752,
+            "inputTokens": 10978,
+            "outputTokens": 178,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2388.5694000000003,
+            "responseReadMs": 0.04800000000022919,
+            "responseWaitMs": 2388.5214,
+            "stage": "第1层 · 0–30 · 初次",
+            "validationMs": 0.0959
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.063,
+        "totalMs": 2388.7673
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "1-strike-root-before:s0",
+        "kind": "sentence",
+        "last": 30,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "1-strike-root-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 10752,
+        "httpMs": 2388.5694000000003,
+        "inputTokens": 10978,
+        "outputTokens": 178,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "relative-child",
+      "checks": [
+        [
+          "relative object",
+          true
+        ],
+        [
+          "clause subject",
+          true
+        ],
+        [
+          "clause verb",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "relative_pronoun"
+            ],
+            "id": "1-relative-child-before:s0:target:0",
+            "kind": "word",
+            "last": 2,
+            "parentId": "1-relative-child-before:s0:target",
+            "role": "object",
+            "sentenceId": "1-relative-child-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 3,
+            "grammar": [
+              "pronoun"
+            ],
+            "id": "1-relative-child-before:s0:target:1",
+            "kind": "word",
+            "last": 3,
+            "parentId": "1-relative-child-before:s0:target",
+            "role": "subject",
+            "sentenceId": "1-relative-child-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 4,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "1-relative-child-before:s0:target:2",
+            "kind": "word",
+            "last": 4,
+            "parentId": "1-relative-child-before:s0:target",
+            "role": "predicate",
+            "sentenceId": "1-relative-child-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "关系代词that在从句中作wrote的宾语"
+        ],
+        "parentId": "1-relative-child-before:s0:target",
+        "relations": [],
+        "skeleton": null,
+        "translation": "她写的",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10496,
+            "inputTokens": 10745,
+            "outputTokens": 101,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1376.6207,
+            "responseReadMs": 0.05349999999998545,
+            "responseWaitMs": 1376.5672,
+            "stage": "第2层 · 2–4 · 初次",
+            "validationMs": 0.0848
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0205,
+        "totalMs": 1376.767
+      },
+      "parent": {
+        "ctype": "relative",
+        "depth": 1,
+        "expandable": true,
+        "first": 2,
+        "grammar": [
+          "postmodifier"
+        ],
+        "id": "1-relative-child-before:s0:target",
+        "kind": "clause",
+        "last": 4,
+        "parentId": null,
+        "role": "attribute",
+        "sentenceId": "1-relative-child-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "that she wrote",
+      "text": "The report that she wrote surprised everyone.",
+      "totals": {
+        "cachedInputTokens": 10496,
+        "httpMs": 1376.6207,
+        "inputTokens": 10745,
+        "outputTokens": 101,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "relative-child",
+      "checks": [
+        [
+          "relative object",
+          true
+        ],
+        [
+          "clause subject",
+          true
+        ],
+        [
+          "clause verb",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 2,
+            "grammar": [
+              "relative_pronoun"
+            ],
+            "id": "1-relative-child-after:s0:target:0",
+            "kind": "word",
+            "last": 2,
+            "parentId": "1-relative-child-after:s0:target",
+            "role": "object",
+            "sentenceId": "1-relative-child-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 3,
+            "grammar": [
+              "pronoun"
+            ],
+            "id": "1-relative-child-after:s0:target:1",
+            "kind": "word",
+            "last": 3,
+            "parentId": "1-relative-child-after:s0:target",
+            "role": "subject",
+            "sentenceId": "1-relative-child-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 4,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "1-relative-child-after:s0:target:2",
+            "kind": "word",
+            "last": 4,
+            "parentId": "1-relative-child-after:s0:target",
+            "role": "predicate",
+            "sentenceId": "1-relative-child-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "that在定语从句中作wrote的宾语",
+          "从句缺宾语，that不是标记词"
+        ],
+        "parentId": "1-relative-child-after:s0:target",
+        "relations": [],
+        "skeleton": null,
+        "translation": "她写的那份",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 3712,
+            "inputTokens": 3930,
+            "outputTokens": 111,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1685.0873,
+            "responseReadMs": 0.048799999999801,
+            "responseWaitMs": 1685.0385,
+            "stage": "第2层 · 2–4 · 初次",
+            "validationMs": 0.0797
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.013600000000000001,
+        "totalMs": 1685.205
+      },
+      "parent": {
+        "ctype": "relative",
+        "depth": 1,
+        "expandable": true,
+        "first": 2,
+        "grammar": [
+          "postmodifier"
+        ],
+        "id": "1-relative-child-after:s0:target",
+        "kind": "clause",
+        "last": 4,
+        "parentId": null,
+        "role": "attribute",
+        "sentenceId": "1-relative-child-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "that she wrote",
+      "text": "The report that she wrote surprised everyone.",
+      "totals": {
+        "cachedInputTokens": 3712,
+        "httpMs": 1685.0873,
+        "inputTokens": 3930,
+        "outputTokens": 111,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    }
+  ],
+  "temperature": 0.3,
+  "thinking": false
+}

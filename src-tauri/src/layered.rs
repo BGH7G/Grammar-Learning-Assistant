@@ -11,7 +11,7 @@ use std::{
     time::Instant,
 };
 
-pub const VERSION: &str = "layer-v2.9.2-grammar-types";
+pub const VERSION: &str = "layer-v2.10.5-compact";
 pub const MAX_DEPTH: u8 = 4;
 const PROMPT: &str = include_str!("prompts/layer-v2.txt");
 const MAX_SESSIONS: usize = 8;
@@ -78,6 +78,7 @@ pub struct Document {
 
 #[derive(Clone)]
 pub struct Session {
+    split_sentences: bool,
     pub id: String,
     pub config_key: String,
     pub pieces: Vec<Piece>,
@@ -103,6 +104,32 @@ impl Store {
     pub fn clear(&mut self) {
         self.sessions.clear();
         self.order.clear();
+    }
+    // Exact text/configuration/splitting match, with LRU promotion on reuse.
+    pub fn prepare_or_reuse(&mut self, candidate: Session) -> Document {
+        let found = self
+            .order
+            .iter()
+            .rev()
+            .find(|id| {
+                let old = &self.sessions[*id];
+                old.config_key == candidate.config_key
+                    && old.split_sentences == candidate.split_sentences
+                    && old
+                        .pieces
+                        .iter()
+                        .map(|p| p.text.as_str())
+                        .eq(candidate.pieces.iter().map(|p| p.text.as_str()))
+            })
+            .cloned();
+        if let Some(id) = found {
+            self.order.retain(|key| key != &id);
+            self.order.push_back(id.clone());
+            return self.sessions[&id].document();
+        }
+        let document = candidate.document();
+        self.insert(candidate);
+        document
     }
     pub fn insert(&mut self, session: Session) {
         while self.order.len() >= MAX_SESSIONS {
@@ -137,7 +164,7 @@ impl Store {
         if node.depth >= MAX_DEPTH {
             return Err("已达到四层解析上限。".into());
         }
-        if node.first == node.last {
+        if node.first == node.last && node.role != "root" {
             return Err("单个词或标点不需要继续展开。".into());
         }
         if session.layers.len() + session.in_flight.len() >= MAX_LAYERS {
@@ -223,6 +250,7 @@ impl Session {
             })
             .collect();
         Ok(Self {
+            split_sentences: split,
             id,
             config_key,
             pieces,
@@ -936,20 +964,29 @@ impl From<QueryFailure> for String {
     }
 }
 
-// Preserve absolute IDs and include the entire containing sentence for disambiguation.
+// Send one indexed copy of the target. Only child requests need the containing
+// sentence as plain context; source text/absolute IDs remain lossless locally.
 fn query_input(session: &Session, parent: &Node) -> serde_json::Value {
     let root = session.nodes.get(&parent.sentence_id).unwrap();
-    json!({
-        "tokens": session.tokens[root.first..=root.last].iter()
-            .map(|token| format!("{}:{}", token.id, token.text)).collect::<Vec<_>>(),
-        "target_tokens": session.tokens[parent.first..=parent.last].iter()
+    let mut input = json!({
+        "tokens": session.tokens[parent.first..=parent.last].iter()
             .map(|token| format!("{}:{}", token.id, token.text)).collect::<Vec<_>>(),
         "target_text": session.pieces[session.tokens[parent.first].piece_id..=session.tokens[parent.last].piece_id]
             .iter().map(|piece|piece.text.as_str()).collect::<String>(),
         "target": [parent.first, parent.last],
         "depth": parent.depth + 1,
         "parent": {"kind": parent.kind, "role": parent.role, "ctype": parent.ctype, "grammar": parent.grammar}
-    })
+    });
+    if (parent.first, parent.last) != (root.first, root.last) {
+        input["context"] = json!(
+            session.pieces
+                [session.tokens[root.first].piece_id..=session.tokens[root.last].piece_id]
+                .iter()
+                .map(|piece| piece.text.as_str())
+                .collect::<String>()
+        );
+    }
+    input
 }
 
 pub async fn query(
@@ -959,10 +996,53 @@ pub async fn query(
     session: &Session,
     parent: &Node,
 ) -> Result<(Layer, AnalysisMetrics), QueryFailure> {
+    query_payload(
+        client,
+        s,
+        key,
+        session,
+        parent,
+        PROMPT,
+        query_input(session, parent),
+    )
+    .await
+}
+
+// Same transport, output budget and decoder as production. This preserves the
+// old request protocol only for explicitly invoked, paired usage comparisons.
+#[cfg(test)]
+pub async fn query_token_baseline(
+    client: &reqwest::Client,
+    s: &Settings,
+    key: &str,
+    session: &Session,
+    parent: &Node,
+    prompt: &str,
+) -> Result<(Layer, AnalysisMetrics), QueryFailure> {
+    let root = session.nodes.get(&parent.sentence_id).unwrap();
+    let input = json!({
+        "tokens":session.tokens[root.first..=root.last].iter().map(|t|format!("{}:{}",t.id,t.text)).collect::<Vec<_>>(),
+        "target_tokens":session.tokens[parent.first..=parent.last].iter().map(|t|format!("{}:{}",t.id,t.text)).collect::<Vec<_>>(),
+        "target_text":session.pieces[session.tokens[parent.first].piece_id..=session.tokens[parent.last].piece_id]
+            .iter().map(|p|p.text.as_str()).collect::<String>(),
+        "target":[parent.first,parent.last],"depth":parent.depth+1,
+        "parent":{"kind":parent.kind,"role":parent.role,"ctype":parent.ctype,"grammar":parent.grammar}
+    });
+    query_payload(client, s, key, session, parent, prompt, input).await
+}
+
+async fn query_payload(
+    client: &reqwest::Client,
+    s: &Settings,
+    key: &str,
+    session: &Session,
+    parent: &Node,
+    prompt: &str,
+    input: serde_json::Value,
+) -> Result<(Layer, AnalysisMetrics), QueryFailure> {
     let started = Instant::now();
-    let input = query_input(session, parent);
     let mut messages =
-        json!([{"role":"system","content":PROMPT},{"role":"user","content":input.to_string()}]);
+        json!([{"role":"system","content":prompt},{"role":"user","content":input.to_string()}]);
     let mut metrics = AnalysisMetrics {
         preparation_ms: started.elapsed().as_secs_f64() * 1000.0,
         ..AnalysisMetrics::default()
@@ -1361,6 +1441,110 @@ mod tests {
     }
 
     #[test]
+    fn history_reuses_exact_inputs_and_retains_loaded_layers() {
+        let a = session("original", "The cat sleeps.");
+        let layer = decode_source(
+            r#"{"v":2,"sk":"The cat sleeps.","tr":"猫在睡觉。","n":[["phrase","subject","none",0,1,0],["word","predicate","none",2,2,0]],"r":[],"d":[],"notes":[]}"#,
+            &a.roots[0],
+            &a,
+        )
+        .unwrap();
+        let mut store = Store::default();
+        store.insert(a.clone());
+        store
+            .finish(&a.id, &a.roots[0].id, "config-a", Some(layer))
+            .unwrap();
+        let reused = store.prepare_or_reuse(session("unused", "The cat sleeps."));
+        assert_eq!(reused.session_id, "original");
+        assert_eq!(reused.layers.len(), 1);
+        assert!(matches!(
+            store.plan("original", "original:s0", "config-a"),
+            Ok(Plan::Cached(_))
+        ));
+        assert_eq!(
+            store
+                .prepare_or_reuse(session("changed", "The cat sleeps!"))
+                .session_id,
+            "changed"
+        );
+        assert_eq!(
+            store
+                .prepare_or_reuse(session("spaces", "The cat  sleeps."))
+                .session_id,
+            "spaces"
+        );
+        let other_split =
+            Session::prepare("split".into(), "The cat sleeps.", "config-a".into(), false).unwrap();
+        assert_eq!(store.prepare_or_reuse(other_split).session_id, "split");
+        let other_config =
+            Session::prepare("config".into(), "The cat sleeps.", "config-b".into(), true).unwrap();
+        assert_eq!(store.prepare_or_reuse(other_config).session_id, "config");
+        store.clear();
+        assert_eq!(
+            store
+                .prepare_or_reuse(session("fresh", "The cat sleeps."))
+                .session_id,
+            "fresh"
+        );
+    }
+
+    #[test]
+    fn history_promotes_reused_sessions_before_eviction() {
+        let mut store = Store::default();
+        for i in 0..MAX_SESSIONS {
+            store.prepare_or_reuse(session(&format!("session-{i}"), &format!("Sentence {i}.")));
+        }
+        assert_eq!(
+            store
+                .prepare_or_reuse(session("unused", "Sentence 0."))
+                .session_id,
+            "session-0"
+        );
+        store.prepare_or_reuse(session("new", "A new sentence."));
+        assert!(store.plan("session-0", "session-0:s0", "config-a").is_ok());
+        assert!(store.plan("session-1", "session-1:s0", "config-a").is_err());
+        assert_eq!(store.sessions.len(), MAX_SESSIONS);
+    }
+
+    #[test]
+    fn prepared_roots_load_independently_and_a_single_word_root_can_be_retried() {
+        let a = session("progressive", "Hello");
+        let root_id = a.roots[0].id.clone();
+        assert_eq!(a.roots[0].first, a.roots[0].last);
+        assert!(a.document().layers.is_empty());
+        let mut store = Store::default();
+        store.insert(a.clone());
+        assert!(matches!(
+            store.plan(&a.id, &root_id, "config-a"),
+            Ok(Plan::Fetch(_, _))
+        ));
+        assert!(store.plan(&a.id, &root_id, "config-a").is_err());
+        store.finish(&a.id, &root_id, "config-a", None).unwrap();
+        assert!(matches!(
+            store.plan(&a.id, &root_id, "config-a"),
+            Ok(Plan::Fetch(_, _))
+        ));
+        let raw =
+            r#"{"v":2,"sk":"Hello","tr":"你好","n":[],"r":[],"d":[],"notes":["单词无需继续拆分"]}"#;
+        let layer = decode_source(raw, &a.roots[0], &a).unwrap();
+        store
+            .finish(&a.id, &root_id, "config-a", Some(layer))
+            .unwrap();
+        assert!(matches!(
+            store.plan(&a.id, &root_id, "config-a"),
+            Ok(Plan::Cached(_))
+        ));
+        let a = session("two", "The cat sleeps. The dog runs.");
+        store.insert(a.clone());
+        for root in &a.roots {
+            assert!(matches!(
+                store.plan(&a.id, &root.id, "config-a"),
+                Ok(Plan::Fetch(_, _))
+            ));
+        }
+    }
+
+    #[test]
     fn expansion_input_keeps_sentence_context_and_absolute_ids() {
         let a = Session::prepare(
             "input".into(),
@@ -1380,13 +1564,24 @@ mod tests {
         assert_eq!(input["depth"], 2);
         assert_eq!(input["parent"]["role"], "predicate");
         assert_eq!(input["target_text"], "bird sings");
-        assert_eq!(input["target_tokens"].as_array().unwrap().len(), 2);
+        assert!(input.get("target_tokens").is_none());
+        assert_eq!(input["context"], "The bird sings.");
         assert!(input.get("role").is_none());
         let tokens = input["tokens"].as_array().unwrap();
-        assert_eq!(tokens.len(), root.last - root.first + 1);
-        assert_eq!(tokens[0], format!("{}:The", root.first));
-        assert_eq!(tokens.last().unwrap(), &json!(format!("{}:.", root.last)));
+        assert_eq!(tokens.len(), 2);
+        assert_eq!(tokens[0], format!("{}:bird", child.first));
+        assert_eq!(
+            tokens.last().unwrap(),
+            &json!(format!("{}:sings", child.last))
+        );
         assert!(!tokens.iter().any(|t| t.as_str().unwrap().contains("First")));
+        let first = query_input(&a, root);
+        assert!(first.get("context").is_none());
+        assert!(first.get("target_tokens").is_none());
+        assert_eq!(
+            first["tokens"].as_array().unwrap().len(),
+            root.last - root.first + 1
+        );
     }
 
     #[test]
@@ -1428,12 +1623,16 @@ mod tests {
     #[test]
     fn prompt_example_and_note_limits() {
         let a = session("a", "The cat sleeps.");
-        // The supplied prompt uses attached punctuation in its illustrative token lists.
-        // Validate its full JSON examples against those declared absolute ranges.
+        // All compact examples must retain the v2 schema and absolute ranges,
+        // including nonzero target IDs distinct from child indices.
         for (marker, first, last, depth) in [
-            ("Ex1 (", 0, 13, 0),
-            ("depth 2 [2,13]:", 2, 13, 1),
-            ("Ex2 (", 0, 9, 0),
+            ("depth 1, target [0,5]:", 0, 5, 0),
+            ("depth 2, target [1,2]:", 1, 2, 1),
+            ("At depth 1 the ENTIRE predicative NP", 0, 7, 0),
+            ("At depth 1 the embedded subject birds", 0, 9, 0),
+            ("At depth 1 return this coarse layer:", 0, 6, 0),
+            ("depth 2, target [17,25]:", 17, 25, 1),
+            ("depth 3, target [17,21]:", 17, 21, 2),
         ] {
             let section = &PROMPT[PROMPT.find(marker).unwrap()..];
             let json_start = section.find("{\"v\":2").unwrap();

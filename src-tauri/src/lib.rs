@@ -6,6 +6,8 @@ mod benchmark;
 mod layered;
 mod llm;
 mod settings;
+#[cfg(test)]
+mod token_benchmark;
 use analyzer::AnalysisMetrics;
 use serde::Serialize;
 use settings::{Settings, validate_settings};
@@ -176,6 +178,48 @@ struct ExpansionResult {
 }
 
 #[tauri::command]
+async fn prepare_analysis(
+    app: tauri::AppHandle,
+    state: tauri::State<'_, State>,
+    text: String,
+    request_id: String,
+    split_sentences: Option<bool>,
+) -> Result<AnalysisResult, String> {
+    let started = Instant::now();
+    let (_, _, config_key) = configuration(&app, &state)?;
+    let configuration_ms = started.elapsed().as_secs_f64() * 1000.0;
+    let id = format!(
+        "{}-{}",
+        std::process::id(),
+        state.next_session.fetch_add(1, Ordering::Relaxed)
+    );
+    let session = layered::Session::prepare(
+        id,
+        &text,
+        config_key.clone(),
+        split_sentences.unwrap_or(true),
+    )?;
+    ensure_configuration(&app, &state, &config_key)?;
+    let document = state
+        .sessions
+        .lock()
+        .map_err(|_| "会话缓存不可用。")?
+        .prepare_or_reuse(session);
+    // Local preparation only. Root requests use expand_node, sharing its cache,
+    // in-flight guard, configuration checks and retry/usage accounting.
+    Ok(AnalysisResult {
+        request_id,
+        document,
+        metrics: AnalysisMetrics {
+            total_ms: started.elapsed().as_secs_f64() * 1000.0,
+            configuration_ms,
+            preparation_ms: started.elapsed().as_secs_f64() * 1000.0 - configuration_ms,
+            ..AnalysisMetrics::default()
+        },
+    })
+}
+
+#[tauri::command]
 async fn analyze_sentence(
     app: tauri::AppHandle,
     state: tauri::State<'_, State>,
@@ -312,6 +356,7 @@ pub fn run() {
             get_settings,
             save_settings,
             test_connection,
+            prepare_analysis,
             analyze_sentence,
             expand_node
         ])

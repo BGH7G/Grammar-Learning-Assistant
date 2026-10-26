@@ -1,0 +1,1494 @@
+{
+  "afterFailures": [],
+  "afterVersion": "layer-v2.10.2-compact",
+  "beforeVersion": "layer-v2.9.2-grammar-types",
+  "caseCount": 3,
+  "complete": true,
+  "jsonMode": false,
+  "model": "deepseek-v4-flash",
+  "reasoningEffort": "high",
+  "rounds": 2,
+  "rows": [
+    {
+      "case": "bbc-root",
+      "checks": [
+        [
+          "linking verb",
+          true
+        ],
+        [
+          "whole predicative NP",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "0-bbc-root-before:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "0-bbc-root-before:s0",
+            "role": "subject",
+            "sentenceId": "0-bbc-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 7,
+            "grammar": [
+              "linking_verb"
+            ],
+            "id": "0-bbc-root-before:s0:1",
+            "kind": "word",
+            "last": 7,
+            "parentId": "0-bbc-root-before:s0",
+            "role": "predicate",
+            "sentenceId": "0-bbc-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 8,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "0-bbc-root-before:s0:2",
+            "kind": "phrase",
+            "last": 21,
+            "parentId": "0-bbc-root-before:s0",
+            "role": "predicative",
+            "sentenceId": "0-bbc-root-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "主系表结构，表语为名词短语"
+        ],
+        "parentId": "0-bbc-root-before:s0",
+        "relations": [],
+        "skeleton": "The British Broadcasting Corporation (BBC) is a British public service broadcaster.",
+        "translation": "英国广播公司（BBC）是一家总部位于英格兰伦敦广播大厦的英国公共服务广播机构。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10752,
+            "inputTokens": 10891,
+            "outputTokens": 132,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2088.8344,
+            "responseReadMs": 0.07100000000036744,
+            "responseWaitMs": 2088.7634,
+            "stage": "第1层 · 0–21 · 初次",
+            "validationMs": 0.166
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0843,
+        "totalMs": 2089.1509
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "0-bbc-root-before:s0",
+        "kind": "sentence",
+        "last": 21,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "0-bbc-root-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 10752,
+        "httpMs": 2088.8344,
+        "inputTokens": 10891,
+        "outputTokens": 132,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "bbc-root",
+      "checks": [
+        [
+          "linking verb",
+          true
+        ],
+        [
+          "whole predicative NP",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "0-bbc-root-after:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "0-bbc-root-after:s0",
+            "role": "subject",
+            "sentenceId": "0-bbc-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 7,
+            "grammar": [
+              "linking_verb"
+            ],
+            "id": "0-bbc-root-after:s0:1",
+            "kind": "word",
+            "last": 7,
+            "parentId": "0-bbc-root-after:s0",
+            "role": "predicate",
+            "sentenceId": "0-bbc-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 8,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "0-bbc-root-after:s0:2",
+            "kind": "phrase",
+            "last": 21,
+            "parentId": "0-bbc-root-after:s0",
+            "role": "predicative",
+            "sentenceId": "0-bbc-root-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "括号内BBC与全称同位，整体作主语",
+          "headquartered短语后置修饰broadcaster"
+        ],
+        "parentId": "0-bbc-root-after:s0",
+        "relations": [],
+        "skeleton": "The British Broadcasting Corporation (BBC) is a British public service broadcaster.",
+        "translation": "英国广播公司（BBC）是一家总部位于英格兰伦敦广播大厦的英国公共服务广播机构。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 896,
+            "inputTokens": 3718,
+            "outputTokens": 142,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1824.4836,
+            "responseReadMs": 0.047100000000000364,
+            "responseWaitMs": 1824.4365,
+            "stage": "第1层 · 0–21 · 初次",
+            "validationMs": 0.08660000000000001
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0389,
+        "totalMs": 1824.6363
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "0-bbc-root-after:s0",
+        "kind": "sentence",
+        "last": 21,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "0-bbc-root-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 896,
+        "httpMs": 1824.4836,
+        "inputTokens": 3718,
+        "outputTokens": 142,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "quote-root",
+      "checks": [
+        [
+          "reported content stays together",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "present_participial"
+            ],
+            "id": "0-quote-root-after:s0:0",
+            "kind": "clause",
+            "last": 9,
+            "parentId": "0-quote-root-after:s0",
+            "role": "adverbial",
+            "sentenceId": "0-quote-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 10,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "0-quote-root-after:s0:1",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "0-quote-root-after:s0",
+            "role": "subject",
+            "sentenceId": "0-quote-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 18,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "0-quote-root-after:s0:2",
+            "kind": "word",
+            "last": 18,
+            "parentId": "0-quote-root-after:s0",
+            "role": "predicate",
+            "sentenceId": "0-quote-root-after:s0"
+          },
+          {
+            "ctype": "noun",
+            "depth": 1,
+            "expandable": true,
+            "first": 19,
+            "id": "0-quote-root-after:s0:3",
+            "kind": "clause",
+            "last": 40,
+            "parentId": "0-quote-root-after:s0",
+            "role": "object",
+            "sentenceId": "0-quote-root-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "句首分词短语作状语，逻辑主语是Hasan",
+          "引语整体作says的宾语从句"
+        ],
+        "parentId": "0-quote-root-after:s0",
+        "relations": [],
+        "skeleton": "Zeteo editor-in-chief Mehdi Hasan says AIPAC blossoms in the dark, shrivels in the light.",
+        "translation": "引用电影《夜花》的片名，Zeteo主编迈赫迪·哈桑说，AIPAC“在黑暗中绽放，在光明中枯萎。我们正试图把一些阳光照到AIPAC身上。”",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 3456,
+            "inputTokens": 3831,
+            "outputTokens": 202,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2002.758,
+            "responseReadMs": 0.0523000000000593,
+            "responseWaitMs": 2002.7057,
+            "stage": "第1层 · 0–40 · 初次",
+            "validationMs": 0.13019999999999998
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0303,
+        "totalMs": 2002.9618999999998
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "0-quote-root-after:s0",
+        "kind": "sentence",
+        "last": 40,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "0-quote-root-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "Referencing the title of the film, Night Flower, Zeteo editor-in-chief Mehdi Hasan says AIPAC “blossoms in the dark, shrivels in the light. We’re trying to put some sunlight onto AIPAC.”",
+      "text": "Referencing the title of the film, Night Flower, Zeteo editor-in-chief Mehdi Hasan says AIPAC “blossoms in the dark, shrivels in the light. We’re trying to put some sunlight onto AIPAC.”",
+      "totals": {
+        "cachedInputTokens": 3456,
+        "httpMs": 2002.758,
+        "inputTokens": 3831,
+        "outputTokens": 202,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "quote-root",
+      "checks": [
+        [
+          "reported content stays together",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "present_participial"
+            ],
+            "id": "0-quote-root-before:s0:0",
+            "kind": "clause",
+            "last": 9,
+            "parentId": "0-quote-root-before:s0",
+            "role": "adverbial",
+            "sentenceId": "0-quote-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 10,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "0-quote-root-before:s0:1",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "0-quote-root-before:s0",
+            "role": "subject",
+            "sentenceId": "0-quote-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 18,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "0-quote-root-before:s0:2",
+            "kind": "word",
+            "last": 18,
+            "parentId": "0-quote-root-before:s0",
+            "role": "predicate",
+            "sentenceId": "0-quote-root-before:s0"
+          },
+          {
+            "ctype": "noun",
+            "depth": 1,
+            "expandable": true,
+            "first": 19,
+            "id": "0-quote-root-before:s0:3",
+            "kind": "clause",
+            "last": 40,
+            "parentId": "0-quote-root-before:s0",
+            "role": "object",
+            "sentenceId": "0-quote-root-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "分词短语的逻辑主语是 Hasan",
+          "引语整体作 says 的宾语从句"
+        ],
+        "parentId": "0-quote-root-before:s0",
+        "relations": [
+          {
+            "headToken": 18,
+            "sourceId": "0-quote-root-before:s0:0"
+          }
+        ],
+        "skeleton": "Zeteo editor-in-chief Mehdi Hasan says AIPAC blossoms in the dark, shrivels in the light.",
+        "translation": "引用电影《夜花》的片名，Zeteo 主编迈赫迪·哈桑说，AIPAC“在黑暗中绽放，在光明中枯萎。我们正试图把一些阳光照到 AIPAC 身上。”",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10880,
+            "inputTokens": 11087,
+            "outputTokens": 202,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2125.8860999999997,
+            "responseReadMs": 0.05639999999948486,
+            "responseWaitMs": 2125.8297000000002,
+            "stage": "第1层 · 0–40 · 初次",
+            "validationMs": 0.1121
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0357,
+        "totalMs": 2126.0735999999997
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "0-quote-root-before:s0",
+        "kind": "sentence",
+        "last": 40,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "0-quote-root-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "Referencing the title of the film, Night Flower, Zeteo editor-in-chief Mehdi Hasan says AIPAC “blossoms in the dark, shrivels in the light. We’re trying to put some sunlight onto AIPAC.”",
+      "text": "Referencing the title of the film, Night Flower, Zeteo editor-in-chief Mehdi Hasan says AIPAC “blossoms in the dark, shrivels in the light. We’re trying to put some sunlight onto AIPAC.”",
+      "totals": {
+        "cachedInputTokens": 10880,
+        "httpMs": 2125.8860999999997,
+        "inputTokens": 11087,
+        "outputTokens": 202,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "strike-predicate",
+      "checks": [
+        [
+          "shared-subject phrases",
+          true
+        ],
+        [
+          "and connector",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 12,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "0-strike-predicate-before:s0:target:0",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "0-strike-predicate-before:s0:target",
+            "role": "coordinate",
+            "sentenceId": "0-strike-predicate-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 18,
+            "grammar": [
+              "coordinating_conjunction"
+            ],
+            "id": "0-strike-predicate-before:s0:target:1",
+            "kind": "word",
+            "last": 18,
+            "parentId": "0-strike-predicate-before:s0:target",
+            "role": "conjunction",
+            "sentenceId": "0-strike-predicate-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 19,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "0-strike-predicate-before:s0:target:2",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "0-strike-predicate-before:s0:target",
+            "role": "coordinate",
+            "sentenceId": "0-strike-predicate-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "两个并列谓语共用主语，第二个strike前省略主语",
+          "as短语为说明主语印象的补足语"
+        ],
+        "parentId": "0-strike-predicate-before:s0:target",
+        "relations": [],
+        "skeleton": null,
+        "translation": "让许多人觉得直言不讳，也让包括《经济学人》在内的更多人觉得明显偏执。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10752,
+            "inputTokens": 10920,
+            "outputTokens": 133,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1875.7823999999998,
+            "responseReadMs": 0.18079999999986285,
+            "responseWaitMs": 1875.6016,
+            "stage": "第2层 · 12–30 · 初次",
+            "validationMs": 0.0805
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0346,
+        "totalMs": 1875.9594000000002
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 12,
+        "grammar": [
+          "verb_phrase"
+        ],
+        "id": "0-strike-predicate-before:s0:target",
+        "kind": "phrase",
+        "last": 30,
+        "parentId": null,
+        "role": "predicate",
+        "sentenceId": "0-strike-predicate-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 10752,
+        "httpMs": 1875.7823999999998,
+        "inputTokens": 10920,
+        "outputTokens": 133,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "strike-predicate",
+      "checks": [
+        [
+          "shared-subject phrases",
+          true
+        ],
+        [
+          "and connector",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 12,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "0-strike-predicate-after:s0:target:0",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "0-strike-predicate-after:s0:target",
+            "role": "coordinate",
+            "sentenceId": "0-strike-predicate-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 18,
+            "grammar": [
+              "coordinating_conjunction"
+            ],
+            "id": "0-strike-predicate-after:s0:target:1",
+            "kind": "word",
+            "last": 18,
+            "parentId": "0-strike-predicate-after:s0:target",
+            "role": "conjunction",
+            "sentenceId": "0-strike-predicate-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 19,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "0-strike-predicate-after:s0:target:2",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "0-strike-predicate-after:s0:target",
+            "role": "coordinate",
+            "sentenceId": "0-strike-predicate-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "两个strike共享主语，as短语为as补足语说明主语给人的印象",
+          "including The Economist修饰many more，展开时作定语"
+        ],
+        "parentId": "0-strike-predicate-after:s0:target",
+        "relations": [],
+        "skeleton": null,
+        "translation": "让许多人觉得是直言不讳的，也让包括《经济学人》在内的更多人觉得是明显偏执的。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 3328,
+            "inputTokens": 3745,
+            "outputTokens": 143,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1939.0732000000003,
+            "responseReadMs": 0.046600000000125874,
+            "responseWaitMs": 1939.0266000000001,
+            "stage": "第2层 · 12–30 · 初次",
+            "validationMs": 0.088
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0201,
+        "totalMs": 1939.2127
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 12,
+        "grammar": [
+          "verb_phrase"
+        ],
+        "id": "0-strike-predicate-after:s0:target",
+        "kind": "phrase",
+        "last": 30,
+        "parentId": null,
+        "role": "predicate",
+        "sentenceId": "0-strike-predicate-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 1,
+      "status": "ok",
+      "targetText": "strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 3328,
+        "httpMs": 1939.0732000000003,
+        "inputTokens": 3745,
+        "outputTokens": 143,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "bbc-root",
+      "checks": [
+        [
+          "linking verb",
+          true
+        ],
+        [
+          "whole predicative NP",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "1-bbc-root-after:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "1-bbc-root-after:s0",
+            "role": "subject",
+            "sentenceId": "1-bbc-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 7,
+            "grammar": [
+              "linking_verb"
+            ],
+            "id": "1-bbc-root-after:s0:1",
+            "kind": "word",
+            "last": 7,
+            "parentId": "1-bbc-root-after:s0",
+            "role": "predicate",
+            "sentenceId": "1-bbc-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 8,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "1-bbc-root-after:s0:2",
+            "kind": "phrase",
+            "last": 21,
+            "parentId": "1-bbc-root-after:s0",
+            "role": "predicative",
+            "sentenceId": "1-bbc-root-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "括号缩写与全称同位，整体作主语",
+          "表语含过去分词后置修饰，整体不拆分"
+        ],
+        "parentId": "1-bbc-root-after:s0",
+        "relations": [],
+        "skeleton": "The British Broadcasting Corporation (BBC) is a British public service broadcaster.",
+        "translation": "英国广播公司（BBC）是一家总部位于英格兰伦敦广播大厦的英国公共服务广播机构。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 3584,
+            "inputTokens": 3718,
+            "outputTokens": 145,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1431.9974,
+            "responseReadMs": 0.04980000000000473,
+            "responseWaitMs": 1431.9476,
+            "stage": "第1层 · 0–21 · 初次",
+            "validationMs": 0.0943
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0198,
+        "totalMs": 1432.1362
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "1-bbc-root-after:s0",
+        "kind": "sentence",
+        "last": 21,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "1-bbc-root-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 3584,
+        "httpMs": 1431.9974,
+        "inputTokens": 3718,
+        "outputTokens": 145,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "bbc-root",
+      "checks": [
+        [
+          "linking verb",
+          true
+        ],
+        [
+          "whole predicative NP",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "1-bbc-root-before:s0:0",
+            "kind": "phrase",
+            "last": 6,
+            "parentId": "1-bbc-root-before:s0",
+            "role": "subject",
+            "sentenceId": "1-bbc-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 7,
+            "grammar": [
+              "linking_verb"
+            ],
+            "id": "1-bbc-root-before:s0:1",
+            "kind": "word",
+            "last": 7,
+            "parentId": "1-bbc-root-before:s0",
+            "role": "predicate",
+            "sentenceId": "1-bbc-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 8,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "1-bbc-root-before:s0:2",
+            "kind": "phrase",
+            "last": 21,
+            "parentId": "1-bbc-root-before:s0",
+            "role": "predicative",
+            "sentenceId": "1-bbc-root-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "主系表结构，表语名词短语带后置分词定语"
+        ],
+        "parentId": "1-bbc-root-before:s0",
+        "relations": [],
+        "skeleton": "The British Broadcasting Corporation (BBC) is a British public service broadcaster.",
+        "translation": "英国广播公司（BBC）是一家总部位于英格兰伦敦广播大厦的英国公共服务广播机构。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10752,
+            "inputTokens": 10891,
+            "outputTokens": 136,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1822.4965,
+            "responseReadMs": 0.05939999999986867,
+            "responseWaitMs": 1822.4371,
+            "stage": "第1层 · 0–21 · 初次",
+            "validationMs": 0.0916
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.028900000000000002,
+        "totalMs": 1822.6526999999999
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "1-bbc-root-before:s0",
+        "kind": "sentence",
+        "last": 21,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "1-bbc-root-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "text": "The British Broadcasting Corporation (BBC) is a British public service broadcaster headquartered at Broadcasting House in London, England.",
+      "totals": {
+        "cachedInputTokens": 10752,
+        "httpMs": 1822.4965,
+        "inputTokens": 10891,
+        "outputTokens": 136,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "quote-root",
+      "checks": [
+        [
+          "reported content stays together",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "present_participial"
+            ],
+            "id": "1-quote-root-before:s0:0",
+            "kind": "clause",
+            "last": 9,
+            "parentId": "1-quote-root-before:s0",
+            "role": "adverbial",
+            "sentenceId": "1-quote-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 10,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "1-quote-root-before:s0:1",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "1-quote-root-before:s0",
+            "role": "subject",
+            "sentenceId": "1-quote-root-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 18,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "1-quote-root-before:s0:2",
+            "kind": "word",
+            "last": 18,
+            "parentId": "1-quote-root-before:s0",
+            "role": "predicate",
+            "sentenceId": "1-quote-root-before:s0"
+          },
+          {
+            "ctype": "noun",
+            "depth": 1,
+            "expandable": true,
+            "first": 19,
+            "id": "1-quote-root-before:s0:3",
+            "kind": "clause",
+            "last": 40,
+            "parentId": "1-quote-root-before:s0",
+            "role": "object",
+            "sentenceId": "1-quote-root-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "分词短语的逻辑主语是哈桑",
+          "引语整体作 says 的宾语从句"
+        ],
+        "parentId": "1-quote-root-before:s0",
+        "relations": [
+          {
+            "headToken": 18,
+            "sourceId": "1-quote-root-before:s0:0"
+          }
+        ],
+        "skeleton": "Zeteo editor-in-chief Mehdi Hasan says AIPAC blossoms in the dark, shrivels in the light.",
+        "translation": "提到电影《夜花》的片名，Zeteo 主编迈赫迪·哈桑说，AIPAC“在黑暗中绽放，在光明中枯萎。我们正试图把一些阳光照到 AIPAC 身上。”",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10880,
+            "inputTokens": 11087,
+            "outputTokens": 203,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2200.6032,
+            "responseReadMs": 0.6981000000000677,
+            "responseWaitMs": 2199.9051,
+            "stage": "第1层 · 0–40 · 初次",
+            "validationMs": 0.1109
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.036399999999999995,
+        "totalMs": 2200.7818
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "1-quote-root-before:s0",
+        "kind": "sentence",
+        "last": 40,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "1-quote-root-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "Referencing the title of the film, Night Flower, Zeteo editor-in-chief Mehdi Hasan says AIPAC “blossoms in the dark, shrivels in the light. We’re trying to put some sunlight onto AIPAC.”",
+      "text": "Referencing the title of the film, Night Flower, Zeteo editor-in-chief Mehdi Hasan says AIPAC “blossoms in the dark, shrivels in the light. We’re trying to put some sunlight onto AIPAC.”",
+      "totals": {
+        "cachedInputTokens": 10880,
+        "httpMs": 2200.6032,
+        "inputTokens": 11087,
+        "outputTokens": 203,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "quote-root",
+      "checks": [
+        [
+          "reported content stays together",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 1,
+        "nodes": [
+          {
+            "ctype": "participial",
+            "depth": 1,
+            "expandable": true,
+            "first": 0,
+            "grammar": [
+              "present_participial"
+            ],
+            "id": "1-quote-root-after:s0:0",
+            "kind": "clause",
+            "last": 9,
+            "parentId": "1-quote-root-after:s0",
+            "role": "adverbial",
+            "sentenceId": "1-quote-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": true,
+            "first": 10,
+            "grammar": [
+              "noun_phrase"
+            ],
+            "id": "1-quote-root-after:s0:1",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "1-quote-root-after:s0",
+            "role": "subject",
+            "sentenceId": "1-quote-root-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 1,
+            "expandable": false,
+            "first": 18,
+            "grammar": [
+              "lexical_verb"
+            ],
+            "id": "1-quote-root-after:s0:2",
+            "kind": "word",
+            "last": 18,
+            "parentId": "1-quote-root-after:s0",
+            "role": "predicate",
+            "sentenceId": "1-quote-root-after:s0"
+          },
+          {
+            "ctype": "noun",
+            "depth": 1,
+            "expandable": true,
+            "first": 19,
+            "id": "1-quote-root-after:s0:3",
+            "kind": "clause",
+            "last": 40,
+            "parentId": "1-quote-root-after:s0",
+            "role": "object",
+            "sentenceId": "1-quote-root-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "句首分词短语作状语，逻辑主语为哈桑",
+          "引语整体作says的宾语从句"
+        ],
+        "parentId": "1-quote-root-after:s0",
+        "relations": [],
+        "skeleton": "Zeteo editor-in-chief Mehdi Hasan says AIPAC blossoms in the dark, shrivels in the light.",
+        "translation": "提到电影《夜之花》的片名，Zeteo主编迈赫迪·哈桑说，AIPAC“在黑暗中绽放，在光明中枯萎。我们正试图把一些阳光照到AIPAC身上。”",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 3584,
+            "inputTokens": 3831,
+            "outputTokens": 202,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 2174.3851,
+            "responseReadMs": 0.05160000000023501,
+            "responseWaitMs": 2174.3334999999997,
+            "stage": "第1层 · 0–40 · 初次",
+            "validationMs": 0.0957
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0252,
+        "totalMs": 2174.5291
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 0,
+        "expandable": true,
+        "first": 0,
+        "id": "1-quote-root-after:s0",
+        "kind": "sentence",
+        "last": 40,
+        "parentId": null,
+        "role": "root",
+        "sentenceId": "1-quote-root-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "Referencing the title of the film, Night Flower, Zeteo editor-in-chief Mehdi Hasan says AIPAC “blossoms in the dark, shrivels in the light. We’re trying to put some sunlight onto AIPAC.”",
+      "text": "Referencing the title of the film, Night Flower, Zeteo editor-in-chief Mehdi Hasan says AIPAC “blossoms in the dark, shrivels in the light. We’re trying to put some sunlight onto AIPAC.”",
+      "totals": {
+        "cachedInputTokens": 3584,
+        "httpMs": 2174.3851,
+        "inputTokens": 3831,
+        "outputTokens": 202,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "strike-predicate",
+      "checks": [
+        [
+          "shared-subject phrases",
+          true
+        ],
+        [
+          "and connector",
+          true
+        ]
+      ],
+      "condition": "after",
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 12,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "1-strike-predicate-after:s0:target:0",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "1-strike-predicate-after:s0:target",
+            "role": "coordinate",
+            "sentenceId": "1-strike-predicate-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 18,
+            "grammar": [
+              "coordinating_conjunction"
+            ],
+            "id": "1-strike-predicate-after:s0:target:1",
+            "kind": "word",
+            "last": 18,
+            "parentId": "1-strike-predicate-after:s0:target",
+            "role": "conjunction",
+            "sentenceId": "1-strike-predicate-after:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 19,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "1-strike-predicate-after:s0:target:2",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "1-strike-predicate-after:s0:target",
+            "role": "coordinate",
+            "sentenceId": "1-strike-predicate-after:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "两个strike共享主语，为并列谓语",
+          "as短语为as补足语说明主语给人的印象"
+        ],
+        "parentId": "1-strike-predicate-after:s0:target",
+        "relations": [],
+        "skeleton": null,
+        "translation": "让许多人觉得说话直白，也让包括《经济学人》在内的更多人觉得明显偏执。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 3584,
+            "inputTokens": 3745,
+            "outputTokens": 131,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1817.4461,
+            "responseReadMs": 0.04839999999990141,
+            "responseWaitMs": 1817.3977,
+            "stage": "第2层 · 12–30 · 初次",
+            "validationMs": 0.0848
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0208,
+        "totalMs": 1817.5742000000002
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 12,
+        "grammar": [
+          "verb_phrase"
+        ],
+        "id": "1-strike-predicate-after:s0:target",
+        "kind": "phrase",
+        "last": 30,
+        "parentId": null,
+        "role": "predicate",
+        "sentenceId": "1-strike-predicate-after:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 3584,
+        "httpMs": 1817.4461,
+        "inputTokens": 3745,
+        "outputTokens": 131,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    },
+    {
+      "case": "strike-predicate",
+      "checks": [
+        [
+          "shared-subject phrases",
+          true
+        ],
+        [
+          "and connector",
+          true
+        ]
+      ],
+      "condition": "before",
+      "layer": {
+        "depth": 2,
+        "nodes": [
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 12,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "1-strike-predicate-before:s0:target:0",
+            "kind": "phrase",
+            "last": 17,
+            "parentId": "1-strike-predicate-before:s0:target",
+            "role": "coordinate",
+            "sentenceId": "1-strike-predicate-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": false,
+            "first": 18,
+            "grammar": [
+              "coordinating_conjunction"
+            ],
+            "id": "1-strike-predicate-before:s0:target:1",
+            "kind": "word",
+            "last": 18,
+            "parentId": "1-strike-predicate-before:s0:target",
+            "role": "conjunction",
+            "sentenceId": "1-strike-predicate-before:s0"
+          },
+          {
+            "ctype": "none",
+            "depth": 2,
+            "expandable": true,
+            "first": 19,
+            "grammar": [
+              "verb_phrase"
+            ],
+            "id": "1-strike-predicate-before:s0:target:2",
+            "kind": "phrase",
+            "last": 30,
+            "parentId": "1-strike-predicate-before:s0:target",
+            "role": "coordinate",
+            "sentenceId": "1-strike-predicate-before:s0"
+          }
+        ],
+        "normalizationCount": 0,
+        "notes": [
+          "两个并列谓语共用主语，as 短语为补足语"
+        ],
+        "parentId": "1-strike-predicate-before:s0:target",
+        "relations": [],
+        "skeleton": null,
+        "translation": "让许多人觉得直言不讳，也让包括《经济学人》在内的更多人觉得明显偏执。",
+        "warnings": []
+      },
+      "metrics": {
+        "attempts": [
+          {
+            "cachedInputTokens": 10752,
+            "inputTokens": 10920,
+            "outputTokens": 123,
+            "reasoningTokens": null,
+            "repairReason": null,
+            "requestMs": 1617.3448,
+            "responseReadMs": 0.19420000000013715,
+            "responseWaitMs": 1617.1506,
+            "stage": "第2层 · 12–30 · 初次",
+            "validationMs": 0.0778
+          }
+        ],
+        "configurationMs": 0.0,
+        "preparationMs": 0.0291,
+        "totalMs": 1617.5001
+      },
+      "parent": {
+        "ctype": "none",
+        "depth": 1,
+        "expandable": true,
+        "first": 12,
+        "grammar": [
+          "verb_phrase"
+        ],
+        "id": "1-strike-predicate-before:s0:target",
+        "kind": "phrase",
+        "last": 30,
+        "parentId": null,
+        "role": "predicate",
+        "sentenceId": "1-strike-predicate-before:s0"
+      },
+      "qualityPassed": true,
+      "round": 2,
+      "status": "ok",
+      "targetText": "strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "text": "His political views, disseminated to his 240m followers on X, strike many as plain-speaking and strike many more, including The Economist, as plainly bigoted.",
+      "totals": {
+        "cachedInputTokens": 10752,
+        "httpMs": 1617.3448,
+        "inputTokens": 10920,
+        "outputTokens": 123,
+        "reasoningTokens": null,
+        "requests": 1,
+        "retryRequests": 0
+      }
+    }
+  ],
+  "temperature": 0.3,
+  "thinking": false
+}

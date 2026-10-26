@@ -6,7 +6,7 @@ import { componentRole, componentType, componentHelp, coordinatedPredicate, pred
 const roles: Record<LayerRole, string> = { root:'整句',main_clause:'主句',subject:'主语',predicate:'谓语',object:'宾语',attribute:'定语',adverbial:'状语',complement:'补语',predicative:'表语',conjunction:'连接词',coordinate:'并列成分',head:'中心词',determiner:'限定词',marker:'结构标记',punctuation:'标点',other:'其他成分' };
 const readableError = (e:unknown) => typeof e === 'string' ? e : '本层解析失败，请稍后重试。';
 
-export default function LayeredAnalysisView({ document:doc, onMetrics }: { document:LayerDocument; onMetrics:(m:AnalysisMetrics)=>void }) {
+export default function LayeredAnalysisView({ document:doc, onMetrics, activeRootId, inDrawer=false, onLayerLoaded }: { document:LayerDocument; onMetrics:(m:AnalysisMetrics)=>void; activeRootId?:string; inDrawer?:boolean; onLayerLoaded?:(layer:AnalysisLayer)=>void }) {
   const [layers,setLayers]=useState<Record<string,AnalysisLayer>>(() => Object.fromEntries(doc.layers.map(l=>[l.parentId,l])));
   const [selected,setSelected]=useState(doc.roots[0].id);
   const [busyId,setBusyId]=useState<string|null>(null);
@@ -15,8 +15,12 @@ export default function LayeredAnalysisView({ document:doc, onMetrics }: { docum
   const studyRef=useRef<HTMLDivElement>(null);
   const alive=useRef(true); const pending=useRef(false); const navigation=useRef(0);
   useEffect(()=>{alive.current=true;return()=>{alive.current=false;};},[]);
+  useEffect(()=>{setLayers(old=>({...old,...Object.fromEntries(doc.layers.map(l=>[l.parentId,l]))}));},[doc.layers]);
+  useEffect(()=>{if(activeRootId){navigation.current++;setSelected(activeRootId);setError('');}},[activeRootId]);
   const nodes=useMemo(()=>new Map([...doc.roots,...Object.values(layers).flatMap(l=>l.nodes)].map(n=>[n.id,n])),[doc.roots,layers]);
-  const parent=nodes.get(selected)!; const layer=layers[selected]; const root=nodes.get(parent.sentenceId)!;
+  const selectedNode=nodes.get(selected)!;
+  const parent=activeRootId&&selectedNode.sentenceId!==activeRootId?nodes.get(activeRootId)!:selectedNode;
+  const layer=layers[parent.id]; const root=nodes.get(parent.sentenceId)!;
 
   const [coreOnly,setCoreOnly]=useState(false);
   useEffect(()=>{if(selected!==root.id)studyRef.current?.focus({preventScroll:true});},[selected,root.id]);
@@ -41,13 +45,14 @@ export default function LayeredAnalysisView({ document:doc, onMetrics }: { docum
       const nextLayer=response.layer;
       if(!nextLayer || nextLayer.parentId!==node.id)throw '返回结果不属于当前成分。';
       setLayers(old=>({...old,[node.id]:nextLayer}));
+      onLayerLoaded?.(nextLayer);
       if(navigation.current===ticket){setSelected(node.id);setHover(null);}
     } catch(e) { if(alive.current && navigation.current===ticket)setError(readableError(e)); }
     finally { if(alive.current){pending.current=false;setBusyId(null);} }
   }
   const rootLayer=layers[root.id];
   const visible=(items:LayerNode[])=>items.filter(n=>!isPunctuationOnly(snippet(n)));
-  const topNodes=visible(rootLayer.nodes);
+  const topNodes=visible(rootLayer?.nodes||[]);
   const childNodes=visible(layer?.nodes||[]);
   const mislabeledPunctuation=[...topNodes,...childNodes].some(n=>n.role==='punctuation');
   const roleLabel=(n:LayerNode)=>componentRole(n,n.parentId?nodes.get(n.parentId):undefined,n.parentId?layers[n.parentId]?.nodes:[],snippet(n));
@@ -72,6 +77,7 @@ export default function LayeredAnalysisView({ document:doc, onMetrics }: { docum
   const head=parent.parentId?layers[parent.parentId]?.relations.find(r=>r.sourceId===parent.id)?.headToken:undefined;
   function keyboard(e:React.KeyboardEvent<HTMLElement>){
     if(e.target instanceof HTMLInputElement||e.target instanceof HTMLSelectElement)return;
+    if(inDrawer&&['Escape','ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;
     if(e.key==='Escape'&&parent.parentId){e.preventDefault();navigate(parent.parentId);}
     if(e.key==='ArrowLeft'||e.key==='ArrowRight'){
       const siblings=parent.parentId?visible(layers[parent.parentId]?.nodes||[]):topNodes;
@@ -82,17 +88,17 @@ export default function LayeredAnalysisView({ document:doc, onMetrics }: { docum
     if(e.key==='Enter'&&e.target===e.currentTarget){e.preventDefault();const next=childNodes.find(n=>canExpand(n));if(next)void open(next);}
   }
   return <div ref={studyRef} className="sentence-study" onKeyDown={keyboard} tabIndex={-1}>
-    {doc.roots.length>1&&<nav className="study-tabs" aria-label="句子选择">{doc.roots.map((r,i)=><button key={r.id} className={r.id===root.id?'active':''} aria-current={r.id===root.id?'page':undefined} onClick={()=>navigate(r.id)}>句 {i+1}</button>)}</nav>}
-    <section className="card study-overview" aria-label="分层解析"><div className="section-head"><h2>分层解析</h2><div className="study-mode" aria-label="原文显示模式"><button aria-pressed={!coreOnly} onClick={()=>setCoreOnly(false)}>全句</button><button aria-pressed={coreOnly} onClick={()=>setCoreOnly(true)}>主干</button></div></div>
+    {!inDrawer&&doc.roots.length>1&&<nav className="study-tabs" aria-label="句子选择">{doc.roots.map((r,i)=><button key={r.id} className={r.id===root.id?'active':''} aria-current={r.id===root.id?'page':undefined} onClick={()=>navigate(r.id)}>句 {i+1}</button>)}</nav>}
+    <section className={`${inDrawer?'drawer-overview':'card study-overview'}`} aria-label="分层解析"><div className="section-head">{!inDrawer&&<h2>分层解析</h2>}<div className="study-mode" aria-label="原文显示模式"><button aria-pressed={!coreOnly} onClick={()=>setCoreOnly(false)}>全句</button><button aria-pressed={coreOnly} onClick={()=>setCoreOnly(true)}>主干</button></div></div>
     <div className="sentence study-sentence" aria-label="可点击的完整原句">{segments.map(segment=>{
       const n=segment.node;if(!n)return <span key={segment.first}>{segment.text}</span>;
       const label=roleLabel(n);
       const structure=typeLabel(n);
       return <span key={segment.first} className={`piece study-segment ${n.role} ${topSelected?.id===n.id?'selected':''} ${coreOnly&&['attribute','adverbial','other','marker'].includes(n.role)?'core-muted':''}`} role="button" tabIndex={0} aria-pressed={topSelected?.id===n.id} aria-label={`${label}${structure?' · '+structure:''}：${segment.text}`} onClick={()=>void open(n)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();void open(n);}}} onMouseEnter={()=>setHover(n.id)} onMouseLeave={()=>setHover(null)}><span className="study-segment-label">{label}{structure&&<span className="study-structure-label"> · {structure}</span>}{canExpand(n)?' ›':''}</span>{segment.text}</span>;
     })}</div>
-    <p className="study-translation">{rootLayer.translation}</p>
+    {!inDrawer&&<p className="study-translation">{rootLayer?.translation}</p>}
     {mislabeledPunctuation&&<p className="field-note layer-warning">部分含文字的片段被模型误标为标点，已保留原文并标记“待核对”。请重新分析。</p>}</section>
-    {parent.id!==root.id?<section className="card study-detail" aria-label="所选成分详情"><div className="study-detail-header"><nav className="breadcrumbs" aria-label="解析路径">{trail.map((n,i)=><span key={n.id}>{i>0&&<span>›</span>}<button title={snippet(n)} aria-current={i===trail.length-1?'location':undefined} onClick={()=>navigate(n.id)}>{i===0?'整句':roleLabel(n)}</button></span>)}</nav><span className="study-shortcuts">← → 切换　Enter 下钻　Esc 返回</span></div>
+    {parent.id!==root.id?<section className="card study-detail" aria-label="所选成分详情"><div className="study-detail-header"><nav className="breadcrumbs" aria-label="解析路径">{trail.map((n,i)=><span key={n.id}>{i>0&&<span>›</span>}<button title={snippet(n)} aria-current={i===trail.length-1?'location':undefined} onClick={()=>navigate(n.id)}>{i===0?'整句':roleLabel(n)}</button></span>)}</nav><span className="study-shortcuts">{inDrawer?'↑ ↓ ← → 切换句子　Esc 关闭':'← → 切换　Enter 下钻　Esc 返回'}</span></div>
       {typeLabel(parent)&&<p className="study-type-caption">句子成分：{roleLabel(parent)}<span>语法类型：{typeLabel(parent)}</span></p>}
       {(isParallel||isPredicatePart)&&<div className="shared-subject-note"><strong>{sharedSubject?`共同主语：${snippet(sharedSubject)}`:'共同主语：当前结构未明确提供'}</strong><span>{sharedSubject?'各谓语部分共用这个主语，不是各有主语的独立分句。':'请结合上级结构判断，不自动借用其他分句的主语。'}</span></div>}
       {suspicious&&<p className="field-note layer-warning">模型将谓语范围标记为分句，结构分类存在冲突，请结合原文复核。</p>}
@@ -104,7 +110,7 @@ export default function LayeredAnalysisView({ document:doc, onMetrics }: { docum
     </section>:<p className="study-select-hint"><Icon name="info" size={14}/>点击句中色块，查看作用、译文与内部结构。未加载的结构会调用模型。</p>}
     {busyId&&<p className="hint" role="status"><span className="spinner"/>正在解析所选成分…</p>}
     {error&&<div className="notice error" role="alert">{error}</div>}
-    {(layer?.warnings?.length||rootLayer.notes.length)?<details className="study-supplement"><summary>本句说明</summary>{rootLayer.notes.map((note,i)=><p key={i}>{note}</p>)}{layer?.warnings?.map((w,i)=><p key={`w${i}`}>{w}</p>)}</details>:null}
+    {(layer?.warnings?.length||rootLayer?.notes.length)?<details className="study-supplement"><summary>本句说明</summary>{rootLayer?.notes.map((note,i)=><p key={i}>{note}</p>)}{layer?.warnings?.map((w,i)=><p key={`w${i}`}>{w}</p>)}</details>:null}
     <details className="study-supplement"><summary>结构详情</summary><span className="muted">缓存读取 {cacheReads} · 当前深度 {layer?.depth||parent.depth} / {doc.maxDepth}</span></details>
   </div>;
 }

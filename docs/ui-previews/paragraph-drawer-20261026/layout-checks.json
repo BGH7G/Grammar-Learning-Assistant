@@ -1,0 +1,25 @@
+{
+  "wide": {
+    "dividerMin": "27",
+    "horizontalOverflow": false,
+    "reading": 256.640625,
+    "stage": 641.625,
+    "viewport": {
+      "height": 900,
+      "width": 1600
+    },
+    "visibleDrawers": 1
+  },
+  "narrowAfterDrag": {
+    "dividerMin": "38",
+    "dividerNow": "38",
+    "horizontalOverflow": false,
+    "reading": 170,
+    "stage": 452.625,
+    "viewport": {
+      "height": 720,
+      "width": 640
+    },
+    "visibleDrawers": 1
+  }
+}

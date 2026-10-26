@@ -1,0 +1,100 @@
+{
+  "conditions": {
+    "before": {
+      "runs": 36,
+      "successfulRuns": 36,
+      "qualityPassedRuns": 36,
+      "checks": 76,
+      "passedChecks": 76,
+      "inputTokens": 389910,
+      "outputTokens": 4457,
+      "totalTokens": 394367,
+      "cachedInputTokens": 382718,
+      "requests": 36,
+      "retryRequests": 0,
+      "meanHttpMsPerTarget": 1666.6868666666667
+    },
+    "after": {
+      "runs": 36,
+      "successfulRuns": 36,
+      "qualityPassedRuns": 36,
+      "checks": 76,
+      "passedChecks": 76,
+      "inputTokens": 161904,
+      "outputTokens": 4931,
+      "totalTokens": 166835,
+      "cachedInputTokens": 151680,
+      "requests": 38,
+      "retryRequests": 2,
+      "meanHttpMsPerTarget": 1823.5629027777777
+    }
+  },
+  "reductionsPercent": {
+    "inputTokens": 58.4765715165038,
+    "outputTokens": -10.634956248597716,
+    "totalTokens": 57.69549683416716,
+    "meanHttpMsPerTarget": -9.412448087795845
+  },
+  "byScope": {
+    "first": {
+      "before": {
+        "runs": 16,
+        "successfulRuns": 16,
+        "qualityPassedRuns": 16,
+        "checks": 24,
+        "passedChecks": 24,
+        "inputTokens": 173900,
+        "outputTokens": 2297,
+        "totalTokens": 176197,
+        "cachedInputTokens": 170752,
+        "requests": 16,
+        "retryRequests": 0,
+        "meanHttpMsPerTarget": 1740.01375625
+      },
+      "after": {
+        "runs": 16,
+        "successfulRuns": 16,
+        "qualityPassedRuns": 16,
+        "checks": 24,
+        "passedChecks": 24,
+        "inputTokens": 77444,
+        "outputTokens": 2752,
+        "totalTokens": 80196,
+        "cachedInputTokens": 71296,
+        "requests": 18,
+        "retryRequests": 2,
+        "meanHttpMsPerTarget": 2109.77329375
+      }
+    },
+    "expansion": {
+      "before": {
+        "runs": 20,
+        "successfulRuns": 20,
+        "qualityPassedRuns": 20,
+        "checks": 52,
+        "passedChecks": 52,
+        "inputTokens": 216010,
+        "outputTokens": 2160,
+        "totalTokens": 218170,
+        "cachedInputTokens": 211966,
+        "requests": 20,
+        "retryRequests": 0,
+        "meanHttpMsPerTarget": 1608.025355
+      },
+      "after": {
+        "runs": 20,
+        "successfulRuns": 20,
+        "qualityPassedRuns": 20,
+        "checks": 52,
+        "passedChecks": 52,
+        "inputTokens": 84460,
+        "outputTokens": 2179,
+        "totalTokens": 86639,
+        "cachedInputTokens": 80384,
+        "requests": 20,
+        "retryRequests": 0,
+        "meanHttpMsPerTarget": 1594.59459
+      }
+    }
+  }
+}

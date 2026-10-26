@@ -21,7 +21,7 @@ const SAMPLES: &[(&str, &str)] = &[
     ),
 ];
 
-fn totals(metrics: &[AnalysisMetrics]) -> Value {
+pub(super) fn totals(metrics: &[AnalysisMetrics]) -> Value {
     let attempts: Vec<_> = metrics.iter().flat_map(|m| m.attempts.iter()).collect();
     fn sum(values: impl Iterator<Item = Option<u64>>) -> Option<u64> {
         values.collect::<Option<Vec<_>>>().map(|v| v.iter().sum())

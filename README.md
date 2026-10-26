@@ -6,6 +6,7 @@ Windows 桌面英语语法助手。Tauri 2 + React + TypeScript + Rust。
 
 - 英文输入、2,000 Unicode 字符限制、可关闭的自动分句（最多 8 句）、加载和错误状态、旧请求结果失效。
 - 分层 v2：可点击的彩色原句、译文和内部结构；按需展开、面包屑、键盘导航、修饰关联及会话缓存，附离线示例。
+- 段落阅读与单一解析抽屉：原文/译文逐句联动高亮、首层逐句加载、300ms 悬停优先级、句子键盘切换、单句重试和可调分隔线。[界面及请求机制说明](docs/paragraph-drawer-ui-v2.md)。
 - 统一“句子成分 · 语法类型”标签，支持情态动词、助动词、系动词、实义动词及其他词类；名词短语优先分成核心短语和后置定语，并细分冠词类别。
 - 成分配色页：各成分背景色和文字色、实时预览、内置预设与自定义配色方案，修改自动保存在本机。
 - 模型接入页：完整 Chat Completions 端点、模型 ID、API Key、可选 JSON mode、温度滑块（0–2）、思考开关、Low/High/Max 推理强度、保存和连接测试。
@@ -24,6 +25,7 @@ npm.cmd run tauri dev
 ```powershell
 npm.cmd run build
 node scripts/check-component-labels.mjs
+node scripts/check-paragraph-workflow.mjs
 cargo test --locked --manifest-path src-tauri/Cargo.toml
 cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
 cargo clippy --locked --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings
@@ -70,12 +72,13 @@ cargo test --locked --manifest-path src-tauri/Cargo.toml configured_model_smoke 
 
 ## 分层 v2 与 Token 对比
 
-当前提示词版本为 `layer-v2.9.2-grammar-types`，采用一次一层协议。旧版完整树提示词及解析器已备份到 `docs/prompt-backups/v1-20261024-165343/`，包含 SHA-256 清单。旧版仅保留作回归和基准对比；历史 v1/v2 Token 对比对应当时的 `layer-v2.5`，不代表当前提示词用量。
+当前提示词版本为 `layer-v2.10.5-compact`，采用一次一层协议。旧版完整树提示词及解析器已备份到 `docs/prompt-backups/v1-20261024-165343/`，包含 SHA-256 清单。旧版仅保留作回归和基准对比；历史 v1/v2 Token 对比对应当时的 `layer-v2.5`，不代表当前提示词用量。
 
 - 当前提示词：`src-tauri/src/prompts/layer-v2.txt`。
 - 协议与缓存边界：[layered-protocol-v2.md](docs/layered-protocol-v2.md)。
 - Token 实测及原始数据索引：[token-comparison.md](docs/token-comparison.md)。
 - 最新语法类型标签实测：[测试记录](docs/benchmarks/grammar-types-layer-v2.9.2-grammar-types-1792984179/review.md)。
+- 保留功能的 Token 优化实测：[成对对比报告](docs/benchmarks/compact-layer-v2.10.5-compact-1792986274/summary.md)。18 个相同目标各两轮，总 Token 减少 57.70%，两版各 76 项预设功能检查通过，修复重试已计入；这不是所有句子的准确率或费用保证。
 - 仅用户点击时展开，最多四层。已加载节点从会话缓存读取；模型设置保存后旧会话失效。默认不自动预取，避免无意增加调用量。
 
 运行同模型、相同参数、六条公开样例各两轮的 v1/v2 基准（会调用已配置服务并产生费用；不修改已保存配置）。基准包含旧版完整解析、新版首屏及按标记展开至四层，保留所有重试和失败统计：

@@ -11,11 +11,46 @@ export const colorRoles = [
   ['marker','结构标记','#e9eef0'], ['other','其他成分','#f1eee8'],
 ] as const;
 export type Palette = Record<string, { foreground: string; background: string }>;
-export const defaultPalette: Palette = Object.fromEntries(colorRoles.map(([role,,background])=>[role,{foreground:'#242424',background}]));
+const legacyDefaultPalette: Palette = Object.fromEntries(colorRoles.map(([role,,background])=>[role,{foreground:'#242424',background}]));
+// Every role has its own swatch; structural roles stay quieter than core roles.
+const makePalette = (colors: Record<string, string>): Palette => Object.fromEntries(
+  colorRoles.map(([role]) => [role, { foreground: '#202938', background: colors[role] }]),
+);
+export const presets: Record<string, { name: string; description: string; palette: Palette }> = {
+  default: {
+    name: '默认配色1', description: '红色主语、蓝色谓语、绿色宾语，适合快速辨认句子主干。',
+    palette: makePalette({
+      subject:'#FFAAA5', predicate:'#9DCCFF', object:'#B4E598',
+      predicative:'#FFC58F', complement:'#91DED8', attribute:'#D8B4F4', adverbial:'#FFE18A',
+      main_clause:'#CFDDF5', conjunction:'#F5B7D7', coordinate:'#BDD4BD',
+      head:'#D0D6DE', determiner:'#E9D3A6', marker:'#BCDDE7', other:'#E5DDD7',
+    }),
+  },
+  coast: {
+    name: '默认配色2', description: '珊瑚、湖蓝与青绿搭配，冷暖对照清晰。',
+    palette: makePalette({
+      subject:'#FFB692', predicate:'#88D5EE', object:'#9CE2B6',
+      predicative:'#C4B4F1', complement:'#F4A9C5', attribute:'#B6C9FF', adverbial:'#F9DA7C',
+      main_clause:'#CADDEB', conjunction:'#F3C3A9', coordinate:'#C7D6AB',
+      head:'#CCD6DA', determiner:'#E6D1A8', marker:'#B7E1DC', other:'#DDD6E7',
+    }),
+  },
+  garden: {
+    name: '默认配色3', description: '莓粉、紫罗兰与嫩绿组合，突出修饰关系与嵌套结构。',
+    palette: makePalette({
+      subject:'#F5A6C4', predicate:'#B6ACF2', object:'#ACDE8E',
+      predicative:'#F5C078', complement:'#8FD4F0', attribute:'#DDA8E8', adverbial:'#8EDCD0',
+      main_clause:'#D8CEE9', conjunction:'#F0CE89', coordinate:'#C3D5B3',
+      head:'#D3D1DC', determiner:'#EAC9B7', marker:'#B9D5E2', other:'#DED9CA',
+    }),
+  },
+};
+export const defaultPalette: Palette = presets.default.palette;
 export const paletteKey = 'grammar-assistant.component-colors.v1';
 export function loadPalette(): Palette {
   try {
     const saved=JSON.parse(localStorage.getItem(paletteKey)||'{}');
+    if (colorRoles.every(([role]) => saved?.[role]?.foreground?.toLowerCase() === legacyDefaultPalette[role].foreground && saved?.[role]?.background?.toLowerCase() === legacyDefaultPalette[role].background)) return structuredClone(defaultPalette);
     return Object.fromEntries(colorRoles.map(([role])=>[role,{
       foreground:/^#[0-9a-f]{6}$/i.test(saved?.[role]?.foreground)?saved[role].foreground:defaultPalette[role].foreground,
       background:/^#[0-9a-f]{6}$/i.test(saved?.[role]?.background)?saved[role].background:defaultPalette[role].background,
@@ -34,11 +69,6 @@ const groups = [
   {title:'结构成分',roles:['main_clause','conjunction','coordinate','head','determiner','marker','other']},
 ];
 const roleName=(role:string)=>colorRoles.find(([id])=>id===role)![1];
-const presets:Record<string,Palette>={
-  default:defaultPalette,
-  soft:Object.fromEntries(colorRoles.map(([role,,background])=>[role,{foreground:'#364152',background:role==='subject'?'#e4edf7':role==='predicate'?'#f5e5e5':background}])),
-  vivid:Object.fromEntries(colorRoles.map(([role],i)=>[role,{foreground:'#182230',background:['#a8d4ff','#ffb3b3','#bce5a8','#dbbafa','#ffda9e','#a3ddd2','#b4c6ef'][i%7]}])),
-};
 type SavedScheme = { id:string; name:string; palette:Palette };
 const schemesKey='grammar-assistant.color-schemes.v1';
 function loadSchemes():SavedScheme[] {
@@ -63,7 +93,7 @@ export default function ColorSettings({palette,onChange,error}:{palette:Palette;
   const [selected,setSelected]=useState('object');
   const [structureOpen,setStructureOpen]=useState(false);
   const rows=useRef<Record<string,HTMLDivElement|null>>({});
-  const allSchemes=[...schemes,...Object.entries(presets).map(([id,palette])=>({id,name:id,palette}))];
+  const allSchemes=[...schemes,...Object.entries(presets).map(([id,scheme])=>({id,name:scheme.name,palette:scheme.palette}))];
   const matches=allSchemes.filter(s=>colorRoles.every(([role])=>s.palette[role].foreground.toLowerCase()===palette[role].foreground.toLowerCase()&&s.palette[role].background.toLowerCase()===palette[role].background.toLowerCase()));
   const preset=matches.find(s=>s.id===preferred)?.id||matches[0]?.id||'custom';
   const activeScheme=schemes.find(s=>s.id===preset);
@@ -74,7 +104,7 @@ export default function ColorSettings({palette,onChange,error}:{palette:Palette;
   function saveScheme() {
     const trimmed=name.trim();
     if(!trimmed||trimmed.length>30){setSchemeError('请输入 1–30 个字符的方案名称。');return;}
-    if(['默认','柔和','鲜明',...schemes.map(s=>s.name)].some(n=>n.toLocaleLowerCase()===trimmed.toLocaleLowerCase())){setSchemeError('此名称已存在，请使用其他名称。');return;}
+    if(['默认','柔和','鲜明',...Object.values(presets).map(s=>s.name),...schemes.map(s=>s.name)].some(n=>n.toLocaleLowerCase()===trimmed.toLocaleLowerCase())){setSchemeError('此名称已存在，请使用其他名称。');return;}
     const scheme={id:`user:${crypto.randomUUID()}`,name:trimmed,palette:structuredClone(palette)};
     if(persistSchemes([...schemes,scheme])){setPreferred(scheme.id);setNaming(false);setName('');setSchemeNotice(`已保存方案“${trimmed}”。`);}
   }
@@ -94,7 +124,8 @@ export default function ColorSettings({palette,onChange,error}:{palette:Palette;
     <button className="button subtle color-reset" title={`重置${roleName(role)}`} aria-label={`重置${roleName(role)}`} onClick={()=>onChange({...palette,[role]:defaultPalette[role]})}><Icon name="reset" size={16}/></button>
   </div>)}</>;}
   return <div className="color-settings">
-    <header className="page-header color-page-header"><div><h1>成分配色</h1><p>修改后立即应用并自动保存。点击预览中的成分，可直接定位到对应设置。</p></div><div className="color-actions"><label className="sr-only" htmlFor="color-preset">预设方案</label><select id="color-preset" value={preset} onChange={e=>{const scheme=allSchemes.find(s=>s.id===e.target.value);if(scheme){setPreferred(scheme.id);onChange(structuredClone(scheme.palette));setSchemeNotice("");}}}><option value="custom" disabled>当前配色：未保存为方案</option><option value="default">预设方案：默认</option><option value="soft">预设方案：柔和</option><option value="vivid">预设方案：鲜明</option>{schemes.length>0&&<optgroup label="我的方案">{schemes.map(s=><option key={s.id} value={s.id}>{s.name}</option>)}</optgroup>}</select><button className="button secondary" onClick={()=>{setNaming(v=>!v);setSchemeError("");}}>另存为方案</button>{activeScheme&&<button className="button subtle" onClick={deleteScheme} aria-label={`删除方案${activeScheme.name}`}><Icon name="trash" size={16}/>删除方案</button>}<button className="button secondary" onClick={()=>onChange(defaultPalette)}>恢复默认</button></div></header>
+    <header className="page-header color-page-header"><div><h1>成分配色</h1><p>修改后立即应用并自动保存。点击预览中的成分，可直接定位到对应设置。</p></div><div className="color-actions"><label className="sr-only" htmlFor="color-preset">预设方案</label><select id="color-preset" value={preset} onChange={e=>{const scheme=allSchemes.find(s=>s.id===e.target.value);if(scheme){setPreferred(scheme.id);onChange(structuredClone(scheme.palette));setSchemeNotice("");}}}><option value="custom" disabled>当前配色：未保存为方案</option>{Object.entries(presets).map(([id,scheme])=><option key={id} value={id}>预设方案：{scheme.name}{id==='default'?'（默认）':''}</option>)}{schemes.length>0&&<optgroup label="我的方案">{schemes.map(s=><option key={s.id} value={s.id}>{s.name}</option>)}</optgroup>}</select><button className="button secondary" onClick={()=>{setNaming(v=>!v);setSchemeError("");}}>另存为方案</button>{activeScheme&&<button className="button subtle" onClick={deleteScheme} aria-label={`删除方案${activeScheme.name}`}><Icon name="trash" size={16}/>删除方案</button>}<button className="button secondary" onClick={()=>{setPreferred('default');onChange(structuredClone(defaultPalette));}}>恢复默认</button></div></header>
+    {presets[preset]&&<p className="scheme-message muted">{presets[preset].description}</p>}
     {naming&&<form className="scheme-save-form" onSubmit={e=>{e.preventDefault();saveScheme();}}><label htmlFor="scheme-name">方案名称</label><input id="scheme-name" autoFocus type="text" maxLength={30} value={name} placeholder="例如：我的阅读配色" onChange={e=>setName(e.target.value)}/><button className="button primary" type="submit">保存方案</button><button className="button secondary" type="button" onClick={()=>{setNaming(false);setSchemeError('');}}>取消</button></form>}
     {schemeError&&<p className="scheme-message error-text" role="alert">{schemeError}</p>}
     {schemeNotice&&<p className="scheme-message muted" role="status">{schemeNotice}</p>}

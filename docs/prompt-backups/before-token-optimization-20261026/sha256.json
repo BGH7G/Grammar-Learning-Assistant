@@ -1,0 +1,18 @@
+[
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\prompts\\layer-v2.txt",
+    "Hash": "264B07B4C47272AEFE05E888B82B4C9EF74D017734E419F432F5EFA8C6AD2F7C"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\layered.rs",
+    "Hash": "CDFFB0CF92486CDD90DEBD2615F4AEB346C47AD25413D917AE40C1AB7A4189B4"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\benchmark.rs",
+    "Hash": "B3A29A72CAFDD21377C08C153025E99EF258F7FC9DAE28E6327EFB6A38F0D33E"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\docs\\layered-protocol-v2.md",
+    "Hash": "EB66EC15DC2C35C04CCE4C806B9B289A0FDC68C91A9F3C702613DE699F6F2D4F"
+  }
+]

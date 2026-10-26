@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { invoke, isTauri } from "@tauri-apps/api/core";
-import LayeredAnalysisView from "./components/LayeredAnalysisView";
+import ParagraphAnalysis from "./components/ParagraphAnalysis";
 import Icon, { type IconName } from "./components/Icon";
-import PerformanceDetails from "./components/PerformanceDetails";
-import type { LayerDocument, AnalysisMetrics, AnalysisResult, Settings, ReasoningEffort, ThinkingProtocol } from "./types/analysis";
-import { layerSample } from "./layerSample";
+import type { AnalysisLayer, LayerDocument, AnalysisMetrics, AnalysisResult, Settings, ReasoningEffort, ThinkingProtocol } from "./types/analysis";
+import { paragraphSample } from "./paragraphSample";
 import ColorSettings, { loadPalette, paletteKey, paletteStyle, type Palette } from "./components/ColorSettings";
 import "./App.css";
 
@@ -47,6 +46,7 @@ export default function App() {
   const [notice, setNotice] = useState("");
   const [noticeError, setNoticeError] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [loadingSentences,setLoadingSentences]=useState(0);
   const [configBusy, setConfigBusy] = useState(false);
   const [ready, setReady] = useState(false);
   const [, setElapsed] = useState<number | null>(null);
@@ -54,6 +54,8 @@ export default function App() {
   const [liveElapsed, setLiveElapsed] = useState(0);
   const [testElapsed, setTestElapsed] = useState<number | null>(null);
   const current = useRef("");
+  const metricsSession=useRef<string|null>(null);
+  const resultSplit=useRef(true);
   const count = Array.from(text).length;
 
   useEffect(() => {
@@ -70,17 +72,20 @@ export default function App() {
   }, [busy]);
 
   function editText(value: string) {
-    current.current = ""; setBusy(false); setText(value); setResult(null); setError(""); setElapsed(null); setMetrics(null);
+    current.current = ""; setBusy(false); setText(value); setError("");
   }
-  function demo() { editText(layerSample.pieces.map(p => p.text).join("")); setResult(layerSample); setEditing(false); setPage("analysis"); }
+  function demo() { setMetrics(null); resultSplit.current=true; setSplitSentences(true); editText(paragraphSample.pieces.map(p => p.text).join(""));metricsSession.current=paragraphSample.sessionId; setResult(paragraphSample); setEditing(false); setPage("analysis"); }
   async function analyze() {
     if (!text.trim() || count > 2000) return;
+    if (result && text === result.pieces.map(p=>p.text).join("") && splitSentences === resultSplit.current) {
+      setEditing(false); setError(""); return;
+    }
     if (!settings.endpoint) { setError("请先在“模型接入”中保存接口配置，或使用离线示例。"); return; }
     const id = crypto.randomUUID(); const started = performance.now();
-    current.current = id; setBusy(true); setError(""); setResult(null); setElapsed(null); setMetrics(null);
+    current.current = id; setBusy(true); setEditing(true); setError("");
     try {
-      const r = await invoke<AnalysisResult>("analyze_sentence", { text, requestId: id, splitSentences });
-      if (current.current === r.requestId) { setResult(r.document); setEditing(false); setMetrics(r.metrics); setElapsed((performance.now() - started) / 1000); }
+      const r = await invoke<AnalysisResult>("prepare_analysis", { text, requestId: id, splitSentences });
+      if (current.current === r.requestId) {resultSplit.current=splitSentences;metricsSession.current=r.document.sessionId; setResult(r.document); setEditing(false); setMetrics(r.metrics); setElapsed((performance.now() - started) / 1000); }
     } catch (e) { if (current.current === id) setError(message(e)); }
     finally { if (current.current === id) setBusy(false); }
   }
@@ -89,7 +94,7 @@ export default function App() {
     try {
       await invoke("save_settings", { settings: { endpoint: draft.endpoint, model: draft.model, jsonMode: draft.jsonMode, temperature: draft.temperature, thinking: draft.thinking, reasoningEffort: draft.reasoningEffort, thinkingProtocol: draft.thinkingProtocol }, apiKey: key || null, clearKey });
       const s = await invoke<Settings>("get_settings");
-      setSettings(s); setDraft(s); setKey(""); setClearKey(false); setNotice("配置已保存。"); current.current = ""; setBusy(false); setResult(null); setMetrics(null); setElapsed(null);
+      setSettings(s); setDraft(s); setKey(""); setClearKey(false); setNotice("配置已保存。"); current.current = "";metricsSession.current=null;setLoadingSentences(0); setBusy(false); setResult(null); setEditing(false); setMetrics(null); setElapsed(null);
     } catch (e) { setNotice(message(e)); setNoticeError(true); }
     finally { setConfigBusy(false); }
   }
@@ -107,6 +112,10 @@ export default function App() {
     setMetrics(old => old ? { totalMs: old.totalMs + m.totalMs, configurationMs: old.configurationMs + m.configurationMs, preparationMs: old.preparationMs + m.preparationMs, attempts: [...old.attempts,...m.attempts] } : m);
   }
   function openSettings() { setService("model"); setPage("settings"); }
+  function rememberLayer(sessionId:string,layer:AnalysisLayer){
+    if(metricsSession.current!==sessionId)return;
+    setResult(old=>old&&old.sessionId===sessionId?{...old,layers:[...old.layers.filter(l=>l.parentId!==layer.parentId),layer]}:old);
+  }
 
   return <div className="app-shell" style={paletteStyle(palette)}>
     <aside className="sidebar">
@@ -120,20 +129,20 @@ export default function App() {
       <div className="sidebar-bottom"><div className="connection-status"><span className={`status-dot ${settings.endpoint ? "configured" : ""}`} />{settings.endpoint ? "模型已配置" : "尚未配置模型"}</div><span className="sidebar-model" title={settings.model}>{settings.model || "在模型接入中添加服务"}</span><span className="version">版本 0.1.0 · Windows</span></div>
     </aside>
     <main className={page === "settings" ? "main settings-main" : "main analysis-main"}>
-      <header className="page-header" hidden={page === "colors"}><div><h1>{page === "analysis" ? "句子分析" : page === "colors" ? "成分配色" : "模型接入"}</h1><p>{page === "analysis" ? "点击句中的色块，逐层查看结构、作用与译文。" : page === "colors" ? "自定义句子成分的文字色与背景色。" : "配置分析服务，使用你自己的模型。"}</p></div><span className="status-pill"><span className={`status-dot ${busy || configBusy ? "working" : ""}`} />{busy ? "正在分析" : configBusy ? "处理中" : "就绪"}</span></header>
-      {page === "analysis" ? <div className="analysis-content">
-        {(!result || editing) && <section className="card input-card"><div className="section-head"><div className="heading-with-icon"><Icon name="document" /><h2>英文句子</h2></div><button className="button subtle" onClick={demo}><Icon name="sample" size={16} />离线示例</button></div>
-          <label className="sr-only" htmlFor="sentence">英文句子</label><textarea id="sentence" value={text} onChange={e => editText(e.target.value)} placeholder="输入或粘贴英文句子…" aria-describedby="input-hint character-count" />
+      <header className="page-header" hidden={page === "colors"}><div><h1>{page === "analysis" ? "句子分析" : page === "colors" ? "成分配色" : "模型接入"}</h1><p>{page === "analysis" ? "点击任一句，在下方抽屉中查看语法解析。" : page === "colors" ? "自定义句子成分的文字色与背景色。" : "配置分析服务，使用你自己的模型。"}</p></div><span className="status-pill"><span className={`status-dot ${busy || configBusy || loadingSentences ? "working" : ""}`} />{busy ? "准备中" : configBusy ? "处理中" : loadingSentences?'正在分析':'就绪'}</span></header>
+      {page === "analysis" ? <div className={`analysis-content ${result?'paragraph-mode':''}`}>
+        {!result && <section className="card input-card"><div className="section-head"><div className="heading-with-icon"><Icon name="document" /><h2>英文原文</h2></div><button className="button subtle" onClick={demo}><Icon name="sample" size={16} />离线示例</button></div>
+          <label className="sr-only" htmlFor="sentence">英文原文</label><textarea id="sentence" value={text} onChange={e => editText(e.target.value)} placeholder="输入或粘贴英文句子或段落…" aria-describedby="input-hint character-count" />
           <div className="input-footer"><span id="character-count" className={count > 2000 ? "error-text" : "muted"}>{count.toLocaleString()} / 2,000 字符</span><div className="button-row"><button className="button secondary" onClick={() => editText("")} disabled={!text}><Icon name="trash" size={16} />清空</button><button className="button primary" disabled={busy || !text.trim() || count > 2000 || !ready} onClick={analyze}><Icon name="play" size={16} />{busy ? "正在分析…" : "分析句子"}</button></div></div>
           <label className="checkbox-row sentence-split"><input type="checkbox" checked={splitSentences} onChange={e=>{setSplitSentences(e.target.checked);editText(text);}}/>自动分句（最多 8 句；缩写或特殊标点可关闭后分析）</label>
           <p id="input-hint" className="hint"><Icon name="info" size={14} />分析时，原文将发送至已配置的模型服务。</p>
         </section>}
-        {result && !editing && <div className="card study-source-bar"><span className="study-source-summary" title={text}>{text}</span><span className="muted">共 {result.roots.length} 句 · {count} 字符</span><button className="button secondary" onClick={()=>setEditing(true)}>编辑原文</button><button className="button secondary" disabled={busy || !ready || !settings.endpoint} onClick={analyze}>重新分析</button></div>}
+        {result && <div className="card study-source-bar paragraph-source-bar"><span className={`muted ${count>2000?"error-text":""}`}>共 {result.roots.length} 句 · {count} 字符</span><button className="button secondary" aria-pressed={editing} disabled={busy} onClick={()=>{setEditing(true);requestAnimationFrame(()=>document.getElementById("paragraph-inline-editor")?.focus({preventScroll:true}));}}>编辑原文</button><button className="button secondary" disabled={busy || !text.trim() || count>2000 || ((!ready || !settings.endpoint) && !(result.sessionId==="offline" && text===result.pieces.map(p=>p.text).join("")))} onClick={analyze}>{busy?"分析中…":"重新分析"}</button></div>}
         {!result && <div className="analysis-toolbar"><span className="muted">当前模型：{settings.model || "未配置"}</span><button className="button subtle" onClick={openSettings}><Icon name="settings" size={15} />模型设置<Icon name="chevron" size={13} /></button></div>}
         {error && <div role="alert" className="notice error"><Icon name="info" size={17} />{error}</div>}
         {busy && <div className="card loading-state" role="status"><span className="spinner" />正在分析句子结构…<span className="status-pill">已等待 {liveElapsed.toFixed(1)} 秒</span></div>}
-        {result ? <><LayeredAnalysisView key={result.sessionId} document={result} onMetrics={addMetrics} />{metrics && <PerformanceDetails metrics={metrics} />}</> : !busy && <section className="empty"><span className="empty-icon"><Icon name="grammar" size={38} /></span><h2>从一个句子开始</h2><p>输入英文后点击分析，或先查看离线示例。</p><button className="button secondary" onClick={demo}><Icon name="sample" size={16} />查看示例</button></section>}
-        <p className="workspace-note"><Icon name="info" size={14} />结构校验不等于语法正确，请结合上下文判断。修改输入或保存模型配置会使旧会话失效；已发出的请求仍可能计费。</p>
+        {result ? <div className="paragraph-result-host"><ParagraphAnalysis key={result.sessionId} document={result} editing={editing} draftText={text} onEditText={editText} metrics={metrics} onMetrics={m=>{if(metricsSession.current===result.sessionId)addMetrics(m);}} onLayerLoaded={layer=>rememberLayer(result.sessionId,layer)} onLoadingChange={setLoadingSentences}/></div> : !busy&&!result && <section className="empty"><span className="empty-icon"><Icon name="grammar" size={38} /></span><h2>从一个句子开始</h2><p>输入英文后点击分析，或先查看离线示例。</p><button className="button secondary" onClick={demo}><Icon name="sample" size={16} />查看示例</button></section>}
+        <p className="workspace-note"><Icon name="info" size={14} />结构校验不等于语法正确，请结合上下文判断。直接编辑原文后点击重新分析；相同原文与配置优先复用本次运行的历史结果。已发出的请求仍可能计费。</p>
       </div> : page === "colors" ? <ColorSettings palette={palette} onChange={changePalette} error={paletteError} /> : <div className="settings-layout">
         <section className="service-column" aria-label="分析服务列表"><div className="list-heading"><h2>分析服务</h2><span className="count-badge">2</span></div>
           <button className={`service-item ${service === "model" ? "selected" : ""}`} aria-pressed={service === "model"} onClick={() => setService("model")}><span className="service-icon"><Icon name="server" size={21} /></span><span className="service-info"><strong>自定义模型</strong><small title={settings.model}>{settings.model || "Chat Completions"}</small></span><span className="source-tag custom">自定义</span>{service === "model" && <Icon name="check" size={14} className="selected-check" />}</button>
@@ -162,7 +171,7 @@ export default function App() {
             <div className="save-bar"><span className="muted">{dirty ? "更改尚未保存" : "修改完成后保存配置"}</span><button className="button primary" disabled={!ready || configBusy || !draft.endpoint.trim() || !draft.model.trim()} onClick={save}><Icon name="save" size={16} />{configBusy ? "处理中…" : "保存配置"}</button></div>
             <SettingCard icon="shield" title="连接验证" description={dirty ? "请先保存更改，再测试模型连接。" : settings.endpoint ? "向已保存的服务发送简短请求，验证连接是否可用。" : "保存接口地址和模型后，可测试连接。"} disabled={testDisabled}><div className="verification-controls"><button className="button secondary" disabled={testDisabled} onClick={test}><Icon name="play" size={16} />测试连接</button>{testElapsed !== null && <span className="status-pill"><Icon name="clock" size={13} />{testElapsed.toFixed(1)} 秒</span>}</div><p className="field-note">测试可能产生少量模型调用费用。</p></SettingCard>
           </> : <>
-            <SettingCard icon="sample" title="语法分析示例" description="通过固定句子查看主句成分、中文翻译和定语从句。"><div className="sample-preview">The cat that I saw yesterday sat on the mat.</div><button className="button primary" onClick={demo}><Icon name="play" size={16} />打开示例</button></SettingCard>
+            <SettingCard icon="sample" title="语法分析示例" description="通过七句固定段落体验对应高亮、解析抽屉和内部结构。"><div className="sample-preview">Many residents who work downtown now ride to the office…</div><button className="button primary" onClick={demo}><Icon name="play" size={16} />打开示例</button></SettingCard>
             <SettingCard icon="info" title="关于此示例" description="内置样例无需配置模型，不发送网络请求。"><p className="field-note">如需分析自己的句子，请选择“自定义模型”并保存服务配置。</p></SettingCard>
           </>}
           {notice && <div className={`notice ${noticeError ? "error" : ""}`} role={noticeError ? "alert" : "status"}><Icon name="info" size={17} /><span>{notice}</span></div>}

@@ -1,0 +1,38 @@
+[
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src\\App.tsx",
+    "Hash": "127993EAB4508A74AEE966C1A4D5804E53EFD17D7F640E276EC235F28BE53554"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src\\App.css",
+    "Hash": "BF754E498307C653241B0FC441D48C9C5498F70B7632725C500B845B1C5B34E4"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src\\analysisQueue.ts",
+    "Hash": "76BAF7833E50B9EBE875593828A3F137317B5D0849392A1D26A02D7BD8EACA59"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src\\paragraphSample.ts",
+    "Hash": "8449E27CBF3EA986CF68C246DB5B986ABA4B5F07CCE90D01F5951FEC91E12B2C"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src\\components\\ParagraphAnalysis.tsx",
+    "Hash": "C9A86758CE6070A202B4EB63B76BAF0ABE7148BD24140838D028634548622366"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src\\components\\LayeredAnalysisView.tsx",
+    "Hash": "1D5F194B0B3A8C146316F9B8D7C49B5B5199420F54F5B6C0DF232096BDAB688E"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\lib.rs",
+    "Hash": "F6274FF66627050835C13C73D46FD2F6548783E282F52D1FD59B19B25306BFDF"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\layered.rs",
+    "Hash": "C26E61DF1A4E3520E7B8FDFB816FE715F3E290F7C65583F5433C19A3492225DC"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\scripts\\check-paragraph-workflow.mjs",
+    "Hash": "50AD432FDF77097DE02FE56A79080C7B29B9EC7066D4CDCF30A3B4B30BD8600A"
+  }
+]

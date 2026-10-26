@@ -1,0 +1,26 @@
+[
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\prompts\\layer-v2.txt",
+    "Hash": "F7992E7D263A8BEB13DF6D0F84B88B438F32656CA0FD8EBA9D20379B026A9E06"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\layered.rs",
+    "Hash": "20BB13EE9DC105D00310FACAB4FD05F48BDA6AEC0A3F31B58ECADAA301527E03"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\lib.rs",
+    "Hash": "C8330AA5E1429521A2E7AA1E7902014AEFAE1923D8551FFF128A83E4B8B5B589"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\benchmark.rs",
+    "Hash": "D13C23AA59653CEB75194BCDF016D61E903ED183D035B91FCD2A78DDBCA3898C"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\src-tauri\\src\\token_benchmark.rs",
+    "Hash": "AC92FB3E0D620E952561D8EDC47D6A6120C670B57A879BA48AEBB85FC9556DBE"
+  },
+  {
+    "Path": "F:\\BGHong7G_Obj\\grammar-assistant\\scripts\\summarize_token_optimization.py",
+    "Hash": "B383572E6BBF9DC570A9D8942F6FE32F3B0A8FF958A5C6EA28D2F29E1977C971"
+  }
+]
