@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 
 const paths = {
+  keyboard: <><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M6 12h.01M10 12h.01M14 12h.01M18 12h.01M7 16h10"/></>,
   reset: <><path d="M4 4v5h5M4.5 9a7 7 0 1 1-.2 5" /></>,
   palette: <><path d="M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 1-4c-1-1 0-3 2-3h2a3 3 0 0 0 3-3 9 9 0 0 0-9-8Z"/><path d="M7 9h.01M11 6h.01M16 7h.01M6 13h.01"/></>,
   temperature: <><path d="M9 14V5a3 3 0 0 1 6 0v9a5 5 0 1 1-6 0ZM12 6v11" /><circle cx="12" cy="18" r="1" /></>,

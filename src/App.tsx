@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { invoke, isTauri } from "@tauri-apps/api/core";
 import ParagraphAnalysis from "./components/ParagraphAnalysis";
+import HotkeySettings from "./components/HotkeySettings";
+import useSelectionCapture, {type CapturedText} from "./hooks/useSelectionCapture";
 import Icon, { type IconName } from "./components/Icon";
 import type { AnalysisLayer, LayerDocument, AnalysisMetrics, AnalysisResult, Settings, ReasoningEffort, ThinkingProtocol } from "./types/analysis";
 import { paragraphSample } from "./paragraphSample";
@@ -25,7 +27,7 @@ function SettingCard({ icon, title, description, children, disabled = false, id 
 }
 
 export default function App() {
-  const [page, setPage] = useState<"analysis" | "settings" | "colors">("analysis");
+  const [page, setPage] = useState<"analysis" | "settings" | "colors" | "hotkeys">("analysis");
   const [palette, setPalette] = useState(loadPalette);
   const [paletteError, setPaletteError] = useState("");
   function changePalette(next: Palette) {
@@ -39,6 +41,7 @@ export default function App() {
   const [key, setKey] = useState("");
   const [clearKey, setClearKey] = useState(false);
   const [text, setText] = useState("");
+  const [pendingSelection,setPendingSelection]=useState<CapturedText|null>(null);
   const [result, setResult] = useState<LayerDocument | null>(null);
   const [editing, setEditing] = useState(false);
   const [splitSentences, setSplitSentences] = useState(true);
@@ -74,6 +77,22 @@ export default function App() {
   function editText(value: string) {
     current.current = ""; setBusy(false); setText(value); setError("");
   }
+  function acceptSelection(value:CapturedText){
+    current.current="";metricsSession.current=null;
+    setBusy(false);setLoadingSentences(0);setResult(null);setMetrics(null);setElapsed(null);
+    setText(value.text);setEditing(false);setError("");setPendingSelection(null);setPage("analysis");
+    setNotice("已填入复制文本，请核对原文后点击分析。");setNoticeError(false);
+  }
+  useSelectionCapture({
+    onStart:()=>{current.current="";setBusy(false);},
+    onText:value=>{
+      current.current="";setBusy(false);setPage("analysis");setError("");
+      const original=result?.pieces.map(p=>p.text).join("")??"";
+      if(text!==original&&text.length>0&&text!==value.text){setPendingSelection(value);setNotice("");}
+      else acceptSelection(value);
+    },
+    onError:message=>{setNotice(message);setNoticeError(true);},
+  });
   function demo() { setMetrics(null); resultSplit.current=true; setSplitSentences(true); editText(paragraphSample.pieces.map(p => p.text).join(""));metricsSession.current=paragraphSample.sessionId; setResult(paragraphSample); setEditing(false); setPage("analysis"); }
   async function analyze() {
     if (!text.trim() || count > 2000) return;
@@ -125,12 +144,14 @@ export default function App() {
         <button className={`nav-item ${page === "analysis" ? "active" : ""}`} aria-current={page === "analysis" ? "page" : undefined} onClick={() => setPage("analysis")}><Icon name="document" /><span>句子分析</span></button>
         <button className={`nav-item ${page === "settings" ? "active" : ""}`} aria-current={page === "settings" ? "page" : undefined} onClick={openSettings}><Icon name="settings" /><span>模型接入</span></button>
         <button className={`nav-item ${page === "colors" ? "active" : ""}`} aria-label="成分配色" aria-current={page === "colors" ? "page" : undefined} onClick={() => setPage("colors")}><Icon name="palette" /><span>成分配色</span></button>
+        <button className={`nav-item ${page === "hotkeys" ? "active" : ""}`} aria-current={page === "hotkeys" ? "page" : undefined} onClick={() => setPage("hotkeys")}><Icon name="keyboard" /><span>热键</span></button>
       </nav>
       <div className="sidebar-bottom"><div className="connection-status"><span className={`status-dot ${settings.endpoint ? "configured" : ""}`} />{settings.endpoint ? "模型已配置" : "尚未配置模型"}</div><span className="sidebar-model" title={settings.model}>{settings.model || "在模型接入中添加服务"}</span><span className="version">版本 0.1.0 · Windows</span></div>
     </aside>
     <main className={page === "settings" ? "main settings-main" : "main analysis-main"}>
-      <header className="page-header" hidden={page === "colors"}><div><h1>{page === "analysis" ? "句子分析" : page === "colors" ? "成分配色" : "模型接入"}</h1><p>{page === "analysis" ? "点击任一句，在下方抽屉中查看语法解析。" : page === "colors" ? "自定义句子成分的文字色与背景色。" : "配置分析服务，使用你自己的模型。"}</p></div><span className="status-pill"><span className={`status-dot ${busy || configBusy || loadingSentences ? "working" : ""}`} />{busy ? "准备中" : configBusy ? "处理中" : loadingSentences?'正在分析':'就绪'}</span></header>
+      <header className="page-header" hidden={page === "colors"}><div><h1>{page === "analysis" ? "句子分析" : page === "hotkeys" ? "热键" : "模型接入"}</h1><p>{page === "analysis" ? "点击任一句，在下方抽屉中查看语法解析。" : page === "hotkeys" ? "设置常用操作的快捷键。" : "配置分析服务，使用你自己的模型。"}</p></div>{page !== "hotkeys" && <span className="status-pill"><span className={`status-dot ${busy || configBusy || loadingSentences ? "working" : ""}`} />{busy ? "准备中" : configBusy ? "处理中" : loadingSentences?'正在分析':'就绪'}</span>}</header>
       {page === "analysis" ? <div className={`analysis-content ${result?'paragraph-mode':''}`}>
+        {pendingSelection&&<section className="notice selection-notice" aria-label="新的复制文本"><div><p>已读取新文本，当前输入有未提交内容。</p><details><summary>查看新文本</summary><pre>{pendingSelection.text}</pre></details></div><div className="button-row"><button className="button primary" onClick={()=>acceptSelection(pendingSelection)}>替换输入</button><button className="button secondary" onClick={()=>setPendingSelection(null)}>保留当前输入</button></div></section>}
         {!result && <section className="card input-card"><div className="section-head"><div className="heading-with-icon"><Icon name="document" /><h2>英文原文</h2></div><button className="button subtle" onClick={demo}><Icon name="sample" size={16} />离线示例</button></div>
           <label className="sr-only" htmlFor="sentence">英文原文</label><textarea id="sentence" value={text} onChange={e => editText(e.target.value)} placeholder="输入或粘贴英文句子或段落…" aria-describedby="input-hint character-count" />
           <div className="input-footer"><span id="character-count" className={count > 2000 ? "error-text" : "muted"}>{count.toLocaleString()} / 2,000 字符</span><div className="button-row"><button className="button secondary" onClick={() => editText("")} disabled={!text}><Icon name="trash" size={16} />清空</button><button className="button primary" disabled={busy || !text.trim() || count > 2000 || !ready} onClick={analyze}><Icon name="play" size={16} />{busy ? "正在分析…" : "分析句子"}</button></div></div>
@@ -143,7 +164,7 @@ export default function App() {
         {busy && <div className="card loading-state" role="status"><span className="spinner" />正在分析句子结构…<span className="status-pill">已等待 {liveElapsed.toFixed(1)} 秒</span></div>}
         {result ? <div className="paragraph-result-host"><ParagraphAnalysis key={result.sessionId} document={result} editing={editing} draftText={text} onEditText={editText} metrics={metrics} onMetrics={m=>{if(metricsSession.current===result.sessionId)addMetrics(m);}} onLayerLoaded={layer=>rememberLayer(result.sessionId,layer)} onLoadingChange={setLoadingSentences}/></div> : !busy&&!result && <section className="empty"><span className="empty-icon"><Icon name="grammar" size={38} /></span><h2>从一个句子开始</h2><p>输入英文后点击分析，或先查看离线示例。</p><button className="button secondary" onClick={demo}><Icon name="sample" size={16} />查看示例</button></section>}
         <p className="workspace-note"><Icon name="info" size={14} />结构校验不等于语法正确，请结合上下文判断。直接编辑原文后点击重新分析；相同原文与配置优先复用本次运行的历史结果。已发出的请求仍可能计费。</p>
-      </div> : page === "colors" ? <ColorSettings palette={palette} onChange={changePalette} error={paletteError} /> : <div className="settings-layout">
+      </div> : page === "colors" ? <ColorSettings palette={palette} onChange={changePalette} error={paletteError} /> : page === "hotkeys" ? <HotkeySettings/> : <div className="settings-layout">
         <section className="service-column" aria-label="分析服务列表"><div className="list-heading"><h2>分析服务</h2><span className="count-badge">2</span></div>
           <button className={`service-item ${service === "model" ? "selected" : ""}`} aria-pressed={service === "model"} onClick={() => setService("model")}><span className="service-icon"><Icon name="server" size={21} /></span><span className="service-info"><strong>自定义模型</strong><small title={settings.model}>{settings.model || "Chat Completions"}</small></span><span className="source-tag custom">自定义</span>{service === "model" && <Icon name="check" size={14} className="selected-check" />}</button>
           <button className={`service-item ${service === "sample" ? "selected" : ""}`} aria-pressed={service === "sample"} onClick={() => setService("sample")}><span className="service-icon"><Icon name="sample" size={21} /></span><span className="service-info"><strong>离线示例</strong><small>查看语法分析效果</small></span><span className="source-tag built-in">内置</span>{service === "sample" && <Icon name="check" size={14} className="selected-check" />}</button>

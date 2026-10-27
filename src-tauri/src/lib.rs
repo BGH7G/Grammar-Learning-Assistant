@@ -3,8 +3,10 @@ mod analysis;
 mod analyzer;
 #[cfg(test)]
 mod benchmark;
+mod hotkey;
 mod layered;
 mod llm;
+mod selection;
 mod settings;
 #[cfg(test)]
 mod token_benchmark;
@@ -339,7 +341,16 @@ async fn expand_node(
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-    tauri::Builder::default()
+    let builder = tauri::Builder::default();
+    #[cfg(not(any(target_os = "android", target_os = "ios")))]
+    let builder = builder.plugin(hotkey::plugin());
+    builder
+        .manage(hotkey::HotkeyState::default())
+        .manage(selection::CaptureState::default())
+        .setup(|app| {
+            hotkey::setup(app.handle());
+            Ok(())
+        })
         .manage(State {
             client: reqwest::Client::builder()
                 .connect_timeout(Duration::from_secs(10))
@@ -353,6 +364,9 @@ pub fn run() {
             next_session: AtomicU64::new(1),
         })
         .invoke_handler(tauri::generate_handler![
+            hotkey::get_hotkey_settings,
+            hotkey::save_hotkey_settings,
+            selection::get_selection_state,
             get_settings,
             save_settings,
             test_connection,
@@ -360,8 +374,16 @@ pub fn run() {
             analyze_sentence,
             expand_node
         ])
-        .run(tauri::generate_context!())
-        .expect("error running app");
+        .build(tauri::generate_context!())
+        .expect("error building app")
+        .run(|app, event| {
+            if let tauri::RunEvent::ExitRequested { api, .. } = event {
+                let state = app.state::<selection::CaptureState>();
+                if state.request_exit() {
+                    api.prevent_exit();
+                }
+            }
+        });
 }
 #[cfg(test)]
 mod live_tests {
